@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.11.5)  13 MAR 2026 00:16
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.11.5)  18 MAR 2026 23:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/user/Downloads/TA-STI-template-1.0/TA
-(/Users/user/Downloads/TA-STI-template-1.0/TA.tex
+**/Users/user/Documents/18222096-FarahAulia-TA/TA
+(/Users/user/Documents/18222096-FarahAulia-TA/TA.tex
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/base/book.cls
@@ -870,7 +870,7 @@ Package csquotes Warning: No style for language 'indonesian'.
 Package csquotes Info: Redefining alias 'default' -> 'fallback'.
 (./TA.aux (/usr/local/texlive/2025basic/texmf-dist/tex/generic/babel/locale/en/babel-english.tex)
 Package babel Info: Importing data for english
-(babel)             from babel-en.ini. Reported on input line 58.
+(babel)             from babel-en.ini. Reported on input line 107.
 )
 \openout1 = `TA.aux'.
 
@@ -1063,26 +1063,23 @@ File: images/ganesha.jpg Graphic file (type bmp)
 [2
 
 ]) (./3 Pernyataan Orisinalitas.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 
 [3]
 
 [4
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 10--14
+Underfull \hbox (badness 10000) in paragraph at lines 11--15
 
  []
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 15.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 16.
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (/usr/local/texlive/2025basic/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 15.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 16.
  (/usr/local/texlive/2025basic/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (/usr/local/texlive/2025basic/texmf-dist/tex/latex/microtype/mt-msb.cfg
@@ -1096,57 +1093,57 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (
 [6
 
 ]
-Overfull \hbox (3.43965pt too wide) in paragraph at lines 9--9
+Overfull \hbox (3.43965pt too wide) in paragraph at lines 10--10
 []|\TU/TimesNewRoman(0)/b/n/12 No.| 
  []
 
 
-Underfull \hbox (badness 5175) in paragraph at lines 11--11
+Underfull \hbox (badness 5175) in paragraph at lines 12--12
 []|\TU/TimesNewRoman(0)/m/n/12 Memeriksa ejaan dan
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 13--13
+Underfull \hbox (badness 10000) in paragraph at lines 14--14
 []|\TU/TimesNewRoman(0)/m/n/12 Microsoft
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 17--17
+Underfull \hbox (badness 10000) in paragraph at lines 18--18
 []|\TU/TimesNewRoman(0)/m/n/12 Pencarian informasi
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 19--19
+Underfull \hbox (badness 10000) in paragraph at lines 20--20
 []|\TU/TimesNewRoman(0)/m/n/12 Penyusunan bahan
  []
 
 
-Underfull \hbox (badness 2269) in paragraph at lines 21--21
+Underfull \hbox (badness 2269) in paragraph at lines 22--22
 []|\TU/TimesNewRoman(0)/m/n/12 Penyusunan kode pro-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 23--23
+Underfull \hbox (badness 10000) in paragraph at lines 24--24
 []|\TU/TimesNewRoman(0)/m/n/12 Penyusunan formu-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 23--23
+Underfull \hbox (badness 10000) in paragraph at lines 24--24
 \TU/TimesNewRoman(0)/m/n/12 la atau perhitungan
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 29--29
+Underfull \hbox (badness 10000) in paragraph at lines 30--30
 []|\TU/TimesNewRoman(0)/m/n/12 Penyusunan kesimpu-
  []
 
 
-Overfull \hbox (13.72078pt too wide) in paragraph at lines 7--32
+Overfull \hbox (13.72078pt too wide) in paragraph at lines 8--33
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 35--37
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
 
  []
 
@@ -1206,7 +1203,7 @@ Package geometry Warning: `a4paper': not available in `\newgeometry'; skipped.
 
 
 ] (./TA.toc
-Overfull \hbox (4.85715pt too wide) in paragraph at lines 46--46
+Overfull \hbox (4.85715pt too wide) in paragraph at lines 36--36
  [][] [][][]\TU/TimesNewRoman(0)/m/n/12 Penulisan Rumus atau Persamaan Matematika Menggunakan 
  []
 
@@ -1239,7 +1236,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-Overfull \hbox (58.8302pt too wide) in paragraph at lines 14--14
+Overfull \hbox (58.8302pt too wide) in paragraph at lines 4--4
  \TU/TimesNewRoman(0)/m/n/12 kolom secara fleksibel. Selain itu, tabel ini juga menggunakan \TU/lmtt/m/n/12 threeparttable 
  []
 
@@ -1314,12 +1311,9 @@ Overfull \hbox (2.66713pt too wide) in alignment at lines 15--27
 ] (./Bab I - Pendahuluan.tex
 Bab I.
 
-Overfull \hbox (1.51288pt too wide) in paragraph at lines 11--12
-[]\TU/TimesNewRoman(0)/m/n/12 Kelemahan atau kekurangan dari solusi yang telah diterapkan atau yang memu-
+Overfull \hbox (2.40508pt too wide) in paragraph at lines 10--11
+[]\TU/TimesNewRoman(0)/m/n/12 Seiring berkembangnya teknologi kecerdasan buatan, \TU/TimesNewRoman(0)/m/it/12 Large Language Model \TU/TimesNewRoman(0)/m/n/12 (LLM)
  []
-
-
-Underfull \vbox (badness 1292) has occurred while \output is active []
 
 
 
@@ -1327,31 +1321,38 @@ Underfull \vbox (badness 1292) has occurred while \output is active []
 
 
 ]
-
-Package biblatex-chicago Warning: Empty Ibidem citation on input line 38.
-
-
-Overfull \hbox (1.58914pt too wide) in paragraph at lines 38--39
-\TU/TimesNewRoman(0)/m/n/12 aktivitas orang yang menggunakan teknologi tersebut untuk mendukung
+Overfull \hbox (18.06836pt too wide) in paragraph at lines 16--18
+[]\TU/TimesNewRoman(0)/m/n/12 Dengan mempertimbangkan kebutuhan tersebut, penelitian ini bertujuan untuk mengem-
  []
+
+
+Overfull \hbox (3.38095pt too wide) in paragraph at lines 19--21
+[]\TU/TimesNewRoman(0)/m/n/12 Secara umum, tugas akhir ini membahas bagaimana merancang dan mengembangkan
+ []
+
+
+Overfull \hbox (6.17009pt too wide) in paragraph at lines 21--22
+[]\TU/TimesNewRoman(0)/m/n/12 Bagaimana merancang dan mengembangkan aplikasi pembelajaran ASD berba-
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
 [2]
-Overfull \hbox (6.8829pt too wide) in paragraph at lines 67--69
-\TU/TimesNewRoman(0)/m/n/12 yang harus dilakukan dalam pelaksanaan tugas akhir, sehingga pertanyaan-pertanyaan
- []
+Underfull \vbox (badness 6300) has occurred while \output is active []
 
 
 
 [3]
-
-[4]
-Overfull \hbox (22.53932pt too wide) in paragraph at lines 106--107
+Overfull \hbox (22.53932pt too wide) in paragraph at lines 62--63
 []\TU/TimesNewRoman(0)/m/n/12 Bab IV Perancangan: Berisi penjelasan tentang perancangan solusi yang diusulkan,
  []
 
-) (./Bab II - Studi.tex
+
+
+[4]) (./Bab II - Studi.tex
 
 [5]
 
@@ -1579,12 +1580,12 @@ Package logreq Info: Writing requests to 'TA.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 34047 strings out of 475366
- 668468 string characters out of 5762339
- 2198546 words of memory out of 5000000
- 56541 multiletter control sequences out of 15000+600000
- 565797 words of font info for 95 fonts, out of 8000000 for 9000
+ 34044 strings out of 475366
+ 668509 string characters out of 5762339
+ 2198531 words of memory out of 5000000
+ 56537 multiletter control sequences out of 15000+600000
+ 565805 words of font info for 96 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 79i,14n,95p,1233b,6683s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 79i,14n,95p,1236b,6606s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on TA.pdf (66 pages).

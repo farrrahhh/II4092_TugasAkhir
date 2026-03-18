@@ -3,81 +3,45 @@
 \label{chap:pendahuluan}
 % --- Latar Belakang ---
 \section{Latar Belakang}
-Subbab ini menjelaskan dasar pemikiran, motivasi, kebutuhan, alasan, atau urgensi pemilihan masalah tugas akhir. Subbab ini berisi penjelasan ringkas tentang kondisi atau situasi yang ada saat ini terkait dengan topik yang dibahas. Tujuan utamanya adalah untuk memberikan informasi secukupnya kepada pembaca agar memahami topik yang akan dibahas. Dalam subbab ini, jelaskan hal-hal berikut ini:
-\begin{enumerate}
-\item	Kondisi atau situasi topik yang dibahas beserta permasalahannya, misalnya tentang pengelolaan informasi di fasilitas kesehatan daerah pedesaan saat ini dan masalah yang dihadapi, berdasarkan hasil survei atau wawancara dengan pihak terkait.
-\item	Urgensi atau pentingnya penyelesaian masalah tersebut, misalnya dampak negatif yang ditimbulkan jika masalah tersebut tidak diselesaikan.
-\item	Berbagai solusi yang telah diterapkan maupun solusi yang memungkinkan untuk diterapkan untuk menyelesaikan masalah tersebut, berdasarkan hasil studi literatur, wawancara dengan pihak terkait, atau kunjungan lapangan.
-\item   Kelemahan atau kekurangan dari solusi yang telah diterapkan atau yang memungkinkan untuk diterapkan tersebut, yang menjadi dasar pemikiran dalam merumuskan masalah tugas akhir.
-\end{enumerate}
-Latar belakang dapat ditulis dalam 2-3 halaman. Penulisan latar belakang masalah yang baik akan mengantarkan pembaca kepada pemahaman yang jelas tentang topik yang akan dibahas, 
-sehingga pembaca dapat mengikuti pembahasan pada subbab-subbab berikutnya dengan baik. Oleh karena itu, 
-penulis diharapkan melakukan investigasi yang mendalam untuk mengumpulkan fakta-fakta yang relevan dengan topik yang dibahas, 
-baik melalui studi literatur, wawancara dengan pihak terkait, maupun kunjungan lapangan. Hasil studi ini dijelaskan secara \emph{ringkas} di dalam subbab ini.
-Penjelasan hasil studi literatur yang komprehensif dapat dijabarkan di Bab II Studi Literatur secara sistematis.
+Algoritma dan Struktur Data (ASD) merupakan fondasi utama dalam pendidikan ilmu komputer karena konsep-konsep di dalamnya digunakan dalam berbagai aspek komputasi seperti pemrograman, optimasi, manajemen memori, hingga perancangan sistem berskala besar. Pemahaman terhadap ASD sangat penting karena menjadi dasar dalam kemampuan pemecahan masalah dan pengembangan perangkat lunak. Namun, berbagai studi menunjukkan bahwa mahasiswa sering mengalami kesulitan dalam mempelajari ASD karena sifat materinya yang abstrak, dinamis, dan multidimensional, sehingga menimbulkan beban kognitif tinggi serta memicu miskonsepsi pada tahap awal pembelajaran (Mtaho \& Mselle, 2024).
 
-Dalam menulis latar belakang, hindari penulisan yang bersifat terlalu umum atau terlalu luas cakupannya sehingga sulit untuk dihubungkan dengan topik yang dibahas dalam tugas akhir,
-seperti:
-\begin{enumerate}
-    \item "Pentingnya teknologi informasi dalam kehidupan manusia."
-    \item "Perkembangan pesat teknologi \emph{artificial intelligence} di era digital."
-    \item "Tantangan dalam pengelolaan data besar (\emph{big data}) di berbagai sektor industri."
-    \item "Peran teknologi informasi dalam meningkatkan kualitas layanan kesehatan."
-\end{enumerate}
-Penulisan yang terlalu umum atau luas cakupannya akan menyulitkan penulis dalam merumuskan masalah, tujuan, metodologi, dan evaluasi tugas akhir.
+Dalam praktiknya, pembelajaran ASD umumnya dilakukan melalui modul, \textit{slide}, serta penjelasan langsung dari dosen atau asisten pengajar. Meskipun metode ini mampu menyampaikan konsep dasar, pendekatan tersebut masih belum mampu memberikan penjelasan yang adaptif, variasi contoh yang cukup, maupun umpan balik yang cepat ketika mahasiswa mengalami kesulitan. Akibatnya, mahasiswa sering mengalami kesalahan pemahaman pada konsep dasar seperti \textit{pointer} atau struktur data linear, yang kemudian berdampak pada kesulitan memahami materi lanjutan seperti \textit{tree}, \textit{graph}, dan analisis kompleksitas.
 
-Jika ada referensi yang digunakan dalam penulisan latar belakang, cantumkan referensi tersebut dengan benar menggunakan \texttt{biblatex} sesuai dengan contoh penulisan kutipan dan daftar pustaka yang telah disediakan dalam template ini.
-Sebagai contoh, pada paragraf berikut ini terdapat kutipan dari dua referensi yang berbeda \autocite{laudon2020, pressman2019}. 
-Ada dua format penulisan sitasi yang dapat digunakan, yaitu format naratif dan format parentetik.
-Contoh penulisan kutipan dengan format naratif adalah sebagai berikut:
-\begin{displayquote}
-Menurut \textcite{laudon2020}, sistem informasi adalah kombinasi dari teknologi informasi dan aktivitas orang yang menggunakan teknologi tersebut untuk mendukung operasi dan manajemen organisasi.
-\end{displayquote}
-Contoh penulisan kutipan dengan format parentetik adalah sebagai berikut:
-\begin{displayquote}
-    Sistem informasi merupakan kombinasi dari teknologi informasi dan aktivitas orang yang menggunakan teknologi tersebut untuk mendukung operasi dan manajemen organisasi \autocite{laudon2020}.
-\end{displayquote}
+Seiring berkembangnya teknologi kecerdasan buatan, \textit{Large Language Model} (LLM) mulai dimanfaatkan dalam bidang pendidikan karena kemampuannya menghasilkan penjelasan konsep, contoh implementasi, serta ilustrasi langkah-langkah algoritma secara dinamis. Kemampuan ini membuka peluang bagi LLM untuk berperan sebagai teman belajar digital yang dapat membantu mahasiswa memahami materi secara mandiri, memberikan penjelasan tambahan saat dibutuhkan, serta menciptakan pengalaman belajar yang lebih interaktif dan fleksibel.
+
+Namun, penggunaan LLM secara langsung melalui \textit{chatbot} umum seperti ChatGPT, Gemini, atau DeepSeek masih memiliki keterbatasan. Interaksi yang tidak terarah membuat penjelasan yang dihasilkan tidak selalu mengikuti urutan materi yang diajarkan dalam kelas. Selain itu, LLM juga berpotensi menghasilkan informasi yang tidak akurat akibat fenomena \textit{hallucination}, serta memberikan jawaban yang tidak konsisten dengan kurikulum pembelajaran (Raihan et al., 2024). Hal ini menyebabkan LLM belum sepenuhnya efektif jika digunakan secara langsung sebagai sarana belajar.
+
+Oleh karena itu, diperlukan pendekatan yang memungkinkan LLM dimanfaatkan secara lebih terstruktur sebagai teman belajar yang mendampingi mahasiswa dalam memahami materi. Pendekatan \textit{guided learning} menyediakan alur pembelajaran yang sistematis, mulai dari pemahaman konsep, contoh implementasi, latihan, hingga ringkasan. Selain itu, pendekatan \textit{retrieval-based guidance} memungkinkan sistem mengambil konteks dari sumber resmi seperti materi kuliah, sehingga penjelasan yang dihasilkan tetap relevan, akurat, dan sesuai dengan kurikulum.
+
+Dengan mempertimbangkan kebutuhan tersebut, penelitian ini bertujuan untuk mengembangkan aplikasi pembelajaran ASD yang memanfaatkan LLM sebagai teman belajar digital bagi mahasiswa. Aplikasi ini dirancang untuk membantu mahasiswa memahami konsep secara bertahap, memberikan contoh dan latihan yang relevan, serta mendukung proses belajar mandiri yang lebih terstruktur, interaktif, dan konsisten dengan kurikulum.
 % --- Rumusan Masalah ---
 \section{Rumusan Masalah}
-Rumusan Masalah berisi masalah utama yang dibahas dalam tugas akhir. Rumusan masalah yang baik memiliki struktur sebagai berikut:
+Secara umum, tugas akhir ini membahas bagaimana merancang dan mengembangkan sebuah aplikasi pembelajaran berbasis web yang memanfaatkan LLM sebagai teman belajar untuk menyajikan materi ASD secara terarah dan sesuai dengan kurikulum. Berdasarkan uraian tersebut, rumusan masalah dalam tugas akhir ini adalah sebagai berikut:
 \begin{enumerate}
-\item	Pokok persoalan dari kondisi atau situasi yang ada saat ini. Dengan kata lain, jelaskan kelemahan atau kekurangan dari kondisi, situasi, atau solusi yang dijelaskan pada latar belakang. Ini merupakan pokok rumusan masalah.
-\item	Elaborasi lebih lanjut urgensi penyelesaian masalah tersebut (mengapa penting untuk diselesaikan dan akibat yang dapat terjadi jika tidak diselesaikan).
-\item	Usulan singkat terkait dengan solusi yang ditawarkan untuk menyelesaikan persoalan.
-Penting untuk diperhatikan bahwa persoalan yang dideskripsikan pada subbab ini akan dipertanggungjawabkan di bab Evaluasi (apakah terselesaikan atau tidak).
+    \item Bagaimana merancang dan mengembangkan aplikasi pembelajaran ASD berbasis web dengan alur \textit{guided learning} yang terstruktur dan mudah diikuti oleh mahasiswa, sehingga dapat membantu mengurangi miskonsepsi pada konsep-konsep dasar ASD?
+    
+    \item Bagaimana memanfaatkan LLM dalam aplikasi sebagai teman belajar digital untuk menghasilkan penjelasan materi, contoh implementasi, dan latihan secara terkontrol agar tetap relevan, akurat, dan konsisten dengan kurikulum?
 \end{enumerate}
-Hindari penulisan rumusan masalah yang terlalu umum atau terlalu luas cakupannya sehingga sulit untuk diselesaikan dalam jangka waktu pelaksanaan tugas akhir, 
-seperti:
-\begin{enumerate}
-    \item "Bagaimana cara meningkatkan kualitas layanan kesehatan di Indonesia?"
-    \item "Bagaimana cara mengoptimalkan penggunaan energi di perkotaan?"
-    \item "Bagaimana cara mengurangi kemacetan lalu lintas di kota besar?"
-    \item "Bagaimana cara membangun sistem irigasi sawah menggunakan \emph{AI}?"
-\end{enumerate}
-Rumusan masalah yang baik dan spesifik akan memudahkan penulis dalam menentukan tujuan, metodologi, dan evaluasi tugas akhir.
-
-Selain itu, hindari menuliskan pertanyaan yang merupakan sebuah keniscayaan yang harus dijawab atau dikerjakan 
-dalam pelaksanaan tugas akhir, seperti:
-\begin{enumerate}
-    \item "Bagaimana cara melakukan analisis kebutuhan sistem informasi rumah sakit?"
-    \item "Bagaimana cara merancang basis data untuk aplikasi X?"
-    \item "Bagaimana cara mengimplementasikan \textit{large language model} untuk deteksi penyakit Y?"
-    \item "Bagaimana cara menguji sistem penyiraman tanaman berbasis IoT yang akan dibuat?"
-\end{enumerate}
-Kegiatan analisis, perancangan, implementasi, dan pengujian merupakan tahapan yang harus dilakukan dalam pelaksanaan tugas akhir,
-sehingga pertanyaan-pertanyaan tersebut tidak perlu dimasukkan ke dalam rumusan masalah.
-
 % --- Tujuan ---
 \section{Tujuan}
-Tuliskan \textbf{tujuan utama} dan/atau tujuan detail yang akan dicapai dalam pelaksanaan tugas akhir. 
-Fokuskan isi subbab ini pada hasil akhir yang ingin diperoleh setelah tugas akhir diselesaikan 
-terkait dengan penyelesaian persoalan pada rumusan masalah. 
-Penting untuk diperhatikan bahwa tujuan yang dideskripsikan pada subbab ini akan dipertanggungjawabkan 
-di akhir pelaksanaan tugas akhir. Oleh karena itu, tuliskan juga \emph{kriteria keberhasilan} tugas akhir ini.
+Berdasarkan rumusan masalah yang telah ditetapkan, tujuan penelitian ini adalah sebagai berikut:
 
+\begin{enumerate}
+    \item Mengembangkan aplikasi pembelajaran ASD berbasis web dengan alur pembelajaran terstruktur menggunakan pendekatan \textit{guided learning} untuk membantu mahasiswa memahami konsep secara bertahap dan mengurangi miskonsepsi.
+    
+    \item Mengimplementasikan pemanfaatan LLM dalam aplikasi sebagai teman belajar digital yang mampu menghasilkan penjelasan materi, contoh implementasi, dan latihan secara relevan, akurat, serta konsisten dengan kurikulum.
+\end{enumerate}
 % --- Batasan Masalah ---
 \section{Batasan Masalah}
-Tuliskan batasan-batasan yang diambil dalam pelaksanaan tugas akhir. Batasan ini dapat dihindari (bersifat opsional, tidak perlu ada) jika topik atau judul tugas akhir dibuat cukup spesifik.
+Untuk memastikan ruang lingkup penelitian tetap terfokus dan sesuai dengan tujuan yang ingin dicapai, Tugas Akhir ini memiliki batasan-batasan sebagai berikut:
+
+\begin{enumerate}
+    \item Ruang lingkup materi yang digunakan dalam aplikasi dibatasi pada topik-topik dasar ASD seperti \textit{array}, \textit{linked list}, \textit{stack}, \textit{queue}, \textit{tree}, \textit{graph}, \textit{searching}, dan \textit{sorting} sesuai dengan kurikulum yang diberikan dosen.
+    \item \textit{Large Language Model} (LLM) yang digunakan bersifat model siap pakai (\textit{pre-trained}) dan tidak mencakup proses pelatihan ulang (\textit{fine-tuning}) berskala besar. Penelitian ini hanya memanfaatkan teknik \textit{prompt engineering} dan \textit{retrieval-based guidance} untuk mengarahkan keluaran model.
+    \item Interaksi pengguna dibatasi melalui mekanisme \textit{guided learning}, sehingga pengguna tidak diberikan akses untuk melakukan percakapan bebas (\textit{open-ended chat}) dengan LLM. Seluruh konten dihasilkan dalam format yang telah ditentukan, seperti penjelasan konsep, contoh kode, latihan soal, dan ringkasan.
+    \item Sumber referensi yang digunakan LLM dibatasi pada dokumen yang disediakan dosen atau materi kuliah yang relevan. Sistem tidak membahas topik yang berada di luar cakupan kurikulum ASD.
+    \item Evaluasi penelitian difokuskan pada kualitas konten dan kejelasan penyajian materi, serta aspek kegunaan aplikasi oleh mahasiswa, tanpa mencakup evaluasi performa teknis LLM secara mendalam.
+\end{enumerate}
 
 % --- Metodologi Pengerjaan TA ---
 \section{Metodologi}
