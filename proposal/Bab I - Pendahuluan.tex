@@ -1,0 +1,86 @@
+% ==========================================
+% BAB I PENDAHULUAN
+% ==========================================
+
+\chapter{PENDAHULUAN}
+\label{chap:pendahuluan}
+
+\section{Latar Belakang}
+
+Algoritma dan Struktur Data (ASD) merupakan fondasi utama dalam pendidikan ilmu komputer karena konsep-konsep di dalamnya digunakan dalam berbagai aspek komputasi seperti pemrograman, optimasi, manajemen memori, hingga perancangan sistem berskala besar. Namun, studi literatur menunjukkan bahwa mahasiswa sering mengalami kesulitan dalam mempelajari ASD karena sifat materinya yang bersifat abstrak, multidimensional, serta dinamis, sehingga menimbulkan beban kognitif tinggi dan memicu berbagai miskonsepsi pada tahap awal pembelajaran \cite{Mtaho2024}. Pembelajaran yang umumnya bergantung pada modul, \textit{slide}, dan penjelasan langsung di kelas juga belum mampu menyediakan variasi contoh, penjelasan bertahap, maupun umpan balik cepat yang dibutuhkan mahasiswa dalam memahami konsep algoritmik yang kompleks. Kondisi ini membuat mahasiswa rentan mengalami kesalahan konseptual pada materi dasar seperti \textit{pointer} atau struktur data linear, yang kemudian berdampak pada pemahaman materi lanjutan seperti \textit{tree}, \textit{graph}, dan analisis kompleksitas.
+
+Di tengah kebutuhan tersebut, teknologi \textit{Large Language Model} (LLM) mulai dimanfaatkan sebagai alat bantu pembelajaran karena mampu menjelaskan konsep dan memberikan contoh secara dinamis. Namun, penggunaan LLM secara langsung melalui \textit{chatbot} umum seperti ChatGPT, Gemini, ataupun DeepSeek memiliki keterbatasan, seperti interaksi yang terlalu bebas, ketidakkonsistenan dengan kurikulum, serta potensi menghasilkan jawaban yang tidak akurat akibat fenomena \textit{hallucination} \cite{Raihan2024}. Selain itu, LLM tidak secara otomatis mengikuti urutan materi yang ditetapkan dosen, sehingga kurang mendukung pembelajaran yang terstruktur.
+
+Untuk mengatasi keterbatasan tersebut, diperlukan pendekatan yang lebih terarah agar LLM tidak digunakan sebagai \textit{chatbot} bebas, melainkan sebagai bagian dari alur belajar yang memiliki struktur jelas. Pendekatan \textit{guided learning} menyediakan urutan pembelajaran mulai dari pemahaman konsep, melihat contoh, mengerjakan latihan, hingga membaca rangkuman, sehingga dapat membantu mahasiswa memahami materi secara bertahap dan terarah.
+
+Dengan demikian, diperlukan pengembangan aplikasi pembelajaran Algoritma dan Struktur Data yang memanfaatkan LLM secara terarah dalam kerangka \textit{guided learning}, sehingga mampu membantu mahasiswa memahami konsep ASD secara lebih konsisten, terstruktur, dan sesuai dengan kurikulum.
+
+\section{Rumusan Masalah}
+
+Secara umum, Tugas Akhir ini membahas bagaimana merancang dan mengembangkan aplikasi pembelajaran yang memanfaatkan LLM untuk menyajikan materi ASD secara terarah dan sesuai dengan kurikulum. Berdasarkan uraian tersebut, rumusan masalah dalam Tugas Akhir ini adalah sebagai berikut:
+
+\begin{enumerate}
+    \item Bagaimana merancang alur pembelajaran ASD yang terstruktur dan mudah diikuti oleh mahasiswa, sehingga dapat membantu mengurangi miskonsepsi pada konsep-konsep dasar ASD?
+    \item Bagaimana memanfaatkan LLM untuk menghasilkan penjelasan materi, contoh, dan latihan secara terkontrol agar tetap relevan, akurat, dan konsisten dengan materi pembelajaran yang ditetapkan dosen?
+\end{enumerate}
+
+\section{Tujuan}
+
+Berdasarkan rumusan masalah yang telah ditetapkan, tujuan penelitian ini adalah sebagai berikut:
+
+\begin{enumerate}
+    \item Merancang alur pembelajaran ASD yang terstruktur, sistematis, dan mudah diikuti oleh mahasiswa, sehingga dapat meminimalkan miskonsepsi dan mendukung pemahaman konsep-konsep dasar secara lebih efektif.
+    \item Mengembangkan pemanfaatan LLM secara terkontrol untuk menghasilkan penjelasan materi, contoh, dan latihan yang relevan, akurat, serta konsisten dengan kurikulum dan materi pembelajaran yang ditetapkan dosen.
+\end{enumerate}
+
+\section{Batasan Masalah}
+
+Untuk memastikan ruang lingkup penelitian tetap terfokus dan sesuai dengan tujuan yang ingin dicapai, Tugas Akhir ini memiliki batasan-batasan sebagai berikut:
+
+\begin{enumerate}
+    \item Ruang lingkup materi yang digunakan dalam aplikasi dibatasi pada topik-topik dasar ASD seperti \textit{array}, \textit{linked list}, \textit{stack}, \textit{queue}, \textit{tree}, \textit{graph}, \textit{searching}, dan \textit{sorting} sesuai dengan kurikulum yang diberikan dosen.
+    \item \textit{Large Language Model} (LLM) yang digunakan bersifat model siap pakai (\textit{pre-trained}) dan tidak mencakup proses pelatihan ulang (\textit{fine-tuning}) berskala besar. Penelitian ini hanya memanfaatkan teknik \textit{prompt engineering} untuk mengarahkan keluaran model.
+    \item Interaksi pengguna dibatasi melalui mekanisme \textit{guided learning}, sehingga pengguna tidak diberikan akses untuk melakukan percakapan bebas (\textit{open-ended chat}) dengan LLM. Seluruh konten dihasilkan dalam format yang telah ditentukan, seperti penjelasan konsep, contoh kode, latihan soal, dan ringkasan.
+    \item Sumber referensi yang digunakan LLM dibatasi pada dokumen yang disediakan dosen atau materi kuliah yang relevan. Sistem tidak membahas topik yang berada di luar cakupan kurikulum ASD.
+    \item Evaluasi penelitian difokuskan pada kualitas konten dan kejelasan penyajian materi, serta aspek kegunaan aplikasi oleh mahasiswa, tanpa mencakup evaluasi performa teknis LLM secara mendalam.
+\end{enumerate}
+
+\section{Metodologi}
+
+Metodologi yang digunakan dalam Tugas Akhir ini adalah sebagai berikut:
+
+\begin{enumerate}
+    \item Studi literatur dilakukan untuk memahami penelitian terkait kesulitan mahasiswa dalam mempelajari Algoritma dan Struktur Data, pendekatan \textit{guided learning}, serta pemanfaatan \textit{Large Language Model} dalam proses pembelajaran. Literatur juga mencakup kajian mengenai risiko penggunaan \textit{chatbot} LLM yang bersifat \textit{open-ended}. Temuan literatur ini menjadi dasar dalam merumuskan kebutuhan pengguna, dan strategi integrasi LLM pada aplikasi pembelajaran ASD.
+
+    \item Perancangan solusi dilakukan dalam bentuk aplikasi pembelajaran ASD berbasis LLM dengan pendekatan \textit{guided learning}. Perancangan meliputi:
+    \begin{enumerate}
+        \item penyusunan alur pembelajaran terstruktur yang terdiri dari tahapan penjelasan konsep, contoh implementasi, latihan soal, dan ringkasan;
+        \item perancangan antarmuka terarah tanpa percakapan bebas;
+        \item perumusan \textit{prompt template} untuk mengatur format keluaran LLM.
+    \end{enumerate}
+
+    \item Implementasi dan pengujian meliputi pembangunan aplikasi \textit{guided learning} dan integrasi API LLM. Pengujian mencakup:
+    \begin{enumerate}
+        \item pengujian fungsionalitas aplikasi,
+        \item evaluasi kualitas konten berdasarkan akurasi, relevansi, dan kesesuaian dengan materi kuliah, dan
+        \item evaluasi pengguna untuk menilai kegunaan aplikasi dan kemudahan mengikuti alur belajar.
+    \end{enumerate}
+
+    \item Analisis hasil dan kesimpulan dilakukan untuk menilai efektivitas \textit{guided learning} dalam mengarahkan keluaran LLM. Analisis mencakup aspek kualitas konten, konsistensi alur belajar, serta persepsi pengguna. Hasil analisis digunakan untuk menyimpulkan pencapaian tujuan penelitian dan memberikan rekomendasi pengembangan lanjutan.
+\end{enumerate}
+
+\section{Sistematika Pembahasan}
+
+Laporan Tugas Akhir ini disusun secara sistematis agar memudahkan pembaca dalam memahami alur penelitian, perancangan, pengembangan, serta evaluasi aplikasi pembelajaran yang dibangun. Adapun sistematika pembahasan dalam laporan ini adalah sebagai berikut.
+
+\textbf{Bab I Pendahuluan} berisi latar belakang, rumusan masalah, tujuan penelitian, batasan masalah, metodologi yang digunakan, serta sistematika pembahasan laporan secara keseluruhan.
+
+\textbf{Bab II Studi Literatur} membahas landasan teoritis yang digunakan dalam penelitian ini, meliputi konsep pembelajaran Algoritma dan Struktur Data, karakteristik kesulitan mahasiswa dalam memahami ASD, prinsip kerja \textit{Large Language Model} (LLM), dan evaluasi. Bab ini juga menguraikan penelitian terdahulu yang relevan.
+
+\textbf{Bab III Analisis Masalah} membahas kondisi pembelajaran Algoritma dan Struktur Data (ASD) saat ini, termasuk fungsi umum sistem pembelajaran yang digunakan mahasiswa serta berbagai kendala yang masih ditemui. Bab ini juga memuat analisis kebutuhan melalui identifikasi masalah pengguna, perumusan kebutuhan fungsional dan nonfungsional sistem, serta analisis alternatif solusi yang meliputi pemilihan model LLM dan mekanisme \textit{guided learning} yang paling sesuai untuk mendukung pengembangan aplikasi.
+
+\textbf{Bab IV Desain Konsep Solusi} membahas perancangan sistem pembelajaran ASD berbasis LLM, meliputi analisis kebutuhan, evaluasi alternatif teknologi, serta pemilihan model LLM dan pendekatan \textit{guided learning}. Bab ini juga menyajikan rancangan arsitektur sistem, alur kerja pembelajaran, serta visualisasi antarmuka aplikasi yang akan diimplementasikan.
+
+\textbf{Bab V Rencana Selanjutnya} berisi langkah pengembangan berikutnya yang mencakup rencana implementasi, desain pengujian, serta analisis risiko dan mitigasi untuk memastikan proses pengembangan dapat berjalan efektif hingga Tugas Akhir selesai.
+
+

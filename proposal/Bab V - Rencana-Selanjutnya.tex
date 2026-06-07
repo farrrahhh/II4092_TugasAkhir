@@ -1,0 +1,268 @@
+% ==========================================
+% BAB V RENCANA SELANJUTNYA
+% ==========================================
+\chapter{RENCANA SELANJUTNYA}
+\label{chap:rencana-selanjutnya}
+\section{Rencana Implementasi}
+
+Rencana implementasi yang akan dibahas pada Bab ini berisikan alat dan bahan, 
+\textit{timeline}, dan lingkungan dan konfigurasi. Berikut merupakan detail dari 
+setiap subbab yang akan dibahas.
+
+\subsection{Alat dan Bahan}
+
+Berikut merupakan pembahasan dari perencanaan alat dan bahan yang digunakan
+pada Tabel V.1 berikut.
+
+\begin{longtable}{|p{1cm}|p{3.5cm}|p{8cm}|}
+\caption{Daftar Alat dan Bahan Implementasi Sistem}
+\label{tab:alatbahan} \\
+\hline
+\textbf{No} & \textbf{Layanan} & \textbf{Alat dan Bahan} \\
+\hline
+\endfirsthead
+
+\hline
+\textbf{No} & \textbf{Layanan} & \textbf{Alat dan Bahan} \\
+\hline
+\endhead
+
+% Row 1 -----------------------------------------------------------------
+1 &
+\textit{Frontend} &
+1. Framework: Next.js \newline
+2. Bahasa: TypeScript \newline
+3. Styling: Tailwind CSS \newline
+4. UI Library (opsional): ShadCN / Chakra UI
+\\
+\hline
+
+% Row 2 -----------------------------------------------------------------
+2 &
+\textit{Backend \& LLM Service} &
+1. Node.js / Express untuk API \newline
+2. OpenAI API (GPT-4o) untuk generasi konten \newline
+3. LangChain untuk \textit{orchestration} dan \textit{prompt flow}
+\\
+\hline
+
+% Row 3 -----------------------------------------------------------------
+3 &
+\textit{Database \& Storage} &
+1. PostgreSQL untuk data pengguna dan progres belajar \newline
+2. Supabase / Firebase Storage untuk penyimpanan dokumen materi
+\\
+\hline
+
+% Row 4 -----------------------------------------------------------------
+4 &
+\textit{Infrastructure \& Deployment} &
+1. Platform Hosting: Vercel / Netlify (Frontend) \newline
+2. Railway (Backend) \newline
+3. GitHub untuk \textit{version control}
+\\
+\hline
+
+% Row 5 -----------------------------------------------------------------
+5 &
+\textit{Documentation \& IDE} &
+1. Visual Studio Code \newline
+2. \LaTeX{} (VS Code TexTools) \newline
+3. Postman untuk uji API
+\\
+\hline
+
+% Row 6 -----------------------------------------------------------------
+6 &
+\textit{Testing Tools} &
+1. Black Box Testing Sheet untuk pengujian fungsionalitas sistem \newline
+2. Google Form untuk \textit{usability testing} dan pengumpulan umpan balik
+\\
+\hline
+
+\end{longtable}
+
+\subsection{\textit{Timeline}}
+
+\textit{Timeline} implementasi disusun dengan membagi proses pengembangan 
+ke dalam beberapa fase yang terstruktur. Berikut adalah \textit{timeline} 
+implementasi aplikasi pembelajaran ASD berbasis LLM.
+
+\textbf{1. Fase 1: Perancangan (Oktober 2025 – Desember 2025)}
+\begin{enumerate}[label=\alph*.]
+    \item Identifikasi dan analisis permasalahan pembelajaran ASD
+    \item Analisis kebutuhan pengguna serta penyusunan kebutuhan fungsional dan nonfungsional
+    \item Studi literatur terkait LLM, \textit{guided learning}, dan pembelajaran ASD
+    \item Analisis alternatif solusi dan pemilihan teknologi
+    \item Perancangan desain konsep solusi, alur \textit{guided learning}, dan arsitektur sistem
+\end{enumerate}
+
+\textbf{2. Fase 2: Initial Setup dan Implementasi Fitur Dasar (Januari 2026 – Februari 2026)}
+\begin{enumerate}[label=\alph*.]
+    \item \textit{Setup} lingkungan pengembangan, repository, dan struktur proyek
+    \item Perancangan arsitektur sistem secara detail
+    \item Perancangan \textit{database} sistem
+    \item Implementasi \textit{database} dan integrasi awal \textit{backend}
+    \item Implementasi modul \textit{backend} dasar (autentikasi, materi, progres belajar)
+    \item Implementasi UI/UX awal untuk halaman beranda dan pemilihan topik
+    \item Integrasi awal API LLM untuk menghasilkan konten dasar
+\end{enumerate}
+
+\textbf{3. Fase 3: Implementasi \textit{Guided Learning} (Maret 2026 – April 2026)}
+\begin{enumerate}[label=\alph*.]
+    \item Penyusunan \textit{structured prompt flow} (konsep → contoh → latihan → ringkasan)
+    \item Implementasi halaman materi berbasis \textit{guided learning}
+    \item Integrasi LLM untuk menghasilkan konten sesuai kurikulum
+    \item \textit{Service integration testing} untuk memastikan stabilitas alur sistem
+\end{enumerate}
+
+\textbf{4. Fase 4: Pengujian dan Evaluasi (Mei 2026 – Juni 2026)}
+\begin{enumerate}[label=\alph*.]
+    \item \textit{Black Box Testing} untuk seluruh fitur aplikasi
+    \item \textit{Task-based usability testing} menggunakan Google Form
+    \item Evaluasi pengalaman pengguna dan konsistensi materi
+    \item Penyempurnaan fitur berdasarkan hasil evaluasi
+    \item Finalisasi implementasi sistem dan dokumentasi hasil pengujian
+\end{enumerate}
+
+\subsection{Lingkungan dan Konfigurasi}
+
+\begin{enumerate}
+    \item Lingkungan pengembangan (\textit{development environment}) dilakukan 
+    pada perangkat lokal menggunakan macOS dengan konfigurasi pendukung seperti 
+    Node.js, Python, dan Docker untuk menjalankan layanan \textit{backend}, 
+    \textit{frontend}. Seluruh proses dilakukan secara lokal 
+    sebelum dipindahkan ke tahap integrasi.
+
+    \item Lingkungan uji coba (\textit{testing environment}) dijalankan pada 
+    \textit{staging server} menggunakan layanan seperti Vercel (frontend) dan 
+    Railway (backend). Lingkungan ini digunakan untuk menguji alur 
+    \textit{guided learning} dan integrasi LLM sebelum 
+    aplikasi dinilai siap untuk demonstrasi dan evaluasi pengguna.
+\end{enumerate}
+
+\section{Desain Pengujian dan Evaluasi}
+
+Pengujian sistem dirancang untuk memastikan bahwa seluruh fungsionalitas aplikasi
+dan kualitas alur pembelajaran berjalan sesuai tujuan yang telah ditetapkan.
+Berikut adalah desain pengujian dan evaluasi yang akan dilakukan:
+
+\begin{longtable}{|p{3.2cm}|p{2cm}|p{3.5cm}|p{3.5cm}|}
+\caption{Desain Pengujian dan Evaluasi Sistem}
+\label{tab:pengujian-evaluasi}\\
+\hline
+\multicolumn{4}{|c|}{\textbf{Desain Pengujian dan Evaluasi Sistem}} \\
+\hline
+\textbf{Jenis Pengujian} & \textbf{Metode} & \textbf{Tujuan} & \textbf{Indikator Keberhasilan} \\
+\hline
+\endfirsthead
+
+\multicolumn{4}{c}{\small (lanjutan dari halaman sebelumnya)}\\[0.3em]
+\hline
+\textbf{Jenis Pengujian} & \textbf{Metode} & \textbf{Tujuan} & \textbf{Indikator Keberhasilan} \\
+\hline
+\endhead
+
+\hline
+\multicolumn{4}{r}{\textit{Bersambung ke halaman berikutnya}}\\
+\endfoot
+
+\hline
+\endlastfoot
+\caption{Desain Pengujian dan Evaluasi Sistem}
+\label{tab:pengujian-evaluasi}\\
+
+\hline
+\textbf{Jenis Pengujian} & \textbf{Metode} & \textbf{Tujuan} & \textbf{Indikator Keberhasilan} \\
+\hline
+\endfirsthead
+
+\multicolumn{4}{c}{\small (lanjutan dari halaman sebelumnya)}\\[0.3em]
+\hline
+\textbf{Jenis Pengujian} & \textbf{Metode} & \textbf{Tujuan} & \textbf{Indikator Keberhasilan} \\
+\hline
+\endhead
+
+\hline
+\multicolumn{4}{r}{\textit{Bersambung ke halaman berikutnya}}\\
+\endfoot
+
+\hline
+\endlastfoot
+
+\textit{Black Box Testing} &
+Verifikasi fungsional &
+Memastikan seluruh fitur berjalan sesuai spesifikasi &
+Semua skenario uji pada \textit{black box testing} lulus tanpa error fungsional \\
+\hline
+
+\textit{Availability Test} &
+Simulasi akses berulang &
+Memastikan aplikasi dapat digunakan tanpa gangguan selama sesi belajar &
+Aplikasi stabil, tidak terjadi \textit{crash} atau \textit{downtime} selama pengujian \\
+\hline
+
+\textit{Security Validation} &
+Pemeriksaan autentikasi dan validasi \textit{input} &
+Memastikan hanya pengguna sah yang dapat mengakses sistem serta \textit{input} tidak valid ditolak &
+Proses \textit{login} tidak dapat dilewati, percobaan kredensial salah dan \textit{input} tidak valid ditolak oleh sistem \\
+\hline
+
+\textit{Compatibility Test} &
+Uji lintas perangkat dan \textit{browser} &
+Memastikan aplikasi berjalan dengan baik di macOS, Windows, perangkat \textit{mobile}, serta \textit{browser} modern &
+Halaman dan fitur utama tampil responsif dan berfungsi di Chrome, Firefox, Safari, serta \textit{browser} modern lain yang diuji \\
+\hline
+
+Pengujian Alur Aplikasi &
+\textit{Task-based usability test} &
+Memastikan alur materi dan tahapan \textit{guided learning} mudah diikuti pengguna &
+Mayoritas peserta dapat menyelesaikan tugas tanpa kebingungan signifikan, dengan waktu penyelesaian tugas berada dalam rentang yang stabil \\
+\hline
+
+\end{longtable}
+
+
+
+\section{Analisis Risiko dan Mitigasi}
+
+Analisis risiko dan mitigasi disusun untuk mengidentifikasi potensi hambatan selama pengembangan serta menentukan strategi penanganan yang tepat agar proyek tetap berjalan sesuai rencana. Berikut adalah analisis risiko dan mitigasi:
+
+\begin{longtable}{|p{3.5cm}|p{2cm}|p{1.5cm}|p{5.5cm}|}
+\caption{Analisis Risiko dan Mitigasi Sistem Pembelajaran ASD Berbasis LLM} \\
+\hline
+\textbf{Risiko} & \textbf{Probabilitas} & \textbf{Dampak} & \textbf{Mitigasi} \\
+\hline
+\endfirsthead
+
+\multicolumn{4}{c}{\textit{(Lanjutan dari halaman sebelumnya)}} \\
+\hline
+\textbf{Risiko} & \textbf{Probabilitas} & \textbf{Dampak} & \textbf{Mitigasi} \\
+\hline
+\endhead
+
+\hline \multicolumn{4}{r}{\textit{Bersambung ke halaman berikutnya}} \\
+\endfoot
+
+\hline
+\endlastfoot
+
+1. LLM menghasilkan informasi tidak akurat (hallucination) 
+& Sedang 
+& Tinggi 
+& Membatasi ruang lingkup \textit{prompt} menggunakan \textit{prompt template} yang spesifik, dan melakukan \textit{expert review} untuk memastikan akurasi konsep. \\
+\hline
+
+2. Keluaran LLM tidak sesuai kurikulum / tahap \textit{guided learning}
+& Sedang
+& Tinggi
+& Menggunakan \textit{prompt template} spesifik, menerapkan \textit{guardrails}, dan memastikan seluruh konteks berasal dari \textit{Knowledge Base} ASD. \\
+\hline
+
+3. Gangguan kerja karena beban magang sehingga \textit{deadline} TA mundur
+& Tinggi
+& Tinggi
+& Menyusun jadwal kerja mingguan, membatasi \textit{scope} implementasi, menetapkan prioritas fitur minimal, dan melakukan \textit{progress} harian meski kecil. \\
+\hline
+
+\end{longtable}

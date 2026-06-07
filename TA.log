@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.11.5)  18 MAR 2026 23:59
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.11.5)  8 JUN 2026 05:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/user/Documents/18222096-FarahAulia-TA/TA
-(/Users/user/Documents/18222096-FarahAulia-TA/TA.tex
+**/Users/user/Downloads/II4092_TugasAkhir/TA
+(/Users/user/Downloads/II4092_TugasAkhir/TA.tex
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/base/book.cls
@@ -848,7 +848,7 @@ Package biblatex Info: ... and expl3
  (/usr/local/texlive/2025basic/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty
 Package: blx-case-expl3 2025/07/10 v3.21 expl3 case changing code for biblatex
 )))
-Package hyperref Info: Option `colorlinks' set `true' on input line 196.
+Package hyperref Info: Option `colorlinks' set `true' on input line 205.
 \c@myequations=\count489
 \cftbeforemyequationsskip=\skip137
 \cftmyequationsindent=\skip138
@@ -865,35 +865,35 @@ Package csquotes Info: Adjusting default style.
 
 
 Package csquotes Warning: No style for language 'indonesian'.
-(csquotes)                Using fallback style on input line 376.
+(csquotes)                Using fallback style on input line 374.
 
 Package csquotes Info: Redefining alias 'default' -> 'fallback'.
 (./TA.aux (/usr/local/texlive/2025basic/texmf-dist/tex/generic/babel/locale/en/babel-english.tex)
 Package babel Info: Importing data for english
-(babel)             from babel-en.ini. Reported on input line 107.
+(babel)             from babel-en.ini. Reported on input line 67.
 )
 \openout1 = `TA.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 376.
-LaTeX Font Info:    ... okay on input line 376.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 376.
-LaTeX Font Info:    ... okay on input line 376.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 376.
-LaTeX Font Info:    ... okay on input line 376.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 376.
-LaTeX Font Info:    ... okay on input line 376.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 376.
-LaTeX Font Info:    ... okay on input line 376.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 376.
-LaTeX Font Info:    ... okay on input line 376.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 376.
-LaTeX Font Info:    ... okay on input line 376.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 376.
-LaTeX Font Info:    ... okay on input line 376.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 376.
-LaTeX Font Info:    ... okay on input line 376.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 376.
-LaTeX Font Info:    ... okay on input line 376.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 374.
+LaTeX Font Info:    ... okay on input line 374.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 374.
+LaTeX Font Info:    ... okay on input line 374.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 374.
+LaTeX Font Info:    ... okay on input line 374.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 374.
+LaTeX Font Info:    ... okay on input line 374.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 374.
+LaTeX Font Info:    ... okay on input line 374.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 374.
+LaTeX Font Info:    ... okay on input line 374.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 374.
+LaTeX Font Info:    ... okay on input line 374.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 374.
+LaTeX Font Info:    ... okay on input line 374.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 374.
+LaTeX Font Info:    ... okay on input line 374.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 374.
+LaTeX Font Info:    ... okay on input line 374.
 
 Package fontspec Info: 
 (fontspec)             Adjusting the maths setup (use [no-math] to avoid
@@ -901,56 +901,56 @@ Package fontspec Info:
 
 \symlegacymaths=\mathgroup6
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 376.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 376.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 376.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 376.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 376.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 376.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 376.
-LaTeX Font Info:    Redeclaring math accent \check on input line 376.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 376.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 376.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 376.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 376.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 376.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 376.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 376.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 376.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 376.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 376.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 376.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 376.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 376.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 376.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 376.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 376.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 374.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 374.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 374.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 374.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 374.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 374.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 374.
+LaTeX Font Info:    Redeclaring math accent \check on input line 374.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 374.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 374.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 374.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 374.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 374.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 374.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 374.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 374.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 374.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 374.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 374.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 374.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 374.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 374.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 374.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 374.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 376.
+(Font)              `operators' in the math version `normal' on input line 374.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/TimesNewRoman(0)/m/n on input line 376.
+(Font)                  OT1/cmr/m/n --> TU/TimesNewRoman(0)/m/n on input line 374.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 376.
+(Font)              `operators' in the math version `bold' on input line 374.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(0)/m/n on input line 376.
+(Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(0)/m/n on input line 374.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  TU/TimesNewRoman(0)/m/n --> TU/TimesNewRoman(0)/m/n on input line 376.
+(Font)                  TU/TimesNewRoman(0)/m/n --> TU/TimesNewRoman(0)/m/n on input line 374.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/TimesNewRoman(0)/m/it on input line 376.
+(Font)                  OT1/cmr/m/it --> TU/TimesNewRoman(0)/m/it on input line 374.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(0)/b/n on input line 376.
+(Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(0)/b/n on input line 374.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 376.
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 374.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 376.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 374.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  TU/TimesNewRoman(0)/m/n --> TU/TimesNewRoman(0)/b/n on input line 376.
+(Font)                  TU/TimesNewRoman(0)/m/n --> TU/TimesNewRoman(0)/b/n on input line 374.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/TimesNewRoman(0)/b/it on input line 376.
+(Font)                  OT1/cmr/bx/it --> TU/TimesNewRoman(0)/b/it on input line 374.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 376.
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 374.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 376.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 374.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: floatrow package is loaded.
@@ -1005,13 +1005,13 @@ Package: fr-longtable 2007/11/28 v0.1b (beta) floatrow: additions for longtable
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \microtypecontext on input line 376.
-Package microtype Info: Applying patch `item' on input line 376.
-Package microtype Info: Applying patch `toc' on input line 376.
-Package microtype Info: Applying patch `eqnum' on input line 376.
-Package microtype Info: Applying patch `footnote' on input line 376.
-Package microtype Info: Applying patch `verbatim' on input line 376.
-LaTeX Info: Redefining \microtypesetup on input line 376.
+LaTeX Info: Redefining \microtypecontext on input line 374.
+Package microtype Info: Applying patch `item' on input line 374.
+Package microtype Info: Applying patch `toc' on input line 374.
+Package microtype Info: Applying patch `eqnum' on input line 374.
+Package microtype Info: Applying patch `footnote' on input line 374.
+Package microtype Info: Applying patch `verbatim' on input line 374.
+LaTeX Info: Redefining \microtypesetup on input line 374.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: No adjustment of tracking.
@@ -1021,7 +1021,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `TimesNewRoman' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-Package hyperref Info: Link coloring ON on input line 376.
+Package hyperref Info: Link coloring ON on input line 374.
 (./TA.out) (./TA.out)
 \@outlinefile=\write4
 \openout4 = `TA.out'.
@@ -1031,7 +1031,7 @@ Package biblatex Info: ... file 'indonesian.lbx' not found.
 
 
 Package biblatex Warning: Language 'indonesian' not supported.
-(biblatex)                Using dummy definitions on input line 376.
+(biblatex)                Using dummy definitions on input line 374.
 
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
@@ -1047,8 +1047,8 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'TA.bbl' found.
  (./TA.bbl)
-Package biblatex Info: Reference section=0 on input line 376.
-Package biblatex Info: Reference segment=0 on input line 376.
+Package biblatex Info: Reference section=0 on input line 374.
+Package biblatex Info: Reference segment=0 on input line 374.
  (./1 Halaman Judul.tex
 File: images/ganesha.jpg Graphic file (type bmp)
 <images/ganesha.jpg>
@@ -1203,52 +1203,78 @@ Package geometry Warning: `a4paper': not available in `\newgeometry'; skipped.
 
 
 ] (./TA.toc
-Overfull \hbox (4.85715pt too wide) in paragraph at lines 36--36
- [][] [][][]\TU/TimesNewRoman(0)/m/n/12 Penulisan Rumus atau Persamaan Matematika Menggunakan 
+Overfull \hbox (16.49278pt too wide) in paragraph at lines 58--58
+ [][] [][][]\TU/TimesNewRoman(0)/m/it/12 Utilizing ChatGPT in a Data Structures and Algorithms Course: 
  []
 
 
-Underfull \vbox (badness 6608) has occurred while \output is active []
+
+[13]
+Overfull \hbox (0.58832pt too wide) detected at line 84
+\TU/TimesNewRoman(0)/m/n/12 III.3.1.1 
+ []
+
+
+Overfull \hbox (0.58832pt too wide) detected at line 86
+\TU/TimesNewRoman(0)/m/n/12 III.3.2.1 
+ []
+
+
+Overfull \hbox (0.58832pt too wide) detected at line 89
+\TU/TimesNewRoman(0)/m/n/12 III.3.2.2 
+ []
+
+
+Overfull \hbox (14.33994pt too wide) in paragraph at lines 101--101
+ [][] [][][]\TU/TimesNewRoman(0)/b/n/12 IMPLEMENTASI WEBSITE PEMBELAJARAN ALGORITMA DAN 
+ []
+
+
+Overfull \hbox (1.26215pt too wide) detected at line 113
+\TU/TimesNewRoman(0)/m/n/12 VI.1.2.1 
+ []
+
+
+Overfull \hbox (1.26215pt too wide) detected at line 114
+\TU/TimesNewRoman(0)/m/n/12 VI.1.2.2 
+ []
+
+
+Overfull \hbox (1.26215pt too wide) detected at line 115
+\TU/TimesNewRoman(0)/m/n/12 VI.1.2.3 
+ []
 
 
 
-[13])
+[14])
 \tf@toc=\write5
 \openout5 = `TA.toc'.
 
 ) (./8 Daftar Gambar.tex
 
-[14] (./TA.lof)
+[15]
+
+[16
+
+] (./TA.lof)
 \tf@lof=\write6
 \openout6 = `TA.lof'.
 
 ) (./9 Daftar Tabel.tex
 
-[15
+[17]
 
-]
+[18
 
-[16
-
-] (./TA.lot
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `lmtt' (encoding: TU).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-
-Overfull \hbox (58.8302pt too wide) in paragraph at lines 4--4
- \TU/TimesNewRoman(0)/m/n/12 kolom secara fleksibel. Selain itu, tabel ini juga menggunakan \TU/lmtt/m/n/12 threeparttable 
- []
-
-)
+] (./TA.lot)
 \tf@lot=\write7
 \openout7 = `TA.lot'.
 
 ) (./10 Daftar Persamaan.tex
 
-[17]
+[19]
 
-[18
+[20
 
 ] (./TA.equ)
 \tf@equ=\write8
@@ -1256,11 +1282,11 @@ Overfull \hbox (58.8302pt too wide) in paragraph at lines 4--4
 
 ) (./11 Daftar Algoritma.tex
 
-[19
+[21
 
 ]
 
-[20
+[22
 
 ] (./TA.loa)
 \tf@loa=\write9
@@ -1268,11 +1294,11 @@ Overfull \hbox (58.8302pt too wide) in paragraph at lines 4--4
 
 ) (./12 Daftar Listing.tex
 
-[21
+[23
 
 ]
 
-[22
+[24
 
 ] (./TA.lol)
 \tf@lol=\write10
@@ -1280,22 +1306,22 @@ Overfull \hbox (58.8302pt too wide) in paragraph at lines 4--4
 
 ) (./13 Daftar Simbol.tex
 
-[23
+[25
 
 ]
 
-[24
+[26
 
 ]
 Overfull \hbox (16.93071pt too wide) in alignment at lines 15--104
  [] [] [] 
  []
 
-[25] [26]) (./14 Daftar Singkatan.tex
+[27] [28]) (./14 Daftar Singkatan.tex
 
-[27]
+[29]
 
-[28
+[30
 
 ]
 Overfull \hbox (2.66713pt too wide) in alignment at lines 15--27
@@ -1304,9 +1330,9 @@ Overfull \hbox (2.66713pt too wide) in alignment at lines 15--27
 
 )
 
-[29]
+[31]
 
-[30
+[32
 
 ] (./Bab I - Pendahuluan.tex
 Bab I.
@@ -1336,235 +1362,1237 @@ Overfull \hbox (6.17009pt too wide) in paragraph at lines 21--22
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 
 [2]
-Underfull \vbox (badness 6300) has occurred while \output is active []
+Overfull \hbox (2.58997pt too wide) in paragraph at lines 41--42
+\TU/TimesNewRoman(0)/m/n/12 ditentukan, seperti penjelasan konsep, contoh kode, latihan soal, dan ringkasan. 
+ []
+
+
+Overfull \hbox (0.24596pt too wide) in paragraph at lines 51--52
+[]\TU/TimesNewRoman(0)/b/n/12 Studi Literatur \TU/TimesNewRoman(0)/m/n/12 dilakukan untuk membangun landasan teoritis penelitian. Ka-
+ []
 
 
 
 [3]
-Overfull \hbox (22.53932pt too wide) in paragraph at lines 62--63
-[]\TU/TimesNewRoman(0)/m/n/12 Bab IV Perancangan: Berisi penjelasan tentang perancangan solusi yang diusulkan,
+Overfull \hbox (6.04388pt too wide) in paragraph at lines 53--55
+\TU/TimesNewRoman(0)/m/n/12 studi literatur dan observasi terhadap kondisi pembelajaran ASD saat ini. Tahap
+ []
+
+
+Overfull \hbox (2.19322pt too wide) in paragraph at lines 63--65
+\TU/TimesNewRoman(0)/m/n/12 berjalan sesuai spesifikasi dan memberikan manfaat nyata bagi pengguna. Pen-
  []
 
 
 
-[4]) (./Bab II - Studi.tex
+[4]
+Overfull \hbox (2.43875pt too wide) in paragraph at lines 74--75
+[]\TU/TimesNewRoman(0)/m/n/12 Laporan Tugas Akhir ini disusun secara sistematis agar memudahkan pembaca dalam
+ []
 
-[5]
 
-[6
+Overfull \hbox (1.75745pt too wide) in paragraph at lines 74--75
+\TU/TimesNewRoman(0)/m/n/12 memahami alur penelitian, perancangan, pengembangan, serta evaluasi aplikasi pem-
+ []
 
-]
+
+Overfull \hbox (9.86397pt too wide) in paragraph at lines 76--77
+[]\TU/TimesNewRoman(0)/b/n/12 Bab I Pendahuluan \TU/TimesNewRoman(0)/m/n/12 berisi latar belakang, rumusan masalah, tujuan penelitian, batasan
+ []
+
+
+Overfull \hbox (4.44167pt too wide) in paragraph at lines 86--87
+[]\TU/TimesNewRoman(0)/b/n/12 Bab VI Evaluasi \TU/TimesNewRoman(0)/m/n/12 berisi analisis dan evaluasi terhadap solusi yang diimplementasikan,
+ []
+
+)
+
+[5] (./Bab II - Studi.tex
+
+[6]
 Bab II.
 
-Overfull \hbox (1.26251pt too wide) in paragraph at lines 5--8
-[]\TU/TimesNewRoman(0)/m/n/12 Studi literatur biasanya berisi tentang tinjauan pustaka, landasan teori, dan penelitian-
- []
-
-
-Overfull \hbox (2.1867pt too wide) in paragraph at lines 8--9
-[]\TU/TimesNewRoman(0)/m/n/12 Landasan teori yang diperoleh dari literatur yang akan digunakan untuk menye-
- []
-
-
-Overfull \hbox (0.71484pt too wide) in paragraph at lines 14--19
-\TU/TimesNewRoman(0)/m/n/12 terbaik yang memungkinkan untuk diterapkan, teori-teori dasar tentang metode terse-
- []
-
-
-Overfull \hbox (3.38086pt too wide) in paragraph at lines 14--19
-\TU/TimesNewRoman(0)/m/n/12 but, dan diakhiri dengan tinjauan terhadap penelitian-penelitian terdahulu yang meng-
- []
+Package biblatex-chicago Warning: Empty Ibidem citation on input line 15.
 
 
 
 [7
 
+
 ]
-File: images/gambar1.png Graphic file (type bmp)
-<images/gambar1.png>
+File: images/transformer-architecture.png Graphic file (type bmp)
+<images/transformer-architecture.png>
 
 
 [8]
-File: images/gambar1.png Graphic file (type bmp)
-<images/gambar1.png>
-
 
 [9]
-
-LaTeX Warning: Reference `tab:tabel3' on page 10 undefined on input line 80.
-
-
-LaTeX Warning: Reference `tab:tabel3' on page 10 undefined on input line 94.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[10] (./tables/tabel1.tex
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-) (./tables/longtable1.tex
-Underfull \hbox (badness 10000) in paragraph at lines 23--24
-[]|\TU/TimesNewRoman(0)/m/n/12 Third entry demonstrating the
+Overfull \hbox (5.20583pt too wide) in paragraph at lines 71--72
+\TU/TimesNewRoman(0)/m/n/12 sesuai tujuan. Dalam \TU/TimesNewRoman(0)/m/it/12 Prompt Engineering\TU/TimesNewRoman(0)/m/n/12 , proses ini melibatkan perancangan \TU/TimesNewRoman(0)/m/it/12 prompt
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 38--39
-[]|\TU/TimesNewRoman(0)/m/n/12 Third entry demonstrating the
+Overfull \hbox (18.18094pt too wide) in paragraph at lines 78--79
+[]\TU/TimesNewRoman(0)/m/it/12 Few-Shot Prompting\TU/TimesNewRoman(0)/m/n/12 : pengguna memberikan beberapa contoh masukan–keluaran
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 48--49
-[]|\TU/TimesNewRoman(0)/m/n/12 Third entry demonstrating the
+Overfull \hbox (2.08632pt too wide) in paragraph at lines 80--81
+[]\TU/TimesNewRoman(0)/m/it/12 Chain of Thought (CoT)\TU/TimesNewRoman(0)/m/n/12 : instruksi meminta model menjelaskan proses berpikir
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 58--59
-[]|\TU/TimesNewRoman(0)/m/n/12 Third entry demonstrating the
+Overfull \hbox (18.20306pt too wide) in paragraph at lines 82--83
+[]\TU/TimesNewRoman(0)/m/it/12 Tree of Thought (ToT)\TU/TimesNewRoman(0)/m/n/12 : model mengeksplorasi beberapa jalur penalaran, mengeval-
  []
 
-[11] [12])
-Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Overfull \hbox (6.05478pt too wide) in paragraph at lines 86--87
+[]\TU/TimesNewRoman(0)/m/it/12 Reflection Prompting\TU/TimesNewRoman(0)/m/n/12 : setelah memberikan jawaban, model diminta melakukan
+ []
 
 
+Overfull \hbox (10.931pt too wide) in paragraph at lines 92--93
+[]\TU/TimesNewRoman(0)/m/it/12 Automatic Prompt Engineering (APE)\TU/TimesNewRoman(0)/m/n/12 : menggunakan LLM untuk menghasilkan,
+ []
+
+
+
+[10]
+
+Package biblatex-chicago Warning: Empty Ibidem citation on input line 105.
+
+
+
+[11]
+Overfull \hbox (2.21414pt too wide) in paragraph at lines 118--119
+\TU/TimesNewRoman(0)/m/n/12 mampuan menghasilkan visualisasi struktur data dan potensi kesalahan pada masalah
+ []
+
+
+Overfull \hbox (18.43475pt too wide) in paragraph at lines 123--124
+[]\TU/TimesNewRoman(0)/m/n/12 Penelitian oleh Deng ([][][][]Deng[][] [][]2025[][][]) mengevaluasi efektivitas tiga gaya interaksi ChatGPT-
+ []
+
+
+Overfull \hbox (11.5364pt too wide) in paragraph at lines 127--128
+\TU/TimesNewRoman(0)/m/n/12 gaskan bahwa interaksi yang bersifat dialogis membantu pengguna memahami langkah
+ []
+
+
+
+[12]
+Overfull \hbox (9.09566pt too wide) in paragraph at lines 134--135
+\TU/TimesNewRoman(0)/m/n/12 menggunakan \TU/TimesNewRoman(0)/m/it/12 chatbot\TU/TimesNewRoman(0)/m/n/12 . Hal ini terjadi karena \TU/TimesNewRoman(0)/m/it/12 chatbot \TU/TimesNewRoman(0)/m/n/12 menyediakan penjelasan langkah
+ []
+
+)
+Overfull \hbox (0.1789pt too wide) in paragraph at lines 136--436
+\TU/TimesNewRoman(0)/m/n/12 serta menyesuaikan tingkat kesulitan penyampaian materi berdasarkan respons peng-
+ []
+
+(./Bab III - Analisis.tex
 
 [13]
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-
-[14] (./listings/binary-search-python.tex
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 7.
-)
-Underfull \hbox (badness 10000) in paragraph at lines 6--227
-
- []
-
-(./algorithms/binary-search-alg.tex
-Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 4.
-LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <12> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 7.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[15])) (./Bab III - Analisis.tex
-
-[16]
-Bab III.
-
-Package lipsum Warning: Unknown language 'latin'. Hyphenation patterns for
-(lipsum)                'indonesian' will be used instead.
-
-
-Underfull \vbox (badness 1715) has occurred while \output is active []
-
-
-
-[17
-
+[14
 
 ]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Bab III.
+
+Overfull \hbox (1.34766pt too wide) in paragraph at lines 29--30
+\TU/TimesNewRoman(0)/m/n/12 kode yang dapat digunakan mahasiswa untuk mempelajari konsep dasar, seper-
+ []
 
 
 
-[18]) (./Bab IV - Perancangan.tex
+[15
+
+]
+Overfull \hbox (3.5325pt too wide) in paragraph at lines 45--46
+[]\TU/TimesNewRoman(0)/m/n/12 Umpan balik terhadap latihan dan pemahaman konsep biasanya tidak diberikan
+ []
+
+
+Overfull \hbox (16.56108pt too wide) in paragraph at lines 50--51
+\TU/TimesNewRoman(0)/m/n/12 atau asisten pengajar. Meskipun LLM modern seperti ChatGPT, Gemini, atau DeepSeek
+ []
+
+
+Overfull \hbox (14.05469pt too wide) in paragraph at lines 50--51
+\TU/TimesNewRoman(0)/m/n/12 mulai dimanfaatkan oleh mahasiswa, penggunaannya belum terintegrasi dengan kuriku-
+ []
+
+
+
+[16]
+Overfull \hbox (11.51949pt too wide) in paragraph at lines 61--62
+\TU/TimesNewRoman(0)/m/n/12 memperlambat proses belajar dan meningkatkan risiko kesalahan pemahaman. Berikut
+ []
+
+
+Overfull \hbox (2.19948pt too wide) in paragraph at lines 64--65
+\TU/TimesNewRoman(0)/m/n/12 penjelasan konsep ASD secara terstruktur dan bertahap sehingga memudahkan
+ []
+
+
+Overfull \hbox (1.54031pt too wide) in paragraph at lines 66--67
+\TU/TimesNewRoman(0)/m/n/12 trasi langkah demi langkah yang dapat disesuaikan dengan tingkat pemahaman
+ []
+
+
+
+[17]
+Overfull \hbox (4.2121pt too wide) in paragraph at lines 76--77
+\TU/TimesNewRoman(0)/m/n/12 melalui visualisasi perubahan struktur data dan simulasi algoritma dalam berba-
+ []
+
+
+Overfull \hbox (4.18745pt too wide) in paragraph at lines 88--89
+\TU/TimesNewRoman(0)/m/n/12 umpan balik otomatis terhadap jawaban mahasiswa pada latihan soal. Dengan adanya
+ []
+
+
+
+[18]
+Overfull \hbox (12.43289pt too wide) in paragraph at lines 102--103
+[]\TU/TimesNewRoman(0)/m/n/12 Kebutuhan fungsional atau \TU/TimesNewRoman(0)/m/it/12 Functional Requirements \TU/TimesNewRoman(0)/m/n/12 merupakan kebutuhan-kebutuhan
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 125--125
+[]|\TU/TimesNewRoman(0)/m/n/12 Sistem mam-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 125--125
+\TU/TimesNewRoman(0)/m/n/12 pu melakukan
+ []
+
+
+Underfull \hbox (badness 6445) in paragraph at lines 125--125
+\TU/TimesNewRoman(0)/m/n/12 proses \TU/TimesNewRoman(0)/m/it/12 login \TU/TimesNewRoman(0)/m/n/12 se-
+ []
+
+
+Underfull \hbox (badness 2495) in paragraph at lines 125--125
+\TU/TimesNewRoman(0)/m/n/12 bagai autentikasi
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 129--129
+[]|\TU/TimesNewRoman(0)/m/n/12 Sistem mampu
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 129--129
+\TU/TimesNewRoman(0)/m/n/12 menampilkan
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 129--129
+\TU/TimesNewRoman(0)/m/n/12 alur pembela-
+ []
+
+
+Underfull \hbox (badness 1924) in paragraph at lines 129--129
+\TU/TimesNewRoman(0)/m/n/12 jaran ASD yang
+ []
+
+
+Underfull \hbox (badness 1057) in paragraph at lines 130--131
+\TU/TimesNewRoman(0)/m/n/12 langkah yang harus diikuti agar pembela-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 133--133
+[]|\TU/TimesNewRoman(0)/m/n/12 Sistem mampu
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 133--133
+\TU/TimesNewRoman(0)/m/n/12 menghasilkan
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 133--133
+\TU/TimesNewRoman(0)/m/n/12 penjelasan kon-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 133--133
+\TU/TimesNewRoman(0)/m/n/12 LLM sesuai
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 137--137
+[]|\TU/TimesNewRoman(0)/m/n/12 Sistem mampu
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 137--137
+\TU/TimesNewRoman(0)/m/n/12 menampilkan
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 137--137
+\TU/TimesNewRoman(0)/m/n/12 contoh kode
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 137--137
+\TU/TimesNewRoman(0)/m/n/12 dan penjelasan
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 137--137
+\TU/TimesNewRoman(0)/m/n/12 langkah demi
+ []
+
+
+Underfull \hbox (badness 1297) in paragraph at lines 138--139
+[]|\TU/TimesNewRoman(0)/m/n/12 Sistem dapat menghasilkan contoh imple-
+ []
+
+
+Underfull \hbox (badness 1895) in paragraph at lines 138--139
+\TU/TimesNewRoman(0)/m/n/12 mentasi kode untuk topik tertentu, diser-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 141--141
+[]|\TU/TimesNewRoman(0)/m/n/12 Sistem mampu
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 141--141
+\TU/TimesNewRoman(0)/m/n/12 menyediakan
+ []
+
+
+Underfull \hbox (badness 3746) in paragraph at lines 141--141
+\TU/TimesNewRoman(0)/m/n/12 latihan soal dan
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 141--141
+\TU/TimesNewRoman(0)/m/n/12 pembahasan
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 142--143
+[]|\TU/TimesNewRoman(0)/m/n/12 Sistem dapat menghasilkan atau
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 142--143
+\TU/TimesNewRoman(0)/m/n/12 menampilkan latihan soal yang terkait
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 142--143
+\TU/TimesNewRoman(0)/m/n/12 memberikan pembahasan otomatis yang
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
+[]|\TU/TimesNewRoman(0)/m/n/12 Sistem mampu
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
+\TU/TimesNewRoman(0)/m/n/12 memberikan
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
+\TU/TimesNewRoman(0)/m/n/12 umpan balik
+ []
+
+
+Underfull \hbox (badness 1521) in paragraph at lines 145--145
+\TU/TimesNewRoman(0)/m/n/12 terhadap miskon-
+ []
+
+
+Underfull \hbox (badness 2735) in paragraph at lines 146--147
+\TU/TimesNewRoman(0)/m/n/12 si pengguna untuk mengidentifikasi pola
+ []
+
+
+Underfull \hbox (badness 3612) in paragraph at lines 146--147
+\TU/TimesNewRoman(0)/m/n/12 kesalahan umum, kemudian memberikan
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 149--149
+[]|\TU/TimesNewRoman(0)/m/n/12 Sistem mam-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 149--149
+\TU/TimesNewRoman(0)/m/n/12 pu menyajikan
+ []
+
+
+Underfull \hbox (badness 3815) in paragraph at lines 149--149
+\TU/TimesNewRoman(0)/m/n/12 ringkasan materi
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 149--149
+\TU/TimesNewRoman(0)/m/n/12 pada akhir sesi
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 153--153
+[]|\TU/TimesNewRoman(0)/m/n/12 Sistem mampu
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 153--153
+\TU/TimesNewRoman(0)/m/n/12 menyimpan dan
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 153--153
+\TU/TimesNewRoman(0)/m/n/12 menampilkan
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 153--153
+\TU/TimesNewRoman(0)/m/n/12 riwayat serta
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 153--153
+\TU/TimesNewRoman(0)/m/n/12 progres belajar
+ []
 
 [19]
 
-[20
+[20]
+Overfull \hbox (0.45047pt too wide) in paragraph at lines 164--165
+[]\TU/TimesNewRoman(0)/m/n/12 Kebutuhan nonfungsional atau \TU/TimesNewRoman(0)/m/it/12 Non-Functional Requirements \TU/TimesNewRoman(0)/m/n/12 merupakan kebutuhan
+ []
 
-]
+
+Underfull \hbox (badness 4543) in paragraph at lines 192--193
+[]|\TU/TimesNewRoman(0)/m/n/12 Sistem harus melindungi data pengguna
+ []
+
+
+Underfull \hbox (badness 2837) in paragraph at lines 192--193
+\TU/TimesNewRoman(0)/m/n/12 seperti progres belajar, riwayat interaksi,
+ []
+
+
+Underfull \hbox (badness 2913) in paragraph at lines 196--197
+\TU/TimesNewRoman(0)/m/n/12 perangkat seperti laptop, tablet, maupun
+ []
+
+
+Underfull \hbox (badness 3396) in paragraph at lines 200--201
+\TU/TimesNewRoman(0)/m/n/12 pengguna dan menghasilkan konten dari
+ []
+
+
+Underfull \hbox (badness 1184) in paragraph at lines 204--205
+\TU/TimesNewRoman(0)/m/n/12 intuitif dan mudah digunakan oleh maha-
+ []
+
+
+
+[21]
+Overfull \hbox (7.3208pt too wide) in alignment at lines 232--238
+ [] [] [] [] 
+ []
+
+
+Overfull \hbox (7.3208pt too wide) in alignment at lines 238--244
+ [] [] [] [] 
+ []
+
+
+Overfull \hbox (7.3208pt too wide) in alignment at lines 244--248
+ [] [] [] [] 
+ []
+
+
+Overfull \hbox (7.3208pt too wide) in alignment at lines 248--251
+ [] [] [] [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 253--253
+[]|\TU/TimesNewRoman(0)/m/it/12 Reasoning \TU/TimesNewRoman(0)/m/n/12 algo-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 253--254
+[]|\TU/TimesNewRoman(0)/m/n/12 Baik,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 253--254
+\TU/TimesNewRoman(0)/m/n/12 terkadang
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 255--255
+[]|\TU/TimesNewRoman(0)/m/n/12 Kualitas penje-
+ []
+
+
+Underfull \hbox (badness 4013) in paragraph at lines 255--255
+[]|\TU/TimesNewRoman(0)/m/n/12 Mendalam dan sis-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 255--256
+[]|\TU/TimesNewRoman(0)/m/n/12 Natural, ku-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 255--256
+\TU/TimesNewRoman(0)/m/n/12 rang detail
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 255--256
+\TU/TimesNewRoman(0)/m/n/12 pada kode
+ []
+
+
+Underfull \hbox (badness 1502) in paragraph at lines 257--257
+[]|\TU/TimesNewRoman(0)/m/n/12 Konsistensi kelu-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 259--259
+[]|\TU/TimesNewRoman(0)/m/n/12 Kapasitas kon-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 261--261
+[]|\TU/TimesNewRoman(0)/m/n/12 Biaya penggu-
+ []
+
+
+Overfull \hbox (7.3208pt too wide) in alignment at lines 251--266
+ [] [] [] [] 
+ []
+
+
+
+[22]
+Overfull \hbox (0.85867pt too wide) in paragraph at lines 280--281
+\TU/TimesNewRoman(0)/m/n/12 implementasi kode dalam berbagai bahasa pemrograman dengan kualitas yang
+ []
+
+
+
+[23]
+Overfull \hbox (3.75807pt too wide) in paragraph at lines 294--295
+[]\TU/TimesNewRoman(0)/b/n/12 Penjelasan Konsep \TU/TimesNewRoman(0)/m/n/12 : LLM menghasilkan penjelasan teoretis yang disesuaikan
+ []
+
+
+Overfull \hbox (24.07431pt too wide) in paragraph at lines 296--297
+\TU/TimesNewRoman(0)/m/n/12 alur eksekusi secara langkah demi langkah, membantu mahasiswa menghubungkan
+ []
+
+) (./Bab IV - Perancangan.tex
+
+[24]
 Bab IV.
-) (./Bab V - Implementasi.tex
 
-[21
+Overfull \hbox (2.47195pt too wide) in paragraph at lines 14--15
+[]\TU/TimesNewRoman(0)/m/n/12 Sistem dirancang sebagai \TU/TimesNewRoman(0)/m/it/12 teman belajar digital \TU/TimesNewRoman(0)/m/n/12 yang mendampingi mahasiswa dalam
+ []
+
+File: images/use-case-diagram.png Graphic file (type bmp)
+<images/use-case-diagram.png>
+
+
+[25
+
 
 ]
+Overfull \hbox (4.12675pt too wide) in paragraph at lines 31--32
+[]|\TU/TimesNewRoman(0)/b/n/12 Functional
+ []
 
-[22
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--32
+\TU/TimesNewRoman(0)/b/n/12 Require-
+ []
+
+
+Overfull \hbox (28.2567pt too wide) in alignment at lines 27--33
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (4.12675pt too wide) in paragraph at lines 37--38
+[]|\TU/TimesNewRoman(0)/b/n/12 Functional
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--38
+\TU/TimesNewRoman(0)/b/n/12 Require-
+ []
+
+
+Overfull \hbox (28.2567pt too wide) in alignment at lines 33--39
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (28.2567pt too wide) in alignment at lines 39--43
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (28.2567pt too wide) in alignment at lines 43--46
+ [] [] [] [] [] 
+ []
+
+
+Underfull \hbox (badness 2334) in paragraph at lines 49--49
+[]|\TU/TimesNewRoman(0)/m/n/12 User melakukan \TU/TimesNewRoman(0)/m/it/12 login \TU/TimesNewRoman(0)/m/n/12 dengan
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--53
+[]|\TU/TimesNewRoman(0)/m/n/12 Memilih topik
+ []
+
+
+Underfull \hbox (badness 5893) in paragraph at lines 54--54
+[]|\TU/TimesNewRoman(0)/m/n/12 User memilih topik pembela-
+ []
+
+
+Underfull \hbox (badness 2343) in paragraph at lines 59--59
+\TU/TimesNewRoman(0)/m/n/12 sep ASD yang dihasilkan sis-
+ []
+
+
+Underfull \hbox (badness 2343) in paragraph at lines 64--64
+\TU/TimesNewRoman(0)/m/n/12 tasi atau ilustrasi dari konsep
+ []
+
+
+Underfull \hbox (badness 6348) in paragraph at lines 64--64
+\TU/TimesNewRoman(0)/m/n/12 ASD untuk membantu pema-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 68--68
+[]|\TU/TimesNewRoman(0)/m/n/12 Mengerjakan
+ []
+
+
+Underfull \hbox (badness 1412) in paragraph at lines 69--69
+[]|\TU/TimesNewRoman(0)/m/n/12 User mengerjakan soal latihan
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 69--69
+\TU/TimesNewRoman(0)/m/n/12 yang diberikan sistem untuk
+ []
+
+
+Underfull \hbox (badness 6204) in paragraph at lines 69--69
+\TU/TimesNewRoman(0)/m/n/12 menguji pemahaman terhadap
+ []
+
+
+Underfull \hbox (badness 4569) in paragraph at lines 73--73
+[]|\TU/TimesNewRoman(0)/m/n/12 Melihat pemba-
+ []
+
+
+Underfull \hbox (badness 1412) in paragraph at lines 74--74
+[]|\TU/TimesNewRoman(0)/m/n/12 User melihat pembahasan dari
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 78--78
+[]|\TU/TimesNewRoman(0)/m/n/12 Melihat
+ []
+
+
+Underfull \hbox (badness 6608) in paragraph at lines 79--79
+[]|\TU/TimesNewRoman(0)/m/n/12 User melihat rangkuman ma-
+ []
+
+
+Underfull \hbox (badness 4660) in paragraph at lines 79--79
+\TU/TimesNewRoman(0)/m/n/12 teri untuk memperkuat pema-
+ []
+
+
+Underfull \hbox (badness 5260) in paragraph at lines 79--79
+\TU/TimesNewRoman(0)/m/n/12 haman terhadap konsep yang
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 83--83
+[]|\TU/TimesNewRoman(0)/m/n/12 Melihat
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 83--83
+\TU/TimesNewRoman(0)/m/it/12 progress \TU/TimesNewRoman(0)/m/n/12 be-
+ []
+
+
+Overfull \hbox (28.2567pt too wide) in alignment at lines 46--88
+ [] [] [] [] [] 
+ []
+
+[26]
+Overfull \hbox (4.61754pt too wide) in paragraph at lines 90--91
+[]\TU/TimesNewRoman(0)/m/n/12 Tabel [][]IV.1[][] menunjukkan bahwa terdapat satu aktor yaitu \TU/TimesNewRoman(0)/m/it/12 user \TU/TimesNewRoman(0)/m/n/12 yang dapat menjalankan
+ []
+
+
+
+[27]
+File: images/FT-01-Login.png Graphic file (type bmp)
+<images/FT-01-Login.png>
+
+
+[28]
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `lmtt' (encoding: TU).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
+Overfull \hbox (17.57722pt too wide) in paragraph at lines 111--112
+\TU/lmtt/m/n/12 POST /auth/login \TU/TimesNewRoman(0)/m/n/12 ke \TU/TimesNewRoman(0)/m/it/12 backend\TU/TimesNewRoman(0)/m/n/12 . \TU/TimesNewRoman(0)/m/it/12 Backend \TU/TimesNewRoman(0)/m/n/12 melakukan \TU/TimesNewRoman(0)/m/it/12 query \TU/TimesNewRoman(0)/m/n/12 data pengguna ke \TU/TimesNewRoman(0)/m/it/12 database
+ []
+
+File: images/FT-02-Logout.png Graphic file (type bmp)
+<images/FT-02-Logout.png>
+
+
+[29]
+File: images/FT-03-Pilih-Topik-ASD-FT-11-Guided-Learning-Flow.png Graphic file (type bmp)
+<images/FT-03-Pilih-Topik-ASD-FT-11-Guided-Learning-Flow.png>
+
+
+[30]
+File: images/FT-04-Tampilkan-Materi-FT-10-Generate-LLM-FT-14-Adaptasi-Konten.png Graphic file (type bmp)
+<images/FT-04-Tampilkan-Materi-FT-10-Generate-LLM-FT-14-Adaptasi-Konten.png>
+
+Overfull \hbox (0.9661pt too wide) in paragraph at lines 141--142
+[]\TU/TimesNewRoman(0)/m/n/12 Diagram pada Gambar [][]IV.5[][] menggambarkan alur penampilan materi yang dihasilkan
+ []
+
+
+Overfull \hbox (1.31766pt too wide) in paragraph at lines 141--142
+\TU/TimesNewRoman(0)/m/n/12 gabungkan konteks materi (\TU/TimesNewRoman(0)/m/it/12 hardcoded context\TU/TimesNewRoman(0)/m/n/12 ) dan data kelemahan tersebut sebelum
+ []
+
+File: images/FT-05-Tampilkan-Contoh-FT-10-Generate-LLM-FT-14-Adaptasi-Konten.png Graphic file (type bmp)
+<images/FT-05-Tampilkan-Contoh-FT-10-Generate-LLM-FT-14-Adaptasi-Konten.png>
+
+
+[31]
+File: images/FT-06-Latihan-Soal-FT-10-Generate-LLM-FT-13-Adaptive-Engine-FT-14-Adaptasi-Konten.png Graphic file (type bmp)
+<images/FT-06-Latihan-Soal-FT-10-Generate-LLM-FT-13-Adaptive-Engine-FT-14-Adaptasi-Konten.png>
+
+
+[32]
+Overfull \hbox (25.50706pt too wide) in paragraph at lines 161--162
+\TU/TimesNewRoman(0)/m/n/12 soal secara adaptif. \TU/TimesNewRoman(0)/m/it/12 Frontend \TU/TimesNewRoman(0)/m/n/12 mengirim permintaan \TU/lmtt/m/n/12 POST /latihan/{slug}/generate
+ []
+
+File: images/FT-07-Pembahasan-Latihan-FT-12-Feedback-Jawaban-FT-13-Adaptive-Engine.png Graphic file (type bmp)
+<images/FT-07-Pembahasan-Latihan-FT-12-Feedback-Jawaban-FT-13-Adaptive-Engine.png>
+
+
+[33]
+Overfull \hbox (14.60748pt too wide) in paragraph at lines 171--172
+\TU/TimesNewRoman(0)/m/n/12 gan soal dan jawaban ke \TU/TimesNewRoman(0)/m/it/12 backend \TU/TimesNewRoman(0)/m/n/12 melalui \TU/lmtt/m/n/12 POST /latihan/{slug}/evaluasi-batch\TU/TimesNewRoman(0)/m/n/12 .
+ []
+
+
+Overfull \hbox (15.89156pt too wide) in paragraph at lines 171--172
+\TU/TimesNewRoman(0)/m/it/12 Backend \TU/TimesNewRoman(0)/m/n/12 mengirimkan data tersebut ke OpenAI API untuk dievaluasi, dan API mengem-
+ []
+
+File: images/FT-08-Ringkasan-Materi.png Graphic file (type bmp)
+<images/FT-08-Ringkasan-Materi.png>
+
+
+[34]
+File: images/FT-09-Progress-Belajar-FT-13-Adaptive-Engine.png Graphic file (type bmp)
+<images/FT-09-Progress-Belajar-FT-13-Adaptive-Engine.png>
+
+
+[35]
+Overfull \hbox (2.22838pt too wide) in paragraph at lines 198--199
+\TU/TimesNewRoman(0)/m/n/12 untuk pengembangan aplikasi web. Akses ke \TU/TimesNewRoman(0)/m/it/12 database \TU/TimesNewRoman(0)/m/n/12 dilakukan melalui SQLAlche-
+ []
+
+
+
+[36]) (./Bab V - Implementasi.tex
+
+[37]
+
+[38
 
 ]
 Bab V.
 ) (./Bab VI - Evaluasi.tex
 
-[23
+[39
 
 ]
 
-[24
+[40
 
 ]
 Bab VI.
 
-Overfull \hbox (20.82396pt too wide) in paragraph at lines 23--29
- [][] 
+Overfull \hbox (7.3208pt too wide) in alignment at lines 18--24
+ [] [] [] [] 
+ []
+
+
+Overfull \hbox (7.3208pt too wide) in alignment at lines 24--30
+ [] [] [] [] 
+ []
+
+
+Overfull \hbox (7.3208pt too wide) in alignment at lines 30--34
+ [] [] [] [] 
+ []
+
+
+Overfull \hbox (7.3208pt too wide) in alignment at lines 34--37
+ [] [] [] [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+[]|\TU/TimesNewRoman(0)/m/n/12 FT-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--40
+[]|\TU/TimesNewRoman(0)/m/n/12 Pengguna memasukkan
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--42
+[]|\TU/TimesNewRoman(0)/m/n/12 Sistem memperbolehkan
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--42
+\TU/TimesNewRoman(0)/m/n/12 akses dengan kreden-
+ []
+
+
+Underfull \hbox (badness 3907) in paragraph at lines 41--42
+\TU/TimesNewRoman(0)/m/n/12 sial valid; menampilkan
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--42
+\TU/TimesNewRoman(0)/m/n/12 pesan kesalahan untuk
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 44--44
+[]|\TU/TimesNewRoman(0)/m/n/12 FT-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--45
+[]|\TU/TimesNewRoman(0)/m/n/12 Pengguna menekan
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 49--49
+[]|\TU/TimesNewRoman(0)/m/n/12 FT-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 49--49
+[]|\TU/TimesNewRoman(0)/m/n/12 Pilih Topik
+ []
+
+
+Underfull \hbox (badness 3758) in paragraph at lines 50--50
+[]|\TU/TimesNewRoman(0)/m/n/12 Pengguna memilih salah
+ []
+
+
+Underfull \hbox (badness 7944) in paragraph at lines 50--50
+\TU/TimesNewRoman(0)/m/n/12 satu dari sepuluh topik
+ []
+
+
+Underfull \hbox (badness 4569) in paragraph at lines 51--52
+[]|\TU/TimesNewRoman(0)/m/n/12 Sistem menampilkan ha-
+ []
+
+
+Underfull \hbox (badness 4266) in paragraph at lines 51--52
+\TU/TimesNewRoman(0)/m/n/12 laman topik dengan tab
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 54--54
+[]|\TU/TimesNewRoman(0)/m/n/12 FT-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 54--54
+[]|\TU/TimesNewRoman(0)/m/n/12 Tampilkan
+ []
+
+
+Underfull \hbox (badness 7631) in paragraph at lines 55--55
+[]|\TU/TimesNewRoman(0)/m/n/12 Pengguna membuka tab
+ []
+
+
+Underfull \hbox (badness 1496) in paragraph at lines 56--57
+\TU/TimesNewRoman(0)/m/n/12 hasilkan dan ditampilkan
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 59--59
+[]|\TU/TimesNewRoman(0)/m/n/12 FT-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 59--59
+[]|\TU/TimesNewRoman(0)/m/n/12 Tampilkan
+ []
+
+
+Underfull \hbox (badness 7631) in paragraph at lines 60--60
+[]|\TU/TimesNewRoman(0)/m/n/12 Pengguna membuka tab
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 60--60
+\TU/TimesNewRoman(0)/m/n/12 contoh setelah menyele-
+ []
+
+
+Underfull \hbox (badness 4846) in paragraph at lines 61--62
+\TU/TimesNewRoman(0)/m/n/12 tab terkunci jika materi
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 64--64
+[]|\TU/TimesNewRoman(0)/m/n/12 FT-
+ []
+
+
+Underfull \hbox (badness 7631) in paragraph at lines 65--65
+[]|\TU/TimesNewRoman(0)/m/n/12 Pengguna membuka tab
+ []
+
+
+Underfull \hbox (badness 4266) in paragraph at lines 66--67
+[]|\TU/TimesNewRoman(0)/m/n/12 Soal latihan berhasil di-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 69--69
+[]|\TU/TimesNewRoman(0)/m/n/12 FT-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 69--69
+[]|\TU/TimesNewRoman(0)/m/n/12 Pembahasan
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 71--72
+[]|\TU/TimesNewRoman(0)/m/n/12 Sistem mengembalikan
+ []
+
+
+Underfull \hbox (badness 3895) in paragraph at lines 71--72
+\TU/TimesNewRoman(0)/m/n/12 skor, \TU/TimesNewRoman(0)/m/it/12 feedback \TU/TimesNewRoman(0)/m/n/12 per soal,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 71--72
+\TU/TimesNewRoman(0)/m/n/12 dan pembahasan yang
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 74--74
+[]|\TU/TimesNewRoman(0)/m/n/12 FT-
+ []
+
+
+Underfull \hbox (badness 7631) in paragraph at lines 75--75
+[]|\TU/TimesNewRoman(0)/m/n/12 Pengguna membuka tab
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--77
+\TU/TimesNewRoman(0)/m/n/12 di-\TU/TimesNewRoman(0)/m/it/12 generate \TU/TimesNewRoman(0)/m/n/12 dan dita-
+ []
+
+
+Underfull \hbox (badness 7832) in paragraph at lines 76--77
+\TU/TimesNewRoman(0)/m/n/12 mpilkan; topik ditandai
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 79--79
+[]|\TU/TimesNewRoman(0)/m/n/12 FT-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 79--79
+[]|\TU/TimesNewRoman(0)/m/n/12 Progres Bela-
+ []
+
+
+Underfull \hbox (badness 2460) in paragraph at lines 81--82
+[]|\TU/TimesNewRoman(0)/m/n/12 Sistem menampilkan sta-
+ []
+
+
+Underfull \hbox (badness 4582) in paragraph at lines 81--82
+\TU/TimesNewRoman(0)/m/n/12 tus penyelesaian seluruh
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 81--82
+\TU/TimesNewRoman(0)/m/n/12 topik beserta indikator
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--84
+[]|\TU/TimesNewRoman(0)/m/n/12 FT-
+ []
+
+
+Underfull \hbox (badness 2253) in paragraph at lines 85--85
+[]|\TU/TimesNewRoman(0)/m/n/12 Sistem mengirim \TU/TimesNewRoman(0)/m/it/12 prompt
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 85--85
+\TU/TimesNewRoman(0)/m/n/12 ke OpenAI API untuk
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 85--85
+\TU/TimesNewRoman(0)/m/n/12 menghasilkan materi,
+ []
+
+
+Underfull \hbox (badness 3088) in paragraph at lines 86--87
+[]|\TU/TimesNewRoman(0)/m/n/12 OpenAI API mengemba-
+ []
+
+
+Underfull \hbox (badness 2970) in paragraph at lines 86--87
+\TU/TimesNewRoman(0)/m/n/12 JSON yang valid sesuai
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 89--89
+[]|\TU/TimesNewRoman(0)/m/n/12 FT-
+ []
+
+
+Underfull \hbox (badness 2469) in paragraph at lines 90--90
+[]|\TU/TimesNewRoman(0)/m/n/12 Pengguna mencoba men-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 91--92
+[]|\TU/TimesNewRoman(0)/m/n/12 Sistem mengunci tab
+ []
+
+
+Underfull \hbox (badness 1490) in paragraph at lines 91--92
+\TU/TimesNewRoman(0)/m/n/12 yang belum tersedia dan
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 91--92
+\TU/TimesNewRoman(0)/m/n/12 menampilkan notifikasi
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 91--92
+\TU/TimesNewRoman(0)/m/n/12 untuk menyelesaikan
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 94--94
+[]|\TU/TimesNewRoman(0)/m/n/12 FT-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 94--94
+[]|\TU/TimesNewRoman(0)/m/it/12 Feedback
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--99
+[]|\TU/TimesNewRoman(0)/m/n/12 FT-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--99
+[]|\TU/TimesNewRoman(0)/m/it/12 Adaptive
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--99
+\TU/TimesNewRoman(0)/m/it/12 Learning
+ []
+
+
+Underfull \hbox (badness 7777) in paragraph at lines 100--100
+[]|\TU/TimesNewRoman(0)/m/n/12 Pengguna menyelesaikan
+ []
+
+
+Underfull \hbox (badness 2126) in paragraph at lines 101--102
+[]|\TU/TimesNewRoman(0)/m/n/12 Sistem menyimpan \TU/TimesNewRoman(0)/m/it/12 weak
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 101--102
+\TU/TimesNewRoman(0)/m/it/12 concepts \TU/TimesNewRoman(0)/m/n/12 dan menggu-
+ []
+
+
+Underfull \hbox (badness 5504) in paragraph at lines 101--102
+\TU/TimesNewRoman(0)/m/n/12 nakannya pada \TU/TimesNewRoman(0)/m/it/12 generate
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 104--104
+[]|\TU/TimesNewRoman(0)/m/n/12 FT-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 104--104
+[]|\TU/TimesNewRoman(0)/m/n/12 Adaptasi
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 104--104
+\TU/TimesNewRoman(0)/m/n/12 Konten Pem-
+ []
+
+
+Underfull \hbox (badness 2245) in paragraph at lines 105--105
+\TU/TimesNewRoman(0)/m/it/12 weak concepts \TU/TimesNewRoman(0)/m/n/12 membuka
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 106--107
+[]|\TU/TimesNewRoman(0)/m/n/12 Konten yang dihasilkan
+ []
+
+
+Underfull \hbox (badness 2478) in paragraph at lines 106--107
+\TU/TimesNewRoman(0)/m/n/12 yang teridentifikasi seba-
+ []
+
+
+Overfull \hbox (7.3208pt too wide) in alignment at lines 37--109
+ [] [] [] [] 
  []
 
 
 
-[25
+[41
 
-]
+] [42]
+Overfull \hbox (15.49854pt too wide) in paragraph at lines 114--115
+\TU/TimesNewRoman(0)/m/n/12 mana aplikasi dapat digunakan oleh mahasiswa dengan mudah, efisien, dan memuaskan.
+ []
 
-[26]) (./Bab VII - Penutup.tex
 
-[27]
+Overfull \hbox (18.3468pt too wide) in paragraph at lines 118--119
+[]\TU/TimesNewRoman(0)/m/it/12 Task-based usability test \TU/TimesNewRoman(0)/m/n/12 dilakukan dengan meminta responden menyelesaikan serangka-
+ []
 
-[28
+
+
+[43]
+
+[44]) (./Bab VII - Penutup.tex
+
+[45]
+
+[46
 
 ]
 Bab VII.
 )
 
-[29
+[47
 
 ]
 
-[30
+[48
 
 ]
-Overfull \hbox (4.9412pt too wide) in paragraph at lines 455--455
-[][]\TU/TimesNewRoman(0)/m/n/12 Laudon, Kenneth C., dan Jane P. Laudon. 2020. \TU/TimesNewRoman(0)/m/it/12 Sistem Informasi Manajemen. \TU/TimesNewRoman(0)/m/n/12 Jakarta:
+Overfull \hbox (2.36067pt too wide) in paragraph at lines 453--453
+\TU/TimesNewRoman(0)/m/n/12 Ashraf Elnashar, Jesse Spencer-Smith, dan Douglas C. Schmidt. 2023. \TU/TimesNewRoman(0)/m/it/12 A Prompt
  []
 
-(./Lampiran-A.tex
 
-[31
 
-]
+[49
 
-[32
+] (./Lampiran-A.tex
 
-]
+[50]
 Lampiran A.
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 8.
 (./listings/binary-search-python.tex
 
-[33
+[51
+
 
 ])) (./Lampiran-B.tex
 
-[34]
+[52]
 Lampiran B.
 )
 
-[35
+[53
 
 
 ]
 
-[36
+[54
 
-] (./TA.aux)
+]
+
+Package caption Warning: Unused \captionsetup[algorithm] on input line 110.
+See the caption package documentation for explanation.
+
+(./TA.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -1574,18 +2602,23 @@ L3 programming layer <2025-01-18>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `TA.out' has not changed.
-(rerunfilecheck)             Checksum: 33DE6153AFA175A4A3389C6315B7B6FC;10994.
+(rerunfilecheck)             Checksum: F153A409E766BD956069E7D0654828A2;15300.
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                TA
+(biblatex)                and rerun LaTeX afterwards.
+
 Package logreq Info: Writing requests to 'TA.run.xml'.
 \openout1 = `TA.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 34044 strings out of 475366
- 668509 string characters out of 5762339
- 2198531 words of memory out of 5000000
- 56537 multiletter control sequences out of 15000+600000
- 565805 words of font info for 96 fonts, out of 8000000 for 9000
+ 34138 strings out of 475366
+ 674349 string characters out of 5762339
+ 2158667 words of memory out of 5000000
+ 56641 multiletter control sequences out of 15000+600000
+ 564074 words of font info for 84 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 79i,14n,95p,1236b,6606s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 79i,12n,95p,1231b,6830s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on TA.pdf (66 pages).
+Output written on TA.pdf (86 pages).

@@ -1,8 +1,33 @@
 \babel@toc {indonesian}{}\relax 
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {II.1}{\ignorespaces Contoh peletakan gambar di bagian atas halaman}}{8}{figure.caption.14}%
-\contentsline {figure}{\numberline {II.2}{\ignorespaces Contoh peletakan gambar dengan judul yang panjang sehingga ditulis dalam beberapa baris}}{9}{figure.caption.15}%
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\contentsline {figure}{\numberline {II.1}{\ignorespaces Arsitektur dasar Transformer}}{9}{figure.caption.14}%
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
 \addvspace {10\p@ }
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
@@ -10,12 +35,46 @@
 \babel@toc {indonesian}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {IV.1}{\ignorespaces Diagram \textit {Use Case} Sistem Teman Belajar ASD}}{26}{figure.caption.15}%
+\contentsline {figure}{\numberline {IV.2}{\ignorespaces \textit {Sequence Diagram} FT-01 Login}}{29}{figure.caption.16}%
+\contentsline {figure}{\numberline {IV.3}{\ignorespaces \textit {Sequence Diagram} FT-02 Logout}}{30}{figure.caption.17}%
+\contentsline {figure}{\numberline {IV.4}{\ignorespaces \textit {Sequence Diagram} FT-03 Pilih Topik ASD dan FT-11 \textit {Guided Learning Flow}}}{30}{figure.caption.18}%
+\contentsline {figure}{\numberline {IV.5}{\ignorespaces \textit {Sequence Diagram} FT-04 Tampilkan Materi, FT-10 \textit {Generate} LLM, dan FT-14 Adaptasi Konten}}{31}{figure.caption.19}%
+\contentsline {figure}{\numberline {IV.6}{\ignorespaces \textit {Sequence Diagram} FT-05 Tampilkan Contoh, FT-10 \textit {Generate} LLM, dan FT-14 Adaptasi Konten}}{32}{figure.caption.20}%
+\contentsline {figure}{\numberline {IV.7}{\ignorespaces \textit {Sequence Diagram} FT-06 Latihan Soal, FT-10 \textit {Generate} LLM, FT-13 \textit {Adaptive Engine}, dan FT-14 Adaptasi Konten}}{33}{figure.caption.21}%
+\contentsline {figure}{\numberline {IV.8}{\ignorespaces \textit {Sequence Diagram} FT-07 Pembahasan Latihan, FT-12 \textit {Feedback} Jawaban, dan FT-13 \textit {Adaptive Engine}}}{34}{figure.caption.22}%
+\contentsline {figure}{\numberline {IV.9}{\ignorespaces \textit {Sequence Diagram} FT-08 Ringkasan Materi}}{35}{figure.caption.23}%
+\contentsline {figure}{\numberline {IV.10}{\ignorespaces \textit {Sequence Diagram} FT-09 Progres Belajar dan FT-13 \textit {Adaptive Engine}}}{36}{figure.caption.24}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
 \addvspace {10\p@ }
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
 \babel@toc {english}{}\relax 

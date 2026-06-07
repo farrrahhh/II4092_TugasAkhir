@@ -1,0 +1,128 @@
+% ==========================================
+% BAB IV DESAIN KONSEP SOLUSI
+% ==========================================
+\chapter{DESAIN KONSEP SOLUSI}
+\label{chap:desain-konsep-solusi}
+\section{Tahapan Desain}
+
+\subsection{Analisis Kebutuhan dan Perumusan Masalah}
+
+Tahap pertama berfokus pada pengumpulan informasi mengenai kebutuhan
+mahasiswa dalam mempelajari materi ASD serta kendala yang mereka hadapi.
+Analisis dilakukan untuk memahami sumber kesulitan, risiko kesalahan
+pemahaman, dan kebutuhan terhadap sistem pembelajaran yang lebih terarah.
+Pada tahap ini dilakukan:
+
+\begin{enumerate}
+    \item Identifikasi kebutuhan pengguna, meliputi kebutuhan penjelasan bertahap,
+    contoh kode yang mudah diikuti, latihan dengan pembahasan, serta navigasi
+    pembelajaran yang terstruktur.
+
+    \item Identifikasi permasalahan proses belajar, seperti miskonsepsi pada konsep
+    dasar, keterbatasan materi yang bersifat statis, dan kurangnya umpan balik instan.
+
+    \item Identifikasi risiko penggunaan LLM tanpa kontrol, termasuk potensi
+    \textit{hallucination}, ketidakkonsistenan jawaban, dan penyimpangan dari
+    kurikulum resmi.
+
+    \item Perumusan kebutuhan sistem, baik fungsional maupun nonfungsional,
+    sebagai dasar dalam menyusun desain solusi.
+\end{enumerate}
+
+Tahapan ini menghasilkan pemahaman komprehensif mengenai permasalahan yang
+perlu dipecahkan dan fitur-fitur yang wajib dimiliki sistem.
+
+
+\subsection{Evaluasi Alternatif Solusi dan Pemilihan Teknologi}
+
+Tahap kedua merupakan proses evaluatif yang berfokus pada pemilihan alternatif solusi yang paling sesuai dengan kebutuhan sistem pembelajaran yang akan dibangun. Evaluasi dilakukan terhadap beberapa komponen utama, yaitu model LLM. Pada aspek LLM, model seperti GPT-4o, Gemini~1.5, dan Claude~3 dibandingkan berdasarkan stabilitas \textit{reasoning}, kualitas penjelasan konseptual, dan konsistensi dalam menghasilkan keluaran yang relevan dengan materi ASD.
+
+Berdasarkan evaluasi tersebut, GPT-4o dipilih sebagai model utama yang paling sesuai untuk mendukung pembelajaran ASD secara terarah, akurat, dan relevan dengan kurikulum.
+
+
+\subsection{Perancangan Komponen dan Arsitektur Sistem}
+
+Tahap ketiga berfokus pada penyusunan rancangan sistem berdasarkan hasil 
+analisis dan pemilihan teknologi pada tahap sebelumnya. Pada tahap ini, 
+disusun arsitektur sistem yang mencakup integrasi antara antarmuka pengguna,
+\textit{backend}, layanan LLM, dan penyimpanan progres belajar.
+
+Selain itu, dirancang alur \textit{guided learning} yang terdiri atas tahapan 
+penjelasan konsep, penyajian contoh implementasi kode, pemberian latihan, dan 
+penyusunan ringkasan materi. Setiap tahapan memiliki struktur \textit{prompt} 
+yang dirancang agar respons LLM tetap terarah dan konsisten.
+
+Pada tahap ini pula dirancang komponen
+\textit{backend} seperti modul autentikasi, modul materi, modul layanan LLM,
+serta modul progres belajar.
+
+Untuk mendukung pengalaman pengguna, desain UI/UX juga disusun agar navigasi 
+antar tahapan pembelajaran lebih intuitif dan mudah diikuti.
+
+\subsection{Gambaran Umum Sistem}
+
+Berdasarkan hasil analisis terhadap solusi yang diusulkan dalam Tugas Akhir ini, 
+sistem pembelajaran ASD dikembangkan sebagai sebuah aplikasi web interaktif 
+yang memanfaatkan LLM. Platform ini berfungsi sebagai alat bantu edukatif yang membantu 
+mahasiswa mempelajari konsep ASD secara bertahap melalui penyajian materi, 
+contoh implementasi, latihan soal, dan ringkasan yang dihasilkan oleh LLM 
+dengan dukungan konteks dari materi kuliah.
+
+Secara umum, alur kerja sistem ini ditunjukkan pada Gambar~\ref{fig:alur-sistem}. 
+Proses dimulai ketika pengguna memilih topik pembelajaran yang tersedia pada 
+aplikasi. Selanjutnya, sistem menyusun \textit{prompt} terstruktur dan
+mengirimkannya kepada LLM untuk menghasilkan konten sesuai tahapan
+\textit{guided learning}. Hasil pembelajaran kemudian ditampilkan kepada 
+pengguna, yang dapat memilih untuk melanjutkan ke tahap berikutnya atau 
+mengakhiri sesi sesuai kebutuhan.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\textwidth]{image/alur-guided-learning.png}
+    \caption{Alur umum sistem pembelajaran ASD berbasis LLM}
+    \label{fig:alur-sistem}
+\end{figure}
+
+
+\subsection{Arsitektur Aplikasi}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{image/arsitektur-aplikasi.png}
+    \caption{Arsitektur Sistem Pembelajaran Berbasis LLM}
+\end{figure}
+
+Arsitektur sistem pembelajaran Algoritma dan Struktur Data berbasis LLM ini terdiri atas beberapa komponen utama yang saling berinteraksi. Pada lapisan paling atas terdapat pengguna, yaitu mahasiswa yang mengakses sistem melalui antarmuka web pembelajaran. Antarmuka ini menyediakan fitur pemilihan topik, navigasi tahapan \textit{guided learning}, serta tampilan penjelasan konsep, contoh implementasi, latihan soal, dan ringkasan materi.
+
+Di bawahnya, terdapat komponen \textit{Orchestration and Learning Logic} yang bertanggung jawab mengatur alur pembelajaran. Komponen ini menentukan tahapan yang sedang dijalankan, menyusun \textit{prompt} terstruktur berdasarkan topik dan tahap belajar, serta mengoordinasikan pemanggilan layanan LLM.
+
+Dengan arsitektur ini, setiap respons yang diterima pengguna selalu melalui proses penyusunan \textit{prompt} terstruktur dan generasi oleh \textit{LLM}, sehingga konten yang dihasilkan tetap relevan dengan kurikulum dan mendukung pembelajaran yang terarah.
+
+\subsection{Visualisasi Website}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{image/visual-home.png}%
+    \caption{Tampilan halaman beranda aplikasi pembelajaran ASD.}
+    \label{fig:visual-home}
+\end{figure}
+
+Halaman beranda menampilkan daftar topik Algoritma dan Struktur Data dalam bentuk \textit{card} yang tersusun rapi, masing-masing berisi ikon, nama topik, dan deskripsi singkat. Tampilan ini dirancang untuk memudahkan pengguna memilih materi pembelajaran secara intuitif, dengan \textit{layout} yang bersih dan navigasi sederhana. Di bagian atas, tersedia menu Progres Belajar dan Profil sehingga pengguna dapat mengakses fitur utama aplikasi dengan cepat.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{image/visual-materi.png}%
+    \caption{Tampilan halaman materi dengan tahapan \textit{guided learning}.}
+    \label{fig:visual-materi}
+\end{figure}
+
+Halaman materi terdiri dari dua panel utama: panel kiri berisi tahapan pembelajaran (Penjelasan Konsep, Contoh Implementasi, Latihan Soal, dan Ringkasan), sementara panel kanan menampilkan penjelasan materi yang dihasilkan LLM secara terarah berdasarkan kurikulum. Setiap materi disertai poin penting dan sumber referensi resmi untuk menjaga akurasi konten. Tombol \textit{Regenerate Materi} dan \textit{Lanjut ke Tahap Berikutnya} memastikan pengguna mengikuti alur pembelajaran yang telah ditentukan.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{image/visual-progress.png}%
+    \caption{Tampilan halaman progres belajar pengguna.}
+    \label{fig:visual-progress}
+\end{figure}
+
+Halaman progres belajar memberikan ringkasan perkembangan pengguna melalui indikator jumlah topik, topik yang selesai, dan topik yang sedang dipelajari. Bagian tengah menampilkan \textit{progress bar} keseluruhan, sementara bagian bawah menampilkan progres tiap topik secara individual, lengkap dengan persentase penyelesaian dan status belajar. Tampilan ini mendukung pemantauan mandiri dan membantu pengguna memahami tingkat penguasaan materi yang telah dicapai, serta menyediakan riwayat pembelajaran yang dilakukan pengguna.

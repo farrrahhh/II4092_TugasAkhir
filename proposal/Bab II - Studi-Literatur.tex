@@ -1,4 +1,6 @@
-\cleardoublepage % memastikan bab baru dimulai di halaman ganjil (kanan)
+% ==========================================
+% BAB II STUDI LITERATUR
+% ==========================================
 \chapter{STUDI LITERATUR}
 \label{chap:studi-literatur}
 
@@ -15,14 +17,16 @@ Materi ASD umumnya mencakup struktur dasar seperti \textit{array}, \textit{linke
 Berbagai penelitian menunjukkan bahwa mahasiswa sering mengalami kesulitan dalam mempelajari Algoritma dan Struktur Data (ASD) karena sifat materinya yang abstrak, dinamis, dan multidimensional. Berdasarkan temuan dari \textit{systematic literature review} yang dilakukan oleh Mtaho dan Mselle \cite{Mtaho2024}, kesulitan terbesar mahasiswa berasal dari beberapa faktor utama, yaitu:
 
 \begin{enumerate}
-    \item Abstraksi konsep yang tinggi, sehingga sulit untuk divisualisasikan. Contohnya adalah konsep \textit{pointer}, \textit{node}, atau relasi antar-\textit{node} pada struktur \textit{tree} dan \textit{graph} yang tidak terlihat secara langsung dalam eksekusi program.
-
+    \item Abstraksi konsep yang tinggi, sehingga sulit untuk \textit{divisualisasikan}. Contohnya adalah konsep \textit{pointer}, \textit{node}, atau relasi antar-\textit{node} pada struktur \textit{tree} dan \textit{graph} yang tidak terlihat secara langsung dalam eksekusi program.
+    
     \item Perubahan struktur yang bersifat dinamis, seperti pemutakhiran referensi pada \textit{linked list} atau proses rotasi pada \textit{binary tree}. Perubahan ini menuntut kemampuan visualisasi mental dan penalaran yang kuat untuk memahami bagaimana data bergerak dan dimodifikasi.
-
+    
     \item Beban kognitif yang tinggi, karena pembelajaran ASD mengharuskan mahasiswa memahami representasi struktur data, logika algoritma, serta implementasi kode secara bersamaan. Tuntutan ini sering membuat mahasiswa kewalahan ketika mencoba menghubungkan teori dengan implementasi.
-
+    
     \item Miskonsepsi pada konsep dasar, seperti salah memahami operasi \textit{insert} atau \textit{delete}, cara kerja \textit{pointer}, atau alur eksekusi algoritma. Miskonsepsi tersebut dapat menghambat pemahaman materi lanjutan dan berdampak pada kemampuan pemecahan masalah.
 \end{enumerate}
+
+
 
 
 % LLM
@@ -36,7 +40,7 @@ Arsitektur utama yang menjadi fondasi LLM modern adalah Transformer \cite{Vaswan
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.75\textwidth]{images/transformer-architecture.png}
+    \includegraphics[width=0.75\textwidth]{image/transformer-architecture.png}
     \caption{Arsitektur dasar Transformer}
     \label{fig:transformer}
 \end{figure}
@@ -95,6 +99,7 @@ Berbagai strategi \textit{prompt engineering} telah dikembangkan untuk meningkat
 Teknik-teknik tersebut digunakan untuk meningkatkan kontrol pengguna terhadap keluaran model, mengurangi risiko bias atau kesalahan, serta meningkatkan kualitas penjelasan dan kemampuan penalaran LLM dalam berbagai konteks pembelajaran maupun aplikasi praktis.
 
 
+
 % Evaluasi
 \section{Evaluasi}
 
@@ -113,7 +118,7 @@ Selain itu, pendekatan ini memperkuat efisiensi proses pengujian karena dapat me
 
 Pemanfaatan ChatGPT sebagai alat bantu \textit{Teaching Assistant} (TA) dalam mata kuliah \textit{Data Structures and Algorithms} (DSA) terbukti efektif dalam meningkatkan kualitas pembelajaran. Studi oleh Jamie et al. \cite{Jamie2024ChatGPTDSA} menunjukkan bahwa penggunaan LLM seperti ChatGPT-4o dan ChatGPT-o1 dapat membantu mahasiswa memahami konsep algoritmik kompleks melalui penjelasan terstruktur, pembuatan contoh, dan penyediaan latihan berbasis \textit{structured prompts}. Dalam pendekatan ini, keluaran LLM tetap diverifikasi oleh TA untuk menjaga akurasi dan kesesuaian konten.
 
-Hasil eksperimen terkontrol membandingkan dua kelas---kelas dengan instruksi tradisional dan kelas dengan pendekatan hibrida TA dengan ChatGPT. Kelompok hibrida menunjukkan peningkatan signifikan dengan selisih rata-rata 16{,}50 poin lebih tinggi pada latihan, kuis, dan ujian. Model AI membantu menjelaskan konsep sulit seperti rekursi, \textit{graph traversal}, serta \textit{dynamic programming}, sembari menyajikan keluaran yang lebih terarah berkat \textit{prompt} yang sistematis.
+Hasil eksperimen terkontrol membandingkan dua kelas-kelas dengan instruksi tradisional dan kelas dengan pendekatan hibrida TA dengan ChatGPT. Kelompok hibrida menunjukkan peningkatan signifikan dengan selisih rata-rata 16{,}50 poin lebih tinggi pada latihan, kuis, dan ujian. Model AI membantu menjelaskan konsep sulit seperti rekursi, \textit{graph traversal}, serta \textit{dynamic programming}, sembari menyajikan keluaran yang lebih terarah berkat \textit{prompt} yang sistematis.
 
 Namun, penelitian tersebut juga mencatat keterbatasan ChatGPT, seperti ketidakmampuan menghasilkan visualisasi struktur data dan potensi kesalahan pada masalah yang memerlukan kreativitas tinggi. Dengan demikian, peran TA tetap penting untuk memvalidasi keluaran model. Studi ini menegaskan bahwa integrasi LLM tidak menggantikan peran manusia, melainkan memperkuat efektivitas pengajaran melalui kolaborasi manusia dan AI yang terstruktur.
 

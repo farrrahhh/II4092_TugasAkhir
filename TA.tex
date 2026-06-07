@@ -102,6 +102,15 @@
   \floatname{algorithm}{\algorithmname}
   \providecommand{\listofalgorithms}{\listof{algorithm}{\listalgorithmname}}
 }
+\captionsetup[algorithm]{
+  labelsep=space,
+  format=hang,
+  justification=raggedright,
+  singlelinecheck=false
+}
+\floatsetup[algorithm]{
+  capposition=top
+}
 \IfFileExists{algorithmicx.sty}{
   \usepackage{algorithmicx} % for algorithmic environment
   \usepackage{algpseudocode} % for pseudocode
@@ -128,7 +137,6 @@
   \newcommand{\EndIf}{\addtolength{\algindent}{-1.5em}\State\textbf{end if}}
 }
 \usepackage{microtype} % Untuk optimasi typography dan spacing
-\usepackage{floatrow} % for customizing float (figure and table) positions
 \usepackage{array} % for better arrays (eg. in tabular environment)
 \IfFileExists{threeparttable.sty}{
   \usepackage{threeparttable} % for tables with notes
@@ -151,6 +159,7 @@
 
 \setmainfont{Times New Roman} % set main font to Times New Roman
 \onehalfspacing % spasi 1.5
+\raggedbottom % mencegah peregangan vertikal antar paragraf
 
 % --- Bibliography menggunakan BibLaTeX dengan gaya Chicago ---
 \usepackage[
@@ -352,17 +361,6 @@
 \floatsetup[lstlisting]{
   capposition=top
 }
-% --- Algoritma ---
-\captionsetup[algorithm]{
-  labelsep=space, 
-  format=hang, 
-  justification=raggedright, 
-  singlelinecheck=false
-}
-\floatsetup[algorithm]{
-  capposition=top
-}
-
 % --- Atur indentasi paragraf ---
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{12pt plus 2pt minus 1pt}

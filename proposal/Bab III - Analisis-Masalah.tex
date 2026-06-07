@@ -4,24 +4,12 @@
 % fungsional dan nonfungsional, analisis berbagai alternatif solusi yang dapat ditawarkan, dan
 % metode pemilihan solusi yang diusulkan.
 % ============================================================================================
-\cleardoublepage
 \chapter{ANALISIS MASALAH}
 \label{chap:analisis-masalah}
 
-Bab ini membahas analisis permasalahan yang mendasari pengembangan sistem pembelajaran Algoritma dan Struktur Data (ASD) berbasis \textit{Large Language Model} (LLM) dengan pendekatan \textit{guided learning}. Secara garis besar, bab ini membahas hal-hal berikut:
-
-\begin{enumerate}[1.]
-    \item Analisis kondisi pembelajaran ASD saat ini, meliputi fungsi umum sistem yang sudah ada beserta permasalahan yang masih ditemui;
-    \item Analisis kebutuhan sistem, mencakup identifikasi masalah pengguna, konsep dasar solusi yang diusulkan, serta rumusan kebutuhan fungsional dan nonfungsional; dan
-    \item Analisis pemilihan solusi, meliputi evaluasi berbagai alternatif teknologi dan penentuan solusi yang paling sesuai untuk mendukung pengembangan sistem.
-\end{enumerate}
-
-
-% ============================================================
 \section{Analisis Kondisi Saat Ini}
-% ============================================================
 
-Pembelajaran Algoritma dan Struktur Data (ASD) merupakan salah satu komponen penting dalam kurikulum ilmu komputer yang bertujuan membekali mahasiswa dengan kemampuan memahami struktur data, merancang algoritma, serta menganalisis kompleksitas program. Meskipun demikian, berbagai studi menunjukkan bahwa proses pembelajaran ASD masih menghadapi tantangan signifikan, terutama dalam penyampaian konsep yang bersifat abstrak dan dinamis \autocite{Mtaho2024}. Berdasarkan studi literatur dan observasi terhadap praktik pembelajaran saat ini, bagian berikut merangkum fungsi-fungsi utama sistem pembelajaran ASD yang digunakan mahasiswa serta berbagai kendala yang masih ditemui dalam implementasinya.
+Pembelajaran Algoritma dan Struktur Data (ASD) merupakan salah satu komponen penting dalam kurikulum ilmu komputer yang bertujuan membekali mahasiswa dengan kemampuan memahami struktur data, merancang algoritma, serta menganalisis kompleksitas program. Meskipun demikian, berbagai studi menunjukkan bahwa proses pembelajaran ASD masih menghadapi tantangan signifikan, terutama dalam penyampaian konsep yang bersifat abstrak dan dinamis. Berdasarkan informasi yang diperoleh melalui studi literatur dan observasi terhadap praktik pembelajaran saat ini, bagian berikut merangkum fungsi-fungsi utama sistem pembelajaran ASD yang digunakan mahasiswa serta berbagai kendala yang masih ditemui dalam implementasinya.
 
 Adapun fungsi umum yang dimiliki sistem pembelajaran ASD saat ini, yaitu:
 
@@ -37,28 +25,26 @@ Meskipun telah menyediakan fitur-fitur tersebut, pendekatan pembelajaran ASD saa
 
 \begin{enumerate}
     \item Sistem pembelajaran umumnya bersifat statis dan tidak adaptif terhadap kebutuhan mahasiswa. Materi, contoh, dan penjelasan yang tersedia biasanya disajikan dalam satu format yang sama sehingga tidak dapat menyesuaikan tingkat pemahaman setiap mahasiswa. Kondisi ini membuat mahasiswa yang mengalami kesulitan pada konsep tertentu tidak mendapatkan penjelasan tambahan yang lebih terarah.
-
+    
     \item Penjelasan mengenai struktur data yang bersifat dinamis, seperti \textit{linked list}, \textit{tree}, atau \textit{graph}, sering kali masih kurang intuitif karena hanya ditampilkan dalam bentuk gambar statis. Hal ini menyulitkan mahasiswa untuk memahami perubahan \textit{pointer}, hubungan antar-\textit{node}, atau proses algoritma secara rinci.
-
+    
     \item Mahasiswa sering mengandalkan penjelasan dari asisten pengajar atau sumber eksternal seperti \textit{chatbot} LLM umum. Namun, penggunaan LLM secara bebas memiliki keterbatasan, seperti ketidakkonsistenan dengan kurikulum atau potensi terjadinya \textit{hallucination} yang dapat menghasilkan informasi keliru.
-
-    \item Umpan balik terhadap latihan dan pemahaman konsep biasanya tidak diberikan secara cepat. Mahasiswa harus menunggu sesi asistensi atau waktu koreksi, sehingga proses belajar menjadi kurang responsif dan memperlambat perbaikan miskonsepsi.
-
+    
+    \item Umpan balik terhadap latihan dan pemahaman konsep biasanya tidak diberikan secara cepat. Mahasiswa harus menunggu sesi asistensi atau menunggu waktu koreksi, sehingga proses belajar menjadi kurang responsif dan memperlambat perbaikan miskonsepsi.
+    
     \item Sumber referensi materi sering kali tersebar pada berbagai platform seperti LMS, modul digital, forum diskusi, dan sumber eksternal lain, sehingga tidak ada satu wadah terintegrasi yang dapat memandu mahasiswa mengikuti alur belajar secara sistematis.
 \end{enumerate}
 
 Saat ini, proses pembelajaran ASD di lingkungan perkuliahan masih sangat bergantung pada metode tradisional yang membutuhkan interaksi langsung dengan dosen atau asisten pengajar. Meskipun LLM modern seperti ChatGPT, Gemini, atau DeepSeek mulai dimanfaatkan oleh mahasiswa, penggunaannya belum terintegrasi dengan kurikulum dan tidak dibatasi oleh struktur pembelajaran tertentu. Kondisi ini membuat mahasiswa berisiko menerima penjelasan yang tidak sesuai urutan materi atau bahkan bertentangan dengan pendekatan yang diajarkan dalam kelas.
 
 
-% ============================================================
 \section{Analisis Kebutuhan}
-% ============================================================
 
 \subsection{Identifikasi Masalah Pengguna}
 
-Pengguna utama sistem ini adalah mahasiswa yang mempelajari materi Algoritma dan Struktur Data (ASD). Dalam proses pembelajaran saat ini, mahasiswa sering menghadapi berbagai tantangan karena materi ASD memiliki tingkat abstraksi yang tinggi, bersifat dinamis, dan memerlukan kemampuan penalaran algoritmik yang kuat \autocite{Mtaho2024}. Metode pembelajaran tradisional yang mengandalkan modul, \textit{slide}, serta penjelasan langsung dari dosen dan asisten pengajar belum sepenuhnya mampu menjawab kebutuhan mahasiswa dalam memahami konsep secara mendalam dan bertahap. Kondisi ini menyebabkan mahasiswa sering mengalami miskonsepsi pada konsep dasar, kesulitan mengikuti alur materi, serta kurangnya umpan balik cepat ketika mengalami kebingungan.
+Pengguna utama sistem ini adalah mahasiswa yang mempelajari materi Algoritma dan Struktur Data (ASD). Dalam proses pembelajaran saat ini, mahasiswa sering menghadapi berbagai tantangan karena materi ASD memiliki tingkat abstraksi yang tinggi, bersifat dinamis, dan memerlukan kemampuan penalaran algoritmik yang kuat. Metode pembelajaran tradisional yang mengandalkan modul, \textit{slide}, serta penjelasan langsung dari dosen dan asisten pengajar belum sepenuhnya mampu menjawab kebutuhan mahasiswa dalam memahami konsep secara mendalam dan bertahap. Kondisi ini menyebabkan mahasiswa sering mengalami miskonsepsi pada konsep dasar, kesulitan mengikuti alur materi, serta kurangnya umpan balik cepat ketika mengalami kebingungan.
 
-Selain itu, mahasiswa kerap mencari bantuan melalui \textit{chatbot} LLM umum, namun interaksi yang tidak terarah dan tidak sesuai materi yang diberikan di kelas berpotensi memberikan penjelasan keliru atau tidak konsisten \autocite{White2023PromptPatternCatalog}. Hal ini memperlambat proses belajar dan meningkatkan risiko kesalahan pemahaman. Berikut permasalahan yang dihadapi oleh pengguna tersebut.
+Selain itu, mahasiswa kerap mencari bantuan melalui \textit{chatbot} LLM umum, namun interaksi yang tidak terarah dan tidak sesuai materi yang diberikan di kelas berpotensi memberikan penjelasan keliru atau tidak konsisten. Hal ini memperlambat proses belajar dan meningkatkan risiko kesalahan pemahaman. Berikut permasalahan yang dihadapi oleh pengguna tersebut.
 
 \begin{enumerate}
     \item Mahasiswa saat ini belum memiliki sistem pembelajaran yang menyajikan penjelasan konsep ASD secara terstruktur dan bertahap sehingga memudahkan mereka membangun pemahaman dari dasar hingga tingkat yang lebih kompleks.
@@ -78,12 +64,11 @@ Selain itu, mahasiswa kerap mencari bantuan melalui \textit{chatbot} LLM umum, n
 
 Untuk mencari solusi atas masalah-masalah tersebut, perlu disusun kebutuhan fungsional dan nonfungsional sistem yang diperlukan. Berikut penjabaran mengenai kebutuhan fungsional dan nonfungsional untuk sistem yang akan dibuat.
 
-
 \subsection{Konsep Dasar Sistem yang Diusulkan}
 
 Konsep dasar sistem pembelajaran yang diusulkan pada tugas akhir ini berfokus pada pemanfaatan \textit{Large Language Model} (LLM) dalam kerangka \textit{guided learning} yang terstruktur untuk membantu mahasiswa memahami materi Algoritma dan Struktur Data (ASD) secara lebih efektif. Sistem ini dirancang untuk mengatasi berbagai permasalahan pembelajaran yang telah diidentifikasi pada bagian sebelumnya, khususnya terkait sifat materi yang abstrak, perlunya penjelasan bertahap, keterbatasan sumber belajar statis, serta ketidakkonsistenan penjelasan ketika menggunakan \textit{chatbot} umum.
 
-Secara konsep, sistem ini berfungsi sebagai pendamping belajar yang memberikan alur pembelajaran terarah meliputi penjelasan konsep, contoh implementasi, latihan soal, dan ringkasan materi. Setiap tahap pembelajaran dihasilkan oleh LLM namun tetap dikendalikan melalui struktur \textit{prompt} dan konteks materi kuliah yang disediakan oleh dosen. Dengan demikian, sistem tidak hanya menghasilkan penjelasan secara generatif, tetapi melakukannya dengan batasan dan struktur yang selaras dengan kurikulum resmi \autocite{Minaee2025PromptEngineering}.
+Secara konsep, sistem ini berfungsi sebagai pendamping belajar yang memberikan alur pembelajaran terarah meliputi penjelasan konsep, contoh implementasi, latihan soal, dan ringkasan materi. Setiap tahap pembelajaran dihasilkan oleh LLM namun tetap dikendalikan melalui struktur \textit{prompt} dan konteks materi kuliah yang disediakan oleh dosen. Dengan demikian, sistem tidak hanya menghasilkan penjelasan secara generatif, tetapi melakukannya dengan batasan dan struktur yang selaras dengan kurikulum resmi.
 
 Selain menyediakan konten terarah, sistem ini juga dirancang untuk memberikan umpan balik otomatis terhadap jawaban mahasiswa pada latihan soal. Dengan adanya umpan balik instan, mahasiswa dapat mengetahui letak kesalahan mereka secara cepat sehingga proses koreksi miskonsepsi dapat berlangsung lebih efektif tanpa harus menunggu sesi asistensi atau evaluasi manual dari pengajar.
 
@@ -96,14 +81,13 @@ Secara keseluruhan, konsep dasar sistem ini adalah menghadirkan platform pembela
     \item terpadu sebagai satu wadah pembelajaran yang menggabungkan materi, contoh, latihan, dan ringkasan secara sistematis.
 \end{enumerate}
 
-
 \subsection{Kebutuhan Fungsional}
 
 Kebutuhan fungsional atau \textit{Functional Requirements} merupakan kebutuhan-kebutuhan dalam bentuk layanan yang diberikan oleh sistem kepada pengguna. Berikut merupakan tabel kebutuhan fungsional dari sistem pembelajaran Algoritma dan Struktur Data berbasis \textit{Large Language Model} dengan pendekatan \textit{guided learning}.
 
 \begin{longtable}{|p{1.8cm}|p{3cm}|p{7.5cm}|}
 \caption{Kebutuhan Fungsional Sistem Pembelajaran ASD Berbasis LLM}
-\label{tab:kebutuhan-fungsional}\\
+\label{tab:fr-llm}\\
 \hline
 \textbf{ID} & \textbf{Kebutuhan} & \textbf{Penjelasan} \\
 \hline
@@ -165,25 +149,19 @@ Kebutuhan nonfungsional atau \textit{Non-Functional Requirements} merupakan kebu
 
 \begin{longtable}{|p{1.8cm}|p{3cm}|p{7.5cm}|}
 \caption{Kebutuhan Nonfungsional Sistem Pembelajaran ASD Berbasis LLM}
-\label{tab:kebutuhan-nonfungsional}\\
+\label{tab:kebutuhan-nonfungsional} \\
+
 \hline
 \textbf{ID} & \textbf{Parameter} & \textbf{Penjelasan} \\
 \hline
 \endfirsthead
 
-\caption[]{Kebutuhan Nonfungsional Sistem Pembelajaran ASD Berbasis LLM (lanjutan)}\\
 \hline
 \textbf{ID} & \textbf{Parameter} & \textbf{Penjelasan} \\
 \hline
 \endhead
 
 \hline
-\multicolumn{3}{l}{\textit{Bersambung ke halaman berikutnya}}\\
-\endfoot
-
-\hline
-\endlastfoot
-
 NF-01 & \textit{Availability} &
 Sistem harus selalu tersedia dan dapat diakses oleh pengguna tanpa mengalami \textit{crash} atau gangguan layanan, sehingga proses pembelajaran dapat dilakukan kapan saja tanpa hambatan. \\
 \hline
@@ -196,22 +174,13 @@ NF-03 & \textit{Compatibility} &
 Sistem harus dapat berjalan pada berbagai perangkat seperti laptop, tablet, maupun \textit{smartphone}, serta kompatibel dengan beberapa \textit{browser} modern. \\
 \hline
 
-NF-04 & \textit{Performance} &
-Sistem harus mampu merespons permintaan pengguna dan menghasilkan konten dari LLM dalam waktu yang wajar sehingga tidak mengganggu pengalaman belajar pengguna. \\
-\hline
-
-NF-05 & \textit{Usability} &
-Sistem harus menyediakan antarmuka yang intuitif dan mudah digunakan oleh mahasiswa tanpa memerlukan pelatihan khusus, sehingga pengguna dapat langsung mengikuti alur pembelajaran yang disediakan. \\
-\hline
-
 \end{longtable}
+
 
 Pemenuhan kebutuhan nonfungsional ini bertujuan untuk memastikan sistem memiliki ketersediaan yang baik, aman digunakan, serta memberikan pengalaman belajar yang mudah dan intuitif bagi pengguna.
 
 
-% ============================================================
 \section{Analisis Pemilihan Solusi}
-% ============================================================
 
 \subsection{Alternatif Solusi}
 
@@ -219,85 +188,14 @@ Penentuan alternatif solusi dilakukan dengan mempertimbangkan setiap kebutuhan d
 
 \subsubsection{Pemilihan Model LLM}
 
-Terdapat beberapa pilihan model LLM yang populer dalam pengembangan aplikasi edukasi berbasis AI, di antaranya GPT-4o, Gemini 1.5, dan Claude 3. Masing-masing model memiliki kelebihan dan kekurangan dalam hal kemampuan \textit{reasoning}, kualitas penjelasan teknis, serta konsistensi keluaran.
+Terdapat beberapa pilihan model LLM yang populer dalam pengembangan aplikasi edukasi berbasis AI, di antaranya GPT-4/GPT-4o, Gemini 1.5, dan Claude 3. Masing-masing model memiliki kelebihan dan kekurangan dalam hal kemampuan \textit{reasoning}, kualitas penjelasan teknis, serta konsistensi keluaran.
 
 GPT-4o unggul dalam pemahaman konteks yang panjang, penalaran algoritmik, dan kemampuan memberikan penjelasan langkah demi langkah secara stabil. Model ini terbukti efektif untuk menghasilkan contoh kode, menyusun latihan, serta memberikan umpan balik yang terstruktur, menjadikannya kandidat kuat untuk sistem pembelajaran yang memerlukan penjelasan mendalam dalam domain pemrograman. Namun, GPT-4o memerlukan biaya penggunaan yang relatif lebih tinggi dibandingkan beberapa alternatif lainnya.
 
-Di sisi lain, Gemini 1.5 menawarkan kapasitas konteks yang sangat besar sehingga cocok untuk sistem yang memerlukan penyertaan modul kuliah atau dokumen panjang dalam \textit{prompt}. Akan tetapi, kualitas \textit{reasoning} Gemini pada permasalahan algoritmik tertentu kadang kurang stabil dan lebih mudah menghasilkan jawaban yang tidak konsisten.
+Di sisi lain, Gemini 1.5 menawarkan konteks panjang yang sangat besar, sehingga cocok untuk sistem yang memerlukan penyertaan modul kuliah atau dokumen panjang dalam \textit{prompt}. Akan tetapi, kualitas \textit{reasoning} Gemini pada permasalahan algoritmik tertentu kadang kurang stabil dan lebih mudah menghasilkan jawaban yang tidak konsisten.
 
 Claude 3 memiliki kemampuan penjelasan natural dan terstruktur, tetapi terkadang kurang presisi dalam contoh kode yang kompleks, khususnya pada topik algoritma tingkat lanjut.
 
-Perbandingan ketiga model LLM tersebut dirangkum pada Tabel~\ref{tab:perbandingan-llm}.
-
-\begin{longtable}{|p{3cm}|p{3.5cm}|p{3.5cm}|p{2.5cm}|}
-\caption{Perbandingan Model LLM untuk Sistem Pembelajaran ASD}
-\label{tab:perbandingan-llm}\\
-\hline
-\textbf{Kriteria} & \textbf{GPT-4o} & \textbf{Gemini 1.5} & \textbf{Claude 3} \\
-\hline
-\endfirsthead
-
-\caption[]{Perbandingan Model LLM untuk Sistem Pembelajaran ASD (lanjutan)}\\
-\hline
-\textbf{Kriteria} & \textbf{GPT-4o} & \textbf{Gemini 1.5} & \textbf{Claude 3} \\
-\hline
-\endhead
-
-\hline
-\multicolumn{4}{l}{\textit{Bersambung ke halaman berikutnya}}\\
-\endfoot
-
-\hline
-\endlastfoot
-
-\textit{Reasoning} algoritmik & Sangat baik, stabil & Cukup baik, kurang konsisten & Baik, terkadang kurang presisi \\
-\hline
-Kualitas penjelasan teknis & Mendalam dan sistematis & Cukup baik & Natural, kurang detail pada kode kompleks \\
-\hline
-Konsistensi keluaran & Tinggi & Sedang & Tinggi \\
-\hline
-Kapasitas konteks & Besar & Sangat besar & Besar \\
-\hline
-Biaya penggunaan & Relatif tinggi & Menengah & Menengah \\
-\hline
-Kesesuaian untuk ASD & Sangat sesuai & Cukup sesuai & Cukup sesuai \\
-\hline
-
-\end{longtable}
+Setelah mempertimbangkan seluruh aspek tersebut, GPT-4o dipilih sebagai solusi utama karena memberikan keseimbangan terbaik antara kemampuan \textit{reasoning} teknis, stabilitas penjelasan, dan kecocokan dengan kebutuhan pembelajaran ASD yang menuntut akurasi tinggi dan penjelasan yang sistematis.
 
 
-\subsection{Analisis Penentuan Solusi}
-
-Berdasarkan hasil evaluasi terhadap berbagai alternatif solusi yang telah diuraikan pada subbab sebelumnya, berikut adalah keputusan pemilihan solusi yang digunakan dalam pengembangan sistem pembelajaran ASD berbasis LLM.
-
-\subsubsection{Model LLM yang Dipilih}
-
-Setelah mempertimbangkan seluruh aspek yang relevan, GPT-4o dipilih sebagai model LLM utama yang digunakan dalam sistem ini. Pemilihan GPT-4o didasarkan pada beberapa pertimbangan berikut:
-
-\begin{enumerate}
-    \item \textbf{Kemampuan \textit{reasoning} yang tinggi dan stabil.} GPT-4o menunjukkan konsistensi yang baik dalam menghasilkan penjelasan algoritmik yang akurat, terutama untuk topik-topik yang memerlukan penalaran bertahap seperti proses traversal pada \textit{tree} atau analisis kompleksitas algoritma.
-
-    \item \textbf{Kualitas contoh kode yang baik.} Model ini mampu menghasilkan contoh implementasi kode dalam berbagai bahasa pemrograman dengan kualitas yang memadai, disertai penjelasan langkah demi langkah yang mudah dipahami.
-
-    \item \textbf{Dukungan terhadap \textit{prompt engineering} yang terstruktur.} GPT-4o merespons dengan baik terhadap instruksi dan batasan yang diberikan melalui \textit{system prompt}, sehingga memungkinkan sistem untuk mengendalikan format keluaran sesuai tahapan \textit{guided learning} \autocite{White2023PromptPatternCatalog}.
-
-    \item \textbf{Ekosistem API yang matang.} OpenAI menyediakan API yang stabil dan terdokumentasi dengan baik, mempermudah integrasi dengan \textit{backend} aplikasi.
-\end{enumerate}
-
-Dengan pertimbangan tersebut, GPT-4o memberikan keseimbangan terbaik antara kemampuan teknis, stabilitas keluaran, dan kemudahan integrasi untuk mendukung sistem pembelajaran ASD yang terarah, akurat, dan konsisten dengan kurikulum.
-
-\subsubsection{Pendekatan \textit{Guided Learning}}
-
-Selain pemilihan model LLM, pendekatan pembelajaran yang digunakan dalam sistem ini juga merupakan bagian krusial dari solusi yang diusulkan. Pendekatan \textit{guided learning} dipilih karena kemampuannya dalam menyediakan alur belajar yang terstruktur dan terarah, berbeda dengan pendekatan \textit{open-ended chat} yang tidak memiliki batasan konteks. Dengan pendekatan ini, setiap sesi pembelajaran mahasiswa akan mengikuti urutan tahapan yang konsisten, yaitu:
-
-\begin{enumerate}
-    \item \textbf{Penjelasan Konsep} : LLM menghasilkan penjelasan teoretis yang disesuaikan dengan topik yang dipilih mahasiswa, mencakup definisi, karakteristik, dan hubungan dengan konsep lain dalam ASD.
-
-    \item \textbf{Contoh Implementasi} : LLM menyajikan contoh kode beserta penjelasan alur eksekusi secara langkah demi langkah, membantu mahasiswa menghubungkan teori dengan praktik pemrograman.
-
-    \item \textbf{Latihan Soal} : Sistem menyediakan soal latihan yang relevan dengan materi, disertai pembahasan otomatis setelah mahasiswa menjawab untuk mendeteksi dan mengoreksi miskonsepsi secara langsung.
-
-    \item \textbf{Ringkasan} : LLM menghasilkan ringkasan poin-poin penting dari sesi belajar yang telah selesai sebagai bahan \textit{review} bagi mahasiswa.
-\end{enumerate}
-
-Pendekatan ini memastikan bahwa seluruh konten yang dihasilkan LLM tetap relevan, terstruktur, dan konsisten dengan kurikulum resmi, sekaligus memberikan pengalaman belajar yang lebih terarah dan efektif dibandingkan interaksi bebas dengan \textit{chatbot} umum.

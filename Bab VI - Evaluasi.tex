@@ -4,77 +4,181 @@
 \cleardoublepage
 \chapter{EVALUASI}
 \label{chap:evaluasi}
-asdfasdf
+
 \section{Metode Evaluasi}
-asdfasdf
-\section{Hasil Evaluasi}
-asdfasdf
-\section{Pembahasan Hasil Evaluasi}
-\section{Evaluasi Kesalahan Penulisan yang Sering Terjadi}
-\subsection{Penggunaan Kata "di mana" atau "dimana"}
-Banyak yang menuliskan kata "di mana" atau "dimana" sebagai pengganti kata "which" dalam bahasa Inggris. 
-Padahal, penggunaan kata "di mana" atau "dimana" tidak tepat dalam konteks tersebut. Demikian juga untuk kata serupa, misalnya "yang mana".
-Kata "di mana" atau "dimana" ini harus diganti dengan kata lain, seperti "dengan", "tempat", "yang", dan sebagainya tergantung kalimatnya.
-Penjelasan lengkap dapat dilihat pada \autocite{BPBI}.
 
-\subsection{Penggunaan Kata "sedangkan" dan "sehingga"}
+Evaluasi Aplikasi Pembelajaran ASD dilakukan untuk memastikan bahwa sistem yang dikembangkan telah memenuhi seluruh kebutuhan fungsional yang ditetapkan, menghasilkan konten pembelajaran yang berkualitas, serta dapat digunakan dengan mudah oleh mahasiswa sebagai pengguna. Evaluasi terdiri atas dua bagian utama, yaitu pengujian \textit{black box} untuk memverifikasi fungsionalitas sistem dan pengujian kegunaan (\textit{usability testing}) untuk menilai pengalaman pengguna secara keseluruhan.
 
-\begin{table}[t]
-  \begin{tabular}{|c|l|l|}
-  \hline
-  Kata & Salah & Benar \\ \hline
-  sedangkan & \begin{tabular}[c]{@{}c@{}}Sedangkan sistem lama masih\\ digunakan oleh banyak pengguna.\end{tabular} & \begin{tabular}[c]{@{}c@{}}Sistem lama masih digunakan\\ oleh banyak pengguna,\\ sedangkan sistem baru belum siap.\end{tabular} \\ \hline
-  sehingga & \begin{tabular}[c]{@{}c@{}}Sehingga sistem lama masih\\ digunakan oleh banyak pengguna.\end{tabular} & \begin{tabular}[c]{@{}c@{}}Sistem lama masih digunakan\\ oleh banyak pengguna sehingga\\ sistem baru belum siap.\end{tabular} \\ \hline
-  \end{tabular}
-  \caption{Contoh penggunaan kata "sedangkan" dan "sehingga"}
-  \label{tbl:sedangkan_sehingga}
+\subsection{Pengujian \textit{Black Box}}
+
+\textit{Black Box Testing} merupakan metode pengujian perangkat lunak yang mengevaluasi fungsi dan perilaku sistem dari sisi eksternal tanpa melihat struktur internal atau kode program, sehingga pengujian dilakukan dengan memberikan berbagai \textit{input} dan memeriksa apakah \textit{output} telah sesuai dengan spesifikasi yang ditentukan \cite{Pressman2015SWE}. Pada pengujian ini digunakan teknik \textit{Equivalence Partitioning}, yaitu metode yang membagi domain \textit{input} ke dalam beberapa kelas ekivalen sehingga hanya satu nilai dari setiap kelas yang perlu diuji karena dianggap mewakili seluruh anggota kelas tersebut \cite{Myers2011ArtOfSoftwareTesting}.
+
+Pengujian \textit{black box} dilakukan terhadap seluruh fitur fungsional Aplikasi Pembelajaran ASD berdasarkan kebutuhan fungsional yang telah ditetapkan. Setiap fitur diuji dengan mendefinisikan skenario uji, data masukan, keluaran yang diharapkan, dan status kelulusan. Rangkuman cakupan pengujian \textit{black box} dapat dilihat pada Tabel \ref{tab:blackbox} berikut.
+
+\begin{longtable}{|p{1cm}|p{2.5cm}|p{4.5cm}|p{4.5cm}|}
+\caption{Cakupan Pengujian \textit{Black Box}}
+\label{tab:blackbox}\\
+\hline
+\textbf{ID} & \textbf{Fitur} & \textbf{Skenario Uji} & \textbf{Indikator Keberhasilan} \\
+\hline
+\endfirsthead
+
+\caption[]{Cakupan Pengujian \textit{Black Box} (lanjutan)}\\
+\hline
+\textbf{ID} & \textbf{Fitur} & \textbf{Skenario Uji} & \textbf{Indikator Keberhasilan} \\
+\hline
+\endhead
+
+\hline
+\multicolumn{4}{r}{\textit{Bersambung ke halaman berikutnya}}\\
+\endfoot
+
+\hline
+\endlastfoot
+
+FT-01 & Login &
+Pengguna memasukkan \textit{email} dan \textit{password} yang valid / tidak valid / kosong &
+Sistem memperbolehkan akses dengan kredensial valid; menampilkan pesan kesalahan untuk kredensial tidak valid atau kosong \\
+\hline
+
+FT-02 & Logout &
+Pengguna menekan tombol \textit{logout} &
+Sesi dihapus dan pengguna diarahkan ke halaman \textit{login} \\
+\hline
+
+FT-03 & Pilih Topik ASD &
+Pengguna memilih salah satu dari sepuluh topik yang tersedia &
+Sistem menampilkan halaman topik dengan tab sesuai status \textit{guided flow} pengguna \\
+\hline
+
+FT-04 & Tampilkan Materi &
+Pengguna membuka tab materi pada topik yang dipilih &
+Konten materi berhasil dihasilkan dan ditampilkan sesuai topik; progres diperbarui setelah selesai dibaca \\
+\hline
+
+FT-05 & Tampilkan Contoh &
+Pengguna membuka tab contoh setelah menyelesaikan tab materi &
+Konten contoh berhasil dihasilkan dan ditampilkan; tab terkunci jika materi belum selesai \\
+\hline
+
+FT-06 & Latihan Soal &
+Pengguna membuka tab latihan dan menerima soal yang di-\textit{generate} &
+Soal latihan berhasil di-\textit{generate} oleh LLM dan ditampilkan kepada pengguna \\
+\hline
+
+FT-07 & Pembahasan Latihan &
+Pengguna mengumpulkan jawaban latihan &
+Sistem mengembalikan skor, \textit{feedback} per soal, dan pembahasan yang relevan \\
+\hline
+
+FT-08 & Ringkasan Materi &
+Pengguna membuka tab ringkasan setelah menyelesaikan latihan &
+Konten ringkasan berhasil di-\textit{generate} dan ditampilkan; topik ditandai selesai \\
+\hline
+
+FT-09 & Progres Belajar &
+Pengguna membuka halaman progres belajar &
+Sistem menampilkan status penyelesaian seluruh topik beserta indikator kelemahan konsep \\
+\hline
+
+FT-10 & \textit{Generate} Konten LLM &
+Sistem mengirim \textit{prompt} ke OpenAI API untuk menghasilkan materi, contoh, dan soal &
+OpenAI API mengembalikan konten dalam format JSON yang valid sesuai topik \\
+\hline
+
+FT-11 & \textit{Guided Learning Flow} &
+Pengguna mencoba mengakses tab yang belum terbuka &
+Sistem mengunci tab yang belum tersedia dan menampilkan notifikasi untuk menyelesaikan tahap sebelumnya \\
+\hline
+
+FT-12 & \textit{Feedback} Jawaban &
+Pengguna mengumpulkan jawaban latihan &
+Sistem menampilkan \textit{feedback} spesifik per soal beserta skor yang akurat \\
+\hline
+
+FT-13 & \textit{Adaptive Learning Engine} &
+Pengguna menyelesaikan latihan dengan hasil tertentu &
+Sistem menyimpan \textit{weak concepts} dan menggunakannya pada \textit{generate} soal berikutnya \\
+\hline
+
+FT-14 & Adaptasi Konten Pembelajaran &
+Pengguna dengan riwayat \textit{weak concepts} membuka materi/contoh/latihan &
+Konten yang dihasilkan lebih menekankan konsep yang teridentifikasi sebagai kelemahan pengguna \\
+\hline
+
+\end{longtable}
+
+
+\subsection{Pengujian Kegunaan (\textit{Usability Testing})}
+
+Selain pengujian fungsional, dilakukan pengujian kegunaan untuk menilai sejauh mana aplikasi dapat digunakan oleh mahasiswa dengan mudah, efisien, dan memuaskan. Pengujian kegunaan dilakukan melalui dua pendekatan, yaitu \textit{task-based usability test} dan pengisian kuesioner \textit{System Usability Scale} (SUS).
+
+\subsubsection{\textit{Task-Based Usability Test}}
+
+\textit{Task-based usability test} dilakukan dengan meminta responden menyelesaikan serangkaian tugas yang mencerminkan alur penggunaan aplikasi secara nyata. Responden diminta untuk menyelesaikan tugas-tugas berikut secara berurutan tanpa bantuan dari peneliti:
+
+\begin{enumerate}
+    \item Melakukan \textit{login} menggunakan akun yang telah disediakan.
+    \item Memilih salah satu topik ASD dari halaman \textit{dashboard}.
+    \item Membaca konten materi dan menandai tab materi sebagai selesai.
+    \item Membuka tab contoh dan membaca contoh implementasi yang ditampilkan.
+    \item Mengerjakan latihan soal dan mengumpulkan seluruh jawaban.
+    \item Membaca pembahasan dan skor yang diberikan sistem.
+    \item Membuka tab ringkasan dan menyelesaikan alur belajar satu topik.
+    \item Mengakses halaman progres belajar dan melihat status penyelesaian topik.
+\end{enumerate}
+
+Selama pengujian, peneliti mengamati dan mencatat waktu penyelesaian setiap tugas, kesalahan yang dilakukan, serta hambatan yang ditemui. Indikator keberhasilan \textit{task-based usability test} adalah seluruh tugas dapat diselesaikan oleh responden dengan waktu yang wajar tanpa adanya kebingungan yang signifikan dalam mengikuti alur \textit{guided learning}.
+
+\subsubsection{\textit{System Usability Scale} (SUS)}
+
+\textit{System Usability Scale} (SUS) merupakan instrumen pengukuran kegunaan yang dikembangkan oleh John Brooke (1996) dan telah banyak digunakan dalam evaluasi sistem interaktif. SUS terdiri atas 10 pernyataan dengan skala Likert 1–5, di mana skor akhir dinormalisasi ke rentang 0–100. Interpretasi skor SUS mengacu pada ketentuan yang dapat dilihat pada Tabel \ref{tab:sus}.
+
+\begin{table}[H]
+\centering
+\caption{Interpretasi Skor SUS}
+\label{tab:sus}
+\begin{tabular}{|p{3cm}|p{3cm}|p{6cm}|}
+\hline
+\textbf{Rentang Skor} & \textbf{Kategori} & \textbf{Keterangan} \\
+\hline
+$> 80{,}3$ & \textit{Excellent} & Aplikasi sangat mudah digunakan \\
+\hline
+$68 - 80{,}3$ & \textit{Good} & Aplikasi mudah digunakan \\
+\hline
+$51 - 68$ & \textit{OK} & Aplikasi cukup dapat digunakan \\
+\hline
+$< 51$ & \textit{Poor} & Aplikasi sulit digunakan dan perlu perbaikan signifikan \\
+\hline
+\end{tabular}
 \end{table}
 
-Kata "sedangkan" dan "sehingga" adalah kata hubung atau konjungsi. 
-Konjungsi adalah kata atau ungkapan yang menghubungkan satuan bahasa 
-(kata, frasa, klausa, dan kalimat). 
-Konjungsi dapat dibagi menjadi konjungsi intrakalimat dan antarkalimat.  
-Kata "sedangkan" menghubungkan dua klausa yang bersifat kontrasif, 
-sedangkan "sehingga" menghubungkan dua klausa yang bersifat kausal. 
-Dalam ragam formal, kata hubung “sedangkan” dan “sehingga” hanya dapat digunakan 
-sebagai konjungsi intrakalimat sehingga kedua konjungsi itu \textbf{tidak dapat diletakkan pada awal kalimat}.
-Selain itu, penggunaan kata "sedangkan" harus didahului oleh koma (,), sedangkan kata "sehingga" tidak perlu didahului oleh koma (,).
-Contoh penggunaan yang benar dan salah dapat dilihat pada Tabel \ref{tbl:sedangkan_sehingga}.
+Kuesioner SUS disebarkan kepada responden melalui Google Form setelah responden menyelesaikan \textit{task-based usability test}. Target responden adalah mahasiswa yang sedang atau telah menempuh mata kuliah Algoritma dan Struktur Data. Indikator keberhasilan pengujian kegunaan adalah perolehan skor SUS minimal 68 yang menunjukkan bahwa aplikasi berada pada kategori \textit{Good} dan layak digunakan sebagai media pembelajaran.
 
+\subsubsection{Responden}
 
-\subsection{Penggunaan Istilah yang Tidak Baku}
-Ada beberapa istilah yang sering digunakan dalam pembicaraan sehari-hari, tetapi tidak baku dalam penulisan ilmiah.
-Beberapa istilah tersebut antara lain:
+Responden pengujian kegunaan merupakan mahasiswa yang sedang atau telah menempuh mata kuliah Algoritma dan Struktur Data. Kriteria responden ditetapkan sebagai berikut:
+
 \begin{enumerate}
-  \item analisa $\rightarrow$ analisis
-  \item eksisting atau existing $\rightarrow$ yang ada atau saat ini
-  \item bisnis proses $\rightarrow$ proses bisnis
-  \item user $\rightarrow$ pengguna
-  \item system $\rightarrow$ sistem
-  \item database $\rightarrow$ basis data
-  \item aktifitas $\rightarrow$ aktivitas
-  \item efektifitas $\rightarrow$ efektivitas
-  \item sosial media $\rightarrow$ media sosial
+    \item Mahasiswa aktif yang sedang atau telah menempuh mata kuliah Algoritma dan Struktur Data.
+    \item Memiliki pengalaman menggunakan perangkat komputer atau \textit{smartphone} untuk keperluan akademik.
+    \item Bersedia mengikuti seluruh tahapan pengujian secara mandiri.
 \end{enumerate}
 
-\subsection{Pemisah Desimal dan Ribuan}
-Tanda pemisah desimal dalam bahasa Indonesia adalah tanda koma, contoh:
-\begin{enumerate}
-  \item (Salah) Akurasi naik menjadi 50.6\% 
-  \item (Benar) Akurasi naik menjadi 50,6\% 
-\end{enumerate}
+Pengujian dilakukan terhadap minimal 5 responden sesuai dengan panduan Nielsen (1993) yang menyatakan bahwa 5 pengguna sudah cukup untuk mengidentifikasi sebagian besar permasalahan kegunaan dalam sebuah antarmuka.
 
-\subsection{Daftar atau \textit{List}}
-Ada beberapa aturan penulisan daftar atau \textit{list} yang perlu diperhatikan, antara lain:
-\begin{enumerate}[a)]
-\item Jika memungkinkan, hindari penggunaan “bullet points” atau sejenisnya. Sebaiknya, gunakan angka (1, 2, 3, ...) atau huruf (a, b, c, …). Dengan demikian, pembaca dapat dengan mudah melihat jumlah \textit{item} atau \textit{list}. 
-\item Jika dalam daftar hanya ada satu item, tidak perlu menggunakan nomor urut.
-\item Penjelasan atau deskripsi suatu item sebaiknya menyatu dengan judul item tersebut, tidak berbeda halaman. Contoh yang salah: judul item ada di halaman 10, namun deskripsinya di halaman 11. Sebaiknya pindahkan judul tersebut ke halaman 11.
-\item Jika penjelasan atau deskripsi suatu item cukup panjang, misalnya lebih dari 1 halaman atau terdiri atas beberapa paragraf, sebaiknya setiap item tersebut dijadikan judul subbab, kecuali jika level subbab sudah mencapai level 4. 
-\end{enumerate}
 
-\subsection{Penggunaan Kata "masing-masing" dan "setiap"}
-Kata “masing-masing” digunakan di belakang kata yang diterangkan, misalnya 
-"Setiap proses menggunakan algoritma masing-masing". Kata “tiap-tiap” atau “setiap”
-ditempatkan di depan kata yang diterangkan, misalnya
-"Setiap proses menggunakan algoritma tertentu".
+\section{Hasil Evaluasi}
+
+\subsection{Hasil Pengujian \textit{Black Box}}
+
+% TODO: isi hasil pengujian black box setelah implementasi selesai
+
+\subsection{Hasil Pengujian Kegunaan}
+
+% TODO: isi hasil usability testing (skor SUS per responden, rata-rata, kategori) setelah pengujian selesai
+
+
+\section{Pembahasan Hasil Evaluasi}
+
+% TODO: isi pembahasan hasil evaluasi setelah data terkumpul
