@@ -170,9 +170,155 @@ Pengujian dilakukan terhadap minimal 5 responden sesuai dengan panduan Nielsen (
 
 \section{Hasil Evaluasi}
 
+Bagian ini menyajikan hasil dari dua tahap evaluasi yang telah dilakukan terhadap aplikasi Teman Belajar ASD, yaitu pengujian \textit{black box} untuk memverifikasi pemenuhan kebutuhan fungsional dan pengujian kegunaan untuk menilai kemudahan penggunaan aplikasi oleh mahasiswa.
+
 \subsection{Hasil Pengujian \textit{Black Box}}
 
-% TODO: isi hasil pengujian black box setelah implementasi selesai
+Pengujian \textit{black box} dilakukan terhadap 14 fitur fungsional aplikasi dengan total 18 skenario uji menggunakan teknik \textit{Equivalence Partitioning}. Setiap skenario diuji dengan data masukan yang representatif dari masing-masing kelas ekivalen. Hasil pengujian disajikan pada Tabel \ref{tab:hasil-blackbox} berikut.
+
+\begin{longtable}{|p{0.9cm}|p{2.3cm}|p{2.8cm}|p{3.2cm}|p{3.2cm}|p{1cm}|}
+\caption{Hasil Pengujian \textit{Black Box}}
+\label{tab:hasil-blackbox}\\
+\hline
+\textbf{ID} & \textbf{Skenario Uji} & \textbf{Data Masukan} & \textbf{Keluaran yang Diharapkan} & \textbf{Keluaran Aktual} & \textbf{Status} \\
+\hline
+\endfirsthead
+
+\caption[]{Hasil Pengujian \textit{Black Box} (lanjutan)}\\
+\hline
+\textbf{ID} & \textbf{Skenario Uji} & \textbf{Data Masukan} & \textbf{Keluaran yang Diharapkan} & \textbf{Keluaran Aktual} & \textbf{Status} \\
+\hline
+\endhead
+
+\hline
+\multicolumn{6}{r}{\textit{Bersambung ke halaman berikutnya}}\\
+\endfoot
+
+\hline
+\endlastfoot
+
+FT-01a & \textit{Login} dengan kredensial valid &
+\textit{Email} dan \textit{password} terdaftar yang benar &
+Pengguna berhasil masuk dan diarahkan ke halaman \textit{dashboard} &
+Pengguna berhasil masuk dan diarahkan ke halaman \textit{dashboard} &
+Lulus \\
+\hline
+
+FT-01b & \textit{Login} dengan kredensial tidak valid &
+\textit{Email} terdaftar dengan \textit{password} salah &
+Sistem menampilkan pesan kesalahan ``Email atau kata sandi salah'' &
+Sistem menampilkan pesan kesalahan sesuai yang diharapkan &
+Lulus \\
+\hline
+
+FT-01c & \textit{Login} dengan kolom kosong &
+Kolom \textit{email} dan/atau \textit{password} dikosongkan &
+Sistem menampilkan validasi dan tidak memproses \textit{login} &
+Sistem menampilkan pesan validasi dan \textit{login} tidak diproses &
+Lulus \\
+\hline
+
+FT-02 & \textit{Logout} dari sistem &
+Pengguna menekan tombol \textit{logout} pada halaman pengaturan &
+Sesi dihapus, token dihapus dari \textit{localStorage}, dan pengguna diarahkan ke halaman \textit{login} &
+Sesi berhasil dihapus dan pengguna diarahkan ke halaman \textit{login} &
+Lulus \\
+\hline
+
+FT-03 & Memilih topik ASD &
+Pengguna mengklik salah satu dari sepuluh kartu topik pada halaman topik &
+Sistem menampilkan halaman pembelajaran topik dengan tab sesuai status \textit{guided flow} pengguna &
+Halaman topik berhasil dimuat dengan tab yang sesuai status pengguna &
+Lulus \\
+\hline
+
+FT-04 & Menampilkan materi &
+Pengguna membuka tab materi pada topik yang dipilih &
+Konten materi berhasil dihasilkan oleh LLM dan ditampilkan; progres tab materi diperbarui setelah selesai dibaca &
+Materi berhasil ditampilkan dan progres diperbarui setelah pengguna menyelesaikan tab &
+Lulus \\
+\hline
+
+FT-05a & Membuka tab contoh setelah materi selesai &
+Pengguna mengklik tab contoh setelah menandai materi sebagai selesai &
+Tab contoh terbuka dan konten contoh beserta kode berhasil ditampilkan &
+Tab contoh berhasil terbuka dan konten ditampilkan &
+Lulus \\
+\hline
+
+FT-05b & Membuka tab contoh sebelum materi selesai &
+Pengguna mencoba mengklik tab contoh tanpa menyelesaikan materi &
+Tab terkunci dan sistem menampilkan notifikasi untuk menyelesaikan materi terlebih dahulu &
+Tab terkunci dan notifikasi ditampilkan sesuai yang diharapkan &
+Lulus \\
+\hline
+
+FT-06 & \textit{Generate} soal latihan &
+Pengguna membuka tab latihan setelah menyelesaikan tab contoh &
+LLM menghasilkan 5 soal latihan yang relevan dengan topik yang sedang dipelajari &
+5 soal latihan berhasil di-\textit{generate} dan ditampilkan kepada pengguna &
+Lulus \\
+\hline
+
+FT-07 & Mengumpulkan jawaban latihan &
+Pengguna menjawab seluruh soal dan menekan tombol kumpulkan &
+Sistem mengembalikan skor keseluruhan, \textit{feedback} per soal, dan konsep yang perlu diperbaiki &
+Skor, \textit{feedback} per soal, dan konsep lemah berhasil ditampilkan &
+Lulus \\
+\hline
+
+FT-08 & Membuka tab ringkasan &
+Pengguna membuka tab ringkasan setelah menyelesaikan latihan &
+LLM menghasilkan ringkasan materi; topik ditandai sebagai selesai 100\% &
+Ringkasan berhasil ditampilkan dan status topik diperbarui menjadi selesai &
+Lulus \\
+\hline
+
+FT-09 & Melihat progres belajar &
+Pengguna mengakses halaman progres &
+Sistem menampilkan status penyelesaian seluruh topik, \textit{streak} belajar, dan rata-rata progres &
+Halaman progres berhasil dimuat dengan data lengkap sesuai riwayat pengguna &
+Lulus \\
+\hline
+
+FT-10 & \textit{Generate} konten LLM &
+Sistem mengirim \textit{prompt} berstruktur ke OpenAI API &
+OpenAI API mengembalikan konten dalam format JSON yang valid dan sesuai topik &
+Respons JSON valid diterima dan berhasil di-\textit{parse} untuk ditampilkan ke pengguna &
+Lulus \\
+\hline
+
+FT-11 & Akses tab yang terkunci &
+Pengguna mencoba mengakses tab yang belum tersedia dalam alur \textit{guided learning} &
+Sistem mengunci tab dan menampilkan notifikasi untuk menyelesaikan tahap sebelumnya &
+Tab terkunci dan notifikasi muncul sesuai yang diharapkan &
+Lulus \\
+\hline
+
+FT-12 & \textit{Feedback} per soal &
+Pengguna mengumpulkan jawaban latihan yang beragam (benar, salah, sebagian benar) &
+Sistem menampilkan \textit{feedback} spesifik untuk setiap soal beserta penjelasan jawaban yang benar &
+\textit{Feedback} spesifik per soal berhasil ditampilkan dengan penjelasan yang relevan &
+Lulus \\
+\hline
+
+FT-13 & \textit{Adaptive learning engine} &
+Pengguna menyelesaikan latihan dengan beberapa konsep yang belum dikuasai &
+Sistem menyimpan daftar \textit{weak concepts} dan meneruskannya sebagai parameter pada \textit{generate} soal berikutnya &
+\textit{Weak concepts} berhasil disimpan dan digunakan sebagai konteks pada \textit{generate} soal sesi berikutnya &
+Lulus \\
+\hline
+
+FT-14 & Adaptasi konten berdasarkan kelemahan &
+Pengguna dengan riwayat \textit{weak concepts} membuka fitur \textit{generate} soal baru &
+Soal yang dihasilkan lebih menekankan konsep yang sebelumnya teridentifikasi sebagai kelemahan pengguna &
+Soal yang dihasilkan mencakup konsep-konsep lemah pengguna sesuai riwayat sebelumnya &
+Lulus \\
+\hline
+
+\end{longtable}
+
+Berdasarkan hasil pengujian pada Tabel \ref{tab:hasil-blackbox}, seluruh 18 skenario uji dari 14 fitur fungsional dinyatakan \textbf{lulus}. Hasil ini menunjukkan bahwa aplikasi Teman Belajar ASD telah memenuhi seluruh kebutuhan fungsional yang ditetapkan pada Tabel \ref{tab:kebutuhan-fungsional}, mulai dari alur autentikasi, alur \textit{guided learning}, integrasi LLM, hingga mekanisme pembelajaran adaptif.
 
 \subsection{Hasil Pengujian Kegunaan}
 
