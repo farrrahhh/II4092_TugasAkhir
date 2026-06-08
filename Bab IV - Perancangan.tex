@@ -189,7 +189,18 @@ Diagram pada Gambar \ref{fig:sd-ringkasan} menggambarkan alur penampilan ringkas
 \end{figure}
 
 Diagram pada Gambar \ref{fig:sd-progress} menggambarkan alur penampilan halaman progres belajar yang terintegrasi dengan \textit{adaptive engine}. \textit{Frontend} meminta data melalui \texttt{GET /progress}, dan \textit{backend} melakukan dua \textit{query} ke \textit{database}: pertama untuk mengambil status tab seluruh topik, dan kedua untuk mengambil data \textit{weak concepts} serta performa \textit{user} per topik. \textit{Backend} menggabungkan kedua data tersebut dan mengembalikan informasi progres lengkap beserta rekomendasi topik yang perlu diperkuat. \textit{Frontend} menampilkan seluruh informasi tersebut kepada \textit{user} dalam satu halaman yang komprehensif.
+\subsection{Arsitektur Sistem}
 
+Sistem Teman Belajar ASD dirancang menggunakan arsitektur berlapis yang terdiri atas empat komponen utama: \textit{Client}, \textit{Frontend}, \textit{Backend}, serta \textit{Database} dan OpenAI API. \textit{Client} mengakses sistem melalui \textit{browser} atau perangkat \textit{mobile} via HTTPS. \textit{Frontend} yang dibangun dengan Next.js berperan sebagai antarmuka pengguna sekaligus \textit{proxy} ke \textit{backend}, menangani halaman autentikasi, \textit{dashboard} topik, alur pembelajaran, dan \textit{progress tracker}. \textit{Backend} berbasis FastAPI mengelola seluruh logika bisnis meliputi autentikasi, progres belajar, generasi soal latihan, evaluasi jawaban, dan \textit{adaptive engine}. Data pengguna disimpan di PostgreSQL, sedangkan generasi konten pembelajaran dilakukan melalui OpenAI API (GPT-4o-mini). Seluruh layanan di-\textit{deploy} di GCP Cloud Run dengan \textit{pipeline} CI/CD melalui GitHub Actions.
+
+Gambar \ref{fig:arsitektur-sistem} menunjukkan diagram arsitektur sistem secara keseluruhan.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{images/arsitektur-sistem.png}
+    \caption{Diagram Arsitektur Sistem Teman Belajar ASD}
+    \label{fig:arsitektur-sistem}
+\end{figure}
 
 \section{Perancangan \textit{Database}}
 
@@ -219,8 +230,272 @@ PostgreSQL dipilih sebagai sistem manajemen \textit{database} karena bersifat \t
 \end{table}
 
 \subsection{Desain Skema \textit{Database}}
+
+Skema \textit{database} terdiri atas sepuluh tabel yang dirancang untuk mendukung fungsionalitas autentikasi, konten pembelajaran, pencatatan aktivitas pengguna, dan mekanisme adaptif. Tabel \ref{tab:db-schema} menyajikan deskripsi singkat setiap tabel beserta kolom-kolom utamanya.
+
+\begin{longtable}{|p{3.5cm}|p{3.5cm}|p{5.5cm}|}
+\caption{Deskripsi Tabel \textit{Database}}
+\label{tab:db-schema}\\
+\hline
+\textbf{Tabel} & \textbf{Kolom Utama} & \textbf{Fungsi} \\
+\hline
+\endfirsthead
+\caption[]{Deskripsi Tabel \textit{Database} (lanjutan)}\\
+\hline
+\textbf{Tabel} & \textbf{Kolom Utama} & \textbf{Fungsi} \\
+\hline
+\endhead
+\hline
+\multicolumn{3}{r}{\textit{Bersambung ke halaman berikutnya}}\\
+\endfoot
+\hline
+\endlastfoot
+
+\texttt{users} &
+\texttt{user\_id, name, email, password, google\_id, created\_at} &
+Menyimpan data akun pengguna, mendukung autentikasi \textit{password} dan OAuth Google \\
+\hline
+
+\texttt{topics} &
+\texttt{topic\_id, topic\_name, description, difficulty\_level} &
+Menyimpan daftar topik ASD beserta deskripsi dan tingkat kesulitan \\
+\hline
+
+\texttt{materials} &
+\texttt{material\_id, topic\_id, content, generated\_by\_llm} &
+Menyimpan konten materi per topik, dapat dihasilkan oleh LLM \\
+\hline
+
+\texttt{examples} &
+\texttt{example\_id, topic\_id, content, generated\_by\_llm} &
+Menyimpan contoh implementasi per topik, dapat dihasilkan oleh LLM \\
+\hline
+
+\texttt{exercises} &
+\texttt{exercise\_id, topic\_id, question, difficulty\_level, generated\_by\_llm} &
+Menyimpan soal latihan per topik, dapat dihasilkan oleh LLM \\
+\hline
+
+\texttt{explanations} &
+\texttt{explanation\_id, exercise\_id, content, generated\_by\_llm} &
+Menyimpan pembahasan soal latihan; berelasi \textit{one-to-one} dengan \texttt{exercises} \\
+\hline
+
+\texttt{user\_answers} &
+\texttt{answer\_id, user\_id, exercise\_id, answer\_text, is\_correct, score, created\_at} &
+Mencatat jawaban pengguna terhadap soal latihan beserta skor dan status kebenaran \\
+\hline
+
+\texttt{progress} &
+\texttt{progress\_id, user\_id, topic\_slug, materi, contoh, latihan, ringkasan, last\_accessed} &
+Menyimpan status penyelesaian tiap tahapan \textit{guided learning} per pengguna per topik \\
+\hline
+
+\texttt{user\_performance} &
+\texttt{performance\_id, user\_id, topic\_id, accuracy, avg\_score, weakness\_level} &
+Menyimpan metrik performa pengguna per topik sebagai dasar \textit{adaptive engine} \\
+\hline
+
+\texttt{learning\_paths} &
+\texttt{path\_id, topic\_id, step\_order, step\_type} &
+Mendefinisikan urutan tahapan pembelajaran per topik \\
+\hline
+
+\end{longtable}
+
+Gambar \ref{fig:erd} menunjukkan \textit{Entity Relationship Diagram} (ERD) yang menggambarkan seluruh tabel dan relasi antar-tabel pada sistem.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{images/erd-schema.png}
+    \caption{\textit{Entity Relationship Diagram} Skema \textit{Database}}
+    \label{fig:erd}
+\end{figure}
+
 \section{Perancangan \textit{Website}}
+\subsection{Perancangan Arsitektur Sistem}
+
+Aplikasi Teman Belajar ASD dibangun menggunakan arsitektur \textit{client-server} yang terdiri dari tiga lapisan utama: \textit{frontend}, \textit{backend}, dan \textit{database}. Komponen \textit{frontend} dibangun dengan Next.js dan berkomunikasi dengan \textit{backend} melalui RESTful API berbasis FastAPI. \textit{Backend} menangani logika bisnis, autentikasi JWT, serta integrasi dengan OpenAI API untuk menghasilkan konten pembelajaran secara adaptif. Data pengguna dan progres belajar disimpan pada PostgreSQL. Tabel \ref{tab:tech-stack} menyajikan komponen teknologi yang digunakan pada setiap lapisan sistem.
+
+\begin{table}[H]
+    \centering
+    \caption{Komponen Teknologi Sistem Pembelajaran ASD}
+    \label{tab:tech-stack}
+    \begin{tabular}{|p{3cm}|p{3.5cm}|p{6cm}|}
+    \hline
+    \textbf{Komponen} & \textbf{Teknologi} & \textbf{Fungsi} \\
+    \hline
+    \textit{Framework Frontend} & Next.js 16 & \textit{Server-side rendering} dan \textit{routing} halaman \\
+    \hline
+    \textit{UI Library} & React 19 & Komponen antarmuka pengguna \\
+    \hline
+    \textit{Styling} & Tailwind CSS 4 & \textit{CSS framework} berbasis utilitas \\
+    \hline
+    \textit{Framework Backend} & FastAPI & RESTful API dan logika bisnis \\
+    \hline
+    \textit{Application Server} & Uvicorn & ASGI \textit{server} untuk menjalankan FastAPI \\
+    \hline
+    ORM & SQLAlchemy & \textit{Object-Relational Mapping} untuk akses \textit{database} \\
+    \hline
+    \textit{Database Driver} & psycopg3 & Koneksi Python ke PostgreSQL \\
+    \hline
+    \textit{Database} & PostgreSQL & Penyimpanan data pengguna dan progres belajar \\
+    \hline
+    Autentikasi & PyJWT & Pembuatan dan validasi JWT \textit{token} \\
+    \hline
+    \textit{AI Integration} & OpenAI API (GPT-4o-mini) & Generasi konten materi, contoh, latihan, dan evaluasi adaptif \\
+    \hline
+    \textit{HTTP Client} & httpx & Komunikasi asinkron ke OpenAI API \\
+    \hline
+    \end{tabular}
+\end{table}
+
 \subsection{Perancangan API}
+
+\textit{Frontend} berkomunikasi dengan \textit{backend} melalui RESTful API yang dibangun menggunakan \textit{framework} FastAPI. Seluruh \textit{endpoint} menggunakan \textit{prefix} \texttt{/api} dan bertukar data dalam format JSON. Akses ke \textit{endpoint} yang memerlukan autentikasi dilakukan dengan menyertakan JWT \textit{token} pada \textit{header} \texttt{Authorization: Bearer <token>}. API dikelompokkan menjadi tiga kelompok fungsional, yaitu autentikasi, progres belajar, dan latihan.
+
+Tabel \ref{tab:api-auth} menyajikan spesifikasi \textit{endpoint} autentikasi yang menangani proses registrasi, \textit{login}, pengambilan data pengguna aktif, dan pembaruan profil.
+
+\begin{table}[H]
+    \centering
+    \caption{Spesifikasi API \textit{Endpoint} Autentikasi}
+    \label{tab:api-auth}
+    \begin{tabular}{|p{1.5cm}|p{3.8cm}|p{3.3cm}|p{4cm}|}
+    \hline
+    \textbf{Metode} & \textbf{\textit{Endpoint}} & \textbf{\textit{Body} / \textit{Header}} & \textbf{Fungsi} \\
+    \hline
+    POST & \texttt{/api/auth/register} & \texttt{name, email, password} & Mendaftarkan pengguna baru dan mengembalikan JWT \textit{token} \\
+    \hline
+    POST & \texttt{/api/auth/login} & \texttt{email, password} & Melakukan autentikasi dan mengembalikan JWT \textit{token} \\
+    \hline
+    GET & \texttt{/api/auth/me} & \textit{Header}: \texttt{Authorization} & Mengambil data pengguna yang sedang aktif \\
+    \hline
+    PUT & \texttt{/api/auth/profile} & \texttt{name, email,} \texttt{current\_password,} \texttt{new\_password} & Memperbarui nama, \textit{email}, atau kata sandi pengguna \\
+    \hline
+    \end{tabular}
+\end{table}
+
+Tabel \ref{tab:api-progress} menyajikan spesifikasi \textit{endpoint} progres belajar yang digunakan untuk membaca dan memperbarui status penyelesaian tiap tahapan pembelajaran per topik.
+
+\begin{table}[H]
+    \centering
+    \caption{Spesifikasi API \textit{Endpoint} Progres Belajar}
+    \label{tab:api-progress}
+    \begin{tabular}{|p{1.5cm}|p{3.8cm}|p{3.3cm}|p{4cm}|}
+    \hline
+    \textbf{Metode} & \textbf{\textit{Endpoint}} & \textbf{\textit{Body} / \textit{Header}} & \textbf{Fungsi} \\
+    \hline
+    GET & \texttt{/api/progress} & \textit{Header}: \texttt{Authorization} & Mengambil seluruh data progres belajar milik pengguna \\
+    \hline
+    PUT & \texttt{/api/progress/} \texttt{\{topic\_slug\}} & \texttt{materi, contoh,} \texttt{latihan, ringkasan} & Memperbarui status penyelesaian tab pembelajaran untuk satu topik \\
+    \hline
+    \end{tabular}
+\end{table}
+
+Tabel \ref{tab:api-latihan} menyajikan spesifikasi \textit{endpoint} latihan yang digunakan untuk menghasilkan soal berbasis LLM secara adaptif serta mengevaluasi jawaban pengguna baik secara individual maupun sekaligus dalam satu \textit{batch}.
+
+\begin{table}[H]
+    \centering
+    \caption{Spesifikasi API \textit{Endpoint} Latihan}
+    \label{tab:api-latihan}
+    \begin{tabular}{|p{1.5cm}|p{3.8cm}|p{3.3cm}|p{4cm}|}
+    \hline
+    \textbf{Metode} & \textbf{\textit{Endpoint}} & \textbf{\textit{Body}} & \textbf{Fungsi} \\
+    \hline
+    POST & \texttt{/api/latihan/} \texttt{\{topic\_slug\}/generate} & \texttt{jumlah, kelemahan,} \texttt{tipe\_paksa,} \texttt{topik\_referensi} & Menghasilkan soal latihan adaptif berbasis LLM sesuai topik dan kelemahan pengguna \\
+    \hline
+    POST & \texttt{/api/latihan/} \texttt{\{topic\_slug\}/evaluasi} & \texttt{soal, jawaban} & Mengevaluasi satu jawaban latihan dan mengembalikan \textit{feedback} \\
+    \hline
+    POST & \texttt{/api/latihan/} \texttt{\{topic\_slug\}/} \texttt{evaluasi-batch} & \texttt{soal[], jawaban\{\}} & Mengevaluasi seluruh jawaban sekaligus dan memperbarui data \textit{weak concepts} pengguna \\
+    \hline
+    \end{tabular}
+\end{table}
+
 \subsection{Perancangan Antarmuka}
 Will be attached later
 \subsection{Spesifikasi \textit{Hosting}}
+
+Aplikasi di-\textit{deploy} menggunakan Google Cloud Run sebagai \textit{platform hosting} berbasis kontainer yang bersifat \textit{serverless}. \textit{Frontend} dan \textit{backend} masing-masing dikemas dalam \textit{Docker image} dan dijalankan sebagai layanan Cloud Run yang terpisah. \textit{Database} menggunakan Google Cloud SQL for PostgreSQL yang terhubung ke \textit{backend} melalui Cloud SQL Connector. Seluruh proses \textit{build} dan \textit{deployment} dijalankan secara otomatis melalui GitHub Actions setiap kali terdapat \textit{push} ke \textit{branch} utama.
+
+Tabel \ref{tab:hosting-frontend} menyajikan spesifikasi \textit{hosting} untuk layanan \textit{frontend}.
+
+\begin{table}[H]
+    \centering
+    \caption{Spesifikasi \textit{Hosting Frontend}}
+    \label{tab:hosting-frontend}
+    \begin{tabular}{|p{4cm}|p{8cm}|}
+    \hline
+    \textbf{Aspek} & \textbf{Spesifikasi} \\
+    \hline
+    \textit{Platform} & Google Cloud Run (\textit{serverless container}) \\
+    \hline
+    \textit{Runtime} & Node.js 20 Alpine \\
+    \hline
+    \textit{Framework} & Next.js (output: \texttt{standalone}) \\
+    \hline
+    \textit{Build Command} & \texttt{npm run build} \\
+    \hline
+    \textit{Container Port} & 3000 \\
+    \hline
+    \textit{Region} & \texttt{asia-southeast2} (Jakarta) \\
+    \hline
+    \textit{Deployment Method} & GitHub Actions (\textit{Continuous Deployment}) \\
+    \hline
+    \textit{Container Registry} & Google Artifact Registry \\
+    \hline
+    \end{tabular}
+\end{table}
+
+Tabel \ref{tab:hosting-backend} menyajikan spesifikasi \textit{hosting} untuk layanan \textit{backend}.
+
+\begin{table}[H]
+    \centering
+    \caption{Spesifikasi \textit{Hosting Backend}}
+    \label{tab:hosting-backend}
+    \begin{tabular}{|p{4cm}|p{8cm}|}
+    \hline
+    \textbf{Aspek} & \textbf{Spesifikasi} \\
+    \hline
+    \textit{Platform} & Google Cloud Run (\textit{serverless container}) \\
+    \hline
+    \textit{Runtime} & Python 3.11 Slim \\
+    \hline
+    \textit{Framework} & FastAPI + Uvicorn \\
+    \hline
+    \textit{Container Port} & 8080 \\
+    \hline
+    \textit{Region} & \texttt{asia-southeast2} (Jakarta) \\
+    \hline
+    \textit{Deployment Method} & GitHub Actions (\textit{Continuous Deployment}) \\
+    \hline
+    \textit{Container Registry} & Google Artifact Registry \\
+    \hline
+    \textit{Min / Max Instances} & 0 / 10 (\textit{scale-to-zero}) \\
+    \hline
+    \end{tabular}
+\end{table}
+
+Tabel \ref{tab:hosting-db} menyajikan spesifikasi \textit{hosting} untuk layanan \textit{database}.
+
+\begin{table}[H]
+    \centering
+    \caption{Spesifikasi \textit{Hosting Database}}
+    \label{tab:hosting-db}
+    \begin{tabular}{|p{4cm}|p{8cm}|}
+    \hline
+    \textbf{Aspek} & \textbf{Spesifikasi} \\
+    \hline
+    \textit{Platform} & Google Cloud SQL \\
+    \hline
+    \textit{Database Engine} & PostgreSQL \\
+    \hline
+    Nama \textit{Instance} & \texttt{asd-db} \\
+    \hline
+    \textit{Region} & \texttt{asia-southeast2} (Jakarta) \\
+    \hline
+    Koneksi & Cloud SQL Connector (via \texttt{--add-cloudsql-instances}) \\
+    \hline
+    \end{tabular}
+\end{table}
+
+\textit{Deployment} dilakukan secara otomatis melalui integrasi dengan repositori Git. Setiap \textit{push} ke \textit{branch} utama akan memicu \textit{pipeline} GitHub Actions yang mendeteksi perubahan pada direktori \texttt{frontend/} atau \texttt{backend/} secara terpisah. \textit{Image} Docker di-\textit{build} dan dikirim ke Google Artifact Registry, kemudian di-\textit{deploy} ke layanan Cloud Run yang sesuai. Autentikasi ke Google Cloud menggunakan Workload Identity Federation sehingga tidak memerlukan \textit{service account key} yang disimpan secara statis.

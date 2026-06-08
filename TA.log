@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.11.5)  8 JUN 2026 05:41
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.11.5)  8 JUN 2026 21:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/user/Downloads/II4092_TugasAkhir/TA
-(/Users/user/Downloads/II4092_TugasAkhir/TA.tex
+**/Users/user/Documents/AplikasiPembelajaranASD/II4092_TugasAkhir/TA
+(/Users/user/Documents/AplikasiPembelajaranASD/II4092_TugasAkhir/TA.tex
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/base/book.cls
@@ -1225,22 +1225,22 @@ Overfull \hbox (0.58832pt too wide) detected at line 89
  []
 
 
-Overfull \hbox (14.33994pt too wide) in paragraph at lines 101--101
+Overfull \hbox (14.33994pt too wide) in paragraph at lines 103--103
  [][] [][][]\TU/TimesNewRoman(0)/b/n/12 IMPLEMENTASI WEBSITE PEMBELAJARAN ALGORITMA DAN 
  []
 
 
-Overfull \hbox (1.26215pt too wide) detected at line 113
+Overfull \hbox (1.26215pt too wide) detected at line 115
 \TU/TimesNewRoman(0)/m/n/12 VI.1.2.1 
  []
 
 
-Overfull \hbox (1.26215pt too wide) detected at line 114
+Overfull \hbox (1.26215pt too wide) detected at line 116
 \TU/TimesNewRoman(0)/m/n/12 VI.1.2.2 
  []
 
 
-Overfull \hbox (1.26215pt too wide) detected at line 115
+Overfull \hbox (1.26215pt too wide) detected at line 117
 \TU/TimesNewRoman(0)/m/n/12 VI.1.2.3 
  []
 
@@ -2137,27 +2137,507 @@ File: images/FT-09-Progress-Belajar-FT-13-Adaptive-Engine.png Graphic file (type
 
 
 [35]
-Overfull \hbox (2.22838pt too wide) in paragraph at lines 198--199
+
+[36]
+File: images/arsitektur-sistem.png Graphic file (type bmp)
+<images/arsitektur-sistem.png>
+
+Overfull \hbox (2.22838pt too wide) in paragraph at lines 209--210
 \TU/TimesNewRoman(0)/m/n/12 untuk pengembangan aplikasi web. Akses ke \TU/TimesNewRoman(0)/m/it/12 database \TU/TimesNewRoman(0)/m/n/12 dilakukan melalui SQLAlche-
  []
 
 
 
-[36]) (./Bab V - Implementasi.tex
-
 [37]
+Overfull \hbox (32.44894pt too wide) in paragraph at lines 234--235
+\TU/TimesNewRoman(0)/m/n/12 sionalitas autentikasi, konten pembelajaran, pencatatan aktivitas pengguna, dan mekanisme
+ []
 
-[38
+
+Underfull \hbox (badness 10000) in paragraph at lines 255--255
+[]|\TU/lmtt/m/n/12 user_id, name,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 255--255
+\TU/lmtt/m/n/12 email, password,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 255--255
+\TU/lmtt/m/n/12 google_id,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 260--260
+[]|\TU/lmtt/m/n/12 topic_id,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 260--260
+\TU/lmtt/m/n/12 topic_name,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 260--260
+\TU/lmtt/m/n/12 description,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 265--265
+[]|\TU/lmtt/m/n/12 material_id,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 265--265
+\TU/lmtt/m/n/12 topic_id,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 265--265
+\TU/lmtt/m/n/12 content,
+ []
+
+
+Underfull \hbox (badness 1484) in paragraph at lines 266--267
+[]|\TU/TimesNewRoman(0)/m/n/12 Menyimpan konten materi per
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 266--267
+\TU/TimesNewRoman(0)/m/n/12 topik, dapat dihasilkan oleh
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 270--270
+[]|\TU/lmtt/m/n/12 example_id,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 270--270
+\TU/lmtt/m/n/12 topic_id,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 270--270
+\TU/lmtt/m/n/12 content,
+ []
+
+
+Underfull \hbox (badness 3547) in paragraph at lines 271--272
+[]|\TU/TimesNewRoman(0)/m/n/12 Menyimpan contoh implemen-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 275--275
+[]|\TU/lmtt/m/n/12 exercise_id,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 275--275
+\TU/lmtt/m/n/12 topic_id,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 275--275
+\TU/lmtt/m/n/12 question,
+ []
+
+
+Overfull \hbox (2.39136pt too wide) in paragraph at lines 275--275
+\TU/lmtt/m/n/12 difficulty_level,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 280--280
+[]|\TU/lmtt/m/n/12 explanation_id,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 280--280
+\TU/lmtt/m/n/12 exercise_id,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 280--280
+\TU/lmtt/m/n/12 content,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 281--282
+[]|\TU/TimesNewRoman(0)/m/n/12 Menyimpan pembahasan soal
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 281--282
+\TU/TimesNewRoman(0)/m/n/12 latihan; berelasi \TU/TimesNewRoman(0)/m/it/12 one-to-one
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 285--285
+[]|\TU/lmtt/m/n/12 answer_id,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 285--285
+\TU/lmtt/m/n/12 user_id,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 285--285
+\TU/lmtt/m/n/12 exercise_id,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 285--285
+\TU/lmtt/m/n/12 answer_text,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 285--285
+\TU/lmtt/m/n/12 is_correct,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 285--285
+\TU/lmtt/m/n/12 score,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 290--290
+[]|\TU/lmtt/m/n/12 progress_id,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 290--290
+\TU/lmtt/m/n/12 user_id,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 290--290
+\TU/lmtt/m/n/12 topic_slug,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 290--290
+\TU/lmtt/m/n/12 materi, contoh,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 290--290
+\TU/lmtt/m/n/12 latihan,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 290--290
+\TU/lmtt/m/n/12 ringkasan,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 295--295
+[]|\TU/lmtt/m/n/12 performance_id,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 295--295
+\TU/lmtt/m/n/12 user_id,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 295--295
+\TU/lmtt/m/n/12 topic_id,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 295--295
+\TU/lmtt/m/n/12 accuracy,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 295--295
+\TU/lmtt/m/n/12 avg_score,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 296--297
+[]|\TU/TimesNewRoman(0)/m/n/12 Menyimpan metrik performa
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 296--297
+\TU/TimesNewRoman(0)/m/n/12 pengguna per topik sebagai
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 300--300
+[]|\TU/lmtt/m/n/12 path_id,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 300--300
+\TU/lmtt/m/n/12 topic_id,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 300--300
+\TU/lmtt/m/n/12 step_order,
+ []
+
+
+Underfull \hbox (badness 1383) in paragraph at lines 301--302
+[]|\TU/TimesNewRoman(0)/m/n/12 Mendefinisikan urutan tahapan
+ []
+
+[38]
+
+[39]
+File: images/erd-schema.png Graphic file (type bmp)
+<images/erd-schema.png>
+
+Underfull \hbox (badness 3623) in paragraph at lines 336--337
+[]|\TU/TimesNewRoman(0)/m/n/12 ASGI \TU/TimesNewRoman(0)/m/it/12 server \TU/TimesNewRoman(0)/m/n/12 untuk menjalankan
+ []
+
+
+Underfull \hbox (badness 1983) in paragraph at lines 338--339
+[]|\TU/TimesNewRoman(0)/m/it/12 Object-Relational Mapping \TU/TimesNewRoman(0)/m/n/12 untuk
+ []
+
+
+Underfull \hbox (badness 2103) in paragraph at lines 342--343
+[]|\TU/TimesNewRoman(0)/m/n/12 Penyimpanan data pengguna dan
+ []
+
+
+Underfull \hbox (badness 1924) in paragraph at lines 346--346
+[]|\TU/TimesNewRoman(0)/m/n/12 OpenAI API (GPT-
+ []
+
+
+Underfull \hbox (badness 1776) in paragraph at lines 348--349
+[]|\TU/TimesNewRoman(0)/m/n/12 Komunikasi asinkron ke OpenAI
+ []
+
+
+
+[40]
+Overfull \hbox (5.44157pt too wide) in paragraph at lines 355--356
+[]\TU/TimesNewRoman(0)/m/it/12 Frontend \TU/TimesNewRoman(0)/m/n/12 berkomunikasi dengan \TU/TimesNewRoman(0)/m/it/12 backend \TU/TimesNewRoman(0)/m/n/12 melalui RESTful API yang dibangun meng-
+ []
+
+
+Overfull \hbox (11.42546pt too wide) in paragraph at lines 355--356
+\TU/TimesNewRoman(0)/m/n/12 gunakan \TU/TimesNewRoman(0)/m/it/12 framework \TU/TimesNewRoman(0)/m/n/12 FastAPI. Seluruh \TU/TimesNewRoman(0)/m/it/12 endpoint \TU/TimesNewRoman(0)/m/n/12 menggunakan \TU/TimesNewRoman(0)/m/it/12 prefix \TU/lmtt/m/n/12 /api \TU/TimesNewRoman(0)/m/n/12 dan bertukar
+ []
+
+
+Overfull \hbox (0.13602pt too wide) in paragraph at lines 355--356
+\TU/TimesNewRoman(0)/m/n/12 data dalam format JSON. Akses ke \TU/TimesNewRoman(0)/m/it/12 endpoint \TU/TimesNewRoman(0)/m/n/12 yang memerlukan autentikasi dilakukan
+ []
+
+
+Overfull \hbox (3.11946pt too wide) in paragraph at lines 367--367
+[]|\TU/lmtt/m/n/12 /api/auth/register| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 367--367
+[]|\TU/lmtt/m/n/12 name, email,
+ []
+
+
+Underfull \hbox (badness 7030) in paragraph at lines 367--368
+[]|\TU/TimesNewRoman(0)/m/n/12 Mendaftarkan penggu-
+ []
+
+
+Underfull \hbox (badness 3364) in paragraph at lines 369--370
+[]|\TU/TimesNewRoman(0)/m/n/12 Melakukan autentikasi
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 369--370
+\TU/TimesNewRoman(0)/m/n/12 dan mengembalikan
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 371--371
+[]|\TU/TimesNewRoman(0)/m/it/12 Header\TU/TimesNewRoman(0)/m/n/12 :
+ []
+
+
+Underfull \hbox (badness 1371) in paragraph at lines 371--372
+[]|\TU/TimesNewRoman(0)/m/n/12 Mengambil data peng-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 373--373
+[]|\TU/lmtt/m/n/12 name, email,
+ []
+
+
+Overfull \hbox (8.08182pt too wide) in paragraph at lines 373--373
+\TU/lmtt/m/n/12 current_password,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 373--374
+[]|\TU/TimesNewRoman(0)/m/n/12 Memperbarui nama,
+ []
+
+
+Overfull \hbox (10.16624pt too wide) in paragraph at lines 363--376
+ [][] 
+ []
+
+
+
+[41]
+Underfull \hbox (badness 10000) in paragraph at lines 388--388
+[]|\TU/TimesNewRoman(0)/m/it/12 Header\TU/TimesNewRoman(0)/m/n/12 :
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 390--390
+[]|\TU/lmtt/m/n/12 /api/progress/
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 390--390
+[]|\TU/lmtt/m/n/12 materi, contoh,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 390--390
+\TU/lmtt/m/n/12 latihan,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 390--391
+[]|\TU/TimesNewRoman(0)/m/n/12 Memperbarui status
+ []
+
+
+Underfull \hbox (badness 2293) in paragraph at lines 390--391
+\TU/TimesNewRoman(0)/m/n/12 penyelesaian tab pem-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 390--391
+\TU/TimesNewRoman(0)/m/n/12 belajaran untuk satu
+ []
+
+
+Overfull \hbox (10.16624pt too wide) in paragraph at lines 384--393
+ [][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 405--405
+[]|\TU/lmtt/m/n/12 /api/latihan/
+ []
+
+
+Overfull \hbox (19.18745pt too wide) in paragraph at lines 405--405
+\TU/lmtt/m/n/12 {topic_slug}/generate| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 405--405
+[]|\TU/lmtt/m/n/12 jumlah,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 405--405
+\TU/lmtt/m/n/12 kelemahan,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 405--405
+\TU/lmtt/m/n/12 tipe_paksa,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 405--406
+[]|\TU/TimesNewRoman(0)/m/n/12 Menghasilkan soal
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 407--407
+[]|\TU/lmtt/m/n/12 /api/latihan/
+ []
+
+
+Overfull \hbox (19.18745pt too wide) in paragraph at lines 407--407
+\TU/lmtt/m/n/12 {topic_slug}/evaluasi| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 407--408
+[]|\TU/TimesNewRoman(0)/m/n/12 Mengevaluasi satu
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 407--408
+\TU/TimesNewRoman(0)/m/n/12 jawaban latihan dan
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 407--408
+\TU/TimesNewRoman(0)/m/n/12 mengembalikan \TU/TimesNewRoman(0)/m/it/12 feed-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 409--409
+[]|\TU/lmtt/m/n/12 /api/latihan/
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 409--409
+\TU/lmtt/m/n/12 {topic_slug}/
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 409--409
+[]|\TU/lmtt/m/n/12 soal[],
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 409--410
+[]|\TU/TimesNewRoman(0)/m/n/12 Mengevaluasi seluruh
+ []
+
+
+Overfull \hbox (10.16624pt too wide) in paragraph at lines 401--412
+ [][] 
+ []
+
+
+
+[42]
+
+[43]
+Underfull \hbox (badness 10000) in paragraph at lines 496--497
+[]|\TU/TimesNewRoman(0)/m/n/12 Cloud SQL Connector (via
+ []
+
+)
+
+[44] (./Bab V - Implementasi.tex
+
+[45]
+
+[46
 
 ]
 Bab V.
 ) (./Bab VI - Evaluasi.tex
 
-[39
+[47
 
 ]
 
-[40
+[48
 
 ]
 Bab VI.
@@ -2523,9 +3003,9 @@ Overfull \hbox (7.3208pt too wide) in alignment at lines 37--109
 
 
 
-[41
+[49
 
-] [42]
+] [50]
 Overfull \hbox (15.49854pt too wide) in paragraph at lines 114--115
 \TU/TimesNewRoman(0)/m/n/12 mana aplikasi dapat digunakan oleh mahasiswa dengan mudah, efisien, dan memuaskan.
  []
@@ -2537,23 +3017,23 @@ Overfull \hbox (18.3468pt too wide) in paragraph at lines 118--119
 
 
 
-[43]
+[51]
 
-[44]) (./Bab VII - Penutup.tex
+[52]) (./Bab VII - Penutup.tex
 
-[45]
+[53]
 
-[46
+[54
 
 ]
 Bab VII.
 )
 
-[47
+[55
 
 ]
 
-[48
+[56
 
 ]
 Overfull \hbox (2.36067pt too wide) in paragraph at lines 453--453
@@ -2562,30 +3042,30 @@ Overfull \hbox (2.36067pt too wide) in paragraph at lines 453--453
 
 
 
-[49
+[57
 
 ] (./Lampiran-A.tex
 
-[50]
+[58]
 Lampiran A.
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 8.
 (./listings/binary-search-python.tex
 
-[51
+[59
 
 
 ])) (./Lampiran-B.tex
 
-[52]
+[60]
 Lampiran B.
 )
 
-[53
+[61
 
 
 ]
 
-[54
+[62
 
 ]
 
@@ -2597,28 +3077,19 @@ See the caption package documentation for explanation.
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
 Package rerunfilecheck Info: File `TA.out' has not changed.
-(rerunfilecheck)             Checksum: F153A409E766BD956069E7D0654828A2;15300.
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                TA
-(biblatex)                and rerun LaTeX afterwards.
-
+(rerunfilecheck)             Checksum: 85B3F588A58254B17230F9E855023438;15663.
 Package logreq Info: Writing requests to 'TA.run.xml'.
 \openout1 = `TA.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 34138 strings out of 475366
- 674349 string characters out of 5762339
- 2158667 words of memory out of 5000000
- 56641 multiletter control sequences out of 15000+600000
+ 34163 strings out of 475366
+ 674992 string characters out of 5762339
+ 2159776 words of memory out of 5000000
+ 56664 multiletter control sequences out of 15000+600000
  564074 words of font info for 84 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 79i,12n,95p,1231b,6830s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 79i,12n,95p,1255b,6830s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on TA.pdf (86 pages).
+Output written on TA.pdf (94 pages).

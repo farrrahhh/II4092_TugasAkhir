@@ -91,43 +91,37 @@
 \contentsline {section}{\numberline {IV.1}Gambaran Umum Sistem}{25}{section.4.1}%
 \contentsline {subsection}{\numberline {IV.1.1}Use Case}{25}{subsection.4.1.1}%
 \contentsline {subsection}{\numberline {IV.1.2}Sequence Diagram}{28}{subsection.4.1.2}%
-\contentsline {section}{\numberline {IV.2}Perancangan \textit {Database}}{36}{section.4.2}%
-\contentsline {subsection}{\numberline {IV.2.1}Spesifikasi \textit {Platform Database}}{36}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {IV.2.2}Desain Skema \textit {Database}}{37}{subsection.4.2.2}%
-\contentsline {section}{\numberline {IV.3}Perancangan \textit {Website}}{37}{section.4.3}%
-\contentsline {subsection}{\numberline {IV.3.1}Perancangan API}{37}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {IV.3.2}Perancangan Antarmuka}{37}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {IV.3.3}Spesifikasi \textit {Hosting}}{37}{subsection.4.3.3}%
-\contentsline {chapter}{\numberline {V}IMPLEMENTASI WEBSITE PEMBELAJARAN ALGORITMA DAN STRUKTUR DATA BERBASIS \textit {GUIDED LEARNING}}{39}{chapter.5}%
-\contentsline {section}{\numberline {V.1}Lingkungan Implementasi}{39}{section.5.1}%
-\contentsline {section}{\numberline {V.2}Implementasi Frontend}{39}{section.5.2}%
-\contentsline {section}{\numberline {V.3}Implementasi Backend}{39}{section.5.3}%
-\contentsline {chapter}{\numberline {VI}EVALUASI}{41}{chapter.6}%
-\contentsline {section}{\numberline {VI.1}Metode Evaluasi}{41}{section.6.1}%
-\contentsline {subsection}{\numberline {VI.1.1}Pengujian \textit {Black Box}}{41}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {IV.1.3}Arsitektur Sistem}{36}{subsection.4.1.3}%
+\contentsline {section}{\numberline {IV.2}Perancangan \textit {Database}}{37}{section.4.2}%
+\contentsline {subsection}{\numberline {IV.2.1}Spesifikasi \textit {Platform Database}}{37}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {IV.2.2}Desain Skema \textit {Database}}{38}{subsection.4.2.2}%
+\contentsline {section}{\numberline {IV.3}Perancangan \textit {Website}}{40}{section.4.3}%
+\contentsline {subsection}{\numberline {IV.3.1}Perancangan Arsitektur Sistem}{40}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {IV.3.2}Perancangan API}{41}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {IV.3.3}Perancangan Antarmuka}{43}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {IV.3.4}Spesifikasi \textit {Hosting}}{43}{subsection.4.3.4}%
+\contentsline {chapter}{\numberline {V}IMPLEMENTASI WEBSITE PEMBELAJARAN ALGORITMA DAN STRUKTUR DATA BERBASIS \textit {GUIDED LEARNING}}{47}{chapter.5}%
+\contentsline {section}{\numberline {V.1}Lingkungan Implementasi}{47}{section.5.1}%
+\contentsline {section}{\numberline {V.2}Implementasi Frontend}{47}{section.5.2}%
+\contentsline {section}{\numberline {V.3}Implementasi Backend}{47}{section.5.3}%
+\contentsline {chapter}{\numberline {VI}EVALUASI}{49}{chapter.6}%
+\contentsline {section}{\numberline {VI.1}Metode Evaluasi}{49}{section.6.1}%
+\contentsline {subsection}{\numberline {VI.1.1}Pengujian \textit {Black Box}}{49}{subsection.6.1.1}%
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
-\contentsline {subsection}{\numberline {VI.1.2}Pengujian Kegunaan (\textit {Usability Testing})}{43}{subsection.6.1.2}%
-\contentsline {subsubsection}{\numberline {VI.1.2.1}\textit {Task-Based Usability Test}}{43}{subsubsection.6.1.2.1}%
-\contentsline {subsubsection}{\numberline {VI.1.2.2}\textit {System Usability Scale} (SUS)}{44}{subsubsection.6.1.2.2}%
-\contentsline {subsubsection}{\numberline {VI.1.2.3}Responden}{45}{subsubsection.6.1.2.3}%
-\contentsline {section}{\numberline {VI.2}Hasil Evaluasi}{45}{section.6.2}%
-\contentsline {subsection}{\numberline {VI.2.1}Hasil Pengujian \textit {Black Box}}{45}{subsection.6.2.1}%
-\contentsline {subsection}{\numberline {VI.2.2}Hasil Pengujian Kegunaan}{45}{subsection.6.2.2}%
-\contentsline {section}{\numberline {VI.3}Pembahasan Hasil Evaluasi}{45}{section.6.3}%
-\contentsline {chapter}{\numberline {VII}PENUTUP}{47}{chapter.7}%
-\contentsline {section}{\numberline {VII.1}Kesimpulan}{47}{section.7.1}%
-\contentsline {section}{\numberline {VII.2}Saran}{47}{section.7.2}%
-\babel@toc {english}{}\relax 
-\babel@toc {indonesian}{}\relax 
-\babel@toc {english}{}\relax 
-\babel@toc {indonesian}{}\relax 
-\babel@toc {english}{}\relax 
-\babel@toc {indonesian}{}\relax 
-\babel@toc {english}{}\relax 
-\babel@toc {indonesian}{}\relax 
+\contentsline {subsection}{\numberline {VI.1.2}Pengujian Kegunaan (\textit {Usability Testing})}{51}{subsection.6.1.2}%
+\contentsline {subsubsection}{\numberline {VI.1.2.1}\textit {Task-Based Usability Test}}{51}{subsubsection.6.1.2.1}%
+\contentsline {subsubsection}{\numberline {VI.1.2.2}\textit {System Usability Scale} (SUS)}{52}{subsubsection.6.1.2.2}%
+\contentsline {subsubsection}{\numberline {VI.1.2.3}Responden}{53}{subsubsection.6.1.2.3}%
+\contentsline {section}{\numberline {VI.2}Hasil Evaluasi}{53}{section.6.2}%
+\contentsline {subsection}{\numberline {VI.2.1}Hasil Pengujian \textit {Black Box}}{53}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {VI.2.2}Hasil Pengujian Kegunaan}{53}{subsection.6.2.2}%
+\contentsline {section}{\numberline {VI.3}Pembahasan Hasil Evaluasi}{53}{section.6.3}%
+\contentsline {chapter}{\numberline {VII}PENUTUP}{55}{chapter.7}%
+\contentsline {section}{\numberline {VII.1}Kesimpulan}{55}{section.7.1}%
+\contentsline {section}{\numberline {VII.2}Saran}{55}{section.7.2}%
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
 \babel@toc {english}{}\relax 
@@ -144,10 +138,16 @@
 \babel@toc {indonesian}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
-\contentsline {chapter}{\numberline {A}KODE PROGRAM}{51}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Perangkat Lunak untuk Akuisisi Data dari Sensor Ultrasonik}{51}{section.A.1}%
-\contentsline {section}{\numberline {A.2}Perangkat Lunak untuk Pengolahan Data Akuisisi dan Visualisasi Hasil Pengukuran Jarak}{52}{section.A.2}%
-\contentsline {chapter}{\numberline {B}HASIL SURVEI LAPANGAN}{53}{appendix.B}%
-\contentsline {section}{\numberline {B.1}Foto Survei Lokasi 1}{53}{section.B.1}%
-\contentsline {section}{\numberline {B.2}Foto Survei Lokasi 2}{53}{section.B.2}%
-\contentsline {section}{\numberline {B.3}Transkrip Wawancara dengan Narasumber}{53}{section.B.3}%
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\contentsline {chapter}{\numberline {A}KODE PROGRAM}{59}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Perangkat Lunak untuk Akuisisi Data dari Sensor Ultrasonik}{59}{section.A.1}%
+\contentsline {section}{\numberline {A.2}Perangkat Lunak untuk Pengolahan Data Akuisisi dan Visualisasi Hasil Pengukuran Jarak}{60}{section.A.2}%
+\contentsline {chapter}{\numberline {B}HASIL SURVEI LAPANGAN}{61}{appendix.B}%
+\contentsline {section}{\numberline {B.1}Foto Survei Lokasi 1}{61}{section.B.1}%
+\contentsline {section}{\numberline {B.2}Foto Survei Lokasi 2}{61}{section.B.2}%
+\contentsline {section}{\numberline {B.3}Transkrip Wawancara dengan Narasumber}{61}{section.B.3}%

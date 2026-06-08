@@ -43,18 +43,24 @@
 \babel@toc {indonesian}{}\relax 
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {IV.1}{\ignorespaces Deskripsi \textit {Use Case} Sistem Pembelajaran ASD}}{26}{table.4.1}%
-\contentsline {table}{\numberline {IV.2}{\ignorespaces Spesifikasi \textit {Platform Database}}}{37}{table.caption.25}%
+\contentsline {table}{\numberline {IV.2}{\ignorespaces Spesifikasi \textit {Platform Database}}}{38}{table.caption.26}%
+\contentsline {table}{\numberline {IV.3}{\ignorespaces Deskripsi Tabel \textit {Database}}}{38}{table.4.3}%
+\contentsline {table}{\numberline {IV.4}{\ignorespaces Komponen Teknologi Sistem Pembelajaran ASD}}{41}{table.caption.28}%
+\contentsline {table}{\numberline {IV.5}{\ignorespaces Spesifikasi API \textit {Endpoint} Autentikasi}}{42}{table.caption.29}%
+\contentsline {table}{\numberline {IV.6}{\ignorespaces Spesifikasi API \textit {Endpoint} Progres Belajar}}{42}{table.caption.30}%
+\contentsline {table}{\numberline {IV.7}{\ignorespaces Spesifikasi API \textit {Endpoint} Latihan}}{43}{table.caption.31}%
+\contentsline {table}{\numberline {IV.8}{\ignorespaces Spesifikasi \textit {Hosting Frontend}}}{44}{table.caption.32}%
+\contentsline {table}{\numberline {IV.9}{\ignorespaces Spesifikasi \textit {Hosting Backend}}}{44}{table.caption.33}%
+\contentsline {table}{\numberline {IV.10}{\ignorespaces Spesifikasi \textit {Hosting Database}}}{44}{table.caption.34}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
-\contentsline {table}{\numberline {VI.1}{\ignorespaces Cakupan Pengujian \textit {Black Box}}}{42}{table.6.1}%
-\contentsline {table}{\numberline {VI.2}{\ignorespaces Interpretasi Skor SUS}}{44}{table.caption.26}%
+\contentsline {table}{\numberline {VI.1}{\ignorespaces Cakupan Pengujian \textit {Black Box}}}{50}{table.6.1}%
+\contentsline {table}{\numberline {VI.2}{\ignorespaces Interpretasi Skor SUS}}{52}{table.caption.35}%
 \addvspace {10\p@ }
-\babel@toc {english}{}\relax 
-\babel@toc {indonesian}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
 \babel@toc {english}{}\relax 
