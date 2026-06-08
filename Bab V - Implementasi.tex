@@ -116,4 +116,81 @@ Gambar \ref{fig:impl-signup} menunjukkan tampilan halaman registrasi yang diakse
 
 Halaman registrasi memiliki formulir dengan tiga \textit{field}: nama lengkap, \textit{email}, dan kata sandi. Setelah registrasi berhasil, sistem secara otomatis menyimpan sesi dan mengalihkan pengguna ke \textit{dashboard} tanpa perlu \textit{login} kembali, menggunakan alur yang identik dengan \textit{login} melalui fungsi \texttt{registerUser} pada modul \texttt{auth.js}.
 
+\subsection{Implementasi Halaman Beranda}
+
+Halaman beranda merupakan tampilan utama yang ditampilkan setelah pengguna berhasil masuk ke sistem. Halaman ini dirancang agar pengguna dapat langsung melihat ringkasan progres belajar, melanjutkan topik yang sedang dipelajari, mengetahui topik berikutnya yang perlu dimulai, serta mendapatkan rekomendasi topik yang perlu ditingkatkan.
+
+Gambar \ref{fig:impl-beranda} menunjukkan tampilan halaman beranda yang telah diimplementasikan.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{images/beranda.png}
+    \caption{Tampilan Halaman Beranda}
+    \label{fig:impl-beranda}
+\end{figure}
+
+Bagian atas halaman menampilkan \textit{hero banner} berlatar gelap yang memuat sapaan dinamis berdasarkan waktu akses (pagi, siang, atau malam) serta tiga statistik utama: persentase progres keseluruhan, jumlah topik yang telah diselesaikan, dan \textit{streak} belajar harian. Nilai-nilai ini dihitung secara lokal dari data progres yang tersimpan di \texttt{localStorage}. Persentase keseluruhan diperoleh dari rata-rata progres seluruh 10 topik, di mana setiap topik memiliki empat sesi (materi, contoh, latihan, ringkasan) yang masing-masing bernilai 25\%.
+
+Di bawah \textit{banner}, terdapat bagian \textit{"Lanjutkan belajar"} yang menampilkan grid kartu topik yang sedang dalam proses (progres lebih dari 0\% namun belum 100\%). Setiap kartu memuat \textit{thumbnail} topik, judul, jumlah sesi selesai, dan \textit{progress bar} berwarna. Kartu-kartu ini diklik langsung menuju halaman topik yang bersangkutan. Bagian selanjutnya adalah \textit{"Topik selanjutnya"}, yang menampilkan satu topik pertama yang belum pernah dimulai dalam format kartu horizontal dengan \textit{thumbnail} besar dan tombol \textit{"Mulai sekarang"}.
+
+Bagian \textit{"Yang perlu ditingkatkan"} menampilkan hingga tiga rekomendasi berdasarkan analisis progres per sesi dari setiap topik. Rekomendasi dibangkitkan oleh fungsi \texttt{buildInsights} yang memprioritaskan topik dengan sesi hampir selesai, topik dengan materi terbaca tetapi latihan belum dikerjakan, serta topik yang baru dimulai. Setiap item rekomendasi memuat pesan kontekstual dan tautan aksi cepat menuju topik terkait. Potongan kode fungsi \texttt{buildInsights} ditunjukkan pada Kode \ref{lst:beranda-insights}.
+
+\begin{lstlisting}[style=javascriptstyle, caption={Fungsi \texttt{buildInsights} untuk Rekomendasi Topik}, label={lst:beranda-insights}]
+function buildInsights(rows) {
+  const list = [];
+  rows.forEach(({ topic, d, secs }) => {
+    if (secs === 0) return;
+    if (secs === 3) {
+      const missing = SECTIONS.find((s) => !d[s]);
+      list.push({ priority: 1, topic,
+        message: `Hampir selesai di ${topic.shortTitle} — tinggal ${SECTION_LABELS[missing]}.`,
+        cta: 'Selesaikan' });
+    } else if (d.materi && d.contoh && !d.latihan) {
+      list.push({ priority: 2, topic,
+        message: `Sudah baca materi ${topic.shortTitle}, tapi belum mencoba latihan.`,
+        cta: 'Coba latihan' });
+    } else if (d.materi && !d.contoh) {
+      list.push({ priority: 3, topic,
+        message: `Pelajari contoh soal ${topic.shortTitle} untuk memperkuat pemahaman.`,
+        cta: 'Lihat contoh' });
+    }
+  });
+  return list.sort((a, b) => a.priority - b.priority).slice(0, 3);
+}
+\end{lstlisting}
+
+\subsection{Implementasi Halaman Topik}
+
+Halaman topik berfungsi sebagai katalog seluruh materi pembelajaran ASD yang tersedia. Halaman ini menampilkan 10 topik dalam format daftar \textit{card} horizontal agar pengguna dapat melihat deskripsi singkat dan progres setiap topik secara sekilas.
+
+Gambar \ref{fig:impl-topik} menunjukkan tampilan halaman topik yang telah diimplementasikan.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{images/topik.png}
+    \caption{Tampilan Halaman Topik}
+    \label{fig:impl-topik}
+\end{figure}
+
+Setiap \textit{card} terdiri dari tiga bagian utama. Pertama, \textit{thumbnail} berwarna di sisi kiri yang memuat gambar ilustrasi khas topik dengan warna latar berbeda untuk masing-masing topik. Kedua, bagian informasi di tengah yang menampilkan judul topik, deskripsi singkat mencakup konsep-konsep kunci yang akan dipelajari, serta \textit{progress bar} yang menunjukkan persentase penyelesaian topik tersebut. Ketiga, tombol aksi di sisi kanan yang secara dinamis bertuliskan \textit{"Mulai"} jika topik belum pernah dibuka, atau \textit{"Lanjutkan"} jika sudah ada progres.
+
+Nilai progres per topik dihitung dari \texttt{localStorage} dengan membaca status penyelesaian keempat sesi (materi, contoh, latihan, ringkasan). Setiap sesi yang bertanda selesai menambah 25\% pada total progres topik tersebut. Pembacaan \texttt{localStorage} dilakukan pada saat komponen terpasang (\textit{mount}) melalui \texttt{useEffect} sehingga nilai yang ditampilkan selalu mencerminkan kondisi terkini tanpa perlu permintaan ke \textit{server}. Potongan kode perhitungan progres dan inisialisasi \textit{state} ditunjukkan pada Kode \ref{lst:topik-progress}.
+
+\begin{lstlisting}[style=javascriptstyle, caption={Perhitungan Progres Topik dari \texttt{localStorage}}, label={lst:topik-progress}]
+function calcProgress(key) {
+  try {
+    const d = JSON.parse(localStorage.getItem(key)) ?? {};
+    return ['materi', 'contoh', 'latihan', 'ringkasan']
+      .filter((s) => d[s]).length * 25;
+  } catch { return 0; }
+}
+
+// Inisialisasi saat komponen mount
+useEffect(() => {
+  setPengantarProgress(calcProgress('asd_progress_pengantar'));
+  setAdtSederhanaProgress(calcProgress('asd_progress_adt_sederhana'));
+  // ... topik lainnya
+}, []);
+\end{lstlisting}
+
 \section{Implementasi \textit{Backend}}

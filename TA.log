@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.11.5)  8 JUN 2026 21:50
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.11.5)  8 JUN 2026 22:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1230,17 +1230,17 @@ Overfull \hbox (14.33994pt too wide) in paragraph at lines 103--103
  []
 
 
-Overfull \hbox (1.26215pt too wide) detected at line 116
+Overfull \hbox (1.26215pt too wide) detected at line 118
 \TU/TimesNewRoman(0)/m/n/12 VI.1.2.1 
  []
 
 
-Overfull \hbox (1.26215pt too wide) detected at line 117
+Overfull \hbox (1.26215pt too wide) detected at line 119
 \TU/TimesNewRoman(0)/m/n/12 VI.1.2.2 
  []
 
 
-Overfull \hbox (1.26215pt too wide) detected at line 118
+Overfull \hbox (1.26215pt too wide) detected at line 120
 \TU/TimesNewRoman(0)/m/n/12 VI.1.2.3 
  []
 
@@ -1300,7 +1300,12 @@ Overfull \hbox (1.26215pt too wide) detected at line 118
 
 [24
 
-] (./TA.lol)
+] (./TA.lol
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `lmtt' (encoding: TU).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+)
 \tf@lol=\write10
 \openout10 = `TA.lol'.
 
@@ -2068,11 +2073,6 @@ File: images/FT-01-Login.png Graphic file (type bmp)
 
 
 [28]
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `lmtt' (encoding: TU).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-
 Overfull \hbox (17.57722pt too wide) in paragraph at lines 111--112
 \TU/lmtt/m/n/12 POST /auth/login \TU/TimesNewRoman(0)/m/n/12 ke \TU/TimesNewRoman(0)/m/it/12 backend\TU/TimesNewRoman(0)/m/n/12 . \TU/TimesNewRoman(0)/m/it/12 Backend \TU/TimesNewRoman(0)/m/n/12 melakukan \TU/TimesNewRoman(0)/m/it/12 query \TU/TimesNewRoman(0)/m/n/12 data pengguna ke \TU/TimesNewRoman(0)/m/it/12 database
  []
@@ -2658,9 +2658,32 @@ LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
 [49]
 File: images/signup.png Graphic file (type bmp)
 <images/signup.png>
-) (./Bab VI - Evaluasi.tex
+
 
 [50]
+File: images/beranda.png Graphic file (type bmp)
+<images/beranda.png>
+
+
+[51]
+Overfull \hbox (9.13797pt too wide) in paragraph at lines 136--137
+[]\TU/TimesNewRoman(0)/m/n/12 Bagian \TU/TimesNewRoman(0)/m/it/12 ”Yang perlu ditingkatkan” \TU/TimesNewRoman(0)/m/n/12 menampilkan hingga tiga rekomendasi berdasarkan
+ []
+
+File: images/topik.png Graphic file (type bmp)
+<images/topik.png>
+
+
+[52]
+Overfull \hbox (2.37871pt too wide) in paragraph at lines 177--178
+\TU/TimesNewRoman(0)/m/n/12 selesai menambah 25% pada total progres topik tersebut. Pembacaan \TU/lmtt/m/n/12 localStorage
+ []
+
+
+
+[53]) (./Bab VI - Evaluasi.tex
+
+[54]
 Bab VI.
 
 Overfull \hbox (7.3208pt too wide) in alignment at lines 18--24
@@ -3024,10 +3047,10 @@ Overfull \hbox (7.3208pt too wide) in alignment at lines 37--109
 
 
 
-[51
+[55
 
 
-] [52]
+] [56]
 Overfull \hbox (15.49854pt too wide) in paragraph at lines 114--115
 \TU/TimesNewRoman(0)/m/n/12 mana aplikasi dapat digunakan oleh mahasiswa dengan mudah, efisien, dan memuaskan.
  []
@@ -3039,23 +3062,23 @@ Overfull \hbox (18.3468pt too wide) in paragraph at lines 118--119
 
 
 
-[53]
+[57]
 
-[54]) (./Bab VII - Penutup.tex
+[58]) (./Bab VII - Penutup.tex
 
-[55]
+[59]
 
-[56
+[60
 
 ]
 Bab VII.
 )
 
-[57
+[61
 
 ]
 
-[58
+[62
 
 ]
 Overfull \hbox (2.36067pt too wide) in paragraph at lines 490--490
@@ -3064,29 +3087,29 @@ Overfull \hbox (2.36067pt too wide) in paragraph at lines 490--490
 
 
 
-[59
+[63
 
 ] (./Lampiran-A.tex
 
-[60]
+[64]
 Lampiran A.
 (./listings/binary-search-python.tex
 
-[61
+[65
 
 
 ])) (./Lampiran-B.tex
 
-[62]
+[66]
 Lampiran B.
 )
 
-[63
+[67
 
 
 ]
 
-[64
+[68
 
 ]
 
@@ -3099,18 +3122,18 @@ LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `TA.out' has not changed.
-(rerunfilecheck)             Checksum: 5807EFE978A335F273F5F91FD89673B6;15942.
+(rerunfilecheck)             Checksum: 6F76B784B31B34BEE5F3CE99F8EF8C4D;16348.
 Package logreq Info: Writing requests to 'TA.run.xml'.
 \openout1 = `TA.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 34271 strings out of 475366
- 676460 string characters out of 5762339
- 2161331 words of memory out of 5000000
- 56768 multiletter control sequences out of 15000+600000
+ 34339 strings out of 475366
+ 677452 string characters out of 5762339
+ 2211025 words of memory out of 5000000
+ 56834 multiletter control sequences out of 15000+600000
  564082 words of font info for 85 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
  79i,12n,95p,1255b,6830s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on TA.pdf (96 pages).
+Output written on TA.pdf (100 pages).
