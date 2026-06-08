@@ -1,0 +1,49 @@
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.blg
+*.bcf
+*.run.xml
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+*.synctex
+*.out
+*.toc
+*.lof
+*.lot
+*.loa
+*.lol
+*.equ
+*.log
+*.bbl-SAVE-ERROR
+*.dpth
+*.md5
+*.auxlock
+
+# PDF output (optional - uncomment to track PDFs)
+# *.pdf
+
+# macOS files
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Editor swap files
+*.swp
+*.swo
+*~
+.#*
+
+# Temporary files
+*.tmp
+*.temp
+*~
+
+# OS-specific
+Thumbs.db
