@@ -418,8 +418,6 @@ Tabel \ref{tab:api-latihan} menyajikan spesifikasi \textit{endpoint} latihan yan
     \end{tabular}
 \end{table}
 
-\subsection{Perancangan Antarmuka}
-Will be attached later
 \subsection{Spesifikasi \textit{Hosting}}
 
 Aplikasi di-\textit{deploy} menggunakan Google Cloud Run sebagai \textit{platform hosting} berbasis kontainer yang bersifat \textit{serverless}. \textit{Frontend} dan \textit{backend} masing-masing dikemas dalam \textit{Docker image} dan dijalankan sebagai layanan Cloud Run yang terpisah. \textit{Database} menggunakan Google Cloud SQL for PostgreSQL yang terhubung ke \textit{backend} melalui Cloud SQL Connector. Seluruh proses \textit{build} dan \textit{deployment} dijalankan secara otomatis melalui GitHub Actions setiap kali terdapat \textit{push} ke \textit{branch} utama.

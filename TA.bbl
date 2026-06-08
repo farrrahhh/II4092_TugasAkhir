@@ -159,6 +159,235 @@
       \field{title}{Data Structures and Algorithms in Java}
       \field{year}{1998}
     \endentry
+    \entry{Kasneci2023}{article}{}{}
+      \name{author}{23}{}{%
+        {{un=0,uniquepart=base,hash=c72fad49713fef4e273c39cc783e7c68}{%
+           family={Kasneci},
+           familyi={K\bibinitperiod},
+           given={Enkelejda},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5163d3438e7144941f8dbbf1717eef09}{%
+           family={Se{ß}ler},
+           familyi={S\bibinitperiod},
+           given={Kathrin},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0c2382e747e5eb9911ca43074baefe29}{%
+           family={Küchemann},
+           familyi={K\bibinitperiod},
+           given={Stefan},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1a1d1ad761cc5b3f309dd5f58d4a143e}{%
+           family={Bannert},
+           familyi={B\bibinitperiod},
+           given={Maria},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8bef110b9a9b7baa3e3c9296baf944ba}{%
+           family={Dementieva},
+           familyi={D\bibinitperiod},
+           given={Daryna},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6f2d5c9c6cec8ceffa6290e8bf6bddf2}{%
+           family={Fischer},
+           familyi={F\bibinitperiod},
+           given={Frank},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=494d637131f50aa2a57073bf6c5f7672}{%
+           family={Gasser},
+           familyi={G\bibinitperiod},
+           given={Urs},
+           giveni={U\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=575b1832386aabbd188fba8611b9b410}{%
+           family={Groh},
+           familyi={G\bibinitperiod},
+           given={Georg},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1335d8f7eb7d45ba7b633488786afa17}{%
+           family={Günnemann},
+           familyi={G\bibinitperiod},
+           given={Stephan},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ce2458f8ac2ca4f2198649b4e8a00380}{%
+           family={Hüllermeier},
+           familyi={H\bibinitperiod},
+           given={Eyke},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4a15aa849b8abfaec9b6d44e15a93245}{%
+           family={Krusche},
+           familyi={K\bibinitperiod},
+           given={Stephan},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2e7b05c7e0c405468d37834ab05737b3}{%
+           family={Kutyniok},
+           familyi={K\bibinitperiod},
+           given={Gitta},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5c2a845d58deb7713744b47e8b052c04}{%
+           family={Michaeli},
+           familyi={M\bibinitperiod},
+           given={Tilman},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=de230b866877a5e5b49f15bf04aef63e}{%
+           family={Nerdel},
+           familyi={N\bibinitperiod},
+           given={Claudia},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=caec2bc4e6990b09f5473339c33cc124}{%
+           family={Pfeffer},
+           familyi={P\bibinitperiod},
+           given={Jürgen},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b9641eead8902970e45fc3b0452cbd2b}{%
+           family={Poquet},
+           familyi={P\bibinitperiod},
+           given={Oleksandra},
+           giveni={O\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d8d811af5b74abad8cd6b169ab55b1dd}{%
+           family={Sailer},
+           familyi={S\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=45a58d13999ee4667e6f84f6b6718ae9}{%
+           family={Schmidt},
+           familyi={S\bibinitperiod},
+           given={Albrecht},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=89021f571c88552ac3ef31ab6c41514e}{%
+           family={Seidel},
+           familyi={S\bibinitperiod},
+           given={Tina},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d337dc293962f197c1e8dd712cb2b148}{%
+           family={Stadler},
+           familyi={S\bibinitperiod},
+           given={Matthias},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8651f7074783c65eada28bd9483764ee}{%
+           family={Weller},
+           familyi={W\bibinitperiod},
+           given={Jochen},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9cffa1b4c64e70b388a1df20f7b776af}{%
+           family={Kuhn},
+           familyi={K\bibinitperiod},
+           given={Jochen},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=38a915387a57fd2fe2a67ca2c13d444f}{%
+           family={Kasneci},
+           familyi={K\bibinitperiod},
+           given={Gjergji},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{79432845715541a7f52fa25906b5eb06}
+      \strng{fullhash}{130ec7d3ec8204ddbc271be0091e710d}
+      \strng{fullhashraw}{130ec7d3ec8204ddbc271be0091e710d}
+      \strng{bibnamehash}{21c173ae5d5fb87ac8b09adcf822239e}
+      \strng{authorbibnamehash}{21c173ae5d5fb87ac8b09adcf822239e}
+      \strng{authornamehash}{79432845715541a7f52fa25906b5eb06}
+      \strng{authorfullhash}{130ec7d3ec8204ddbc271be0091e710d}
+      \strng{authorfullhashraw}{130ec7d3ec8204ddbc271be0091e710d}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{author}
+      \field{journaltitle}{Learning and Individual Differences}
+      \field{title}{{ChatGPT} for good? {On} opportunities and challenges of large language models for education}
+      \field{volume}{103}
+      \field{year}{2023}
+      \field{pages}{102274}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.lindif.2023.102274
+      \endverb
+    \endentry
+    \entry{Leinonen2023}{inproceedings}{}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=e05dd3a598dd9694778231dc37efb331}{%
+           family={Leinonen},
+           familyi={L\bibinitperiod},
+           given={Juho},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8b7a0a0969bb973d5e4e5945774c76c4}{%
+           family={Hellas},
+           familyi={H\bibinitperiod},
+           given={Arto},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b642b4058f3e1e63d62281b993aaa0c8}{%
+           family={Sarsa},
+           familyi={S\bibinitperiod},
+           given={Sami},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=94639dd5d489d2e9ef5990c03ec52b20}{%
+           family={Denny},
+           familyi={D\bibinitperiod},
+           given={Paul},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d0ba59c1166563eb31b911caaa0ba3d4}{%
+           family={Prather},
+           familyi={P\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=459470e9e5bd5b2e80b36fa84b380c9d}{%
+           family={Becker},
+           familyi={B\bibinitperiod},
+           given={Brett\bibnamedelima A.},
+           giveni={B\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {ACM}%
+      }
+      \strng{namehash}{b4ee107aabe724e54bf6c3c115e73911}
+      \strng{fullhash}{ba18c39fd4e78611484b30db3669cf48}
+      \strng{fullhashraw}{ba18c39fd4e78611484b30db3669cf48}
+      \strng{bibnamehash}{ba18c39fd4e78611484b30db3669cf48}
+      \strng{authorbibnamehash}{ba18c39fd4e78611484b30db3669cf48}
+      \strng{authornamehash}{b4ee107aabe724e54bf6c3c115e73911}
+      \strng{authorfullhash}{ba18c39fd4e78611484b30db3669cf48}
+      \strng{authorfullhashraw}{ba18c39fd4e78611484b30db3669cf48}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 54th ACM Technical Symposium on Computer Science Education (SIGCSE '23)}
+      \field{title}{Using Large Language Models to Enhance Programming Error Messages}
+      \field{volume}{1}
+      \field{year}{2023}
+      \verb{doi}
+      \verb 10.1145/3545945.3569785
+      \endverb
+    \endentry
     \entry{Minaee2025PromptEngineering}{misc}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=f993317037a8a70ad4d9c6555a09d89a}{%
@@ -186,13 +415,13 @@
       \field{title}{{TODO: Judul lengkap artikel tentang Prompt Engineering}}
       \field{year}{2025}
     \endentry
-    \entry{Mtaho2024}{misc}{}{}
+    \entry{Mtaho2024}{article}{}{}
       \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=0b32a6fcfa1b8c3603666c87da6b1d75}{%
+        {{un=0,uniquepart=base,hash=87bc3c2673c78929db0639982a3469c7}{%
            family={Mtaho},
            familyi={M\bibinitperiod},
-           given={Leon\bibnamedelima A.},
-           giveni={L\bibinitperiod\bibinitdelim A\bibinitperiod},
+           given={Adam\bibnamedelima B.},
+           giveni={A\bibinitperiod\bibinitdelim B\bibinitperiod},
            givenun=0}}%
         {{un=0,uniquepart=base,hash=919468ecc37cd67dcccd9eb7b255396e}{%
            family={Mselle},
@@ -201,23 +430,28 @@
            giveni={L\bibinitperiod\bibinitdelim J\bibinitperiod},
            givenun=0}}%
       }
-      \strng{namehash}{17eb6d9d025e0f7d9a0cb22d4b1987e6}
-      \strng{fullhash}{17eb6d9d025e0f7d9a0cb22d4b1987e6}
-      \strng{fullhashraw}{17eb6d9d025e0f7d9a0cb22d4b1987e6}
-      \strng{bibnamehash}{17eb6d9d025e0f7d9a0cb22d4b1987e6}
-      \strng{authorbibnamehash}{17eb6d9d025e0f7d9a0cb22d4b1987e6}
-      \strng{authornamehash}{17eb6d9d025e0f7d9a0cb22d4b1987e6}
-      \strng{authorfullhash}{17eb6d9d025e0f7d9a0cb22d4b1987e6}
-      \strng{authorfullhashraw}{17eb6d9d025e0f7d9a0cb22d4b1987e6}
+      \strng{namehash}{c477a5e15a0f0d5f35632ccf47a00beb}
+      \strng{fullhash}{c477a5e15a0f0d5f35632ccf47a00beb}
+      \strng{fullhashraw}{c477a5e15a0f0d5f35632ccf47a00beb}
+      \strng{bibnamehash}{c477a5e15a0f0d5f35632ccf47a00beb}
+      \strng{authorbibnamehash}{c477a5e15a0f0d5f35632ccf47a00beb}
+      \strng{authornamehash}{c477a5e15a0f0d5f35632ccf47a00beb}
+      \strng{authorfullhash}{c477a5e15a0f0d5f35632ccf47a00beb}
+      \strng{authorfullhashraw}{c477a5e15a0f0d5f35632ccf47a00beb}
       \field{sortinit}{M}
       \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{TODO: journal/conference, volume, halaman, DOI}
-      \field{title}{{TODO: Judul lengkap artikel}}
+      \field{labeltitlesource}{author}
+      \field{journaltitle}{The Journal of Informatics}
+      \field{number}{1}
+      \field{title}{Difficulties in Learning the Data Structures Course: Literature Review}
+      \field{volume}{4}
       \field{year}{2024}
+      \verb{doi}
+      \verb 10.59645/tji.v4i1.136
+      \endverb
     \endentry
     \entry{Myers2011ArtOfSoftwareTesting}{book}{}{}
       \name{author}{3}{}{%
@@ -302,6 +536,59 @@
       \field{edition}{8th}
       \field{title}{Software Engineering: A Practitioner's Approach}
       \field{year}{2015}
+    \endentry
+    \entry{Raihan2024}{misc}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=dfd9f120a1a97eea37d7ac11688d2daf}{%
+           family={Raihan},
+           familyi={R\bibinitperiod},
+           given={Nishat},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2f06f363a65422a562b09aa664bef286}{%
+           family={Siddiq},
+           familyi={S\bibinitperiod},
+           given={Mohammed\bibnamedelima Latif},
+           giveni={M\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=217731ccb0206967314bb6d448aacc92}{%
+           family={Santos},
+           familyi={S\bibinitperiod},
+           given={Joanna\bibnamedelima C.S.},
+           giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2a301ba393789d01af4847ae604d64f6}{%
+           family={Zampieri},
+           familyi={Z\bibinitperiod},
+           given={Marcos},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{fcf266a4aefc3acc9fb4cf7ef27cf576}
+      \strng{fullhash}{d97528e1d63a56eb884a3047c5eef125}
+      \strng{fullhashraw}{d97528e1d63a56eb884a3047c5eef125}
+      \strng{bibnamehash}{d97528e1d63a56eb884a3047c5eef125}
+      \strng{authorbibnamehash}{d97528e1d63a56eb884a3047c5eef125}
+      \strng{authornamehash}{fcf266a4aefc3acc9fb4cf7ef27cf576}
+      \strng{authorfullhash}{d97528e1d63a56eb884a3047c5eef125}
+      \strng{authorfullhashraw}{d97528e1d63a56eb884a3047c5eef125}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.LG}
+      \field{eprinttype}{arXiv}
+      \field{note}{Accepted at SIGCSE TS 2025}
+      \field{title}{Large Language Models in Computer Science Education: A Systematic Literature Review}
+      \field{year}{2024}
+      \verb{doi}
+      \verb 10.48550/arXiv.2410.16349
+      \endverb
+      \verb{eprint}
+      \verb 2410.16349
+      \endverb
     \endentry
     \entry{Vaswani2017AttentionIsAllYouNeed}{inproceedings}{}{}
       \name{author}{8}{}{%

@@ -3,17 +3,17 @@
 \label{chap:pendahuluan}
 % --- Latar Belakang ---
 \section{Latar Belakang}
-Algoritma dan Struktur Data (ASD) merupakan fondasi utama dalam pendidikan ilmu komputer karena konsep-konsep di dalamnya digunakan dalam berbagai aspek komputasi seperti pemrograman, optimasi, manajemen memori, hingga perancangan sistem berskala besar. Pemahaman terhadap ASD sangat penting karena menjadi dasar dalam kemampuan pemecahan masalah dan pengembangan perangkat lunak. Namun, berbagai studi menunjukkan bahwa mahasiswa sering mengalami kesulitan dalam mempelajari ASD karena sifat materinya yang abstrak, dinamis, dan multidimensional, sehingga menimbulkan beban kognitif tinggi serta memicu miskonsepsi pada tahap awal pembelajaran (Mtaho \& Mselle, 2024).
+Algoritma dan Struktur Data (ASD) merupakan fondasi utama dalam pendidikan ilmu komputer karena konsep-konsepnya menjadi dasar kemampuan pemecahan masalah, pengembangan perangkat lunak, hingga perancangan sistem berskala besar. Meskipun peran ASD sangat sentral, berbagai studi menunjukkan bahwa mahasiswa konsisten mengalami kesulitan dalam memahami materi ini. Sifat materi ASD yang abstrak, dinamis, dan multidimensional menimbulkan beban kognitif tinggi serta memicu miskonsepsi sejak tahap awal pembelajaran \cite{Mtaho2024}. Kesulitan tersebut kerap bermula dari konsep dasar seperti \textit{pointer} dan struktur data linear, kemudian berkembang menjadi hambatan yang lebih serius ketika mahasiswa mempelajari topik lanjutan seperti \textit{tree}, \textit{graph}, dan analisis kompleksitas algoritma.
 
-Dalam praktiknya, pembelajaran ASD umumnya dilakukan melalui modul, \textit{slide}, serta penjelasan langsung dari dosen atau asisten pengajar. Meskipun metode ini mampu menyampaikan konsep dasar, pendekatan tersebut masih belum mampu memberikan penjelasan yang adaptif, variasi contoh yang cukup, maupun umpan balik yang cepat ketika mahasiswa mengalami kesulitan. Akibatnya, mahasiswa sering mengalami kesalahan pemahaman pada konsep dasar seperti \textit{pointer} atau struktur data linear, yang kemudian berdampak pada kesulitan memahami materi lanjutan seperti \textit{tree}, \textit{graph}, dan analisis kompleksitas.
+Dalam praktiknya, pembelajaran ASD di perguruan tinggi umumnya bertumpu pada modul tertulis, \textit{slide} presentasi, serta penjelasan sinkron dari dosen atau asisten. Pendekatan ini efektif untuk penyampaian konsep secara terstruktur, namun kurang mampu mengakomodasi kebutuhan belajar mandiri mahasiswa di luar jam kuliah. Ketika menghadapi kesulitan secara mandiri, mahasiswa tidak selalu mendapatkan penjelasan tambahan yang segera dan relevan dengan konteks materi yang sedang dipelajari. Keterbatasan umpan balik yang cepat ini berkontribusi pada terbentuknya miskonsepsi yang sulit dikoreksi pada tahap selanjutnya \cite{Leinonen2023}.
 
-Seiring berkembangnya teknologi kecerdasan buatan, \textit{Large Language Model} (LLM) mulai dimanfaatkan dalam bidang pendidikan karena kemampuannya menghasilkan penjelasan konsep, contoh implementasi, serta ilustrasi langkah-langkah algoritma secara dinamis. Kemampuan ini membuka peluang bagi LLM untuk berperan sebagai teman belajar digital yang dapat membantu mahasiswa memahami materi secara mandiri, memberikan penjelasan tambahan saat dibutuhkan, serta menciptakan pengalaman belajar yang lebih interaktif dan fleksibel.
+Perkembangan teknologi kecerdasan buatan, khususnya \textit{Large Language Model} (LLM), membuka peluang baru dalam dunia pendidikan. LLM telah menunjukkan kemampuan yang menjanjikan dalam menghasilkan penjelasan konsep, contoh implementasi kode, serta ilustrasi langkah-langkah algoritma secara dinamis dan kontekstual \cite{Kasneci2023}. Sejumlah penelitian menunjukkan bahwa LLM berpotensi berperan sebagai teman belajar digital (\textit{AI learning companion}) yang mendampingi mahasiswa secara interaktif, memberikan penjelasan sesuai kebutuhan, dan mendukung pembelajaran mandiri yang lebih fleksibel \cite{Kasneci2023}.
 
-Namun, penggunaan LLM secara langsung melalui \textit{chatbot} umum seperti ChatGPT, Gemini, atau DeepSeek masih memiliki keterbatasan. Interaksi yang tidak terarah membuat penjelasan yang dihasilkan tidak selalu mengikuti urutan materi yang diajarkan dalam kelas. Selain itu, LLM juga berpotensi menghasilkan informasi yang tidak akurat akibat fenomena \textit{hallucination}, serta memberikan jawaban yang tidak konsisten dengan kurikulum pembelajaran (Raihan et al., 2024). Hal ini menyebabkan LLM belum sepenuhnya efektif jika digunakan secara langsung sebagai sarana belajar.
+Meskipun demikian, penggunaan LLM secara langsung melalui \textit{chatbot} umum seperti ChatGPT atau Gemini belum cukup efektif sebagai sarana belajar yang terstruktur. Interaksi yang bersifat percakapan bebas membuat penjelasan yang dihasilkan tidak selalu sesuai dengan urutan materi kurikulum. Lebih jauh, LLM berpotensi menghasilkan informasi yang tidak akurat akibat fenomena \textit{hallucination}, serta memberikan jawaban yang tidak konsisten dengan materi yang diajarkan di kelas \cite{Raihan2024}. Tanpa mekanisme pengarahan yang terstruktur, keluaran LLM sulit dijamin kualitas dan relevansinya untuk keperluan pembelajaran akademik.
 
-Oleh  karena itu, diperlukan pendekatan yang memungkinkan LLM dimanfaatkan secara lebih terstruktur sebagai teman belajar yang mendampingi mahasiswa dalam memahami materi. Pendekatan \textit{guided learning} menyediakan alur pembelajaran yang sistematis, mulai dari pemahaman konsep, contoh implementasi, latihan, hingga ringkasan. Selain itu, pendekatan \textit{retrieval-based guidance} memungkinkan sistem mengambil konteks dari sumber resmi seperti materi kuliah, sehingga penjelasan yang dihasilkan tetap relevan, akurat, dan sesuai dengan kurikulum.
+Untuk mengatasi keterbatasan tersebut, diperlukan sistem yang mengintegrasikan LLM dalam alur pembelajaran yang terkontrol. Pendekatan \textit{guided learning} menyediakan kerangka sistematis mulai dari pemahaman konsep, eksplorasi contoh, latihan soal, hingga ringkasan materi, sehingga interaksi mahasiswa dengan LLM tetap terarah dan sesuai kurikulum. Sementara itu, teknik \textit{prompt engineering} yang terstruktur memungkinkan keluaran LLM dibatasi pada domain materi yang relevan, sehingga risiko \textit{hallucination} dan inkonsistensi konten dapat diminimalkan \cite{White2023PromptPatternCatalog}. Kombinasi kedua pendekatan ini berpotensi mewujudkan teman belajar digital yang sekaligus interaktif dan terpercaya.
 
-Dengan mempertimbangkan kebutuhan tersebut, penelitian ini bertujuan untuk mengembangkan aplikasi pembelajaran ASD yang memanfaatkan LLM sebagai teman belajar digital bagi mahasiswa. Aplikasi ini dirancang untuk membantu mahasiswa memahami konsep secara bertahap, memberikan contoh dan latihan yang relevan, serta mendukung proses belajar mandiri yang lebih terstruktur, interaktif, dan konsisten dengan kurikulum.
+Berdasarkan latar belakang tersebut, penelitian ini mengembangkan Teman Belajar ASD, sebuah aplikasi pembelajaran berbasis web yang memanfaatkan LLM sebagai teman belajar digital untuk mahasiswa. Aplikasi ini menyediakan alur \textit{guided learning} yang terstruktur serta menggunakan \textit{prompt engineering} untuk menjaga relevansi dan konsistensi konten dengan kurikulum ASD. Dengan demikian, diharapkan aplikasi ini dapat membantu mahasiswa memahami konsep ASD secara bertahap, mengurangi miskonsepsi, dan mendukung proses belajar mandiri yang lebih efektif.
 % --- Rumusan Masalah ---
 \section{Rumusan Masalah}
 Secara umum, tugas akhir ini membahas bagaimana merancang dan mengembangkan sebuah aplikasi pembelajaran berbasis web yang memanfaatkan LLM sebagai teman belajar untuk menyajikan materi ASD secara terarah dan sesuai dengan kurikulum. Berdasarkan uraian tersebut, rumusan masalah dalam tugas akhir ini adalah sebagai berikut:
@@ -45,28 +45,28 @@ Untuk memastikan ruang lingkup penelitian tetap terfokus dan sesuai dengan tujua
 
 % --- Metodologi Pengerjaan TA ---
 \section{Metodologi}
-Metodologi yang digunakan dalam Tugas Akhir ini terdiri dari empat tahap utama, yaitu studi literatur, analisis dan perancangan, implementasi, serta pengujian dan evaluasi.
+Metodologi yang digunakan dalam Tugas Akhir ini mengikuti kerangka \textit{Software Development Life Cycle} (SDLC) dengan tahapan berikut:
 
 \begin{enumerate}
-    \item \textbf{Studi Literatur} dilakukan untuk membangun landasan teoritis penelitian. Kajian mencakup (a) karakteristik kesulitan mahasiswa dalam mempelajari ASD dan penyebab miskonsepsi yang umum terjadi, (b) prinsip pendekatan \textit{guided learning} sebagai kerangka alur pembelajaran terstruktur, (c) cara kerja \textit{Large Language Model} serta teknik \textit{prompt engineering} dan \textit{retrieval-based guidance} untuk mengendalikan keluaran model, dan (d) risiko penggunaan LLM secara bebas dalam konteks pendidikan, termasuk fenomena \textit{hallucination} dan ketidakkonsistenan dengan kurikulum. Hasil studi literatur ini menjadi dasar dalam merumuskan kebutuhan pengguna dan strategi integrasi LLM pada aplikasi.
+    \item \textbf{Perencanaan}
 
-    \item \textbf{Analisis Kebutuhan dan Perancangan Solusi} dilakukan berdasarkan hasil studi literatur dan observasi terhadap kondisi pembelajaran ASD saat ini. Tahap ini meliputi:
-    \begin{enumerate}
-        \item identifikasi masalah pengguna (mahasiswa) dan penyusunan kebutuhan fungsional serta nonfungsional sistem, mencakup aspek \textit{availability}, \textit{security}, dan \textit{compatibility};
-        \item pemilihan model LLM yang digunakan, yaitu GPT-4o melalui OpenAI API, berdasarkan pertimbangan kemampuan \textit{reasoning} teknis dan stabilitas penjelasan untuk materi algoritmik;
-        \item perancangan arsitektur sistem, alur \textit{guided learning} (konsep $\rightarrow$ contoh $\rightarrow$ latihan $\rightarrow$ ringkasan), dan antarmuka aplikasi tanpa percakapan bebas; serta
-        \item perumusan \textit{prompt template} dan mekanisme \textit{retrieval-based guidance} berbasis dokumen materi kuliah yang disediakan dosen.
-    \end{enumerate}
+    Tahap ini mencakup identifikasi ruang lingkup penelitian, penentuan tujuan pengembangan aplikasi, serta penyusunan jadwal kerja. Aktivitas meliputi studi literatur terkait kesulitan mahasiswa dalam mempelajari ASD, pendekatan \textit{guided learning}, pemanfaatan LLM dalam pendidikan, serta penetapan tumpukan teknologi dan batasan implementasi yang sesuai dengan waktu pengerjaan.
 
-    \item \textbf{Implementasi} dilakukan secara bertahap mengikuti rancangan yang telah disusun. Tumpukan teknologi yang digunakan meliputi Next.js dan TypeScript untuk \textit{frontend}, Node.js/Express dan LangChain untuk \textit{backend} dan \textit{orchestration} LLM, serta PostgreSQL sebagai basis data penyimpanan data pengguna dan progres belajar. Aplikasi di-\textit{deploy} menggunakan Vercel (\textit{frontend}) dan Railway (\textit{backend}).
+    \item \textbf{Analisis}
 
-    \item \textbf{Pengujian dan Evaluasi} dilaksanakan untuk memverifikasi bahwa aplikasi berjalan sesuai spesifikasi dan memberikan manfaat nyata bagi pengguna. Pengujian mencakup:
-    \begin{enumerate}
-        \item \textit{Black Box Testing} untuk memastikan seluruh fitur fungsional berjalan sesuai kebutuhan yang telah ditetapkan;
-        \item pengujian \textit{availability}, \textit{security}, dan \textit{compatibility} lintas perangkat dan \textit{browser} untuk memenuhi kebutuhan nonfungsional; dan
-        \item \textit{task-based usability testing} menggunakan kuesioner untuk mengukur kemudahan pengguna dalam mengikuti alur \textit{guided learning} dan menilai kualitas serta relevansi konten yang dihasilkan LLM.
-    \end{enumerate}
-    Hasil pengujian digunakan untuk menyimpulkan pencapaian tujuan penelitian dan memberikan rekomendasi pengembangan lanjutan.
+    Pada tahap ini dilakukan analisis kebutuhan fungsional dan nonfungsional sistem, termasuk identifikasi aktor, alur pembelajaran yang diinginkan, dan kendala yang dialami mahasiswa saat belajar ASD secara mandiri. Analisis juga mencakup pemilihan model LLM yang digunakan (GPT-4o-mini melalui OpenAI API) serta perumusan strategi \textit{prompt engineering} untuk menjaga relevansi dan konsistensi keluaran model terhadap kurikulum.
+
+    \item \textbf{Desain}
+
+    Tahap desain berfokus pada perancangan arsitektur sistem berlapis (\textit{frontend}, \textit{backend}, dan \textit{database}), model basis data untuk menyimpan data pengguna dan progres belajar, serta alur \textit{guided learning} (materi $\rightarrow$ contoh $\rightarrow$ latihan $\rightarrow$ ringkasan). Selain itu, dirancang pula antarmuka halaman-halaman utama aplikasi dan \textit{template prompt} untuk setiap jenis konten yang dihasilkan LLM.
+
+    \item \textbf{Implementasi}
+
+    Implementasi dilakukan secara bertahap mengikuti rancangan yang telah disusun. \textit{Frontend} dibangun menggunakan Next.js dengan React, \textit{backend} menggunakan FastAPI berbasis Python, dan basis data menggunakan PostgreSQL. Integrasi LLM dilakukan melalui OpenAI API dengan GPT-4o-mini. Autentikasi pengguna menggunakan JWT, dan seluruh layanan di-\textit{deploy} di Google Cloud Run melalui \textit{pipeline} CI/CD berbasis GitHub Actions.
+
+    \item \textbf{Pengujian}
+
+    Tahap ini bertujuan untuk memastikan fungsionalitas sistem berjalan sesuai kebutuhan melalui pengujian berbasis skenario yang mencakup uji fungsional dengan pendekatan \textit{black box testing} dan pengujian kebutuhan nonfungsional meliputi aspek \textit{availability}, \textit{security}, dan \textit{compatibility} lintas perangkat dan \textit{browser}. Evaluasi dilakukan pula terhadap kualitas konten yang dihasilkan LLM dan kemudahan pengguna dalam mengikuti alur \textit{guided learning} melalui \textit{task-based usability testing}.
 \end{enumerate}
 
 % --- Sistematika Penulisan ---
