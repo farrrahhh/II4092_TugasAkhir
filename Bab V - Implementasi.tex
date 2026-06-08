@@ -78,30 +78,7 @@ Gambar \ref{fig:impl-login} menunjukkan tampilan halaman \textit{login} yang tel
     \label{fig:impl-login}
 \end{figure}
 
-Formulir \textit{login} memiliki dua \textit{field} wajib, yaitu \textit{email} dan kata sandi, keduanya divalidasi menggunakan atribut \texttt{required} dan \texttt{type="email"} bawaan HTML. Ketika pengguna mengirimkan formulir, fungsi \texttt{handleSubmit} mengirimkan permintaan \texttt{POST /api/auth/login} ke \textit{backend}. Jika autentikasi berhasil, \textit{backend} mengembalikan JWT \textit{token} beserta data pengguna yang kemudian disimpan ke \texttt{localStorage} melalui fungsi \texttt{saveSession}. Sistem juga langsung memuat data progres belajar dari \textit{database} ke \texttt{localStorage} (\texttt{loadProgressFromDb}) agar navigasi antartopik dapat berjalan tanpa latensi tambahan. Potongan kode implementasi alur \textit{login} ditunjukkan pada Kode \ref{lst:login}.
-
-\begin{lstlisting}[style=javascriptstyle, caption={Implementasi Alur \textit{Login} dan Penyimpanan Sesi}, label={lst:login}]
-const handleSubmit = async (e) => {
-  e.preventDefault();
-  setLoading(true);
-  try {
-    const data = await loginUser(form.email, form.password);
-    saveSession(data);
-    await loadProgressFromDb(data.token);
-    router.push('/dashboard');
-  } catch (err) {
-    setError(err.message);
-  } finally {
-    setLoading(false);
-  }
-};
-
-// auth.js
-export function saveSession(data) {
-  localStorage.setItem('token', data.token);
-  localStorage.setItem('user', JSON.stringify(data.user));
-}
-\end{lstlisting}
+Formulir \textit{login} memiliki dua \textit{field} wajib, yaitu \textit{email} dan kata sandi, keduanya divalidasi menggunakan atribut \texttt{required} dan \texttt{type="email"} bawaan HTML. Ketika pengguna mengirimkan formulir, fungsi \texttt{handleSubmit} mengirimkan permintaan \texttt{POST /api/auth/login} ke \textit{backend}. Jika autentikasi berhasil, \textit{backend} mengembalikan JWT \textit{token} beserta data pengguna yang kemudian disimpan ke \texttt{localStorage} melalui fungsi \texttt{saveSession}. Sistem juga langsung memuat data progres belajar dari \textit{database} ke \texttt{localStorage} (\texttt{loadProgressFromDb}) agar navigasi antartopik dapat berjalan tanpa latensi tambahan. Potongan kode implementasi alur \textit{login} dapat dilihat pada Lampiran \ref{chap:lampiran-a}, Kode \ref{lst:login}.
 
 Sistem juga menerapkan proteksi halaman \textit{login}: jika sesi aktif sudah tersimpan di \texttt{localStorage}, pengguna akan langsung dialihkan ke \textit{dashboard} sehingga tidak perlu \textit{login} ulang.
 
@@ -133,31 +110,7 @@ Bagian atas halaman menampilkan \textit{hero banner} berlatar gelap yang memuat 
 
 Di bawah \textit{banner}, terdapat bagian \textit{"Lanjutkan belajar"} yang menampilkan grid kartu topik yang sedang dalam proses (progres lebih dari 0\% namun belum 100\%). Setiap kartu memuat \textit{thumbnail} topik, judul, jumlah sesi selesai, dan \textit{progress bar} berwarna. Kartu-kartu ini diklik langsung menuju halaman topik yang bersangkutan. Bagian selanjutnya adalah \textit{"Topik selanjutnya"}, yang menampilkan satu topik pertama yang belum pernah dimulai dalam format kartu horizontal dengan \textit{thumbnail} besar dan tombol \textit{"Mulai sekarang"}.
 
-Bagian \textit{"Yang perlu ditingkatkan"} menampilkan hingga tiga rekomendasi berdasarkan analisis progres per sesi dari setiap topik. Rekomendasi dibangkitkan oleh fungsi \texttt{buildInsights} yang memprioritaskan topik dengan sesi hampir selesai, topik dengan materi terbaca tetapi latihan belum dikerjakan, serta topik yang baru dimulai. Setiap item rekomendasi memuat pesan kontekstual dan tautan aksi cepat menuju topik terkait. Potongan kode fungsi \texttt{buildInsights} ditunjukkan pada Kode \ref{lst:beranda-insights}.
-
-\begin{lstlisting}[style=javascriptstyle, caption={Fungsi \texttt{buildInsights} untuk Rekomendasi Topik}, label={lst:beranda-insights}]
-function buildInsights(rows) {
-  const list = [];
-  rows.forEach(({ topic, d, secs }) => {
-    if (secs === 0) return;
-    if (secs === 3) {
-      const missing = SECTIONS.find((s) => !d[s]);
-      list.push({ priority: 1, topic,
-        message: `Hampir selesai di ${topic.shortTitle} — tinggal ${SECTION_LABELS[missing]}.`,
-        cta: 'Selesaikan' });
-    } else if (d.materi && d.contoh && !d.latihan) {
-      list.push({ priority: 2, topic,
-        message: `Sudah baca materi ${topic.shortTitle}, tapi belum mencoba latihan.`,
-        cta: 'Coba latihan' });
-    } else if (d.materi && !d.contoh) {
-      list.push({ priority: 3, topic,
-        message: `Pelajari contoh soal ${topic.shortTitle} untuk memperkuat pemahaman.`,
-        cta: 'Lihat contoh' });
-    }
-  });
-  return list.sort((a, b) => a.priority - b.priority).slice(0, 3);
-}
-\end{lstlisting}
+Bagian \textit{"Yang perlu ditingkatkan"} menampilkan hingga tiga rekomendasi berdasarkan analisis progres per sesi dari setiap topik. Rekomendasi dibangkitkan oleh fungsi \texttt{buildInsights} yang memprioritaskan topik dengan sesi hampir selesai, topik dengan materi terbaca tetapi latihan belum dikerjakan, serta topik yang baru dimulai. Setiap item rekomendasi memuat pesan kontekstual dan tautan aksi cepat menuju topik terkait. Potongan kode fungsi \texttt{buildInsights} dapat dilihat pada Lampiran \ref{chap:lampiran-a}, Kode \ref{lst:beranda-insights}.
 
 \subsection{Implementasi Halaman Topik}
 
@@ -174,24 +127,7 @@ Gambar \ref{fig:impl-topik} menunjukkan tampilan halaman topik yang telah diimpl
 
 Setiap \textit{card} terdiri dari tiga bagian utama. Pertama, \textit{thumbnail} berwarna di sisi kiri yang memuat gambar ilustrasi khas topik dengan warna latar berbeda untuk masing-masing topik. Kedua, bagian informasi di tengah yang menampilkan judul topik, deskripsi singkat mencakup konsep-konsep kunci yang akan dipelajari, serta \textit{progress bar} yang menunjukkan persentase penyelesaian topik tersebut. Ketiga, tombol aksi di sisi kanan yang secara dinamis bertuliskan \textit{"Mulai"} jika topik belum pernah dibuka, atau \textit{"Lanjutkan"} jika sudah ada progres.
 
-Nilai progres per topik dihitung dari \texttt{localStorage} dengan membaca status penyelesaian keempat sesi (materi, contoh, latihan, ringkasan). Setiap sesi yang bertanda selesai menambah 25\% pada total progres topik tersebut. Pembacaan \texttt{localStorage} dilakukan pada saat komponen terpasang (\textit{mount}) melalui \texttt{useEffect} sehingga nilai yang ditampilkan selalu mencerminkan kondisi terkini tanpa perlu permintaan ke \textit{server}. Potongan kode perhitungan progres dan inisialisasi \textit{state} ditunjukkan pada Kode \ref{lst:topik-progress}.
-
-\begin{lstlisting}[style=javascriptstyle, caption={Perhitungan Progres Topik dari \texttt{localStorage}}, label={lst:topik-progress}]
-function calcProgress(key) {
-  try {
-    const d = JSON.parse(localStorage.getItem(key)) ?? {};
-    return ['materi', 'contoh', 'latihan', 'ringkasan']
-      .filter((s) => d[s]).length * 25;
-  } catch { return 0; }
-}
-
-// Inisialisasi saat komponen mount
-useEffect(() => {
-  setPengantarProgress(calcProgress('asd_progress_pengantar'));
-  setAdtSederhanaProgress(calcProgress('asd_progress_adt_sederhana'));
-  // ... topik lainnya
-}, []);
-\end{lstlisting}
+Nilai progres per topik dihitung dari \texttt{localStorage} dengan membaca status penyelesaian keempat sesi (materi, contoh, latihan, ringkasan). Setiap sesi yang bertanda selesai menambah 25\% pada total progres topik tersebut. Pembacaan \texttt{localStorage} dilakukan pada saat komponen terpasang (\textit{mount}) melalui \texttt{useEffect} sehingga nilai yang ditampilkan selalu mencerminkan kondisi terkini tanpa perlu permintaan ke \textit{server}. Potongan kode perhitungan progres dan inisialisasi \textit{state} dapat dilihat pada Lampiran \ref{chap:lampiran-a}, Kode \ref{lst:topik-progress}.
 
 \subsection{Implementasi Halaman Materi}
 
@@ -210,23 +146,7 @@ Tata letak halaman terdiri dari dua panel: panel kiri berupa \textit{sidebar} na
 
 Konten materi disusun menggunakan komponen-komponen presentasi yang telah didefinisikan, yaitu \texttt{CodeBlock} untuk kode program dengan sintaks berwarna, \texttt{Pseudocode} untuk notasi algoritmik, \texttt{AsciiBox} untuk diagram tekstual, \texttt{W3Table} untuk tabel perbandingan, dan \texttt{NoteBox} serta \texttt{InfoBox} untuk blok catatan penting.
 
-Di bagian bawah setiap sesi terdapat tombol \textit{"Tandai Selesai"} yang menyimpan status penyelesaian ke \texttt{localStorage} sekaligus menyinkronkan data ke \textit{backend} melalui fungsi \texttt{syncTopicProgress}. Setelah sesi ditandai selesai, tombol digantikan dengan indikator centang hijau dan jumlah sesi yang telah diselesaikan diperbarui. Potongan kode fungsi penyimpanan progres ditunjukkan pada Kode \ref{lst:materi-progress}.
-
-\begin{lstlisting}[style=javascriptstyle, caption={Fungsi Penyimpanan Progres Sesi ke \texttt{localStorage} dan \textit{Backend}}, label={lst:materi-progress}]
-function saveProgress(updates) {
-  const data = { ...readProgress(), ...updates };
-  localStorage.setItem(PROGRESS_KEY, JSON.stringify(data));
-  syncTopicProgress(TOPIC_SLUG, data);
-}
-
-const handleComplete = (tab) => {
-  const key = TAB_KEYS[tab];          // 'materi' | 'contoh' | 'latihan' | 'ringkasan'
-  if (!key || completed[key]) return;
-  saveProgress({ [key]: true });
-  completedRef.current = { ...completedRef.current, [key]: true };
-  forceUpdate((n) => n + 1);
-};
-\end{lstlisting}
+Di bagian bawah setiap sesi terdapat tombol \textit{"Tandai Selesai"} yang menyimpan status penyelesaian ke \texttt{localStorage} sekaligus menyinkronkan data ke \textit{backend} melalui fungsi \texttt{syncTopicProgress}. Setelah sesi ditandai selesai, tombol digantikan dengan indikator centang hijau dan jumlah sesi yang telah diselesaikan diperbarui. Potongan kode fungsi penyimpanan progres dapat dilihat pada Lampiran \ref{chap:lampiran-a}, Kode \ref{lst:materi-progress}.
 
 \subsection{Implementasi Halaman Contoh}
 
@@ -243,24 +163,7 @@ Gambar \ref{fig:impl-contoh} menunjukkan tampilan halaman contoh yang telah diim
 
 Setiap soal contoh ditampilkan dalam format terstruktur: bagian atas menampilkan \textit{badge} tingkat kesulitan dan kategori topik, diikuti judul soal, blok deskripsi masalah, serta tiga kartu ringkas yang menampilkan spesifikasi input, output, dan \textit{constraint}. Di bawahnya terdapat contoh pasangan input-output dalam dua panel berdampingan.
 
-Halaman ini menerapkan dua komponen interaktif yang dapat diungkap secara terpisah: blok \textit{Hint} yang memberikan petunjuk pendekatan solusi, dan blok \textit{Lihat Pembahasan} yang menampilkan solusi lengkap mencakup algoritma langkah demi langkah dalam bentuk daftar bernomor, notasi algoritmik dalam bentuk pseudocode, dan implementasi dalam bahasa C beserta penelusuran nilai (\textit{trace}). Kedua blok ini tersembunyi secara \textit{default} agar pengguna terdorong untuk memikirkan solusi terlebih dahulu sebelum melihat jawaban. Potongan kode implementasi mekanisme \textit{toggle} tersebut ditunjukkan pada Kode \ref{lst:contoh-toggle}.
-
-\begin{lstlisting}[style=javascriptstyle, caption={Mekanisme \textit{Toggle} Hint dan Pembahasan pada Halaman Contoh}, label={lst:contoh-toggle}]
-const [showHint, setShowHint]       = useState(false);
-const [showJawaban, setShowJawaban] = useState(false);
-
-// Tombol Hint
-<button onClick={() => setShowHint(!showHint)}>
-  {showHint ? "▾" : "▸"} Hint
-</button>
-{showHint && <div>...petunjuk pendekatan...</div>}
-
-// Tombol Pembahasan
-<button onClick={() => setShowJawaban(!showJawaban)}>
-  {showJawaban ? "▾" : "▸"} Lihat Pembahasan
-</button>
-{showJawaban && <div>...algoritma, notasi, kode C, trace...</div>}
-\end{lstlisting}
+Halaman ini menerapkan dua komponen interaktif yang dapat diungkap secara terpisah: blok \textit{Hint} yang memberikan petunjuk pendekatan solusi, dan blok \textit{Lihat Pembahasan} yang menampilkan solusi lengkap mencakup algoritma langkah demi langkah dalam bentuk daftar bernomor, notasi algoritmik dalam bentuk pseudocode, dan implementasi dalam bahasa C beserta penelusuran nilai (\textit{trace}). Kedua blok ini tersembunyi secara \textit{default} agar pengguna terdorong untuk memikirkan solusi terlebih dahulu sebelum melihat jawaban. Potongan kode implementasi mekanisme \textit{toggle} tersebut dapat dilihat pada Lampiran \ref{chap:lampiran-a}, Kode \ref{lst:contoh-toggle}.
 
 \subsection{Implementasi Halaman Latihan}
 
@@ -277,37 +180,7 @@ Gambar \ref{fig:impl-latihan} menunjukkan tampilan halaman latihan yang telah di
 
 Setiap sesi latihan terdiri dari 5 soal dengan dua tipe: \textit{pengetahuan} (jawaban esai singkat dengan textarea biasa) dan \textit{implementasi} (jawaban kode C dengan textarea bertema gelap). Navigasi antara soal menggunakan \textit{dot navigator} berwarna yang mencerminkan status setiap soal secara visual: abu-abu untuk belum dijawab, biru untuk sudah diisi, hijau untuk dinilai dengan skor $\geq$ 70, dan merah untuk skor di bawah 70.
 
-Setiap soal dievaluasi secara individual melalui \textit{endpoint} \texttt{POST /api/latihan/evaluasi}. Hasil evaluasi meliputi skor 0--100, label nilai (Sangat Baik/Baik/Cukup/Perlu Perbaikan), \textit{breakdown} metrik penilaian per aspek, komentar deskriptif, bagian yang sudah benar, bagian yang perlu diperbaiki, serta daftar konsep yang perlu dipelajari ulang (\texttt{konsep\_lemah}). Setelah semua soal selesai, halaman beralih ke tampilan ringkasan hasil yang merangkum rata-rata skor, analisis kelemahan, dan tombol untuk membangkitkan sesi soal baru yang difokuskan pada konsep-konsep lemah tersebut. Potongan kode alur \textit{generate} dan evaluasi soal ditunjukkan pada Kode \ref{lst:latihan-ai}.
-
-\begin{lstlisting}[style=javascriptstyle, caption={Alur \textit{Generate} Soal Adaptif dan Evaluasi per Soal}, label={lst:latihan-ai}]
-const generateSoal = useCallback(async (kelemahan = []) => {
-  setFase("loading");
-  const res = await fetch("/api/latihan/generate", {
-    method: "POST",
-    body: JSON.stringify({ jumlah: 5, kelemahan }),
-  });
-  const data = await res.json();
-  setSoalList(data.soal);
-  setFase("latihan");
-}, []);
-
-const evaluasiSoal = async () => {
-  const res = await fetch("/api/latihan/evaluasi", {
-    method: "POST",
-    body: JSON.stringify({ soal, jawaban: jawaban[soal.id] }),
-  });
-  const data = await res.json();
-  setFeedbackMap((prev) => ({ ...prev, [soal.id]: data }));
-};
-
-// Saat generate baru, kirim konsep lemah dari sesi sebelumnya
-const handleGenerateBaru = () => {
-  const kelemahan = [
-    ...new Set(Object.values(feedbackMap).flatMap((f) => f.konsep_lemah ?? [])),
-  ];
-  generateSoal(kelemahan);
-};
-\end{lstlisting}
+Setiap soal dievaluasi secara individual melalui \textit{endpoint} \texttt{POST /api/latihan/evaluasi}. Hasil evaluasi meliputi skor 0--100, label nilai (Sangat Baik/Baik/Cukup/Perlu Perbaikan), \textit{breakdown} metrik penilaian per aspek, komentar deskriptif, bagian yang sudah benar, bagian yang perlu diperbaiki, serta daftar konsep yang perlu dipelajari ulang (\texttt{konsep\_lemah}). Setelah semua soal selesai, halaman beralih ke tampilan ringkasan hasil yang merangkum rata-rata skor, analisis kelemahan, dan tombol untuk membangkitkan sesi soal baru yang difokuskan pada konsep-konsep lemah tersebut. Potongan kode alur \textit{generate} dan evaluasi soal dapat dilihat pada Lampiran \ref{chap:lampiran-a}, Kode \ref{lst:latihan-ai}.
 
 \subsection{Implementasi Halaman Ringkasan}
 
@@ -343,28 +216,7 @@ Bagian atas halaman menampilkan empat kartu statistik ringkasan: rata-rata progr
 
 Di bawah kartu ringkasan terdapat daftar \textit{Detailed Progress} yang menampilkan satu \texttt{TopicCard} per topik. Setiap kartu memuat ikon berwarna dengan inisial nama topik, judul, deskripsi singkat, \textit{progress bar} dengan persentase dan jumlah sesi selesai, serta empat \textit{badge} sesi (Materi, Contoh, Latihan, Ringkasan) yang berwarna hijau jika sesi tersebut telah diselesaikan dan abu-abu jika belum. Tombol \textit{"Mulai"} atau \textit{"Lanjutkan"} di sisi kanan mengarahkan pengguna langsung ke halaman topik yang bersangkutan.
 
-Logika \textit{streak} harian dihitung oleh fungsi \texttt{updateStreak} yang membandingkan tanggal akses hari ini dengan tanggal terakhir disimpan di \texttt{localStorage}. Jika selisihnya tepat satu hari, \textit{streak} bertambah satu; jika lebih dari satu hari, \textit{streak} direset ke 1. Nilai tanggal dan \textit{streak} kemudian diperbarui di \texttt{localStorage}. Potongan kode fungsi \texttt{updateStreak} ditunjukkan pada Kode \ref{lst:progress-streak}.
-
-\begin{lstlisting}[style=javascriptstyle, caption={Fungsi Perhitungan \textit{Streak} Belajar Harian}, label={lst:progress-streak}]
-function updateStreak() {
-  const today = new Date().toISOString().split('T')[0];
-  const lastVisit = localStorage.getItem('asd_last_visit');
-  let streak = parseInt(localStorage.getItem('asd_streak') ?? '0', 10);
-  if (!lastVisit) {
-    localStorage.setItem('asd_last_visit', today);
-    localStorage.setItem('asd_streak', '1');
-    return 1;
-  }
-  if (lastVisit === today) return streak || 1;
-  const diff = Math.round(
-    (new Date(today) - new Date(lastVisit)) / 86400000
-  );
-  streak = diff === 1 ? streak + 1 : 1;
-  localStorage.setItem('asd_last_visit', today);
-  localStorage.setItem('asd_streak', String(streak));
-  return streak;
-}
-\end{lstlisting}
+Logika \textit{streak} harian dihitung oleh fungsi \texttt{updateStreak} yang membandingkan tanggal akses hari ini dengan tanggal terakhir disimpan di \texttt{localStorage}. Jika selisihnya tepat satu hari, \textit{streak} bertambah satu; jika lebih dari satu hari, \textit{streak} direset ke 1. Nilai tanggal dan \textit{streak} kemudian diperbarui di \texttt{localStorage}. Potongan kode fungsi \texttt{updateStreak} dapat dilihat pada Lampiran \ref{chap:lampiran-a}, Kode \ref{lst:progress-streak}.
 
 \subsection{Implementasi Halaman Pengaturan}
 
@@ -383,29 +235,7 @@ Bagian atas halaman menampilkan avatar pengguna berupa lingkaran berwarna biru d
 
 Di bawah avatar terdapat tiga baris yang dapat diedit secara \textit{inline}: nama, \textit{email}, dan kata sandi. Setiap baris menampilkan nilai saat ini dalam mode hanya-baca (\textit{read-only}) dengan ikon pensil di sisi kanan. Ketika ikon pensil ditekan, baris tersebut beralih ke mode edit yang menampilkan \textit{input field} langsung di tempat tanpa berpindah halaman. Mode edit dikendalikan oleh satu \textit{state} \texttt{editing} yang bernilai \texttt{'name'}, \texttt{'email'}, \texttt{'password'}, atau \texttt{null}. Perubahan dikirim ke \textit{backend} melalui \texttt{PUT /api/auth/profile} menggunakan fungsi \texttt{updateProfile} dari modul \texttt{auth.js}.
 
-Perubahan kata sandi divalidasi di sisi klien sebelum dikirim: kata sandi lama wajib diisi, kata sandi baru minimal 8 karakter, dan konfirmasi harus cocok. Setelah penyimpanan berhasil, data sesi di \texttt{localStorage} diperbarui melalui fungsi \texttt{refreshSession} agar informasi yang tampil di seluruh halaman langsung mencerminkan perubahan tanpa perlu \textit{login} ulang. Di bagian bawah terdapat tombol \textit{"Keluar dari Akun"} yang memanggil \texttt{clearSession()} untuk menghapus sesi dari \texttt{localStorage} kemudian mengarahkan pengguna ke halaman \textit{login}. Potongan kode fungsi \texttt{refreshSession} dan alur penyimpanan perubahan profil ditunjukkan pada Kode \ref{lst:pengaturan-profile}.
-
-\begin{lstlisting}[style=javascriptstyle, caption={Fungsi \texttt{refreshSession} dan Alur Penyimpanan Perubahan Profil}, label={lst:pengaturan-profile}]
-const refreshSession = (updatedUser) => {
-  const s = getSession();
-  const newUser = { ...s.user, ...updatedUser };
-  saveSession({ token: s.token, user: newUser });   // perbarui localStorage
-  setSession((prev) => ({ ...prev, user: newUser }));
-};
-
-const saveName = async () => {
-  if (!nameDraft.trim())
-    return setStatus({ field: 'name', error: 'Nama tidak boleh kosong.' });
-  setLoading(true);
-  try {
-    const updated = await updateProfile(session.token, { name: nameDraft.trim() });
-    refreshSession(updated);
-    setEditing(null);
-  } catch (err) {
-    setStatus({ field: 'name', error: err.message });
-  } finally { setLoading(false); }
-};
-\end{lstlisting}
+Perubahan kata sandi divalidasi di sisi klien sebelum dikirim: kata sandi lama wajib diisi, kata sandi baru minimal 8 karakter, dan konfirmasi harus cocok. Setelah penyimpanan berhasil, data sesi di \texttt{localStorage} diperbarui melalui fungsi \texttt{refreshSession} agar informasi yang tampil di seluruh halaman langsung mencerminkan perubahan tanpa perlu \textit{login} ulang. Di bagian bawah terdapat tombol \textit{"Keluar dari Akun"} yang memanggil \texttt{clearSession()} untuk menghapus sesi dari \texttt{localStorage} kemudian mengarahkan pengguna ke halaman \textit{login}. Potongan kode fungsi \texttt{refreshSession} dan alur penyimpanan perubahan profil dapat dilihat pada Lampiran \ref{chap:lampiran-a}, Kode \ref{lst:pengaturan-profile}.
 
 \section{Implementasi \textit{Backend}}
 
@@ -417,66 +247,13 @@ Sistem autentikasi dibangun menggunakan dua mekanisme: PBKDF2-SHA256 untuk penyi
 
 Kata sandi pengguna tidak pernah disimpan dalam bentuk teks biasa. Fungsi \texttt{hash\_password} membangkitkan \textit{salt} acak 16 byte menggunakan \texttt{secrets.token\_hex}, kemudian menghasilkan \textit{hash} PBKDF2-SHA256 dengan 100.000 iterasi. Hasil akhirnya disimpan dalam satu string berformat \texttt{pbkdf2\_sha256\$iterasi\$salt\$hash} sehingga semua parameter yang diperlukan untuk verifikasi tersedia tanpa kolom tambahan di \textit{database}. Fungsi \texttt{verify\_password} memisahkan kembali komponen tersebut, menghitung ulang \textit{hash}, dan membandingkannya menggunakan \texttt{hmac.compare\_digest} untuk mencegah \textit{timing attack}.
 
-JWT dibangkitkan oleh \texttt{create\_access\_token} dengan masa berlaku tujuh hari dan algoritma HS256. \textit{Endpoint} yang memerlukan autentikasi menggunakan \textit{dependency} \texttt{get\_current\_user} yang membaca \textit{header} \texttt{Authorization: Bearer <token>}, memvalidasi dan mendekode JWT, lalu mengambil objek \texttt{User} dari \textit{database}. Potongan kode implementasi \textit{password hashing} dan \texttt{get\_current\_user} ditunjukkan pada Kode \ref{lst:backend-auth}.
-
-\begin{lstlisting}[style=javascriptstyle, caption={Implementasi \textit{Password Hashing} dan \textit{Dependency} Autentikasi}, label={lst:backend-auth}]
-# security.py
-def hash_password(password: str) -> str:
-    salt = secrets.token_hex(PBKDF2_SALT_BYTES)   # 16 byte acak
-    h = hashlib.pbkdf2_hmac("sha256", password.encode(),
-                             salt.encode(), 100_000).hex()
-    return f"pbkdf2_sha256$100000${salt}${h}"
-
-# routes.py
-def get_current_user(
-    authorization: str = Header(...),
-    db: Session = Depends(get_db),
-) -> User:
-    token = authorization.removeprefix("Bearer ")
-    payload = decode_access_token(token, settings.secret_key)
-    user_id = int(payload["sub"])
-    user = db.execute(
-        select(User).where(User.user_id == user_id)
-    ).scalar_one_or_none()
-    if user is None:
-        raise HTTPException(status_code=404, detail="Pengguna tidak ditemukan.")
-    return user
-\end{lstlisting}
+JWT dibangkitkan oleh \texttt{create\_access\_token} dengan masa berlaku tujuh hari dan algoritma HS256. \textit{Endpoint} yang memerlukan autentikasi menggunakan \textit{dependency} \texttt{get\_current\_user} yang membaca \textit{header} \texttt{Authorization: Bearer <token>}, memvalidasi dan mendekode JWT, lalu mengambil objek \texttt{User} dari \textit{database}. Potongan kode implementasi \textit{password hashing} dan \texttt{get\_current\_user} dapat dilihat pada Lampiran \ref{chap:lampiran-a}, Kode \ref{lst:backend-auth}.
 
 \subsection{Implementasi API Progres}
 
 API progres menyediakan dua \textit{endpoint}: \texttt{GET /api/progress} untuk mengambil seluruh data progres milik pengguna yang sedang \textit{login}, dan \texttt{PUT /api/progress/\{topic\_slug\}} untuk menyimpan progres satu topik.
 
-\textit{Endpoint} \texttt{PUT} menerapkan pola \textit{upsert}: sistem terlebih dahulu mencari baris \texttt{Progress} yang sesuai dengan \texttt{user\_id} dan \texttt{topic\_slug}. Jika belum ada, baris baru dibuat dan ditambahkan ke sesi \textit{database}; jika sudah ada, nilainya diperbarui langsung. Kolom \texttt{last\_accessed} selalu diperbarui ke waktu saat ini menggunakan \texttt{datetime.now(timezone.utc)}. Pola ini menghindari duplikasi baris sekaligus menghilangkan kebutuhan logika \texttt{INSERT OR UPDATE} yang berbeda-beda antar \textit{database}. Potongan kode \textit{endpoint} upsert progres ditunjukkan pada Kode \ref{lst:backend-progress}.
-
-\begin{lstlisting}[style=javascriptstyle, caption={Implementasi \textit{Upsert} Progres Belajar per Topik}, label={lst:backend-progress}]
-@router.put("/progress/{topic_slug}", response_model=ProgressResponse)
-async def upsert_progress(
-    topic_slug: str,
-    payload: ProgressUpdateRequest,
-    current_user: User = Depends(get_current_user),
-    db: Session = Depends(get_db),
-) -> ProgressResponse:
-    row = db.execute(
-        select(Progress).where(
-            Progress.user_id == current_user.user_id,
-            Progress.topic_slug == topic_slug,
-        )
-    ).scalar_one_or_none()
-
-    if row is None:                          # belum ada — buat baru
-        row = Progress(user_id=current_user.user_id, topic_slug=topic_slug)
-        db.add(row)
-
-    row.materi    = payload.materi           # perbarui status 4 sesi
-    row.contoh    = payload.contoh
-    row.latihan   = payload.latihan
-    row.ringkasan = payload.ringkasan
-    row.last_accessed = datetime.now(timezone.utc)
-    db.commit()
-    db.refresh(row)
-    return ProgressResponse.model_validate(row)
-\end{lstlisting}
+\textit{Endpoint} \texttt{PUT} menerapkan pola \textit{upsert}: sistem terlebih dahulu mencari baris \texttt{Progress} yang sesuai dengan \texttt{user\_id} dan \texttt{topic\_slug}. Jika belum ada, baris baru dibuat dan ditambahkan ke sesi \textit{database}; jika sudah ada, nilainya diperbarui langsung. Kolom \texttt{last\_accessed} selalu diperbarui ke waktu saat ini menggunakan \texttt{datetime.now(timezone.utc)}. Pola ini menghindari duplikasi baris sekaligus menghilangkan kebutuhan logika \texttt{INSERT OR UPDATE} yang berbeda-beda antar \textit{database}. Potongan kode \textit{endpoint} upsert progres dapat dilihat pada Lampiran \ref{chap:lampiran-a}, Kode \ref{lst:backend-progress}.
 
 \subsection{Implementasi Mesin Soal Adaptif}
 
@@ -484,30 +261,4 @@ Mesin soal adaptif diimplementasikan di modul \texttt{app/ai.py} dengan memanfaa
 
 Fungsi \texttt{generate\_soal} menerima parameter \texttt{kelemahan} berisi daftar konsep yang perlu diperkuat dari sesi latihan sebelumnya. Jika \texttt{kelemahan} tidak kosong, instruksi sistem yang dikirim ke model menyertakan daftar konsep tersebut agar soal yang dibangkitkan berfokus pada area yang lemah. Setiap topik memiliki konfigurasi tersendiri di \texttt{TOPIC\_CONFIGS} yang mendefinisikan nama, panduan kualitas soal, dan skema JSON yang harus dikembalikan oleh model. Respons model diurai dari JSON dan dikembalikan langsung sebagai \textit{response} API.
 
-Fungsi \texttt{evaluasi\_soal} mengirimkan soal beserta jawaban pengguna ke model untuk dinilai. Model mengembalikan objek JSON yang memuat skor 0--100, label nilai, \textit{breakdown} metrik penilaian per aspek, komentar deskriptif, bagian yang sudah benar, bagian yang perlu diperbaiki, dan daftar \texttt{konsep\_lemah} yang digunakan sebagai masukan adaptif pada sesi latihan berikutnya. Potongan kode \textit{endpoint} generate dan evaluasi ditunjukkan pada Kode \ref{lst:backend-ai}.
-
-\begin{lstlisting}[style=javascriptstyle, caption={Implementasi \textit{Endpoint} Generate dan Evaluasi Soal Adaptif}, label={lst:backend-ai}]
-@router.post("/latihan/{topic_slug}/generate")
-async def generate_latihan(
-    topic_slug: str, payload: GenerateSoalRequest,
-) -> dict:
-    result = await generate_soal(
-        topic_slug=topic_slug,
-        jumlah=payload.jumlah,
-        kelemahan=payload.kelemahan,      # konsep lemah dari sesi sebelumnya
-        tipe_paksa=payload.tipe_paksa,
-        topik_referensi=payload.topik_referensi,
-    )
-    return result
-
-@router.post("/latihan/{topic_slug}/evaluasi")
-async def evaluasi_latihan(
-    topic_slug: str, payload: EvaluasiSoalRequest,
-) -> dict:
-    # model mengembalikan: skor, nilai, metrik, komentar, konsep_lemah
-    return await evaluasi_soal(
-        topic_slug=topic_slug,
-        soal=payload.soal,
-        jawaban=payload.jawaban,
-    )
-\end{lstlisting}
+Fungsi \texttt{evaluasi\_soal} mengirimkan soal beserta jawaban pengguna ke model untuk dinilai. Model mengembalikan objek JSON yang memuat skor 0--100, label nilai, \textit{breakdown} metrik penilaian per aspek, komentar deskriptif, bagian yang sudah benar, bagian yang perlu diperbaiki, dan daftar \texttt{konsep\_lemah} yang digunakan sebagai masukan adaptif pada sesi latihan berikutnya. Potongan kode \textit{endpoint} generate dan evaluasi dapat dilihat pada Lampiran \ref{chap:lampiran-a}, Kode \ref{lst:backend-ai}.
