@@ -366,4 +366,45 @@ function updateStreak() {
 }
 \end{lstlisting}
 
+\subsection{Implementasi Halaman Pengaturan}
+
+Halaman pengaturan memungkinkan pengguna mengelola data akun mereka, meliputi perubahan nama, \textit{email}, dan kata sandi, serta melakukan \textit{logout} dari sistem.
+
+Gambar \ref{fig:impl-pengaturan} menunjukkan tampilan halaman pengaturan yang telah diimplementasikan.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/pengaturan.png}
+    \caption{Tampilan Halaman Pengaturan}
+    \label{fig:impl-pengaturan}
+\end{figure}
+
+Bagian atas halaman menampilkan avatar pengguna berupa lingkaran berwarna biru dengan inisial huruf pertama nama, disertai nama lengkap, \textit{email}, dan tanggal bergabung yang diformat menggunakan \texttt{toLocaleDateString}.
+
+Di bawah avatar terdapat tiga baris yang dapat diedit secara \textit{inline}: nama, \textit{email}, dan kata sandi. Setiap baris menampilkan nilai saat ini dalam mode hanya-baca (\textit{read-only}) dengan ikon pensil di sisi kanan. Ketika ikon pensil ditekan, baris tersebut beralih ke mode edit yang menampilkan \textit{input field} langsung di tempat tanpa berpindah halaman. Mode edit dikendalikan oleh satu \textit{state} \texttt{editing} yang bernilai \texttt{'name'}, \texttt{'email'}, \texttt{'password'}, atau \texttt{null}. Perubahan dikirim ke \textit{backend} melalui \texttt{PUT /api/auth/profile} menggunakan fungsi \texttt{updateProfile} dari modul \texttt{auth.js}.
+
+Perubahan kata sandi divalidasi di sisi klien sebelum dikirim: kata sandi lama wajib diisi, kata sandi baru minimal 8 karakter, dan konfirmasi harus cocok. Setelah penyimpanan berhasil, data sesi di \texttt{localStorage} diperbarui melalui fungsi \texttt{refreshSession} agar informasi yang tampil di seluruh halaman langsung mencerminkan perubahan tanpa perlu \textit{login} ulang. Di bagian bawah terdapat tombol \textit{"Keluar dari Akun"} yang memanggil \texttt{clearSession()} untuk menghapus sesi dari \texttt{localStorage} kemudian mengarahkan pengguna ke halaman \textit{login}. Potongan kode fungsi \texttt{refreshSession} dan alur penyimpanan perubahan profil ditunjukkan pada Kode \ref{lst:pengaturan-profile}.
+
+\begin{lstlisting}[style=javascriptstyle, caption={Fungsi \texttt{refreshSession} dan Alur Penyimpanan Perubahan Profil}, label={lst:pengaturan-profile}]
+const refreshSession = (updatedUser) => {
+  const s = getSession();
+  const newUser = { ...s.user, ...updatedUser };
+  saveSession({ token: s.token, user: newUser });   // perbarui localStorage
+  setSession((prev) => ({ ...prev, user: newUser }));
+};
+
+const saveName = async () => {
+  if (!nameDraft.trim())
+    return setStatus({ field: 'name', error: 'Nama tidak boleh kosong.' });
+  setLoading(true);
+  try {
+    const updated = await updateProfile(session.token, { name: nameDraft.trim() });
+    refreshSession(updated);
+    setEditing(null);
+  } catch (err) {
+    setStatus({ field: 'name', error: err.message });
+  } finally { setLoading(false); }
+};
+\end{lstlisting}
+
 \section{Implementasi \textit{Backend}}
