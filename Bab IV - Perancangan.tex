@@ -7,6 +7,8 @@
 
 \section{Gambaran Umum Sistem}
 
+Bagian ini memaparkan gambaran umum sistem Teman Belajar ASD melalui dua model perancangan: \textit{use case diagram} yang mendeskripsikan interaksi antara pengguna dan sistem, serta \textit{sequence diagram} yang menggambarkan urutan komunikasi antar komponen untuk setiap fungsionalitas utama. Kedua model ini menjadi dasar implementasi sistem secara keseluruhan.
+
 \subsection{Use Case}
 
 Pada sistem aplikasi pembelajaran Algoritma dan Struktur Data berbasis \textit{guided learning} ini, terdapat satu aktor yaitu \textit{user} yang merupakan mahasiswa sebagai pengguna sistem. \textit{User} berinteraksi dengan sistem untuk mempelajari materi ASD secara terstruktur, mulai dari memilih topik, memahami konsep, melihat contoh, mengerjakan latihan, hingga memantau progres belajar.
@@ -204,6 +206,8 @@ Gambar \ref{fig:arsitektur-sistem} menunjukkan diagram arsitektur sistem secara 
 
 \section{Perancangan \textit{Database}}
 
+Bagian ini menjelaskan perancangan \textit{database} yang digunakan oleh sistem, mencakup pemilihan platform, spesifikasi teknis, serta desain skema tabel beserta relasi antar-entitasnya. Perancangan \textit{database} menjadi fondasi penyimpanan data pengguna, progres belajar, dan mekanisme adaptif sistem.
+
 \subsection{Spesifikasi \textit{Platform Database}}
 
 PostgreSQL dipilih sebagai sistem manajemen \textit{database} karena bersifat \textit{open source}, mendukung tipe data relasional yang kaya, serta memiliki ekosistem yang matang untuk pengembangan aplikasi web. Akses ke \textit{database} dilakukan melalui SQLAlchemy sebagai ORM (\textit{Object-Relational Mapper}) dengan \textit{driver} psycopg3, sehingga interaksi antara \textit{backend} Python dan \textit{database} dapat dilakukan secara efisien dan aman. Tabel \ref{tab:spek-db} menyajikan spesifikasi \textit{platform database} yang digunakan.
@@ -313,6 +317,9 @@ Gambar \ref{fig:erd} menunjukkan \textit{Entity Relationship Diagram} (ERD) yang
 \end{figure}
 
 \section{Perancangan \textit{Website}}
+
+Bagian ini membahas perancangan teknis aplikasi web Teman Belajar ASD, meliputi arsitektur sistem dan tumpukan teknologi yang digunakan, spesifikasi \textit{endpoint} API, rancangan antarmuka pengguna, serta konfigurasi \textit{hosting} dan \textit{deployment}.
+
 \subsection{Perancangan Arsitektur Sistem}
 
 Aplikasi Teman Belajar ASD dibangun menggunakan arsitektur \textit{client-server} yang terdiri dari tiga lapisan utama: \textit{frontend}, \textit{backend}, dan \textit{database}. Komponen \textit{frontend} dibangun dengan Next.js dan berkomunikasi dengan \textit{backend} melalui RESTful API berbasis FastAPI. \textit{Backend} menangani logika bisnis, autentikasi JWT, serta integrasi dengan OpenAI API untuk menghasilkan konten pembelajaran secara adaptif. Data pengguna dan progres belajar disimpan pada PostgreSQL. Tabel \ref{tab:tech-stack} menyajikan komponen teknologi yang digunakan pada setiap lapisan sistem.
