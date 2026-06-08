@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.11.5)  8 JUN 2026 21:09
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.11.5)  8 JUN 2026 21:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2127,6 +2127,11 @@ Overfull \hbox (15.89156pt too wide) in paragraph at lines 171--172
 \TU/TimesNewRoman(0)/m/it/12 Backend \TU/TimesNewRoman(0)/m/n/12 mengirimkan data tersebut ke OpenAI API untuk dievaluasi, dan API mengem-
  []
 
+
+Overfull \hbox (2.71127pt too wide) in paragraph at lines 171--172
+\TU/TimesNewRoman(0)/m/n/12 menyimpan hasil evaluasi, termasuk \TU/lmtt/m/n/12 user_answers\TU/TimesNewRoman(0)/m/n/12 , \TU/lmtt/m/n/12 user_performance\TU/TimesNewRoman(0)/m/n/12 , dan \TU/TimesNewRoman(0)/m/it/12 weak
+ []
+
 File: images/FT-08-Ringkasan-Materi.png Graphic file (type bmp)
 <images/FT-08-Ringkasan-Materi.png>
 
@@ -2631,15 +2636,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 496--497
 
 ]
 Bab V.
-) (./Bab VI - Evaluasi.tex
+
 
 [47
 
-]
+]) (./Bab VI - Evaluasi.tex
 
-[48
-
-]
+[48]
 Bab VI.
 
 Overfull \hbox (7.3208pt too wide) in alignment at lines 18--24
@@ -3005,6 +3008,7 @@ Overfull \hbox (7.3208pt too wide) in alignment at lines 37--109
 
 [49
 
+
 ] [50]
 Overfull \hbox (15.49854pt too wide) in paragraph at lines 114--115
 \TU/TimesNewRoman(0)/m/n/12 mana aplikasi dapat digunakan oleh mahasiswa dengan mudah, efisien, dan memuaskan.
@@ -3084,10 +3088,10 @@ Package logreq Info: Writing requests to 'TA.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 34163 strings out of 475366
- 674992 string characters out of 5762339
- 2159776 words of memory out of 5000000
- 56664 multiletter control sequences out of 15000+600000
+ 34165 strings out of 475366
+ 675030 string characters out of 5762339
+ 2159921 words of memory out of 5000000
+ 56666 multiletter control sequences out of 15000+600000
  564074 words of font info for 84 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
  79i,12n,95p,1255b,6830s stack positions out of 10000i,1000n,20000p,200000b,200000s

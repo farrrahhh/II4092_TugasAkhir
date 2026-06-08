@@ -4,8 +4,65 @@
 \cleardoublepage
 \chapter{IMPLEMENTASI WEBSITE PEMBELAJARAN ALGORITMA DAN STRUKTUR DATA BERBASIS \textit{GUIDED LEARNING}}
 \label{chap:implementasi}
+
+Bab ini membahas proses implementasi sistem Teman Belajar ASD berdasarkan hasil perancangan yang telah diuraikan pada Bab IV. Implementasi dilakukan secara bertahap, dimulai dari penyiapan lingkungan pengembangan, pembangunan komponen \textit{frontend} dengan Next.js, hingga pengembangan \textit{backend} berbasis FastAPI beserta integrasi OpenAI API sebagai mesin generasi konten adaptif. Seluruh hasil implementasi mengacu pada kebutuhan fungsional dan nonfungsional yang telah ditetapkan.
+
 \section{Lingkungan Implementasi}
 
-\section{Implementasi Frontend}
+Pada pengembangan sistem Teman Belajar ASD dibutuhkan perangkat baik sisi perangkat keras maupun perangkat lunak untuk mendukung proses implementasi. Penjelasan lingkungan implementasi pada sisi perangkat keras yang digunakan dapat dilihat pada Tabel \ref{tab:impl-hardware}.
 
-\section{Implementasi Backend}
+\begin{table}[H]
+    \centering
+    \caption{Lingkungan Implementasi Perangkat Keras}
+    \label{tab:impl-hardware}
+    \begin{tabular}{|p{4.5cm}|p{8cm}|}
+    \hline
+    \textbf{Spesifikasi} & \textbf{Detail} \\
+    \hline
+    Perangkat & Laptop MacBook Pro \\
+    \hline
+    Prosesor & Apple Silicon M1 \\
+    \hline
+    RAM & 16 GB \\
+    \hline
+    Penyimpanan Internal & SSD 512 GB \\
+    \hline
+    \end{tabular}
+\end{table}
+
+Selain lingkungan perangkat keras, implementasi sistem ini membutuhkan dukungan perangkat lunak yang terpasang pada perangkat keras. Penjelasan lingkungan implementasi pada sisi perangkat lunak yang digunakan dapat dilihat pada Tabel \ref{tab:impl-software}.
+
+\begin{table}[H]
+    \centering
+    \caption{Lingkungan Implementasi Perangkat Lunak}
+    \label{tab:impl-software}
+    \begin{tabular}{|p{4.5cm}|p{8cm}|}
+    \hline
+    \textbf{Spesifikasi} & \textbf{Detail} \\
+    \hline
+    Sistem Operasi & macOS Sequoia 15 \\
+    \hline
+    \textit{Text Editor} & Visual Studio Code \\
+    \hline
+    Bahasa Pemrograman & Python 3.11, JavaScript (Node.js 20) \\
+    \hline
+    \textit{Frontend Framework} & Next.js 16, React 19, Tailwind CSS 4 \\
+    \hline
+    \textit{Backend Framework} & FastAPI, SQLAlchemy, Pydantic \\
+    \hline
+    \textit{Containerization} & Docker \\
+    \hline
+    \textit{Repository} & GitHub \\
+    \hline
+    \textit{Cloud Platform} & Google Cloud Platform (Cloud Run, Artifact Registry) \\
+    \hline
+    CI/CD & GitHub Actions \\
+    \hline
+    \end{tabular}
+\end{table}
+
+Dengan terpenuhinya kebutuhan lingkungan implementasi yang sesuai, implementasi sistem Teman Belajar ASD diharapkan dapat berjalan dengan lancar.
+
+\section{Implementasi \textit{Frontend}}
+
+\section{Implementasi \textit{Backend}}

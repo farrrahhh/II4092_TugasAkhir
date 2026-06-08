@@ -102,8 +102,8 @@
 \contentsline {subsection}{\numberline {IV.3.4}Spesifikasi \textit {Hosting}}{43}{subsection.4.3.4}%
 \contentsline {chapter}{\numberline {V}IMPLEMENTASI WEBSITE PEMBELAJARAN ALGORITMA DAN STRUKTUR DATA BERBASIS \textit {GUIDED LEARNING}}{47}{chapter.5}%
 \contentsline {section}{\numberline {V.1}Lingkungan Implementasi}{47}{section.5.1}%
-\contentsline {section}{\numberline {V.2}Implementasi Frontend}{47}{section.5.2}%
-\contentsline {section}{\numberline {V.3}Implementasi Backend}{47}{section.5.3}%
+\contentsline {section}{\numberline {V.2}Implementasi \textit {Frontend}}{48}{section.5.2}%
+\contentsline {section}{\numberline {V.3}Implementasi \textit {Backend}}{48}{section.5.3}%
 \contentsline {chapter}{\numberline {VI}EVALUASI}{49}{chapter.6}%
 \contentsline {section}{\numberline {VI.1}Metode Evaluasi}{49}{section.6.1}%
 \contentsline {subsection}{\numberline {VI.1.1}Pengujian \textit {Black Box}}{49}{subsection.6.1.1}%
