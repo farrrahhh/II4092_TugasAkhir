@@ -193,4 +193,137 @@ useEffect(() => {
 }, []);
 \end{lstlisting}
 
+\subsection{Implementasi Halaman Materi}
+
+Halaman materi merupakan sesi pertama dalam alur pembelajaran terpandu setiap topik. Halaman ini menampilkan konten teori secara terstruktur dengan navigasi yang memudahkan pengguna menemukan subbagian tertentu.
+
+Gambar \ref{fig:impl-materi} menunjukkan tampilan halaman materi yang telah diimplementasikan.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{images/materi.png}
+    \caption{Tampilan Halaman Materi}
+    \label{fig:impl-materi}
+\end{figure}
+
+Tata letak halaman terdiri dari dua panel: panel kiri berupa \textit{sidebar} navigasi berisi daftar isi (\textit{table of contents}) yang hanya tampil pada layar desktop, dan panel kanan berupa area konten yang dapat digulir. Pada versi \textit{mobile}, daftar isi dikemas dalam komponen \textit{collapsible} yang dapat dibuka dengan menekan tombol di bagian atas konten. Saat pengguna menggulir konten, sorotan pada item daftar isi bergerak secara otomatis mengikuti bagian yang sedang terlihat menggunakan \textit{event listener} pada elemen \textit{scroll}.
+
+Konten materi disusun menggunakan komponen-komponen presentasi yang telah didefinisikan, yaitu \texttt{CodeBlock} untuk kode program dengan sintaks berwarna, \texttt{Pseudocode} untuk notasi algoritmik, \texttt{AsciiBox} untuk diagram tekstual, \texttt{W3Table} untuk tabel perbandingan, dan \texttt{NoteBox} serta \texttt{InfoBox} untuk blok catatan penting.
+
+Di bagian bawah setiap sesi terdapat tombol \textit{"Tandai Selesai"} yang menyimpan status penyelesaian ke \texttt{localStorage} sekaligus menyinkronkan data ke \textit{backend} melalui fungsi \texttt{syncTopicProgress}. Setelah sesi ditandai selesai, tombol digantikan dengan indikator centang hijau dan jumlah sesi yang telah diselesaikan diperbarui. Potongan kode fungsi penyimpanan progres ditunjukkan pada Kode \ref{lst:materi-progress}.
+
+\begin{lstlisting}[style=javascriptstyle, caption={Fungsi Penyimpanan Progres Sesi ke \texttt{localStorage} dan \textit{Backend}}, label={lst:materi-progress}]
+function saveProgress(updates) {
+  const data = { ...readProgress(), ...updates };
+  localStorage.setItem(PROGRESS_KEY, JSON.stringify(data));
+  syncTopicProgress(TOPIC_SLUG, data);
+}
+
+const handleComplete = (tab) => {
+  const key = TAB_KEYS[tab];          // 'materi' | 'contoh' | 'latihan' | 'ringkasan'
+  if (!key || completed[key]) return;
+  saveProgress({ [key]: true });
+  completedRef.current = { ...completedRef.current, [key]: true };
+  forceUpdate((n) => n + 1);
+};
+\end{lstlisting}
+
+\subsection{Implementasi Halaman Contoh}
+
+Halaman contoh menyajikan satu soal latihan berbasis kasus dengan pembahasan lengkap. Tujuannya adalah memperlihatkan cara berpikir algoritmik secara bertahap sebelum pengguna mencoba mengerjakan soal sendiri di sesi latihan.
+
+Gambar \ref{fig:impl-contoh} menunjukkan tampilan halaman contoh yang telah diimplementasikan.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{images/contoh.png}
+    \caption{Tampilan Halaman Contoh}
+    \label{fig:impl-contoh}
+\end{figure}
+
+Setiap soal contoh ditampilkan dalam format terstruktur: bagian atas menampilkan \textit{badge} tingkat kesulitan dan kategori topik, diikuti judul soal, blok deskripsi masalah, serta tiga kartu ringkas yang menampilkan spesifikasi input, output, dan \textit{constraint}. Di bawahnya terdapat contoh pasangan input-output dalam dua panel berdampingan.
+
+Halaman ini menerapkan dua komponen interaktif yang dapat diungkap secara terpisah: blok \textit{Hint} yang memberikan petunjuk pendekatan solusi, dan blok \textit{Lihat Pembahasan} yang menampilkan solusi lengkap mencakup algoritma langkah demi langkah dalam bentuk daftar bernomor, notasi algoritmik dalam bentuk pseudocode, dan implementasi dalam bahasa C beserta penelusuran nilai (\textit{trace}). Kedua blok ini tersembunyi secara \textit{default} agar pengguna terdorong untuk memikirkan solusi terlebih dahulu sebelum melihat jawaban. Potongan kode implementasi mekanisme \textit{toggle} tersebut ditunjukkan pada Kode \ref{lst:contoh-toggle}.
+
+\begin{lstlisting}[style=javascriptstyle, caption={Mekanisme \textit{Toggle} Hint dan Pembahasan pada Halaman Contoh}, label={lst:contoh-toggle}]
+const [showHint, setShowHint]       = useState(false);
+const [showJawaban, setShowJawaban] = useState(false);
+
+// Tombol Hint
+<button onClick={() => setShowHint(!showHint)}>
+  {showHint ? "▾" : "▸"} Hint
+</button>
+{showHint && <div>...petunjuk pendekatan...</div>}
+
+// Tombol Pembahasan
+<button onClick={() => setShowJawaban(!showJawaban)}>
+  {showJawaban ? "▾" : "▸"} Lihat Pembahasan
+</button>
+{showJawaban && <div>...algoritma, notasi, kode C, trace...</div>}
+\end{lstlisting}
+
+\subsection{Implementasi Halaman Latihan}
+
+Halaman latihan merupakan sesi inti sistem adaptif. Soal-soal latihan dibangkitkan secara dinamis oleh OpenAI GPT-4o-mini melalui \textit{endpoint} \texttt{POST /api/latihan/generate} sehingga setiap sesi dapat menyajikan soal yang bervariasi dan disesuaikan dengan kelemahan pengguna.
+
+Gambar \ref{fig:impl-latihan} menunjukkan tampilan halaman latihan yang telah diimplementasikan.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{images/latihan.png}
+    \caption{Tampilan Halaman Latihan}
+    \label{fig:impl-latihan}
+\end{figure}
+
+Setiap sesi latihan terdiri dari 5 soal dengan dua tipe: \textit{pengetahuan} (jawaban esai singkat dengan textarea biasa) dan \textit{implementasi} (jawaban kode C dengan textarea bertema gelap). Navigasi antara soal menggunakan \textit{dot navigator} berwarna yang mencerminkan status setiap soal secara visual: abu-abu untuk belum dijawab, biru untuk sudah diisi, hijau untuk dinilai dengan skor $\geq$ 70, dan merah untuk skor di bawah 70.
+
+Setiap soal dievaluasi secara individual melalui \textit{endpoint} \texttt{POST /api/latihan/evaluasi}. Hasil evaluasi meliputi skor 0--100, label nilai (Sangat Baik/Baik/Cukup/Perlu Perbaikan), \textit{breakdown} metrik penilaian per aspek, komentar deskriptif, bagian yang sudah benar, bagian yang perlu diperbaiki, serta daftar konsep yang perlu dipelajari ulang (\texttt{konsep\_lemah}). Setelah semua soal selesai, halaman beralih ke tampilan ringkasan hasil yang merangkum rata-rata skor, analisis kelemahan, dan tombol untuk membangkitkan sesi soal baru yang difokuskan pada konsep-konsep lemah tersebut. Potongan kode alur \textit{generate} dan evaluasi soal ditunjukkan pada Kode \ref{lst:latihan-ai}.
+
+\begin{lstlisting}[style=javascriptstyle, caption={Alur \textit{Generate} Soal Adaptif dan Evaluasi per Soal}, label={lst:latihan-ai}]
+const generateSoal = useCallback(async (kelemahan = []) => {
+  setFase("loading");
+  const res = await fetch("/api/latihan/generate", {
+    method: "POST",
+    body: JSON.stringify({ jumlah: 5, kelemahan }),
+  });
+  const data = await res.json();
+  setSoalList(data.soal);
+  setFase("latihan");
+}, []);
+
+const evaluasiSoal = async () => {
+  const res = await fetch("/api/latihan/evaluasi", {
+    method: "POST",
+    body: JSON.stringify({ soal, jawaban: jawaban[soal.id] }),
+  });
+  const data = await res.json();
+  setFeedbackMap((prev) => ({ ...prev, [soal.id]: data }));
+};
+
+// Saat generate baru, kirim konsep lemah dari sesi sebelumnya
+const handleGenerateBaru = () => {
+  const kelemahan = [
+    ...new Set(Object.values(feedbackMap).flatMap((f) => f.konsep_lemah ?? [])),
+  ];
+  generateSoal(kelemahan);
+};
+\end{lstlisting}
+
+\subsection{Implementasi Halaman Ringkasan}
+
+Halaman ringkasan merupakan sesi penutup dari setiap topik. Halaman ini menyajikan ulasan padat seluruh konsep yang telah dipelajari dalam format visual yang mudah diingat, sehingga berfungsi sebagai referensi cepat setelah pengguna menyelesaikan materi, contoh, dan latihan.
+
+Gambar \ref{fig:impl-ringkasan} menunjukkan tampilan halaman ringkasan yang telah diimplementasikan.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{images/ringkasan.png}
+    \caption{Tampilan Halaman Ringkasan}
+    \label{fig:impl-ringkasan}
+\end{figure}
+
+Struktur konten ringkasan terdiri dari tiga bagian utama. Pertama, infografis topik yang merangkum seluruh konsep dalam satu gambar visual. Kedua, empat kartu \textit{takeaway} kunci dengan warna berbeda yang masing-masing menjelaskan satu konsep utama dari topik tersebut secara ringkas, dilengkapi ilustrasi pendukung berupa diagram ASCII atau tabel mini di dalam kartu. Ketiga, \textit{quick cheat sheet} yang menampilkan perbandingan konsep secara berdampingan untuk memperkuat pemahaman terhadap perbedaan konsep yang sering tertukar.
+
+Halaman ringkasan menggunakan mekanisme penandaan sesi selesai yang identik dengan halaman materi dan contoh melalui fungsi \texttt{handleComplete} dan \texttt{saveProgress}. Setelah keempat sesi (materi, contoh, latihan, dan ringkasan) ditandai selesai, progres topik mencapai 100\% dan topik tersebut dianggap tuntas dalam sistem.
+
 \section{Implementasi \textit{Backend}}

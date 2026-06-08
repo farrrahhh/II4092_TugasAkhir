@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.11.5)  8 JUN 2026 22:07
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.11.5)  8 JUN 2026 22:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1230,17 +1230,17 @@ Overfull \hbox (14.33994pt too wide) in paragraph at lines 103--103
  []
 
 
-Overfull \hbox (1.26215pt too wide) detected at line 118
+Overfull \hbox (1.26215pt too wide) detected at line 122
 \TU/TimesNewRoman(0)/m/n/12 VI.1.2.1 
  []
 
 
-Overfull \hbox (1.26215pt too wide) detected at line 119
+Overfull \hbox (1.26215pt too wide) detected at line 123
 \TU/TimesNewRoman(0)/m/n/12 VI.1.2.2 
  []
 
 
-Overfull \hbox (1.26215pt too wide) detected at line 120
+Overfull \hbox (1.26215pt too wide) detected at line 124
 \TU/TimesNewRoman(0)/m/n/12 VI.1.2.3 
  []
 
@@ -2681,9 +2681,63 @@ Overfull \hbox (2.37871pt too wide) in paragraph at lines 177--178
 
 
 
-[53]) (./Bab VI - Evaluasi.tex
+[53]
+File: images/materi.png Graphic file (type bmp)
+<images/materi.png>
+
+Overfull \hbox (34.06541pt too wide) in paragraph at lines 211--212
+\TU/TimesNewRoman(0)/m/n/12 didefinisikan, yaitu \TU/lmtt/m/n/12 CodeBlock \TU/TimesNewRoman(0)/m/n/12 untuk kode program dengan sintaks berwarna, \TU/lmtt/m/n/12 Pseudocode
+ []
+
+
 
 [54]
+File: images/contoh.png Graphic file (type bmp)
+<images/contoh.png>
+
+
+[55]
+Missing character: There is no ▾ (U+25BE) in font [lmmono10-regular]:!
+Missing character: There is no ▸ (U+25B8) in font [lmmono10-regular]:!
+Missing character: There is no ▾ (U+25BE) in font [lmmono10-regular]:!
+Missing character: There is no ▸ (U+25B8) in font [lmmono10-regular]:!
+
+
+[56]
+Overfull \hbox (45.41463pt too wide) in paragraph at lines 267--268
+\TU/TimesNewRoman(0)/m/n/12 secara dinamis oleh OpenAI GPT-4o-mini melalui \TU/TimesNewRoman(0)/m/it/12 endpoint \TU/lmtt/m/n/12 POST /api/latihan/generate
+ []
+
+File: images/latihan.png Graphic file (type bmp)
+<images/latihan.png>
+
+Overfull \hbox (32.07733pt too wide) in paragraph at lines 280--281
+[]\TU/TimesNewRoman(0)/m/n/12 Setiap soal dievaluasi secara individual melalui \TU/TimesNewRoman(0)/m/it/12 endpoint \TU/lmtt/m/n/12 POST /api/latihan/evaluasi\TU/TimesNewRoman(0)/m/n/12 .
+ []
+
+
+
+[57]
+Overfull \hbox (5.89539pt too wide) in paragraph at lines 316--317
+[]\TU/TimesNewRoman(0)/m/n/12 Gambar [][]V.8[][] menunjukkan tampilan halaman ringkasan yang telah diimplementasikan. 
+ []
+
+File: images/ringkasan.png Graphic file (type bmp)
+<images/ringkasan.png>
+
+
+[58]
+Overfull \hbox (20.49141pt too wide) in paragraph at lines 327--328
+\TU/TimesNewRoman(0)/m/n/12 dengan halaman materi dan contoh melalui fungsi \TU/lmtt/m/n/12 handleComplete \TU/TimesNewRoman(0)/m/n/12 dan \TU/lmtt/m/n/12 saveProgress\TU/TimesNewRoman(0)/m/n/12 .
+ []
+
+) (./Bab VI - Evaluasi.tex
+
+[59]
+
+[60
+
+]
 Bab VI.
 
 Overfull \hbox (7.3208pt too wide) in alignment at lines 18--24
@@ -3047,10 +3101,9 @@ Overfull \hbox (7.3208pt too wide) in alignment at lines 37--109
 
 
 
-[55
+[61
 
-
-] [56]
+] [62]
 Overfull \hbox (15.49854pt too wide) in paragraph at lines 114--115
 \TU/TimesNewRoman(0)/m/n/12 mana aplikasi dapat digunakan oleh mahasiswa dengan mudah, efisien, dan memuaskan.
  []
@@ -3062,23 +3115,23 @@ Overfull \hbox (18.3468pt too wide) in paragraph at lines 118--119
 
 
 
-[57]
+[63]
 
-[58]) (./Bab VII - Penutup.tex
+[64]) (./Bab VII - Penutup.tex
 
-[59]
+[65]
 
-[60
+[66
 
 ]
 Bab VII.
 )
 
-[61
+[67
 
 ]
 
-[62
+[68
 
 ]
 Overfull \hbox (2.36067pt too wide) in paragraph at lines 490--490
@@ -3087,29 +3140,29 @@ Overfull \hbox (2.36067pt too wide) in paragraph at lines 490--490
 
 
 
-[63
+[69
 
 ] (./Lampiran-A.tex
 
-[64]
+[70]
 Lampiran A.
 (./listings/binary-search-python.tex
 
-[65
+[71
 
 
 ])) (./Lampiran-B.tex
 
-[66]
+[72]
 Lampiran B.
 )
 
-[67
+[73
 
 
 ]
 
-[68
+[74
 
 ]
 
@@ -3122,18 +3175,18 @@ LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `TA.out' has not changed.
-(rerunfilecheck)             Checksum: 6F76B784B31B34BEE5F3CE99F8EF8C4D;16348.
+(rerunfilecheck)             Checksum: 8DCD81C4769C3DE00565AFF8BF66F851;17180.
 Package logreq Info: Writing requests to 'TA.run.xml'.
 \openout1 = `TA.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 34339 strings out of 475366
- 677452 string characters out of 5762339
- 2211025 words of memory out of 5000000
- 56834 multiletter control sequences out of 15000+600000
+ 34436 strings out of 475366
+ 679098 string characters out of 5762339
+ 2212394 words of memory out of 5000000
+ 56927 multiletter control sequences out of 15000+600000
  564082 words of font info for 85 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
  79i,12n,95p,1255b,6830s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on TA.pdf (100 pages).
+Output written on TA.pdf (106 pages).

@@ -106,35 +106,29 @@
 \contentsline {subsection}{\numberline {V.2.1}Implementasi Halaman \textit {Login} dan Registrasi}{48}{subsection.5.2.1}%
 \contentsline {subsection}{\numberline {V.2.2}Implementasi Halaman Beranda}{50}{subsection.5.2.2}%
 \contentsline {subsection}{\numberline {V.2.3}Implementasi Halaman Topik}{52}{subsection.5.2.3}%
-\contentsline {section}{\numberline {V.3}Implementasi \textit {Backend}}{54}{section.5.3}%
-\contentsline {chapter}{\numberline {VI}EVALUASI}{55}{chapter.6}%
-\contentsline {section}{\numberline {VI.1}Metode Evaluasi}{55}{section.6.1}%
-\contentsline {subsection}{\numberline {VI.1.1}Pengujian \textit {Black Box}}{55}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {V.2.4}Implementasi Halaman Materi}{54}{subsection.5.2.4}%
+\contentsline {subsection}{\numberline {V.2.5}Implementasi Halaman Contoh}{55}{subsection.5.2.5}%
+\contentsline {subsection}{\numberline {V.2.6}Implementasi Halaman Latihan}{57}{subsection.5.2.6}%
+\contentsline {subsection}{\numberline {V.2.7}Implementasi Halaman Ringkasan}{58}{subsection.5.2.7}%
+\contentsline {section}{\numberline {V.3}Implementasi \textit {Backend}}{59}{section.5.3}%
+\contentsline {chapter}{\numberline {VI}EVALUASI}{61}{chapter.6}%
+\contentsline {section}{\numberline {VI.1}Metode Evaluasi}{61}{section.6.1}%
+\contentsline {subsection}{\numberline {VI.1.1}Pengujian \textit {Black Box}}{61}{subsection.6.1.1}%
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
-\contentsline {subsection}{\numberline {VI.1.2}Pengujian Kegunaan (\textit {Usability Testing})}{57}{subsection.6.1.2}%
-\contentsline {subsubsection}{\numberline {VI.1.2.1}\textit {Task-Based Usability Test}}{57}{subsubsection.6.1.2.1}%
-\contentsline {subsubsection}{\numberline {VI.1.2.2}\textit {System Usability Scale} (SUS)}{58}{subsubsection.6.1.2.2}%
-\contentsline {subsubsection}{\numberline {VI.1.2.3}Responden}{59}{subsubsection.6.1.2.3}%
-\contentsline {section}{\numberline {VI.2}Hasil Evaluasi}{59}{section.6.2}%
-\contentsline {subsection}{\numberline {VI.2.1}Hasil Pengujian \textit {Black Box}}{59}{subsection.6.2.1}%
-\contentsline {subsection}{\numberline {VI.2.2}Hasil Pengujian Kegunaan}{59}{subsection.6.2.2}%
-\contentsline {section}{\numberline {VI.3}Pembahasan Hasil Evaluasi}{59}{section.6.3}%
-\contentsline {chapter}{\numberline {VII}PENUTUP}{61}{chapter.7}%
-\contentsline {section}{\numberline {VII.1}Kesimpulan}{61}{section.7.1}%
-\contentsline {section}{\numberline {VII.2}Saran}{61}{section.7.2}%
-\babel@toc {english}{}\relax 
-\babel@toc {indonesian}{}\relax 
-\babel@toc {english}{}\relax 
-\babel@toc {indonesian}{}\relax 
-\babel@toc {english}{}\relax 
-\babel@toc {indonesian}{}\relax 
-\babel@toc {english}{}\relax 
-\babel@toc {indonesian}{}\relax 
-\babel@toc {english}{}\relax 
-\babel@toc {indonesian}{}\relax 
+\contentsline {subsection}{\numberline {VI.1.2}Pengujian Kegunaan (\textit {Usability Testing})}{63}{subsection.6.1.2}%
+\contentsline {subsubsection}{\numberline {VI.1.2.1}\textit {Task-Based Usability Test}}{63}{subsubsection.6.1.2.1}%
+\contentsline {subsubsection}{\numberline {VI.1.2.2}\textit {System Usability Scale} (SUS)}{64}{subsubsection.6.1.2.2}%
+\contentsline {subsubsection}{\numberline {VI.1.2.3}Responden}{65}{subsubsection.6.1.2.3}%
+\contentsline {section}{\numberline {VI.2}Hasil Evaluasi}{65}{section.6.2}%
+\contentsline {subsection}{\numberline {VI.2.1}Hasil Pengujian \textit {Black Box}}{65}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {VI.2.2}Hasil Pengujian Kegunaan}{65}{subsection.6.2.2}%
+\contentsline {section}{\numberline {VI.3}Pembahasan Hasil Evaluasi}{65}{section.6.3}%
+\contentsline {chapter}{\numberline {VII}PENUTUP}{67}{chapter.7}%
+\contentsline {section}{\numberline {VII.1}Kesimpulan}{67}{section.7.1}%
+\contentsline {section}{\numberline {VII.2}Saran}{67}{section.7.2}%
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
 \babel@toc {english}{}\relax 
@@ -147,10 +141,20 @@
 \babel@toc {indonesian}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {indonesian}{}\relax 
-\contentsline {chapter}{\numberline {A}KODE PROGRAM}{65}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Perangkat Lunak untuk Akuisisi Data dari Sensor Ultrasonik}{65}{section.A.1}%
-\contentsline {section}{\numberline {A.2}Perangkat Lunak untuk Pengolahan Data Akuisisi dan Visualisasi Hasil Pengukuran Jarak}{66}{section.A.2}%
-\contentsline {chapter}{\numberline {B}HASIL SURVEI LAPANGAN}{67}{appendix.B}%
-\contentsline {section}{\numberline {B.1}Foto Survei Lokasi 1}{67}{section.B.1}%
-\contentsline {section}{\numberline {B.2}Foto Survei Lokasi 2}{67}{section.B.2}%
-\contentsline {section}{\numberline {B.3}Transkrip Wawancara dengan Narasumber}{67}{section.B.3}%
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {indonesian}{}\relax 
+\contentsline {chapter}{\numberline {A}KODE PROGRAM}{71}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Perangkat Lunak untuk Akuisisi Data dari Sensor Ultrasonik}{71}{section.A.1}%
+\contentsline {section}{\numberline {A.2}Perangkat Lunak untuk Pengolahan Data Akuisisi dan Visualisasi Hasil Pengukuran Jarak}{72}{section.A.2}%
+\contentsline {chapter}{\numberline {B}HASIL SURVEI LAPANGAN}{73}{appendix.B}%
+\contentsline {section}{\numberline {B.1}Foto Survei Lokasi 1}{73}{section.B.1}%
+\contentsline {section}{\numberline {B.2}Foto Survei Lokasi 2}{73}{section.B.2}%
+\contentsline {section}{\numberline {B.3}Transkrip Wawancara dengan Narasumber}{73}{section.B.3}%
