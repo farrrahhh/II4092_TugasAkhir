@@ -65,4 +65,55 @@ Dengan terpenuhinya kebutuhan lingkungan implementasi yang sesuai, implementasi 
 
 \section{Implementasi \textit{Frontend}}
 
+\subsection{Implementasi Halaman \textit{Login} dan Registrasi}
+
+Halaman \textit{login} dan registrasi merupakan pintu masuk utama sistem yang menangani proses autentikasi pengguna. Kedua halaman menggunakan tata letak dua panel: panel kiri menampilkan ilustrasi dan deskripsi aplikasi, sedangkan panel kanan berisi formulir input. Implementasi autentikasi memanfaatkan fungsi-fungsi yang didefinisikan pada modul \texttt{app/lib/auth.js} sebagai lapisan abstraksi komunikasi dengan \textit{backend}.
+
+Gambar \ref{fig:impl-login} menunjukkan tampilan halaman \textit{login} yang telah diimplementasikan.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{images/login.png}
+    \caption{Tampilan Halaman \textit{Login}}
+    \label{fig:impl-login}
+\end{figure}
+
+Formulir \textit{login} memiliki dua \textit{field} wajib, yaitu \textit{email} dan kata sandi, keduanya divalidasi menggunakan atribut \texttt{required} dan \texttt{type="email"} bawaan HTML. Ketika pengguna mengirimkan formulir, fungsi \texttt{handleSubmit} mengirimkan permintaan \texttt{POST /api/auth/login} ke \textit{backend}. Jika autentikasi berhasil, \textit{backend} mengembalikan JWT \textit{token} beserta data pengguna yang kemudian disimpan ke \texttt{localStorage} melalui fungsi \texttt{saveSession}. Sistem juga langsung memuat data progres belajar dari \textit{database} ke \texttt{localStorage} (\texttt{loadProgressFromDb}) agar navigasi antartopik dapat berjalan tanpa latensi tambahan. Potongan kode implementasi alur \textit{login} ditunjukkan pada Kode \ref{lst:login}.
+
+\begin{lstlisting}[style=javascriptstyle, caption={Implementasi Alur \textit{Login} dan Penyimpanan Sesi}, label={lst:login}]
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  setLoading(true);
+  try {
+    const data = await loginUser(form.email, form.password);
+    saveSession(data);
+    await loadProgressFromDb(data.token);
+    router.push('/dashboard');
+  } catch (err) {
+    setError(err.message);
+  } finally {
+    setLoading(false);
+  }
+};
+
+// auth.js
+export function saveSession(data) {
+  localStorage.setItem('token', data.token);
+  localStorage.setItem('user', JSON.stringify(data.user));
+}
+\end{lstlisting}
+
+Sistem juga menerapkan proteksi halaman \textit{login}: jika sesi aktif sudah tersimpan di \texttt{localStorage}, pengguna akan langsung dialihkan ke \textit{dashboard} sehingga tidak perlu \textit{login} ulang.
+
+Gambar \ref{fig:impl-signup} menunjukkan tampilan halaman registrasi yang diakses melalui tautan \textit{"Daftar"} pada halaman \textit{login}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{images/signup.png}
+    \caption{Tampilan Halaman Registrasi}
+    \label{fig:impl-signup}
+\end{figure}
+
+Halaman registrasi memiliki formulir dengan tiga \textit{field}: nama lengkap, \textit{email}, dan kata sandi. Setelah registrasi berhasil, sistem secara otomatis menyimpan sesi dan mengalihkan pengguna ke \textit{dashboard} tanpa perlu \textit{login} kembali, menggunakan alur yang identik dengan \textit{login} melalui fungsi \texttt{registerUser} pada modul \texttt{auth.js}.
+
 \section{Implementasi \textit{Backend}}
