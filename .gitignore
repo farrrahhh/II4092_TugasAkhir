@@ -26,9 +26,13 @@
 
 # macOS files
 .DS_Store
+.DS_Store?
 .AppleDouble
 .LSOverride
 ._*
+.Spotlight-V100
+.Trashes
+
 
 # VS Code
 .vscode/
@@ -47,3 +51,4 @@
 
 # OS-specific
 Thumbs.db
+

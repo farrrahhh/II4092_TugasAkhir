@@ -408,3 +408,106 @@ const saveName = async () => {
 \end{lstlisting}
 
 \section{Implementasi \textit{Backend}}
+
+Implementasi \textit{backend} menggunakan FastAPI sebagai \textit{framework} utama yang berjalan di atas Uvicorn. Seluruh \textit{endpoint} dikelompokkan dalam satu \texttt{APIRouter} dan didaftarkan ke aplikasi utama dengan \textit{prefix} \texttt{/api}. CORS dikonfigurasi agar hanya menerima permintaan dari \textit{origin frontend} yang telah ditetapkan. Inisialisasi tabel \textit{database} dilakukan secara otomatis saat aplikasi pertama kali dijalankan melalui \textit{lifespan handler}.
+
+\subsection{Implementasi Autentikasi}
+
+Sistem autentikasi dibangun menggunakan dua mekanisme: PBKDF2-SHA256 untuk penyimpanan kata sandi dan JWT HS256 untuk sesi pengguna. Implementasi keduanya terpusat di modul \texttt{app/security.py}.
+
+Kata sandi pengguna tidak pernah disimpan dalam bentuk teks biasa. Fungsi \texttt{hash\_password} membangkitkan \textit{salt} acak 16 byte menggunakan \texttt{secrets.token\_hex}, kemudian menghasilkan \textit{hash} PBKDF2-SHA256 dengan 100.000 iterasi. Hasil akhirnya disimpan dalam satu string berformat \texttt{pbkdf2\_sha256\$iterasi\$salt\$hash} sehingga semua parameter yang diperlukan untuk verifikasi tersedia tanpa kolom tambahan di \textit{database}. Fungsi \texttt{verify\_password} memisahkan kembali komponen tersebut, menghitung ulang \textit{hash}, dan membandingkannya menggunakan \texttt{hmac.compare\_digest} untuk mencegah \textit{timing attack}.
+
+JWT dibangkitkan oleh \texttt{create\_access\_token} dengan masa berlaku tujuh hari dan algoritma HS256. \textit{Endpoint} yang memerlukan autentikasi menggunakan \textit{dependency} \texttt{get\_current\_user} yang membaca \textit{header} \texttt{Authorization: Bearer <token>}, memvalidasi dan mendekode JWT, lalu mengambil objek \texttt{User} dari \textit{database}. Potongan kode implementasi \textit{password hashing} dan \texttt{get\_current\_user} ditunjukkan pada Kode \ref{lst:backend-auth}.
+
+\begin{lstlisting}[style=javascriptstyle, caption={Implementasi \textit{Password Hashing} dan \textit{Dependency} Autentikasi}, label={lst:backend-auth}]
+# security.py
+def hash_password(password: str) -> str:
+    salt = secrets.token_hex(PBKDF2_SALT_BYTES)   # 16 byte acak
+    h = hashlib.pbkdf2_hmac("sha256", password.encode(),
+                             salt.encode(), 100_000).hex()
+    return f"pbkdf2_sha256$100000${salt}${h}"
+
+# routes.py
+def get_current_user(
+    authorization: str = Header(...),
+    db: Session = Depends(get_db),
+) -> User:
+    token = authorization.removeprefix("Bearer ")
+    payload = decode_access_token(token, settings.secret_key)
+    user_id = int(payload["sub"])
+    user = db.execute(
+        select(User).where(User.user_id == user_id)
+    ).scalar_one_or_none()
+    if user is None:
+        raise HTTPException(status_code=404, detail="Pengguna tidak ditemukan.")
+    return user
+\end{lstlisting}
+
+\subsection{Implementasi API Progres}
+
+API progres menyediakan dua \textit{endpoint}: \texttt{GET /api/progress} untuk mengambil seluruh data progres milik pengguna yang sedang \textit{login}, dan \texttt{PUT /api/progress/\{topic\_slug\}} untuk menyimpan progres satu topik.
+
+\textit{Endpoint} \texttt{PUT} menerapkan pola \textit{upsert}: sistem terlebih dahulu mencari baris \texttt{Progress} yang sesuai dengan \texttt{user\_id} dan \texttt{topic\_slug}. Jika belum ada, baris baru dibuat dan ditambahkan ke sesi \textit{database}; jika sudah ada, nilainya diperbarui langsung. Kolom \texttt{last\_accessed} selalu diperbarui ke waktu saat ini menggunakan \texttt{datetime.now(timezone.utc)}. Pola ini menghindari duplikasi baris sekaligus menghilangkan kebutuhan logika \texttt{INSERT OR UPDATE} yang berbeda-beda antar \textit{database}. Potongan kode \textit{endpoint} upsert progres ditunjukkan pada Kode \ref{lst:backend-progress}.
+
+\begin{lstlisting}[style=javascriptstyle, caption={Implementasi \textit{Upsert} Progres Belajar per Topik}, label={lst:backend-progress}]
+@router.put("/progress/{topic_slug}", response_model=ProgressResponse)
+async def upsert_progress(
+    topic_slug: str,
+    payload: ProgressUpdateRequest,
+    current_user: User = Depends(get_current_user),
+    db: Session = Depends(get_db),
+) -> ProgressResponse:
+    row = db.execute(
+        select(Progress).where(
+            Progress.user_id == current_user.user_id,
+            Progress.topic_slug == topic_slug,
+        )
+    ).scalar_one_or_none()
+
+    if row is None:                          # belum ada — buat baru
+        row = Progress(user_id=current_user.user_id, topic_slug=topic_slug)
+        db.add(row)
+
+    row.materi    = payload.materi           # perbarui status 4 sesi
+    row.contoh    = payload.contoh
+    row.latihan   = payload.latihan
+    row.ringkasan = payload.ringkasan
+    row.last_accessed = datetime.now(timezone.utc)
+    db.commit()
+    db.refresh(row)
+    return ProgressResponse.model_validate(row)
+\end{lstlisting}
+
+\subsection{Implementasi Mesin Soal Adaptif}
+
+Mesin soal adaptif diimplementasikan di modul \texttt{app/ai.py} dengan memanfaatkan OpenAI GPT-4o-mini melalui \textit{endpoint} \texttt{/v1/chat/completions}. Modul ini mengekspos tiga fungsi utama: \texttt{generate\_soal}, \texttt{evaluasi\_soal}, dan \texttt{evaluasi\_batch}, yang masing-masing dipanggil oleh \textit{endpoint} \texttt{POST /api/latihan/\{topic\_slug\}/generate}, \texttt{/evaluasi}, dan \texttt{/evaluasi-batch}.
+
+Fungsi \texttt{generate\_soal} menerima parameter \texttt{kelemahan} berisi daftar konsep yang perlu diperkuat dari sesi latihan sebelumnya. Jika \texttt{kelemahan} tidak kosong, instruksi sistem yang dikirim ke model menyertakan daftar konsep tersebut agar soal yang dibangkitkan berfokus pada area yang lemah. Setiap topik memiliki konfigurasi tersendiri di \texttt{TOPIC\_CONFIGS} yang mendefinisikan nama, panduan kualitas soal, dan skema JSON yang harus dikembalikan oleh model. Respons model diurai dari JSON dan dikembalikan langsung sebagai \textit{response} API.
+
+Fungsi \texttt{evaluasi\_soal} mengirimkan soal beserta jawaban pengguna ke model untuk dinilai. Model mengembalikan objek JSON yang memuat skor 0--100, label nilai, \textit{breakdown} metrik penilaian per aspek, komentar deskriptif, bagian yang sudah benar, bagian yang perlu diperbaiki, dan daftar \texttt{konsep\_lemah} yang digunakan sebagai masukan adaptif pada sesi latihan berikutnya. Potongan kode \textit{endpoint} generate dan evaluasi ditunjukkan pada Kode \ref{lst:backend-ai}.
+
+\begin{lstlisting}[style=javascriptstyle, caption={Implementasi \textit{Endpoint} Generate dan Evaluasi Soal Adaptif}, label={lst:backend-ai}]
+@router.post("/latihan/{topic_slug}/generate")
+async def generate_latihan(
+    topic_slug: str, payload: GenerateSoalRequest,
+) -> dict:
+    result = await generate_soal(
+        topic_slug=topic_slug,
+        jumlah=payload.jumlah,
+        kelemahan=payload.kelemahan,      # konsep lemah dari sesi sebelumnya
+        tipe_paksa=payload.tipe_paksa,
+        topik_referensi=payload.topik_referensi,
+    )
+    return result
+
+@router.post("/latihan/{topic_slug}/evaluasi")
+async def evaluasi_latihan(
+    topic_slug: str, payload: EvaluasiSoalRequest,
+) -> dict:
+    # model mengembalikan: skor, nilai, metrik, komentar, konsep_lemah
+    return await evaluasi_soal(
+        topic_slug=topic_slug,
+        soal=payload.soal,
+        jawaban=payload.jawaban,
+    )
+\end{lstlisting}
