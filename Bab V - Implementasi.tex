@@ -326,4 +326,44 @@ Struktur konten ringkasan terdiri dari tiga bagian utama. Pertama, infografis to
 
 Halaman ringkasan menggunakan mekanisme penandaan sesi selesai yang identik dengan halaman materi dan contoh melalui fungsi \texttt{handleComplete} dan \texttt{saveProgress}. Setelah keempat sesi (materi, contoh, latihan, dan ringkasan) ditandai selesai, progres topik mencapai 100\% dan topik tersebut dianggap tuntas dalam sistem.
 
+\subsection{Implementasi Halaman \textit{Progress}}
+
+Halaman \textit{progress} menyediakan dasbor pemantauan kemajuan belajar secara menyeluruh. Pengguna dapat melihat ringkasan statistik keseluruhan sekaligus rincian status penyelesaian setiap topik dan sesinya dalam satu tampilan.
+
+Gambar \ref{fig:impl-progress} menunjukkan tampilan halaman \textit{progress} yang telah diimplementasikan.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{images/progress.png}
+    \caption{Tampilan Halaman \textit{Progress}}
+    \label{fig:impl-progress}
+\end{figure}
+
+Bagian atas halaman menampilkan empat kartu statistik ringkasan: rata-rata progres keseluruhan dalam persentase, total sesi yang telah diselesaikan dari seluruh topik, jumlah topik yang sudah pernah dimulai, dan jumlah hari belajar berturut-turut (\textit{streak}). Keempat nilai ini dihitung secara lokal dari \texttt{localStorage} pada saat komponen di-\textit{render} menggunakan \texttt{useSyncExternalStore}.
+
+Di bawah kartu ringkasan terdapat daftar \textit{Detailed Progress} yang menampilkan satu \texttt{TopicCard} per topik. Setiap kartu memuat ikon berwarna dengan inisial nama topik, judul, deskripsi singkat, \textit{progress bar} dengan persentase dan jumlah sesi selesai, serta empat \textit{badge} sesi (Materi, Contoh, Latihan, Ringkasan) yang berwarna hijau jika sesi tersebut telah diselesaikan dan abu-abu jika belum. Tombol \textit{"Mulai"} atau \textit{"Lanjutkan"} di sisi kanan mengarahkan pengguna langsung ke halaman topik yang bersangkutan.
+
+Logika \textit{streak} harian dihitung oleh fungsi \texttt{updateStreak} yang membandingkan tanggal akses hari ini dengan tanggal terakhir disimpan di \texttt{localStorage}. Jika selisihnya tepat satu hari, \textit{streak} bertambah satu; jika lebih dari satu hari, \textit{streak} direset ke 1. Nilai tanggal dan \textit{streak} kemudian diperbarui di \texttt{localStorage}. Potongan kode fungsi \texttt{updateStreak} ditunjukkan pada Kode \ref{lst:progress-streak}.
+
+\begin{lstlisting}[style=javascriptstyle, caption={Fungsi Perhitungan \textit{Streak} Belajar Harian}, label={lst:progress-streak}]
+function updateStreak() {
+  const today = new Date().toISOString().split('T')[0];
+  const lastVisit = localStorage.getItem('asd_last_visit');
+  let streak = parseInt(localStorage.getItem('asd_streak') ?? '0', 10);
+  if (!lastVisit) {
+    localStorage.setItem('asd_last_visit', today);
+    localStorage.setItem('asd_streak', '1');
+    return 1;
+  }
+  if (lastVisit === today) return streak || 1;
+  const diff = Math.round(
+    (new Date(today) - new Date(lastVisit)) / 86400000
+  );
+  streak = diff === 1 ? streak + 1 : 1;
+  localStorage.setItem('asd_last_visit', today);
+  localStorage.setItem('asd_streak', String(streak));
+  return streak;
+}
+\end{lstlisting}
+
 \section{Implementasi \textit{Backend}}
