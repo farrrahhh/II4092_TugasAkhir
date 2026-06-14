@@ -160,6 +160,8 @@
 \setmainfont{Times New Roman} % set main font to Times New Roman
 \onehalfspacing % spasi 1.5
 \raggedbottom % mencegah peregangan vertikal antar paragraf
+\setlength\emergencystretch{3em} % fleksibilitas line-breaking untuk kata yang tidak dapat di-hyphenasi
+\global\hfuzz=3pt % suppress warnings for overflows < 3pt (cosmetically negligible)
 
 % --- Bibliography menggunakan BibLaTeX dengan gaya Chicago ---
 \usepackage[
@@ -412,6 +414,7 @@
 % AWAL DOKUMEN
 % ==========================================
 \begin{document}
+\global\hfuzz=3pt % suppress warnings for overflows < 3pt (cosmetically negligible)
 
 % ==========================================
 % HALAMAN AWAL (FRONTMATTER)

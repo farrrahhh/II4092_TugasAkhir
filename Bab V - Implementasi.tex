@@ -144,7 +144,7 @@ Gambar \ref{fig:impl-materi} menunjukkan tampilan halaman materi yang telah diim
 
 Tata letak halaman terdiri dari dua panel: panel kiri berupa \textit{sidebar} navigasi berisi daftar isi (\textit{table of contents}) yang hanya tampil pada layar desktop, dan panel kanan berupa area konten yang dapat digulir. Pada versi \textit{mobile}, daftar isi dikemas dalam komponen \textit{collapsible} yang dapat dibuka dengan menekan tombol di bagian atas konten. Saat pengguna menggulir konten, sorotan pada item daftar isi bergerak secara otomatis mengikuti bagian yang sedang terlihat menggunakan \textit{event listener} pada elemen \textit{scroll}.
 
-Konten materi disusun menggunakan komponen-komponen presentasi yang telah didefinisikan, yaitu \texttt{CodeBlock} untuk kode program dengan sintaks berwarna, \texttt{Pseudocode} untuk notasi algoritmik, \texttt{AsciiBox} untuk diagram tekstual, \texttt{W3Table} untuk tabel perbandingan, dan \texttt{NoteBox} serta \texttt{InfoBox} untuk blok catatan penting.
+Konten materi disusun menggunakan komponen-komponen presentasi yang telah didefinisikan, yaitu \texttt{Code\allowbreak{}Block} untuk kode program dengan sintaks berwarna, \texttt{Pseudo\allowbreak{}code} untuk notasi algoritmik, \texttt{Ascii\allowbreak{}Box} untuk diagram tekstual, \texttt{W3Table} untuk tabel perbandingan, dan \texttt{Note\allowbreak{}Box} serta \texttt{Info\allowbreak{}Box} untuk blok catatan penting.
 
 Di bagian bawah setiap sesi terdapat tombol \textit{"Tandai Selesai"} yang menyimpan status penyelesaian ke \texttt{localStorage} sekaligus menyinkronkan data ke \textit{backend} melalui fungsi \texttt{syncTopicProgress}. Setelah sesi ditandai selesai, tombol digantikan dengan indikator centang hijau dan jumlah sesi yang telah diselesaikan diperbarui. Potongan kode fungsi penyimpanan progres dapat dilihat pada Lampiran \ref{chap:lampiran-a}, Kode \ref{lst:materi-progress}.
 
@@ -167,7 +167,7 @@ Halaman ini menerapkan dua komponen interaktif yang dapat diungkap secara terpis
 
 \subsection{Implementasi Halaman Latihan}
 
-Halaman latihan merupakan sesi inti sistem adaptif. Soal-soal latihan dibangkitkan secara dinamis oleh OpenAI GPT-4o-mini melalui \textit{endpoint} \texttt{POST /api/latihan/generate} sehingga setiap sesi dapat menyajikan soal yang bervariasi dan disesuaikan dengan kelemahan pengguna.
+Halaman latihan merupakan sesi inti sistem adaptif. Soal-soal latihan dibangkitkan secara dinamis oleh OpenAI GPT-4o-mini melalui \textit{endpoint} \texttt{POST /api/latihan/\allowbreak{}generate} sehingga setiap sesi dapat menyajikan soal yang bervariasi dan disesuaikan dengan kelemahan pengguna.
 
 Gambar \ref{fig:impl-latihan} menunjukkan tampilan halaman latihan yang telah diimplementasikan.
 
@@ -180,7 +180,9 @@ Gambar \ref{fig:impl-latihan} menunjukkan tampilan halaman latihan yang telah di
 
 Setiap sesi latihan terdiri dari 5 soal dengan dua tipe: \textit{pengetahuan} (jawaban esai singkat dengan textarea biasa) dan \textit{implementasi} (jawaban kode C dengan textarea bertema gelap). Navigasi antara soal menggunakan \textit{dot navigator} berwarna yang mencerminkan status setiap soal secara visual: abu-abu untuk belum dijawab, biru untuk sudah diisi, hijau untuk dinilai dengan skor $\geq$ 70, dan merah untuk skor di bawah 70.
 
+\begin{sloppypar}
 Setiap soal dievaluasi secara individual melalui \textit{endpoint} \texttt{POST /api/latihan/evaluasi}. Hasil evaluasi meliputi skor 0--100, label nilai (Sangat Baik/Baik/Cukup/Perlu Perbaikan), \textit{breakdown} metrik penilaian per aspek, komentar deskriptif, bagian yang sudah benar, bagian yang perlu diperbaiki, serta daftar konsep yang perlu dipelajari ulang (\texttt{konsep\_lemah}). Setelah semua soal selesai, halaman beralih ke tampilan ringkasan hasil yang merangkum rata-rata skor, analisis kelemahan, dan tombol untuk membangkitkan sesi soal baru yang difokuskan pada konsep-konsep lemah tersebut. Potongan kode alur \textit{generate} dan evaluasi soal dapat dilihat pada Lampiran \ref{chap:lampiran-a}, Kode \ref{lst:latihan-ai}.
+\end{sloppypar}
 
 \subsection{Implementasi Halaman Ringkasan}
 
@@ -197,7 +199,7 @@ Gambar \ref{fig:impl-ringkasan} menunjukkan tampilan halaman ringkasan yang tela
 
 Struktur konten ringkasan terdiri dari tiga bagian utama. Pertama, infografis topik yang merangkum seluruh konsep dalam satu gambar visual. Kedua, empat kartu \textit{takeaway} kunci dengan warna berbeda yang masing-masing menjelaskan satu konsep utama dari topik tersebut secara ringkas, dilengkapi ilustrasi pendukung berupa diagram ASCII atau tabel mini di dalam kartu. Ketiga, \textit{quick cheat sheet} yang menampilkan perbandingan konsep secara berdampingan untuk memperkuat pemahaman terhadap perbedaan konsep yang sering tertukar.
 
-Halaman ringkasan menggunakan mekanisme penandaan sesi selesai yang identik dengan halaman materi dan contoh melalui fungsi \texttt{handleComplete} dan \texttt{saveProgress}. Setelah keempat sesi (materi, contoh, latihan, dan ringkasan) ditandai selesai, progres topik mencapai 100\% dan topik tersebut dianggap tuntas dalam sistem.
+Halaman ringkasan menggunakan mekanisme penandaan sesi selesai yang identik dengan halaman materi dan contoh melalui fungsi \texttt{handle\allowbreak{}Complete} dan \texttt{save\allowbreak{}Progress}. Setelah keempat sesi (materi, contoh, latihan, dan ringkasan) ditandai selesai, progres topik mencapai 100\% dan topik tersebut dianggap tuntas dalam sistem.
 
 \subsection{Implementasi Halaman \textit{Progress}}
 
@@ -235,7 +237,7 @@ Bagian atas halaman menampilkan avatar pengguna berupa lingkaran berwarna biru d
 
 Di bawah avatar terdapat tiga baris yang dapat diedit secara \textit{inline}: nama, \textit{email}, dan kata sandi. Setiap baris menampilkan nilai saat ini dalam mode hanya-baca (\textit{read-only}) dengan ikon pensil di sisi kanan. Ketika ikon pensil ditekan, baris tersebut beralih ke mode edit yang menampilkan \textit{input field} langsung di tempat tanpa berpindah halaman. Mode edit dikendalikan oleh satu \textit{state} \texttt{editing} yang bernilai \texttt{'name'}, \texttt{'email'}, \texttt{'password'}, atau \texttt{null}. Perubahan dikirim ke \textit{backend} melalui \texttt{PUT /api/auth/profile} menggunakan fungsi \texttt{updateProfile} dari modul \texttt{auth.js}.
 
-Perubahan kata sandi divalidasi di sisi klien sebelum dikirim: kata sandi lama wajib diisi, kata sandi baru minimal 8 karakter, dan konfirmasi harus cocok. Setelah penyimpanan berhasil, data sesi di \texttt{localStorage} diperbarui melalui fungsi \texttt{refreshSession} agar informasi yang tampil di seluruh halaman langsung mencerminkan perubahan tanpa perlu \textit{login} ulang. Di bagian bawah terdapat tombol \textit{"Keluar dari Akun"} yang memanggil \texttt{clearSession()} untuk menghapus sesi dari \texttt{localStorage} kemudian mengarahkan pengguna ke halaman \textit{login}. Potongan kode fungsi \texttt{refreshSession} dan alur penyimpanan perubahan profil dapat dilihat pada Lampiran \ref{chap:lampiran-a}, Kode \ref{lst:pengaturan-profile}.
+Perubahan kata sandi divalidasi di sisi klien sebelum dikirim: kata sandi lama wajib diisi, kata sandi baru minimal 8 karakter, dan konfirmasi harus cocok. Setelah penyimpanan berhasil, data sesi di \texttt{localStorage} diperbarui melalui fungsi \texttt{refreshSession} agar informasi yang tampil di seluruh halaman langsung mencerminkan perubahan tanpa perlu \textit{login} ulang. Di bagian bawah terdapat tombol \textit{"Keluar dari Akun"} yang memanggil \texttt{clearSession()} untuk menghapus sesi dari \texttt{local\allowbreak{}Storage} kemudian mengarahkan pengguna ke halaman \textit{login}. Potongan kode fungsi \texttt{refresh\allowbreak{}Session} dan alur penyimpanan perubahan profil dapat dilihat pada Lampiran \ref{chap:lampiran-a}, Kode \ref{lst:pengaturan-profile}.
 
 \section{Implementasi \textit{Backend}}
 
@@ -245,19 +247,19 @@ Implementasi \textit{backend} menggunakan FastAPI sebagai \textit{framework} uta
 
 Sistem autentikasi dibangun menggunakan dua mekanisme: PBKDF2-SHA256 untuk penyimpanan kata sandi dan JWT HS256 untuk sesi pengguna. Implementasi keduanya terpusat di modul \texttt{app/security.py}.
 
-Kata sandi pengguna tidak pernah disimpan dalam bentuk teks biasa. Fungsi \texttt{hash\_password} membangkitkan \textit{salt} acak 16 byte menggunakan \texttt{secrets.token\_hex}, kemudian menghasilkan \textit{hash} PBKDF2-SHA256 dengan 100.000 iterasi. Hasil akhirnya disimpan dalam satu string berformat \texttt{pbkdf2\_sha256\$iterasi\$salt\$hash} sehingga semua parameter yang diperlukan untuk verifikasi tersedia tanpa kolom tambahan di \textit{database}. Fungsi \texttt{verify\_password} memisahkan kembali komponen tersebut, menghitung ulang \textit{hash}, dan membandingkannya menggunakan \texttt{hmac.compare\_digest} untuk mencegah \textit{timing attack}.
+Kata sandi pengguna tidak pernah disimpan dalam bentuk teks biasa. Fungsi \texttt{hash\_password} membangkitkan \textit{salt} acak 16 byte menggunakan \texttt{secrets.\allowbreak{}token\_hex}, kemudian menghasilkan \textit{hash} PBKDF2-SHA256 dengan 100.000 iterasi. Hasil akhirnya disimpan dalam satu string berformat \texttt{pbkdf2\_sha256\allowbreak{}\$iterasi\allowbreak{}\$salt\allowbreak{}\$hash} sehingga semua parameter yang diperlukan untuk verifikasi tersedia tanpa kolom tambahan di \textit{database}. Fungsi \texttt{verify\_password} memisahkan kembali komponen tersebut, menghitung ulang \textit{hash}, dan membandingkannya menggunakan \texttt{hmac.\allowbreak{}compare\_digest} untuk mencegah \textit{timing attack}.
 
 JWT dibangkitkan oleh \texttt{create\_access\_token} dengan masa berlaku tujuh hari dan algoritma HS256. \textit{Endpoint} yang memerlukan autentikasi menggunakan \textit{dependency} \texttt{get\_current\_user} yang membaca \textit{header} \texttt{Authorization: Bearer <token>}, memvalidasi dan mendekode JWT, lalu mengambil objek \texttt{User} dari \textit{database}. Potongan kode implementasi \textit{password hashing} dan \texttt{get\_current\_user} dapat dilihat pada Lampiran \ref{chap:lampiran-a}, Kode \ref{lst:backend-auth}.
 
 \subsection{Implementasi API Progres}
 
-API progres menyediakan dua \textit{endpoint}: \texttt{GET /api/progress} untuk mengambil seluruh data progres milik pengguna yang sedang \textit{login}, dan \texttt{PUT /api/progress/\{topic\_slug\}} untuk menyimpan progres satu topik.
+API progres menyediakan dua \textit{endpoint}: \texttt{GET /api/progress} untuk mengambil seluruh data progres milik pengguna yang sedang \textit{login}, dan \texttt{PUT /api/progress/\allowbreak{}\{topic\_slug\}} untuk menyimpan progres satu topik.
 
-\textit{Endpoint} \texttt{PUT} menerapkan pola \textit{upsert}: sistem terlebih dahulu mencari baris \texttt{Progress} yang sesuai dengan \texttt{user\_id} dan \texttt{topic\_slug}. Jika belum ada, baris baru dibuat dan ditambahkan ke sesi \textit{database}; jika sudah ada, nilainya diperbarui langsung. Kolom \texttt{last\_accessed} selalu diperbarui ke waktu saat ini menggunakan \texttt{datetime.now(timezone.utc)}. Pola ini menghindari duplikasi baris sekaligus menghilangkan kebutuhan logika \texttt{INSERT OR UPDATE} yang berbeda-beda antar \textit{database}. Potongan kode \textit{endpoint} upsert progres dapat dilihat pada Lampiran \ref{chap:lampiran-a}, Kode \ref{lst:backend-progress}.
+\textit{Endpoint} \texttt{PUT} menerapkan pola \textit{upsert}: sistem terlebih dahulu mencari baris \texttt{Progress} yang sesuai dengan \texttt{user\_id} dan \texttt{topic\_slug}. Jika belum ada, baris baru dibuat dan ditambahkan ke sesi \textit{database}; jika sudah ada, nilainya diperbarui langsung. Kolom \texttt{last\_accessed} selalu diperbarui ke waktu saat ini menggunakan \texttt{datetime.now(\allowbreak{}timezone.utc)}. Pola ini menghindari duplikasi baris sekaligus menghilangkan kebutuhan logika \texttt{INSERT OR UPDATE} yang berbeda-beda antar \textit{database}. Potongan kode \textit{endpoint} upsert progres dapat dilihat pada Lampiran \ref{chap:lampiran-a}, Kode \ref{lst:backend-progress}.
 
 \subsection{Implementasi Mesin Soal Adaptif}
 
-Mesin soal adaptif diimplementasikan di modul \texttt{app/ai.py} dengan memanfaatkan OpenAI GPT-4o-mini melalui \textit{endpoint} \texttt{/v1/chat/completions}. Modul ini mengekspos tiga fungsi utama: \texttt{generate\_soal}, \texttt{evaluasi\_soal}, dan \texttt{evaluasi\_batch}, yang masing-masing dipanggil oleh \textit{endpoint} \texttt{POST /api/latihan/\{topic\_slug\}/generate}, \texttt{/evaluasi}, dan \texttt{/evaluasi-batch}.
+Mesin soal adaptif diimplementasikan di modul \texttt{app/ai.py} dengan memanfaatkan OpenAI GPT-4o-mini melalui \textit{endpoint} \texttt{/v1/chat/completions}. Modul ini mengekspos tiga fungsi utama: \texttt{generate\_soal}, \texttt{evaluasi\_soal}, dan \texttt{evaluasi\_batch}, yang masing-masing dipanggil oleh \textit{endpoint} \texttt{POST /api/latihan/\allowbreak{}\{topic\_slug\}/generate}, \texttt{/evaluasi}, dan \texttt{/evaluasi-batch}.
 
 Fungsi \texttt{generate\_soal} menerima parameter \texttt{kelemahan} berisi daftar konsep yang perlu diperkuat dari sesi latihan sebelumnya. Jika \texttt{kelemahan} tidak kosong, instruksi sistem yang dikirim ke model menyertakan daftar konsep tersebut agar soal yang dibangkitkan berfokus pada area yang lemah. Setiap topik memiliki konfigurasi tersendiri di \texttt{TOPIC\_CONFIGS} yang mendefinisikan nama, panduan kualitas soal, dan skema JSON yang harus dikembalikan oleh model. Respons model diurai dari JSON dan dikembalikan langsung sebagai \textit{response} API.
 

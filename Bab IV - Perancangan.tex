@@ -26,7 +26,7 @@ Berikut merupakan \textit{use case diagram} yang menggambarkan interaksi antara 
 
 Penjelasan mengenai diagram di atas dan keterkaitannya dengan kebutuhan fungsional dapat dilihat pada Tabel \ref{tab:use-case}.
 
-\begin{longtable}{|p{1.2cm}|p{1.5cm}|p{2.8cm}|p{5.5cm}|p{1.8cm}|}
+\begin{longtable}{|p{1.0cm}|p{1.3cm}|p{2.7cm}|p{4.0cm}|p{2.5cm}|}
 \caption{Deskripsi \textit{Use Case} Sistem Pembelajaran ASD}
 \label{tab:use-case}\\
 \hline
@@ -160,7 +160,7 @@ Diagram pada Gambar \ref{fig:sd-contoh} menggambarkan alur penampilan contoh imp
     \label{fig:sd-latihan}
 \end{figure}
 
-Diagram pada Gambar \ref{fig:sd-latihan} menggambarkan alur pembuatan dan penyajian latihan soal secara adaptif. \textit{Frontend} mengirim permintaan \texttt{POST /latihan/\{slug\}/generate} ke \textit{backend}. \textit{Backend} mengambil data \textit{weak concepts} dari \textit{database} dan menyusun \textit{prompt} adaptif yang memprioritaskan konsep-konsep yang masih lemah bagi \textit{user}. OpenAI API menghasilkan daftar soal dalam format JSON yang kemudian ditampilkan kepada \textit{user}. \textit{User} mengisi jawaban dan melakukan \textit{submit} untuk dievaluasi pada tahap berikutnya.
+Diagram pada Gambar \ref{fig:sd-latihan} menggambarkan alur pembuatan dan penyajian latihan soal secara adaptif. \textit{Frontend} mengirim permintaan \texttt{POST /latihan/\allowbreak{}\{slug\}/generate} ke \textit{backend}. \textit{Backend} mengambil data \textit{weak concepts} dari \textit{database} dan menyusun \textit{prompt} adaptif yang memprioritaskan konsep-konsep yang masih lemah bagi \textit{user}. OpenAI API menghasilkan daftar soal dalam format JSON yang kemudian ditampilkan kepada \textit{user}. \textit{User} mengisi jawaban dan melakukan \textit{submit} untuk dievaluasi pada tahap berikutnya.
 
 \begin{figure}[H]
     \centering
@@ -170,7 +170,7 @@ Diagram pada Gambar \ref{fig:sd-latihan} menggambarkan alur pembuatan dan penyaj
     \label{fig:sd-pembahasan}
 \end{figure}
 
-Diagram pada Gambar \ref{fig:sd-pembahasan} menggambarkan alur evaluasi jawaban dan pembaruan model adaptif. Setelah \textit{user} mengirim jawaban, \textit{frontend} meneruskan seluruh pasangan soal dan jawaban ke \textit{backend} melalui \texttt{POST /latihan/\{slug\}/evaluasi-batch}. \textit{Backend} mengirimkan data tersebut ke OpenAI API untuk dievaluasi, dan API mengembalikan skor, \textit{feedback} per soal, serta identifikasi \textit{weak concepts} baru. \textit{Backend} menyimpan hasil evaluasi, termasuk \texttt{user\_answers}, \texttt{user\_performance}, dan \textit{weak concepts}, ke \textit{database} untuk digunakan sebagai dasar adaptasi pada sesi berikutnya. \textit{Frontend} kemudian menampilkan skor dan pembahasan kepada \textit{user}, dan memperbarui progres dengan status \texttt{latihan=true}.
+Diagram pada Gambar \ref{fig:sd-pembahasan} menggambarkan alur evaluasi jawaban dan pembaruan model adaptif. Setelah \textit{user} mengirim jawaban, \textit{frontend} meneruskan seluruh pasangan soal dan jawaban ke \textit{backend} melalui \texttt{POST /latihan/\allowbreak{}\{slug\}/evaluasi-batch}. \textit{Backend} mengirimkan data tersebut ke OpenAI API untuk dievaluasi, dan API mengembalikan skor, \textit{feedback} per soal, serta identifikasi \textit{weak concepts} baru. \textit{Backend} menyimpan hasil evaluasi, termasuk \texttt{user\_\allowbreak{}answers}, \texttt{user\_\allowbreak{}performance}, dan \textit{weak concepts}, ke \textit{database} untuk digunakan sebagai dasar adaptasi pada sesi berikutnya. \textit{Frontend} kemudian menampilkan skor dan pembahasan kepada \textit{user}, dan memperbarui progres dengan status \texttt{latihan=true}.
 
 \begin{figure}[H]
     \centering
@@ -276,7 +276,7 @@ Menyimpan contoh implementasi per topik, dapat dihasilkan oleh LLM \\
 \hline
 
 \texttt{exercises} &
-\texttt{exercise\_id, topic\_id, question, difficulty\_level, generated\_by\_llm} &
+\texttt{exercise\_id, topic\_id, question, difficulty\_\allowbreak{}level, generated\_by\_llm} &
 Menyimpan soal latihan per topik, dapat dihasilkan oleh LLM \\
 \hline
 
@@ -367,17 +367,17 @@ Tabel \ref{tab:api-auth} menyajikan spesifikasi \textit{endpoint} autentikasi ya
     \centering
     \caption{Spesifikasi API \textit{Endpoint} Autentikasi}
     \label{tab:api-auth}
-    \begin{tabular}{|p{1.5cm}|p{3.8cm}|p{3.3cm}|p{4cm}|}
+    \begin{tabular}{|p{1.4cm}|p{3.5cm}|p{3.1cm}|p{3.8cm}|}
     \hline
     \textbf{Metode} & \textbf{\textit{Endpoint}} & \textbf{\textit{Body} / \textit{Header}} & \textbf{Fungsi} \\
     \hline
-    POST & \texttt{/api/auth/register} & \texttt{name, email, password} & Mendaftarkan pengguna baru dan mengembalikan JWT \textit{token} \\
+    POST & \texttt{/api/auth/\allowbreak{}register} & \texttt{name, email, password} & Mendaftarkan pengguna baru dan mengembalikan JWT \textit{token} \\
     \hline
     POST & \texttt{/api/auth/login} & \texttt{email, password} & Melakukan autentikasi dan mengembalikan JWT \textit{token} \\
     \hline
     GET & \texttt{/api/auth/me} & \textit{Header}: \texttt{Authorization} & Mengambil data pengguna yang sedang aktif \\
     \hline
-    PUT & \texttt{/api/auth/profile} & \texttt{name, email,} \texttt{current\_password,} \texttt{new\_password} & Memperbarui nama, \textit{email}, atau kata sandi pengguna \\
+    PUT & \texttt{/api/auth/\allowbreak{}profile} & \texttt{name, email,} \texttt{current\_\allowbreak{}password,} \texttt{new\_password} & Memperbarui nama, \textit{email}, atau kata sandi pengguna \\
     \hline
     \end{tabular}
 \end{table}
@@ -388,7 +388,7 @@ Tabel \ref{tab:api-progress} menyajikan spesifikasi \textit{endpoint} progres be
     \centering
     \caption{Spesifikasi API \textit{Endpoint} Progres Belajar}
     \label{tab:api-progress}
-    \begin{tabular}{|p{1.5cm}|p{3.8cm}|p{3.3cm}|p{4cm}|}
+    \begin{tabular}{|p{1.4cm}|p{3.5cm}|p{3.1cm}|p{3.8cm}|}
     \hline
     \textbf{Metode} & \textbf{\textit{Endpoint}} & \textbf{\textit{Body} / \textit{Header}} & \textbf{Fungsi} \\
     \hline
@@ -405,13 +405,13 @@ Tabel \ref{tab:api-latihan} menyajikan spesifikasi \textit{endpoint} latihan yan
     \centering
     \caption{Spesifikasi API \textit{Endpoint} Latihan}
     \label{tab:api-latihan}
-    \begin{tabular}{|p{1.5cm}|p{3.8cm}|p{3.3cm}|p{4cm}|}
+    \begin{tabular}{|p{1.4cm}|p{3.5cm}|p{3.1cm}|p{3.8cm}|}
     \hline
     \textbf{Metode} & \textbf{\textit{Endpoint}} & \textbf{\textit{Body}} & \textbf{Fungsi} \\
     \hline
-    POST & \texttt{/api/latihan/} \texttt{\{topic\_slug\}/generate} & \texttt{jumlah, kelemahan,} \texttt{tipe\_paksa,} \texttt{topik\_referensi} & Menghasilkan soal latihan adaptif berbasis LLM sesuai topik dan kelemahan pengguna \\
+    POST & \texttt{/api/latihan/} \texttt{\{topic\_slug\}/\allowbreak{}generate} & \texttt{jumlah, kelemahan,} \texttt{tipe\_paksa,} \texttt{topik\_\allowbreak{}referensi} & Menghasilkan soal latihan adaptif berbasis LLM sesuai topik dan kelemahan pengguna \\
     \hline
-    POST & \texttt{/api/latihan/} \texttt{\{topic\_slug\}/evaluasi} & \texttt{soal, jawaban} & Mengevaluasi satu jawaban latihan dan mengembalikan \textit{feedback} \\
+    POST & \texttt{/api/latihan/} \texttt{\{topic\_slug\}/\allowbreak{}evaluasi} & \texttt{soal, jawaban} & Mengevaluasi satu jawaban latihan dan mengembalikan \textit{feedback} \\
     \hline
     POST & \texttt{/api/latihan/} \texttt{\{topic\_slug\}/} \texttt{evaluasi-batch} & \texttt{soal[], jawaban\{\}} & Mengevaluasi seluruh jawaban sekaligus dan memperbarui data \textit{weak concepts} pengguna \\
     \hline
