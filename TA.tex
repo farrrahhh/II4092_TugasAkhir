@@ -138,6 +138,10 @@
 }
 \usepackage{microtype} % Untuk optimasi typography dan spacing
 \usepackage{array} % for better arrays (eg. in tabular environment)
+\usepackage{etoolbox} % for \AtBeginEnvironment hooks
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}} % left-aligned p column
+\AtBeginEnvironment{longtable}{\small\setstretch{1}}
+\AtBeginEnvironment{tabular}{\small\setstretch{1}}
 \IfFileExists{threeparttable.sty}{
   \usepackage{threeparttable} % for tables with notes
 }{

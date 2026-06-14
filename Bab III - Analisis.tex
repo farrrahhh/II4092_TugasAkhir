@@ -54,6 +54,8 @@ Saat ini, proses pembelajaran ASD di lingkungan perkuliahan masih sangat bergant
 \section{Analisis Kebutuhan}
 % ============================================================
 
+Bagian ini menguraikan analisis kebutuhan sistem pembelajaran ASD berbasis \textit{guided learning}. Analisis dimulai dari identifikasi permasalahan yang dihadapi pengguna dalam proses pembelajaran ASD saat ini, kemudian dilanjutkan dengan penggambaran konsep dasar sistem yang diusulkan sebagai solusi, dan diakhiri dengan penjabaran kebutuhan fungsional serta kebutuhan nonfungsional yang harus dipenuhi oleh sistem.
+
 \subsection{Identifikasi Masalah Pengguna}
 
 Pengguna utama sistem ini adalah mahasiswa yang mempelajari materi Algoritma dan Struktur Data (ASD). Dalam proses pembelajaran saat ini, mahasiswa sering menghadapi berbagai tantangan karena materi ASD memiliki tingkat abstraksi yang tinggi, bersifat dinamis, dan memerlukan kemampuan penalaran algoritmik yang kuat \autocite{Mtaho2024}. Metode pembelajaran tradisional yang mengandalkan modul, \textit{slide}, serta penjelasan langsung dari dosen dan asisten pengajar belum sepenuhnya mampu menjawab kebutuhan mahasiswa dalam memahami konsep secara mendalam dan bertahap. Kondisi ini menyebabkan mahasiswa sering mengalami miskonsepsi pada konsep dasar, kesulitan mengikuti alur materi, serta kurangnya umpan balik cepat ketika mengalami kebingungan.
@@ -101,7 +103,7 @@ Secara keseluruhan, konsep dasar sistem ini adalah menghadirkan platform pembela
 
 Kebutuhan fungsional atau \textit{Functional Requirements} merupakan kebutuhan-kebutuhan dalam bentuk layanan yang diberikan oleh sistem kepada pengguna. Berikut merupakan tabel kebutuhan fungsional dari sistem pembelajaran Algoritma dan Struktur Data berbasis \textit{Large Language Model} dengan pendekatan \textit{guided learning}.
 
-\begin{longtable}{|p{1.8cm}|p{3cm}|p{7.5cm}|}
+\begin{longtable}{|L{1.8cm}|L{3cm}|L{7.5cm}|}
 \caption{Kebutuhan Fungsional Sistem Pembelajaran ASD Berbasis LLM}
 \label{tab:kebutuhan-fungsional}\\
 \hline
@@ -163,7 +165,7 @@ Dengan memenuhi kebutuhan fungsional ini, sistem diharapkan dapat memberikan sol
 
 Kebutuhan nonfungsional atau \textit{Non-Functional Requirements} merupakan kebutuhan yang berisi pernyataan mengenai perilaku dan kualitas yang harus dimiliki oleh sistem pembelajaran Algoritma dan Struktur Data berbasis LLM ke depannya. Berikut merupakan tabel kebutuhan nonfungsional dari sistem pembelajaran ASD berbasis LLM dengan pendekatan \textit{guided learning}.
 
-\begin{longtable}{|p{1.8cm}|p{3cm}|p{7.5cm}|}
+\begin{longtable}{|L{1.8cm}|L{3cm}|L{7.5cm}|}
 \caption{Kebutuhan Nonfungsional Sistem Pembelajaran ASD Berbasis LLM}
 \label{tab:kebutuhan-nonfungsional}\\
 \hline
@@ -213,6 +215,8 @@ Pemenuhan kebutuhan nonfungsional ini bertujuan untuk memastikan sistem memiliki
 \section{Analisis Pemilihan Solusi}
 % ============================================================
 
+Bagian ini memaparkan analisis pemilihan teknologi dan pendekatan yang digunakan dalam pengembangan sistem pembelajaran ASD. Analisis mencakup tinjauan terhadap berbagai alternatif solusi yang tersedia, mencakup perbandingan model LLM dan pendekatan pembelajaran, serta justifikasi pemilihan solusi akhir yang paling sesuai dengan kebutuhan sistem.
+
 \subsection{Alternatif Solusi}
 
 Penentuan alternatif solusi dilakukan dengan mempertimbangkan setiap kebutuhan dari permasalahan pembelajaran ASD, khususnya kebutuhan penjelasan yang terarah, konsistensi dengan materi kuliah, serta kemampuan menghasilkan contoh dan latihan secara otomatis. Bagian berikut menguraikan alternatif teknologi yang dapat digunakan dalam pengembangan sistem pembelajaran ASD berbasis LLM, serta pertimbangan pemilihan solusi yang paling sesuai.
@@ -229,7 +233,7 @@ Claude 3 memiliki kemampuan penjelasan natural dan terstruktur, tetapi terkadang
 
 Perbandingan ketiga model LLM tersebut dirangkum pada Tabel~\ref{tab:perbandingan-llm}.
 
-\begin{longtable}{|p{2.9cm}|p{3.3cm}|p{3.3cm}|p{2.4cm}|}
+\begin{longtable}{|L{2.9cm}|L{3.3cm}|L{3.3cm}|L{2.4cm}|}
 \caption{Perbandingan Model LLM untuk Sistem Pembelajaran ASD}
 \label{tab:perbandingan-llm}\\
 \hline
