@@ -5,7 +5,7 @@
 \chapter{IMPLEMENTASI WEBSITE PEMBELAJARAN ALGORITMA DAN STRUKTUR DATA BERBASIS \textit{GUIDED LEARNING}}
 \label{chap:implementasi}
 
-Bab ini membahas proses implementasi sistem Teman Belajar ASD berdasarkan hasil perancangan yang telah diuraikan pada Bab IV. Implementasi dilakukan secara bertahap, dimulai dari penyiapan lingkungan pengembangan, pembangunan komponen \textit{frontend} dengan Next.js, hingga pengembangan \textit{backend} berbasis FastAPI beserta integrasi OpenAI API sebagai mesin generasi konten adaptif. Seluruh hasil implementasi mengacu pada kebutuhan fungsional dan nonfungsional yang telah ditetapkan.
+Bab ini membahas proses implementasi sistem Teman Belajar ASD berdasarkan hasil perancangan yang telah diuraikan pada Bab IV. Implementasi dilakukan secara bertahap, dimulai dari penyiapan lingkungan pengembangan, pembangunan komponen \textit{frontend} dengan Next.js, hingga pengembangan \textit{backend} berbasis FastAPI beserta integrasi OpenAI API sebagai mesin generasi soal latihan dan evaluasi jawaban secara adaptif. Seluruh hasil implementasi mengacu pada kebutuhan fungsional dan nonfungsional yang telah ditetapkan.
 
 \section{Lingkungan Implementasi}
 
@@ -65,35 +65,7 @@ Dengan terpenuhinya kebutuhan lingkungan implementasi yang sesuai, implementasi 
 
 \section{Implementasi \textit{Frontend}}
 
-Implementasi \textit{frontend} dibangun menggunakan Next.js dengan dukungan React dan Tailwind CSS. Bagian ini membahas implementasi setiap halaman yang menjadi komponen utama antarmuka pengguna sistem Teman Belajar ASD, mulai dari halaman autentikasi, beranda, alur pembelajaran per topik (materi, contoh, latihan, dan ringkasan), hingga halaman pemantauan progres dan pengaturan profil.
-
-\subsection{Implementasi Halaman \textit{Login} dan Registrasi}
-
-Halaman \textit{login} dan registrasi merupakan pintu masuk utama sistem yang menangani proses autentikasi pengguna. Kedua halaman menggunakan tata letak dua panel: panel kiri menampilkan ilustrasi dan deskripsi aplikasi, sedangkan panel kanan berisi formulir input. Implementasi autentikasi memanfaatkan fungsi-fungsi yang didefinisikan pada modul \texttt{app/lib/auth.js} sebagai lapisan abstraksi komunikasi dengan \textit{backend}.
-
-Gambar \ref{fig:impl-login} menunjukkan tampilan halaman \textit{login} yang telah diimplementasikan.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{images/login.png}
-    \caption{Tampilan Halaman \textit{Login}}
-    \label{fig:impl-login}
-\end{figure}
-
-Formulir \textit{login} memiliki dua \textit{field} wajib, yaitu \textit{email} dan kata sandi, keduanya divalidasi menggunakan atribut \texttt{required} dan \texttt{type="email"} bawaan HTML. Ketika pengguna mengirimkan formulir, fungsi \texttt{handleSubmit} mengirimkan permintaan \texttt{POST /api/auth/login} ke \textit{backend}. Jika autentikasi berhasil, \textit{backend} mengembalikan JWT \textit{token} beserta data pengguna yang kemudian disimpan ke \texttt{localStorage} melalui fungsi \texttt{saveSession}. Sistem juga langsung memuat data progres belajar dari \textit{database} ke \texttt{localStorage} (\texttt{loadProgressFromDb}) agar navigasi antartopik dapat berjalan tanpa latensi tambahan. Potongan kode implementasi alur \textit{login} dapat dilihat pada Lampiran \ref{chap:lampiran-a}, Kode \ref{lst:login}.
-
-Sistem juga menerapkan proteksi halaman \textit{login}: jika sesi aktif sudah tersimpan di \texttt{localStorage}, pengguna akan langsung dialihkan ke \textit{dashboard} sehingga tidak perlu \textit{login} ulang.
-
-Gambar \ref{fig:impl-signup} menunjukkan tampilan halaman registrasi yang diakses melalui tautan \textit{"Daftar"} pada halaman \textit{login}.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{images/signup.png}
-    \caption{Tampilan Halaman Registrasi}
-    \label{fig:impl-signup}
-\end{figure}
-
-Halaman registrasi memiliki formulir dengan tiga \textit{field}: nama lengkap, \textit{email}, dan kata sandi. Setelah registrasi berhasil, sistem secara otomatis menyimpan sesi dan mengalihkan pengguna ke \textit{dashboard} tanpa perlu \textit{login} kembali, menggunakan alur yang identik dengan \textit{login} melalui fungsi \texttt{registerUser} pada modul \texttt{auth.js}.
+Implementasi \textit{frontend} dibangun menggunakan Next.js dengan dukungan React dan Tailwind CSS. Bagian ini membahas implementasi setiap halaman yang menjadi komponen utama antarmuka pengguna sistem Teman Belajar ASD, mulai dari beranda, alur pembelajaran per topik (materi, contoh, latihan, dan ringkasan), hingga halaman pemantauan progres, serta komponen pendukung pembelajaran berbasis LLM.
 
 \subsection{Implementasi Halaman Beranda}
 
@@ -222,36 +194,43 @@ Di bawah kartu ringkasan terdapat daftar \textit{Detailed Progress} yang menampi
 
 Logika \textit{streak} harian dihitung oleh fungsi \texttt{updateStreak} yang membandingkan tanggal akses hari ini dengan tanggal terakhir disimpan di \texttt{localStorage}. Jika selisihnya tepat satu hari, \textit{streak} bertambah satu; jika lebih dari satu hari, \textit{streak} direset ke 1. Nilai tanggal dan \textit{streak} kemudian diperbarui di \texttt{localStorage}. Potongan kode fungsi \texttt{updateStreak} dapat dilihat pada Lampiran \ref{chap:lampiran-a}, Kode \ref{lst:progress-streak}.
 
-\subsection{Implementasi Halaman Pengaturan}
+\subsection{Implementasi Panel Soal Sendiri}
 
-Halaman pengaturan memungkinkan pengguna mengelola data akun mereka, meliputi perubahan nama, \textit{email}, dan kata sandi, serta melakukan \textit{logout} dari sistem.
+Panel Soal Sendiri merupakan fitur yang memungkinkan pengguna memasukkan soal dari sumber eksternal (buku referensi, soal ujian terdahulu, atau latihan mandiri) beserta jawabannya untuk dievaluasi secara otomatis oleh sistem. Fitur ini tersedia sebagai panel tambahan di seluruh sepuluh halaman topik.
 
-Gambar \ref{fig:impl-pengaturan} menunjukkan tampilan halaman pengaturan yang telah diimplementasikan.
+Gambar \ref{fig:impl-soal-sendiri} menunjukkan tampilan panel Soal Sendiri yang telah diimplementasikan.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{images/pengaturan.png}
-    \caption{Tampilan Halaman Pengaturan}
-    \label{fig:impl-pengaturan}
+    \includegraphics[width=\textwidth]{images/FT-13-Evaluasi-Soal-Sendiri.png}
+    \caption{Tampilan Panel Soal Sendiri}
+    \label{fig:impl-soal-sendiri}
 \end{figure}
 
-Bagian atas halaman menampilkan avatar pengguna berupa lingkaran berwarna biru dengan inisial huruf pertama nama, disertai nama lengkap, \textit{email}, dan tanggal bergabung yang diformat menggunakan \texttt{toLocaleDateString}.
+Komponen \texttt{SoalSendiriPanel} diimplementasikan di \texttt{app/components/SoalSendiriPanel.js} dan menerima \textit{prop} \texttt{topicSlug} serta \texttt{onGoToMateri}. Panel menyediakan dua \textit{textarea}: satu untuk soal dan satu untuk jawaban pengguna. Selain input teks langsung, panel mendukung unggah file dalam format \texttt{.txt} dan \texttt{.md} melalui mekanisme klik tombol maupun \textit{drag-and-drop}. Validasi format dilakukan melalui fungsi \texttt{isAccepted} yang memeriksa MIME \textit{type} dan ekstensi file sebelum konten dibaca menggunakan \texttt{FileReader}.
 
-Di bawah avatar terdapat tiga baris yang dapat diedit secara \textit{inline}: nama, \textit{email}, dan kata sandi. Setiap baris menampilkan nilai saat ini dalam mode hanya-baca (\textit{read-only}) dengan ikon pensil di sisi kanan. Ketika ikon pensil ditekan, baris tersebut beralih ke mode edit yang menampilkan \textit{input field} langsung di tempat tanpa berpindah halaman. Mode edit dikendalikan oleh satu \textit{state} \texttt{editing} yang bernilai \texttt{'name'}, \texttt{'email'}, \texttt{'password'}, atau \texttt{null}. Perubahan dikirim ke \textit{backend} melalui \texttt{PUT /api/auth/profile} menggunakan fungsi \texttt{updateProfile} dari modul \texttt{auth.js}.
+Setelah pengguna menekan tombol evaluasi, komponen mengirim permintaan \texttt{POST /api/soal-sendiri/\{topicSlug\}} ke \textit{proxy} Next.js. Sistem menampilkan indikator \textit{loading} selama menunggu respons dari \textit{backend}. Hasil evaluasi ditampilkan dalam panel terstruktur yang memuat: \textit{badge} label nilai (Sangat Baik, Baik, Cukup, Perlu Perbaikan, atau Belum Dijawab) dengan warna berbeda untuk setiap kategori, \textit{progress bar} skor numerik 0--100, komentar ringkasan, bagian yang sudah benar, bagian yang perlu diperbaiki, daftar konsep lemah, dan rekomendasi belajar berupa daftar subtopik spesifik dari materi.
 
-Perubahan kata sandi divalidasi di sisi klien sebelum dikirim: kata sandi lama wajib diisi, kata sandi baru minimal 8 karakter, dan konfirmasi harus cocok. Setelah penyimpanan berhasil, data sesi di \texttt{localStorage} diperbarui melalui fungsi \texttt{refreshSession} agar informasi yang tampil di seluruh halaman langsung mencerminkan perubahan tanpa perlu \textit{login} ulang. Di bagian bawah terdapat tombol \textit{"Keluar dari Akun"} yang memanggil \texttt{clearSession()} untuk menghapus sesi dari \texttt{local\allowbreak{}Storage} kemudian mengarahkan pengguna ke halaman \textit{login}. Potongan kode fungsi \texttt{refresh\allowbreak{}Session} dan alur penyimpanan perubahan profil dapat dilihat pada Lampiran \ref{chap:lampiran-a}, Kode \ref{lst:pengaturan-profile}.
+\subsection{Implementasi Widget Chat Asisten Materi}
+
+Widget Chat Asisten Materi menyediakan antarmuka percakapan kontekstual yang memungkinkan pengguna mengajukan pertanyaan seputar materi topik yang sedang dipelajari secara langsung tanpa keluar dari halaman. Widget ini tersedia di seluruh sepuluh halaman topik sebagai elemen mengambang yang dapat dibuka dan ditutup.
+
+Gambar \ref{fig:impl-chat-materi} menunjukkan tampilan widget chat asisten materi yang telah diimplementasikan.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.55\textwidth]{images/chat-materi.png}
+    \caption{Tampilan Widget Chat Asisten Materi}
+    \label{fig:impl-chat-materi}
+\end{figure}
+
+Komponen \texttt{MateriChatWidget} diimplementasikan di \texttt{app/components/MateriChatWidget.js} dan menerima \textit{prop} \texttt{topicSlug}. Widget awalnya tampil sebagai tombol ikon yang dapat diklik untuk membuka panel chat. Saat panel terbuka, terdapat empat \textit{suggestion chip} yang dapat diklik untuk mengisi pertanyaan secara cepat, seperti \textit{"Jelaskan konsep ini dengan contoh sederhana"} atau \textit{"Kenapa kita butuh ini?"}. Area pesan menggunakan \texttt{useRef} untuk mendukung \textit{auto-scroll} ke pesan terbaru setiap kali terdapat pesan baru atau indikator \textit{loading}. Fokus input secara otomatis diarahkan ke \textit{text field} saat panel pertama kali dibuka menggunakan \texttt{useEffect}.
+
+Saat pengguna mengirim pesan, fungsi \texttt{handleSend} menyusun riwayat percakapan dari \textit{state} \texttt{messages} yang sudah ada, menambahkan pesan \textit{user} baru ke antarmuka, lalu mengirim permintaan \texttt{POST /api/chat/\{topicSlug\}} dengan \textit{payload} berisi \texttt{pesan} dan \texttt{riwayat}. Balasan dari \textit{backend} dimasukkan ke \textit{state} \texttt{messages} sebagai pesan dengan role \texttt{"assistant"}, sehingga percakapan bersifat \textit{multi-turn} dan konteks dipertahankan selama sesi berlangsung.
 
 \section{Implementasi \textit{Backend}}
 
 Implementasi \textit{backend} menggunakan FastAPI sebagai \textit{framework} utama yang berjalan di atas Uvicorn. Seluruh \textit{endpoint} dikelompokkan dalam satu \texttt{APIRouter} dan didaftarkan ke aplikasi utama dengan \textit{prefix} \texttt{/api}. CORS dikonfigurasi agar hanya menerima permintaan dari \textit{origin frontend} yang telah ditetapkan. Inisialisasi tabel \textit{database} dilakukan secara otomatis saat aplikasi pertama kali dijalankan melalui \textit{lifespan handler}.
-
-\subsection{Implementasi Autentikasi}
-
-Sistem autentikasi dibangun menggunakan dua mekanisme: PBKDF2-SHA256 untuk penyimpanan kata sandi dan JWT HS256 untuk sesi pengguna. Implementasi keduanya terpusat di modul \texttt{app/security.py}.
-
-Kata sandi pengguna tidak pernah disimpan dalam bentuk teks biasa. Fungsi \texttt{hash\_password} membangkitkan \textit{salt} acak 16 byte menggunakan \texttt{secrets.\allowbreak{}token\_hex}, kemudian menghasilkan \textit{hash} PBKDF2-SHA256 dengan 100.000 iterasi. Hasil akhirnya disimpan dalam satu string berformat \texttt{pbkdf2\_sha256\allowbreak{}\$iterasi\allowbreak{}\$salt\allowbreak{}\$hash} sehingga semua parameter yang diperlukan untuk verifikasi tersedia tanpa kolom tambahan di \textit{database}. Fungsi \texttt{verify\_password} memisahkan kembali komponen tersebut, menghitung ulang \textit{hash}, dan membandingkannya menggunakan \texttt{hmac.\allowbreak{}compare\_digest} untuk mencegah \textit{timing attack}.
-
-JWT dibangkitkan oleh \texttt{create\_access\_token} dengan masa berlaku tujuh hari dan algoritma HS256. \textit{Endpoint} yang memerlukan autentikasi menggunakan \textit{dependency} \texttt{get\_current\_user} yang membaca \textit{header} \texttt{Authorization: Bearer <token>}, memvalidasi dan mendekode JWT, lalu mengambil objek \texttt{User} dari \textit{database}. Potongan kode implementasi \textit{password hashing} dan \texttt{get\_current\_user} dapat dilihat pada Lampiran \ref{chap:lampiran-a}, Kode \ref{lst:backend-auth}.
 
 \subsection{Implementasi API Progres}
 
@@ -266,3 +245,21 @@ Mesin soal adaptif diimplementasikan di modul \texttt{app/ai.py} dengan memanfaa
 Fungsi \texttt{generate\_soal} menerima parameter \texttt{kelemahan} berisi daftar konsep yang perlu diperkuat dari sesi latihan sebelumnya. Jika \texttt{kelemahan} tidak kosong, instruksi sistem yang dikirim ke model menyertakan daftar konsep tersebut agar soal yang dibangkitkan berfokus pada area yang lemah. Setiap topik memiliki konfigurasi tersendiri di \texttt{TOPIC\_CONFIGS} yang mendefinisikan nama, panduan kualitas soal, dan skema JSON yang harus dikembalikan oleh model. Respons model diurai dari JSON dan dikembalikan langsung sebagai \textit{response} API.
 
 Fungsi \texttt{evaluasi\_soal} mengirimkan soal beserta jawaban pengguna ke model untuk dinilai. Model mengembalikan objek JSON yang memuat skor 0--100, label nilai, \textit{breakdown} metrik penilaian per aspek, komentar deskriptif, bagian yang sudah benar, bagian yang perlu diperbaiki, dan daftar \texttt{konsep\_lemah} yang digunakan sebagai masukan adaptif pada sesi latihan berikutnya. Potongan kode \textit{endpoint} generate dan evaluasi dapat dilihat pada Lampiran \ref{chap:lampiran-a}, Kode \ref{lst:backend-ai}.
+
+\subsection{Implementasi Evaluasi Soal Mandiri}
+
+Fungsi \texttt{evaluasi\_soal\_sendiri} pada modul \texttt{app/ai.py} menangani evaluasi soal yang diunggah pengguna dari sumber eksternal. Berbeda dengan \texttt{evaluasi\_soal} yang mengevaluasi soal hasil \textit{generate} sistem, fungsi ini menerima soal sembarang beserta jawaban pengguna dan mengevaluasinya berdasarkan konteks materi topik yang aktif.
+
+\textit{System prompt} yang dikirim ke model mengandung keseluruhan teks \texttt{materi\_evaluasi} dari konfigurasi topik yang bersangkutan (\texttt{TOPIC\_CONFIGS}). Instruksi sistem mewajibkan model mengembalikan JSON valid dengan delapan \textit{field}: \texttt{tipe\_soal} (\textit{"pengetahuan"} atau \textit{"implementasi"}), \texttt{nilai} (label teks), \texttt{skor} (integer 0--100), \texttt{komentar}, \texttt{yang\_benar}, \texttt{yang\_perlu\_diperbaiki}, \texttt{konsep\_lemah}, dan \texttt{rekomendasi\_belajar}. Parameter \texttt{response\_format} diset ke \texttt{json\_object} dan \texttt{temperature} dikecilkan ke 0.2 agar keluaran lebih deterministik. Jika kolom jawaban dikosongkan, nilai \textit{"Belum Dijawab"} dengan skor 0 ditetapkan oleh model.
+
+\textit{Endpoint} \texttt{POST /api/latihan/\{topic\_slug\}/evaluasi-soal-sendiri} menerima model Pydantic \texttt{EvaluasiSoalSendiriRequest} dengan dua \textit{field}: \texttt{pertanyaan} (wajib) dan \texttt{jawaban} (opsional, \textit{default} string kosong). \textit{Backend} memvalidasi ketersediaan konfigurasi topik dan \textit{API key} OpenAI sebelum memanggil fungsi \texttt{evaluasi\_soal\_sendiri}; kesalahan HTTP dari OpenAI ditangkap sebagai \texttt{httpx.HTTPStatusError} dan dikembalikan dengan status 502.
+
+\subsection{Implementasi Asisten Chat Materi}
+
+Fungsi \texttt{chat\_materi\_ai} pada modul \texttt{app/ai.py} mengimplementasikan asisten percakapan kontekstual yang menjawab pertanyaan mahasiswa berdasarkan materi topik yang sedang dipelajari. Fungsi menerima tiga parameter: \texttt{topic\_slug} untuk mengidentifikasi topik aktif, \texttt{pesan} berisi pertanyaan terbaru pengguna, dan \texttt{riwayat} berupa daftar \textit{dict} dengan \textit{field} \texttt{role} dan \texttt{content} yang mewakili percakapan sebelumnya.
+
+\textit{System prompt} disusun secara dinamis dari konfigurasi topik (\texttt{TOPIC\_CONFIGS}) dan memuat nama topik, teks \texttt{materi\_evaluasi}, serta cakupan topik. Panduan respons yang tertanam dalam \textit{system prompt} mengarahkan model untuk menggunakan Bahasa Indonesia yang jelas, memberikan contoh konkret, menggunakan notasi algoritmik IF2111 atau bahasa C untuk contoh kode, dan membatasi panjang respons hingga empat paragraf secara \textit{default}. Hal ini memastikan penjelasan yang dihasilkan tetap sesuai kurikulum resmi dan tidak menyimpang ke topik di luar ASD.
+
+Riwayat percakapan direkonstruksi menjadi daftar pesan OpenAI dengan menyertakan setiap entri \textit{riwayat} yang memiliki \textit{role} \texttt{"user"} atau \texttt{"assistant"} beserta \textit{content} yang tidak kosong, diikuti oleh pesan \textit{user} terbaru. Dengan demikian, model memiliki konteks percakapan penuh sehingga dapat menjawab pertanyaan lanjutan secara koheren. Parameter \texttt{temperature} diset ke 0.5 dan \texttt{max\_tokens} dibatasi 800 untuk menjaga keseimbangan antara kreativitas dan konsistensi respons.
+
+\textit{Endpoint} \texttt{POST /api/chat/\{topic\_slug\}} menerima model Pydantic \texttt{ChatRequest} dengan \textit{field} \texttt{pesan} (wajib) dan \texttt{riwayat} (opsional, \textit{default} daftar kosong), kemudian mengembalikan \texttt{\{"balasan": <string>\}} sebagai respons JSON.

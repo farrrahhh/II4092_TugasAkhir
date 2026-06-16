@@ -91,13 +91,13 @@ const [showJawaban, setShowJawaban] = useState(false);
 
 // Tombol Hint
 <button onClick={() => setShowHint(!showHint)}>
-  {showHint ? "▾" : "▸"} Hint
+  {showHint ? "v" : ">"} Hint
 </button>
 {showHint && <div>...petunjuk pendekatan...</div>}
 
 // Tombol Pembahasan
 <button onClick={() => setShowJawaban(!showJawaban)}>
-  {showJawaban ? "▾" : "▸"} Lihat Pembahasan
+  {showJawaban ? "v" : ">"} Lihat Pembahasan
 </button>
 {showJawaban && <div>...algoritma, notasi, kode C, trace...</div>}
 \end{lstlisting}

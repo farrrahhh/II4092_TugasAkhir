@@ -38,7 +38,7 @@ Untuk memastikan ruang lingkup penelitian tetap terfokus dan sesuai dengan tujua
 \begin{enumerate}
     \item Ruang lingkup materi yang digunakan dalam aplikasi dibatasi pada topik-topik dasar ASD seperti \textit{array}, \textit{linked list}, \textit{stack}, \textit{queue}, \textit{tree}, \textit{graph}, \textit{searching}, dan \textit{sorting} sesuai dengan kurikulum yang diberikan dosen.
     \item \textit{Large Language Model} (LLM) yang digunakan bersifat model siap pakai (\textit{pre-trained}) dan tidak mencakup proses pelatihan ulang (\textit{fine-tuning}) berskala besar. Penelitian ini hanya memanfaatkan teknik \textit{prompt engineering} dan \textit{retrieval-based guidance} untuk mengarahkan keluaran model.
-    \item Interaksi pengguna dibatasi melalui mekanisme \textit{guided learning}, sehingga pengguna tidak diberikan akses untuk melakukan percakapan bebas (\textit{open-ended chat}) dengan LLM. Seluruh konten dihasilkan dalam format yang telah ditentukan, seperti penjelasan konsep, contoh kode, latihan soal, dan ringkasan.
+    \item Interaksi pengguna utama dibatasi melalui mekanisme \textit{guided learning}. Sebagai fitur pelengkap, sistem menyediakan asisten percakapan kontekstual (\textit{chat asisten materi}) dan fasilitas evaluasi soal mandiri (\textit{soal sendiri}) yang memungkinkan mahasiswa mendapatkan penjelasan tambahan atau mengujikan soal dari sumber eksternal; namun seluruh interaksi tetap dibatasi pada konteks materi topik ASD yang sedang dipelajari dan tidak mencakup percakapan bebas di luar cakupan kurikulum.
     \item Sumber referensi yang digunakan LLM dibatasi pada dokumen yang disediakan dosen atau materi kuliah yang relevan. Sistem tidak membahas topik yang berada di luar cakupan kurikulum ASD.
     \item Evaluasi penelitian difokuskan pada kualitas konten dan kejelasan penyajian materi, serta aspek kegunaan aplikasi oleh mahasiswa, tanpa mencakup evaluasi performa teknis LLM secara mendalam.
 \end{enumerate}
@@ -62,7 +62,7 @@ Metodologi yang digunakan dalam Tugas Akhir ini mengikuti kerangka \textit{Softw
 
     \item \textbf{Implementasi}
 
-    Implementasi dilakukan secara bertahap mengikuti rancangan yang telah disusun. \textit{Frontend} dibangun menggunakan Next.js dengan React, \textit{backend} menggunakan FastAPI berbasis Python, dan basis data menggunakan PostgreSQL. Integrasi LLM dilakukan melalui OpenAI API dengan GPT-4o-mini. Autentikasi pengguna menggunakan JWT, dan seluruh layanan di-\textit{deploy} di Google Cloud Run melalui \textit{pipeline} CI/CD berbasis GitHub Actions.
+    Implementasi dilakukan secara bertahap mengikuti rancangan yang telah disusun. \textit{Frontend} dibangun menggunakan Next.js dengan React, \textit{backend} menggunakan FastAPI berbasis Python, dan basis data menggunakan PostgreSQL. Integrasi LLM dilakukan melalui OpenAI API dengan GPT-4o-mini. Seluruh layanan di-\textit{deploy} di Google Cloud Run melalui \textit{pipeline} CI/CD berbasis GitHub Actions.
 
     \item \textbf{Pengujian}
 

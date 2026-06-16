@@ -13,7 +13,7 @@ Bagian ini memaparkan gambaran umum sistem Teman Belajar ASD melalui dua model p
 
 Pada sistem aplikasi pembelajaran Algoritma dan Struktur Data berbasis \textit{guided learning} ini, terdapat satu aktor yaitu \textit{user} yang merupakan mahasiswa sebagai pengguna sistem. \textit{User} berinteraksi dengan sistem untuk mempelajari materi ASD secara terstruktur, mulai dari memilih topik, memahami konsep, melihat contoh, mengerjakan latihan, hingga memantau progres belajar.
 
-Sistem dirancang sebagai \textit{teman belajar digital} yang mendampingi mahasiswa dalam proses pembelajaran. Melalui integrasi LLM, sistem mampu memberikan penjelasan materi, contoh implementasi, serta umpan balik terhadap latihan yang dikerjakan oleh \textit{user} secara interaktif dan adaptif.
+Sistem dirancang sebagai \textit{teman belajar digital} yang mendampingi mahasiswa dalam proses pembelajaran. Melalui integrasi LLM, sistem mampu membangkitkan soal latihan yang adaptif, mengevaluasi jawaban pengguna secara otomatis, serta memberikan umpan balik yang dipersonalisasi terhadap latihan yang dikerjakan oleh \textit{user}.
 
 Berikut merupakan \textit{use case diagram} yang menggambarkan interaksi antara \textit{user} dengan sistem pembelajaran ASD.
 
@@ -47,86 +47,73 @@ Penjelasan mengenai diagram di atas dan keterkaitannya dengan kebutuhan fungsion
 \hline
 \endlastfoot
 
-UC-01 & User & Authentication &
-User melakukan \textit{login} dengan memasukkan kredensial berupa \textit{email} dan \textit{password} untuk mengakses sistem pembelajaran. &
+UC-01 & User & Memilih topik ASD &
+User memilih topik pembelajaran ASD yang ingin dipelajari sebagai langkah awal dalam alur belajar. &
 FR-01 \\
 \hline
 
-UC-02 & User & Memilih topik ASD &
-User memilih topik pembelajaran ASD yang ingin dipelajari sebagai langkah awal dalam alur belajar. &
+UC-02 & User & Melihat materi &
+User menerima penjelasan konsep ASD yang dihasilkan sistem secara terstruktur sesuai topik yang dipilih. &
 FR-02 \\
 \hline
 
-UC-03 & User & Melihat materi &
-User menerima penjelasan konsep ASD yang dihasilkan sistem secara terstruktur sesuai topik yang dipilih. &
+UC-03 & User & Melihat contoh &
+User melihat contoh implementasi atau ilustrasi dari konsep ASD untuk membantu pemahaman. &
 FR-03 \\
 \hline
 
-UC-04 & User & Melihat contoh &
-User melihat contoh implementasi atau ilustrasi dari konsep ASD untuk membantu pemahaman. &
+UC-04 & User & Mengerjakan latihan &
+User mengerjakan soal latihan yang diberikan sistem untuk menguji pemahaman terhadap materi. &
 FR-04 \\
 \hline
 
-UC-05 & User & Mengerjakan latihan &
-User mengerjakan soal latihan yang diberikan sistem untuk menguji pemahaman terhadap materi. &
+UC-05 & User & Melihat pembahasan &
+User melihat pembahasan dari latihan yang telah dikerjakan sebagai bentuk umpan balik dari sistem. Relasi \textit{extend} dari UC-04 menunjukkan bahwa pembahasan hanya tersedia setelah \textit{user} mengerjakan latihan. &
 FR-05 \\
 \hline
 
-UC-06 & User & Melihat pembahasan &
-User melihat pembahasan dari latihan yang telah dikerjakan sebagai bentuk umpan balik dari sistem. Relasi \textit{extend} dari UC-05 menunjukkan bahwa pembahasan hanya tersedia setelah \textit{user} mengerjakan latihan. &
+UC-06 & User & Melihat ringkasan &
+User melihat rangkuman materi untuk memperkuat pemahaman terhadap konsep yang telah dipelajari. &
 FR-06 \\
 \hline
 
-UC-07 & User & Melihat ringkasan &
-User melihat rangkuman materi untuk memperkuat pemahaman terhadap konsep yang telah dipelajari. &
+UC-07 & User & Melihat \textit{progress} belajar &
+User dapat melihat progres pembelajaran yang menunjukkan sejauh mana materi telah dipelajari. &
 FR-07 \\
 \hline
 
-UC-08 & User & Melihat \textit{progress} belajar &
-User dapat melihat progres pembelajaran yang menunjukkan sejauh mana materi telah dipelajari. &
+UC-08 & User & Mengevaluasi soal sendiri &
+User memasukkan soal dari sumber eksternal beserta jawabannya untuk dievaluasi oleh sistem. Sistem mengembalikan penilaian lengkap mencakup skor, komentar, dan rekomendasi belajar berdasarkan konteks materi topik yang aktif. &
 FR-08 \\
+\hline
+
+UC-09 & User & Bertanya kepada asisten materi &
+User mengajukan pertanyaan mengenai materi topik yang sedang dipelajari melalui asisten percakapan kontekstual. Sistem menjawab berdasarkan konteks materi topik yang aktif dan mempertahankan riwayat percakapan selama sesi. &
+FR-09 \\
 \hline
 
 \end{longtable}
 
-Tabel \ref{tab:use-case} menunjukkan bahwa terdapat satu aktor yaitu \textit{user} yang dapat menjalankan berbagai aktivitas untuk memenuhi kebutuhan fungsional sistem. Proses pembelajaran dimulai dari \textit{user} melakukan autentikasi (UC-01), kemudian memilih topik ASD yang ingin dipelajari (UC-02).
+Tabel \ref{tab:use-case} menunjukkan bahwa terdapat satu aktor yaitu \textit{user} yang dapat menjalankan berbagai aktivitas untuk memenuhi kebutuhan fungsional sistem. Proses pembelajaran dimulai dari \textit{user} memilih topik ASD yang ingin dipelajari (UC-01).
 
-Selanjutnya, \textit{user} akan memasuki alur pembelajaran terstruktur dengan melihat materi (UC-03) yang berisi penjelasan konsep yang dihasilkan sistem. Untuk memperdalam pemahaman, \textit{user} dapat melihat contoh implementasi (UC-04) sebelum mengerjakan latihan yang diberikan (UC-05).
+Selanjutnya, \textit{user} akan memasuki alur pembelajaran terstruktur dengan melihat materi (UC-02) yang berisi penjelasan konsep yang dihasilkan sistem. Untuk memperdalam pemahaman, \textit{user} dapat melihat contoh implementasi (UC-03) sebelum mengerjakan latihan yang diberikan (UC-04).
 
-Setelah menyelesaikan latihan, \textit{user} dapat melihat pembahasan (UC-06) sebagai bentuk umpan balik dari sistem. Relasi \textit{extend} antara UC-05 dan UC-06 menunjukkan bahwa pembahasan hanya muncul setelah \textit{user} mengerjakan latihan. Selain itu, \textit{user} juga dapat melihat ringkasan materi (UC-07) untuk memperkuat pemahaman, serta memantau progres belajar melalui fitur \textit{progress} (UC-08).
+Setelah menyelesaikan latihan, \textit{user} dapat melihat pembahasan (UC-05) sebagai bentuk umpan balik dari sistem. Relasi \textit{extend} antara UC-04 dan UC-05 menunjukkan bahwa pembahasan hanya muncul setelah \textit{user} mengerjakan latihan. Selain itu, \textit{user} juga dapat melihat ringkasan materi (UC-06) untuk memperkuat pemahaman, serta memantau progres belajar melalui fitur \textit{progress} (UC-07).
+
+Sebagai pelengkap alur utama, \textit{user} dapat memanfaatkan dua fitur tambahan yang tersedia pada setiap halaman topik: mengevaluasi soal mandiri (UC-08) dengan memasukkan soal dan jawaban dari sumber eksternal untuk dinilai oleh sistem, serta bertanya kepada asisten materi (UC-09) melalui widget percakapan kontekstual yang memberikan penjelasan sesuai topik yang sedang dipelajari.
 
 Dengan demikian, seluruh \textit{use case} yang dirancang telah mencerminkan alur \textit{guided learning} yang mendukung pembelajaran ASD secara terstruktur dan interaktif, serta memenuhi kebutuhan fungsional sistem.
 
 
 \subsection{Sequence Diagram}
 
-\textit{Sequence diagram} menggambarkan urutan interaksi antar komponen sistem, \textit{User}, \textit{Frontend}, \textit{Backend}, \textit{Database}, dan OpenAI API, dalam menyelesaikan setiap fungsionalitas. Diagram berikut disusun berdasarkan alur \textit{guided learning} yang telah dirancang, mulai dari autentikasi hingga pemantauan progres belajar.
+\textit{Sequence diagram} menggambarkan urutan interaksi antar komponen sistem, \textit{User}, \textit{Frontend}, \textit{Backend}, \textit{Database}, dan OpenAI API, dalam menyelesaikan setiap fungsionalitas. Diagram berikut disusun berdasarkan alur \textit{guided learning} yang telah dirancang, mulai dari pemilihan topik hingga pemantauan progres belajar.
 
 \begin{figure}[H]
     \centering
-    \textbf{FT-01 Login}\\[6pt]
-    \includegraphics[width=0.9\textwidth]{images/FT-01-Login.png}
-    \caption{\textit{Sequence Diagram} FT-01 Login}
-    \label{fig:sd-login}
-\end{figure}
-
-Diagram pada Gambar \ref{fig:sd-login} menggambarkan alur autentikasi pengguna. \textit{User} memasukkan \textit{email} dan \textit{password} pada \textit{frontend}, yang kemudian mengirimkan permintaan \texttt{POST /auth/login} ke \textit{backend}. \textit{Backend} melakukan \textit{query} data pengguna ke \textit{database} berdasarkan \textit{email} yang diberikan. Jika data ditemukan dan kredensial valid, \textit{backend} mengembalikan JWT \textit{token} ke \textit{frontend}, yang selanjutnya menyimpan \textit{token} tersebut dan mengarahkan \textit{user} ke halaman \textit{dashboard}.
-
-\begin{figure}[H]
-    \centering
-    \textbf{FT-02 Logout}\\[6pt]
-    \includegraphics[width=0.55\textwidth]{images/FT-02-Logout.png}
-    \caption{\textit{Sequence Diagram} FT-02 Logout}
-    \label{fig:sd-logout}
-\end{figure}
-
-Diagram pada Gambar \ref{fig:sd-logout} menggambarkan alur keluar dari sistem. Ketika \textit{user} mengeklik tombol \textit{logout}, \textit{frontend} langsung menghapus JWT \textit{token} dari \textit{storage} lokal tanpa perlu melakukan panggilan ke \textit{backend}. Setelah \textit{token} dihapus, \textit{frontend} mengarahkan \textit{user} kembali ke halaman \textit{login}.
-
-\begin{figure}[H]
-    \centering
-    \textbf{FT-03 Pilih Topik ASD + FT-11 \textit{Guided Learning Flow}}\\[6pt]
-    \includegraphics[width=0.9\textwidth]{images/FT-03-Pilih-Topik-ASD-FT-11-Guided-Learning-Flow.png}
-    \caption{\textit{Sequence Diagram} FT-03 Pilih Topik ASD dan FT-11 \textit{Guided Learning Flow}}
+    \textbf{FT-01 Pilih Topik ASD + FT-09 \textit{Guided Learning Flow}}\\[6pt]
+    \includegraphics[width=0.9\textwidth]{images/FT-01-Pilih-Topik-ASD-FT-09-Guided-Learning-Flow.png}
+    \caption{\textit{Sequence Diagram} FT-01 Pilih Topik ASD dan FT-09 \textit{Guided Learning Flow}}
     \label{fig:sd-pilih-topik}
 \end{figure}
 
@@ -134,29 +121,29 @@ Diagram pada Gambar \ref{fig:sd-pilih-topik} menggambarkan alur pemilihan topik 
 
 \begin{figure}[H]
     \centering
-    \textbf{FT-04 Tampilkan Materi + FT-10 \textit{Generate} LLM + FT-14 Adaptasi Konten}\\[6pt]
-    \includegraphics[width=0.9\textwidth]{images/FT-04-Tampilkan-Materi-FT-10-Generate-LLM-FT-14-Adaptasi-Konten.png}
-    \caption{\textit{Sequence Diagram} FT-04 Tampilkan Materi, FT-10 \textit{Generate} LLM, dan FT-14 Adaptasi Konten}
+    \textbf{FT-02 Tampilkan Materi}\\[6pt]
+    \includegraphics[width=0.9\textwidth]{images/FT-02-Tampilkan-Materi.png}
+    \caption{\textit{Sequence Diagram} FT-02 Tampilkan Materi}
     \label{fig:sd-materi}
 \end{figure}
 
-Diagram pada Gambar \ref{fig:sd-materi} menggambarkan alur penampilan materi yang dihasilkan LLM secara adaptif. Ketika \textit{user} membuka tab materi, \textit{frontend} mengirim permintaan ke \textit{backend}. \textit{Backend} terlebih dahulu mengambil data kelemahan konsep \textit{user} (\textit{weak concepts}) dari \textit{database}, kemudian menyusun \textit{prompt} yang menggabungkan konteks materi (\textit{hardcoded context}) dan data kelemahan tersebut sebelum dikirim ke OpenAI API. Respons berupa konten materi adaptif dalam format JSON dikembalikan ke \textit{frontend} dan ditampilkan kepada \textit{user}. Setelah \textit{user} selesai membaca, \textit{frontend} memperbarui progres melalui \texttt{PUT /progress/\{slug\}} dengan status \texttt{materi=true}.
+Diagram pada Gambar \ref{fig:sd-materi} menggambarkan alur penampilan materi. Ketika \textit{user} membuka tab materi, \textit{frontend} langsung merender konten statis yang telah didefinisikan sebagai komponen JSX, mencakup \texttt{CodeBlock}, \texttt{PseudoCode}, \texttt{AsciiBox}, \texttt{W3Table}, \texttt{NoteBox}, dan \texttt{InfoBox}, tanpa melakukan permintaan ke \textit{backend} atau OpenAI API. Setelah \textit{user} selesai membaca, \textit{frontend} memperbarui progres melalui \texttt{PUT /progress/\{slug\}} dengan status \texttt{materi=true}.
 
 \begin{figure}[H]
     \centering
-    \textbf{FT-05 Tampilkan Contoh + FT-10 \textit{Generate} LLM + FT-14 Adaptasi Konten}\\[6pt]
-    \includegraphics[width=0.9\textwidth]{images/FT-05-Tampilkan-Contoh-FT-10-Generate-LLM-FT-14-Adaptasi-Konten.png}
-    \caption{\textit{Sequence Diagram} FT-05 Tampilkan Contoh, FT-10 \textit{Generate} LLM, dan FT-14 Adaptasi Konten}
+    \textbf{FT-03 Tampilkan Contoh}\\[6pt]
+    \includegraphics[width=0.9\textwidth]{images/FT-03-Tampilkan-Contoh.png}
+    \caption{\textit{Sequence Diagram} FT-03 Tampilkan Contoh}
     \label{fig:sd-contoh}
 \end{figure}
 
-Diagram pada Gambar \ref{fig:sd-contoh} menggambarkan alur penampilan contoh implementasi yang bersifat adaptif. Alur ini serupa dengan FT-04, namun keluaran yang dihasilkan OpenAI API berupa contoh kode dan ilustrasi langkah demi langkah yang disesuaikan dengan kelemahan konsep \textit{user}. Setelah \textit{user} selesai mempelajari contoh, progres diperbarui dengan status \texttt{contoh=true} sehingga tab latihan dapat dibuka.
+Diagram pada Gambar \ref{fig:sd-contoh} menggambarkan alur penampilan contoh implementasi. Serupa dengan FT-02, \textit{frontend} merender konten statis yang memuat soal kasus beserta pembahasan lengkap dalam format komponen JSX, mencakup deskripsi masalah, petunjuk (\textit{hint}), algoritma langkah demi langkah, pseudocode, dan implementasi dalam bahasa C, tanpa memanggil \textit{backend} atau OpenAI API. Setelah \textit{user} selesai mempelajari contoh, progres diperbarui dengan status \texttt{contoh=true} sehingga tab latihan dapat dibuka.
 
 \begin{figure}[H]
     \centering
-    \textbf{FT-06 Latihan Soal + FT-10 \textit{Generate} LLM + FT-13 \textit{Adaptive Engine} + FT-14 Adaptasi Konten}\\[6pt]
-    \includegraphics[width=0.9\textwidth]{images/FT-06-Latihan-Soal-FT-10-Generate-LLM-FT-13-Adaptive-Engine-FT-14-Adaptasi-Konten.png}
-    \caption{\textit{Sequence Diagram} FT-06 Latihan Soal, FT-10 \textit{Generate} LLM, FT-13 \textit{Adaptive Engine}, dan FT-14 Adaptasi Konten}
+    \textbf{FT-04 Latihan Soal + FT-08 \textit{Generate} LLM + FT-11 \textit{Adaptive Engine} + FT-12 Adaptasi Konten}\\[6pt]
+    \includegraphics[width=0.9\textwidth]{images/FT-04-Latihan-Soal-FT-08-Generate-LLM-FT-11-Adaptive-Engine-FT-12-Adaptasi-Konten.png}
+    \caption{\textit{Sequence Diagram} FT-04 Latihan Soal, FT-08 \textit{Generate} LLM, FT-11 \textit{Adaptive Engine}, dan FT-12 Adaptasi Konten}
     \label{fig:sd-latihan}
 \end{figure}
 
@@ -164,9 +151,9 @@ Diagram pada Gambar \ref{fig:sd-latihan} menggambarkan alur pembuatan dan penyaj
 
 \begin{figure}[H]
     \centering
-    \textbf{FT-07 Pembahasan Latihan + FT-12 \textit{Feedback} Jawaban + FT-13 \textit{Adaptive Engine}}\\[6pt]
-    \includegraphics[width=0.9\textwidth]{images/FT-07-Pembahasan-Latihan-FT-12-Feedback-Jawaban-FT-13-Adaptive-Engine.png}
-    \caption{\textit{Sequence Diagram} FT-07 Pembahasan Latihan, FT-12 \textit{Feedback} Jawaban, dan FT-13 \textit{Adaptive Engine}}
+    \textbf{FT-05 Pembahasan Latihan + FT-10 \textit{Feedback} Jawaban + FT-11 \textit{Adaptive Engine}}\\[6pt]
+    \includegraphics[width=0.9\textwidth]{images/FT-05-Pembahasan-Latihan-FT-10-Feedback-Jawaban-FT-11-Adaptive-Engine.png}
+    \caption{\textit{Sequence Diagram} FT-05 Pembahasan Latihan, FT-10 \textit{Feedback} Jawaban, dan FT-11 \textit{Adaptive Engine}}
     \label{fig:sd-pembahasan}
 \end{figure}
 
@@ -174,23 +161,44 @@ Diagram pada Gambar \ref{fig:sd-pembahasan} menggambarkan alur evaluasi jawaban 
 
 \begin{figure}[H]
     \centering
-    \textbf{FT-08 Ringkasan Materi}\\[6pt]
-    \includegraphics[width=0.9\textwidth]{images/FT-08-Ringkasan-Materi.png}
-    \caption{\textit{Sequence Diagram} FT-08 Ringkasan Materi}
+    \textbf{FT-06 Ringkasan Materi}\\[6pt]
+    \includegraphics[width=0.9\textwidth]{images/FT-06-Ringkasan-Materi.png}
+    \caption{\textit{Sequence Diagram} FT-06 Ringkasan Materi}
     \label{fig:sd-ringkasan}
 \end{figure}
 
-Diagram pada Gambar \ref{fig:sd-ringkasan} menggambarkan alur penampilan ringkasan materi di akhir sesi belajar. \textit{Frontend} mengirim permintaan \texttt{GET} ringkasan ke \textit{backend}, yang kemudian meneruskan \textit{prompt} beserta konteks materi ke OpenAI API. API menghasilkan ringkasan poin-poin kunci dalam format JSON. Setelah \textit{user} selesai membaca ringkasan, progres diperbarui dengan status \texttt{ringkasan=true}, menandakan bahwa \textit{user} telah menyelesaikan seluruh tahapan pembelajaran untuk topik tersebut.
+Diagram pada Gambar \ref{fig:sd-ringkasan} menggambarkan alur penampilan ringkasan materi di akhir sesi belajar. \textit{Frontend} merender konten ringkasan yang telah didefinisikan secara statis sebagai komponen JSX, mencakup infografis topik, kartu \textit{takeaway} kunci, dan \textit{quick cheat sheet}, tanpa melakukan permintaan ke \textit{backend} atau OpenAI API. Setelah \textit{user} selesai membaca ringkasan, \textit{frontend} memperbarui progres melalui \texttt{PUT /progress/\{slug\}} dengan status \texttt{ringkasan=true}, menandakan bahwa \textit{user} telah menyelesaikan seluruh tahapan pembelajaran untuk topik tersebut.
 
 \begin{figure}[H]
     \centering
-    \textbf{FT-09 Progres Belajar + FT-13 \textit{Adaptive Engine}}\\[6pt]
-    \includegraphics[width=0.9\textwidth]{images/FT-09-Progress-Belajar-FT-13-Adaptive-Engine.png}
-    \caption{\textit{Sequence Diagram} FT-09 Progres Belajar dan FT-13 \textit{Adaptive Engine}}
+    \textbf{FT-07 Progres Belajar + FT-11 \textit{Adaptive Engine}}\\[6pt]
+    \includegraphics[width=0.9\textwidth]{images/FT-07-Progress-Belajar-FT-11-Adaptive-Engine.png}
+    \caption{\textit{Sequence Diagram} FT-07 Progres Belajar dan FT-11 \textit{Adaptive Engine}}
     \label{fig:sd-progress}
 \end{figure}
 
 Diagram pada Gambar \ref{fig:sd-progress} menggambarkan alur penampilan halaman progres belajar yang terintegrasi dengan \textit{adaptive engine}. \textit{Frontend} meminta data melalui \texttt{GET /progress}, dan \textit{backend} melakukan dua \textit{query} ke \textit{database}: pertama untuk mengambil status tab seluruh topik, dan kedua untuk mengambil data \textit{weak concepts} serta performa \textit{user} per topik. \textit{Backend} menggabungkan kedua data tersebut dan mengembalikan informasi progres lengkap beserta rekomendasi topik yang perlu diperkuat. \textit{Frontend} menampilkan seluruh informasi tersebut kepada \textit{user} dalam satu halaman yang komprehensif.
+
+\begin{figure}[H]
+    \centering
+    \textbf{FT-13 Evaluasi Soal Sendiri}\\[6pt]
+    \includegraphics[width=0.9\textwidth]{images/FT-13-Evaluasi-Soal-Sendiri.png}
+    \caption{\textit{Sequence Diagram} FT-13 Evaluasi Soal Sendiri}
+    \label{fig:sd-soal-sendiri}
+\end{figure}
+
+Diagram pada Gambar \ref{fig:sd-soal-sendiri} menggambarkan alur evaluasi soal yang diunggah pengguna. \textit{User} memasukkan teks soal dan jawaban pada panel \textit{Soal Sendiri} di halaman topik aktif, kemudian menekan tombol evaluasi. \textit{Frontend} mengirimkan permintaan \texttt{POST /api/soal-sendiri/\{slug\}} ke \textit{proxy} API Next.js, yang meneruskannya ke \textit{backend} melalui \texttt{POST /api/latihan/\{topic\_slug\}/evaluasi-soal-sendiri}. \textit{Backend} menyusun \textit{prompt} yang menggabungkan konteks materi topik (\texttt{materi\_evaluasi}) dengan soal dan jawaban \textit{user}, lalu mengirimkannya ke OpenAI API dengan instruksi untuk mengembalikan objek JSON. OpenAI API mengembalikan hasil evaluasi berupa \texttt{tipe\_soal}, \texttt{nilai}, \texttt{skor}, \texttt{komentar}, \texttt{yang\_benar}, \texttt{yang\_perlu\_diperbaiki}, \texttt{konsep\_lemah}, dan \texttt{rekomendasi\_belajar}. \textit{Frontend} menampilkan seluruh informasi tersebut kepada \textit{user} dalam panel hasil evaluasi.
+
+\begin{figure}[H]
+    \centering
+    \textbf{FT-14 Chat Asisten Materi}\\[6pt]
+    \includegraphics[width=0.9\textwidth]{images/FT-14-Chat-Materi.png}
+    \caption{\textit{Sequence Diagram} FT-14 Chat Asisten Materi}
+    \label{fig:sd-chat-materi}
+\end{figure}
+
+Diagram pada Gambar \ref{fig:sd-chat-materi} menggambarkan alur percakapan antara \textit{user} dan asisten materi. \textit{User} mengetikkan pertanyaan pada widget chat yang tersedia di setiap halaman topik. \textit{Frontend} menyertakan riwayat percakapan sebelumnya (\texttt{riwayat}) bersama pesan baru (\texttt{pesan}) dalam \textit{body} permintaan \texttt{POST /api/chat/\{slug\}}, yang diteruskan oleh \textit{proxy} Next.js ke \textit{backend} melalui \texttt{POST /api/chat/\{topic\_slug\}}. \textit{Backend} menyusun \textit{system prompt} yang memuat konteks materi topik aktif beserta seluruh riwayat percakapan, kemudian mengirimkannya ke OpenAI API. OpenAI API menghasilkan balasan kontekstual yang dikembalikan ke \textit{frontend} dalam field \texttt{balasan}. \textit{Frontend} menampilkan balasan tersebut sebagai pesan baru dalam antarmuka chat, memperbarui riwayat untuk digunakan pada pesan berikutnya.
+
 \subsection{Arsitektur Sistem}
 
 Sistem Teman Belajar ASD dirancang menggunakan arsitektur berlapis yang terdiri atas empat komponen utama: \textit{Client}, \textit{Frontend}, \textit{Backend}, serta \textit{Database} dan OpenAI API. \textit{Client} mengakses sistem melalui \textit{browser} atau perangkat \textit{mobile} via HTTPS. \textit{Frontend} yang dibangun dengan Next.js berperan sebagai antarmuka pengguna sekaligus \textit{proxy} ke \textit{backend}, menangani halaman autentikasi, \textit{dashboard} topik, alur pembelajaran, dan \textit{progress tracker}. \textit{Backend} berbasis FastAPI mengelola seluruh logika bisnis meliputi autentikasi, progres belajar, generasi soal latihan, evaluasi jawaban, dan \textit{adaptive engine}. Data pengguna disimpan di PostgreSQL, sedangkan generasi konten pembelajaran dilakukan melalui OpenAI API (GPT-4o-mini). Seluruh layanan di-\textit{deploy} di GCP Cloud Run dengan \textit{pipeline} CI/CD melalui GitHub Actions.
@@ -267,12 +275,12 @@ Menyimpan daftar topik ASD beserta deskripsi dan tingkat kesulitan \\
 
 \texttt{materials} &
 \texttt{material\_id, topic\_id, content, generated\_by\_llm} &
-Menyimpan konten materi per topik, dapat dihasilkan oleh LLM \\
+Menyimpan konten materi per topik; kolom \texttt{generated\_by\_llm} menandai sumber konten \\
 \hline
 
 \texttt{examples} &
 \texttt{example\_id, topic\_id, content, generated\_by\_llm} &
-Menyimpan contoh implementasi per topik, dapat dihasilkan oleh LLM \\
+Menyimpan contoh implementasi per topik; kolom \texttt{generated\_by\_llm} menandai sumber konten \\
 \hline
 
 \texttt{exercises} &
@@ -322,7 +330,7 @@ Bagian ini membahas perancangan teknis aplikasi web Teman Belajar ASD, meliputi 
 
 \subsection{Perancangan Arsitektur Sistem}
 
-Aplikasi Teman Belajar ASD dibangun menggunakan arsitektur \textit{client-server} yang terdiri dari tiga lapisan utama: \textit{frontend}, \textit{backend}, dan \textit{database}. Komponen \textit{frontend} dibangun dengan Next.js dan berkomunikasi dengan \textit{backend} melalui RESTful API berbasis FastAPI. \textit{Backend} menangani logika bisnis, autentikasi JWT, serta integrasi dengan OpenAI API untuk menghasilkan konten pembelajaran secara adaptif. Data pengguna dan progres belajar disimpan pada PostgreSQL. Tabel \ref{tab:tech-stack} menyajikan komponen teknologi yang digunakan pada setiap lapisan sistem.
+Aplikasi Teman Belajar ASD dibangun menggunakan arsitektur \textit{client-server} yang terdiri dari tiga lapisan utama: \textit{frontend}, \textit{backend}, dan \textit{database}. Komponen \textit{frontend} dibangun dengan Next.js dan berkomunikasi dengan \textit{backend} melalui RESTful API berbasis FastAPI. \textit{Backend} menangani logika bisnis, autentikasi JWT, serta integrasi dengan OpenAI API untuk membangkitkan soal latihan, mengevaluasi jawaban pengguna, dan melayani chatbot asisten materi. Data pengguna dan progres belajar disimpan pada PostgreSQL. Tabel \ref{tab:tech-stack} menyajikan komponen teknologi yang digunakan pada setiap lapisan sistem.
 
 \begin{table}[H]
     \centering
@@ -350,7 +358,7 @@ Aplikasi Teman Belajar ASD dibangun menggunakan arsitektur \textit{client-server
     \hline
     Autentikasi & PyJWT & Pembuatan dan validasi JWT \textit{token} \\
     \hline
-    \textit{AI Integration} & OpenAI API (GPT-4o-mini) & Generasi konten materi, contoh, latihan, dan evaluasi adaptif \\
+    \textit{AI Integration} & OpenAI API (GPT-4o-mini) & Generasi soal latihan adaptif, evaluasi jawaban pengguna, dan chatbot asisten materi \\
     \hline
     \textit{HTTP Client} & httpx & Komunikasi asinkron ke OpenAI API \\
     \hline
@@ -359,28 +367,7 @@ Aplikasi Teman Belajar ASD dibangun menggunakan arsitektur \textit{client-server
 
 \subsection{Perancangan API}
 
-\textit{Frontend} berkomunikasi dengan \textit{backend} melalui RESTful API yang dibangun menggunakan \textit{framework} FastAPI. Seluruh \textit{endpoint} menggunakan \textit{prefix} \texttt{/api} dan bertukar data dalam format JSON. Akses ke \textit{endpoint} yang memerlukan autentikasi dilakukan dengan menyertakan JWT \textit{token} pada \textit{header} \texttt{Authorization: Bearer <token>}. API dikelompokkan menjadi tiga kelompok fungsional, yaitu autentikasi, progres belajar, dan latihan.
-
-Tabel \ref{tab:api-auth} menyajikan spesifikasi \textit{endpoint} autentikasi yang menangani proses registrasi, \textit{login}, pengambilan data pengguna aktif, dan pembaruan profil.
-
-\begin{table}[H]
-    \centering
-    \caption{Spesifikasi API \textit{Endpoint} Autentikasi}
-    \label{tab:api-auth}
-    \begin{tabular}{|L{1.4cm}|L{3.5cm}|L{3.1cm}|L{3.8cm}|}
-    \hline
-    \textbf{Metode} & \textbf{\textit{Endpoint}} & \textbf{\textit{Body} / \textit{Header}} & \textbf{Fungsi} \\
-    \hline
-    POST & \texttt{/api/auth/\allowbreak{}register} & \texttt{name, email, password} & Mendaftarkan pengguna baru dan mengembalikan JWT \textit{token} \\
-    \hline
-    POST & \texttt{/api/auth/login} & \texttt{email, password} & Melakukan autentikasi dan mengembalikan JWT \textit{token} \\
-    \hline
-    GET & \texttt{/api/auth/me} & \textit{Header}: \texttt{Authorization} & Mengambil data pengguna yang sedang aktif \\
-    \hline
-    PUT & \texttt{/api/auth/\allowbreak{}profile} & \texttt{name, email,} \texttt{current\_\allowbreak{}password,} \texttt{new\_password} & Memperbarui nama, \textit{email}, atau kata sandi pengguna \\
-    \hline
-    \end{tabular}
-\end{table}
+\textit{Frontend} berkomunikasi dengan \textit{backend} melalui RESTful API yang dibangun menggunakan \textit{framework} FastAPI. Seluruh \textit{endpoint} menggunakan \textit{prefix} \texttt{/api} dan bertukar data dalam format JSON. API dikelompokkan menjadi dua kelompok fungsional, yaitu progres belajar dan latihan.
 
 Tabel \ref{tab:api-progress} menyajikan spesifikasi \textit{endpoint} progres belajar yang digunakan untuk membaca dan memperbarui status penyelesaian tiap tahapan pembelajaran per topik.
 
@@ -414,6 +401,23 @@ Tabel \ref{tab:api-latihan} menyajikan spesifikasi \textit{endpoint} latihan yan
     POST & \texttt{/api/latihan/} \texttt{\{topic\_slug\}/\allowbreak{}evaluasi} & \texttt{soal, jawaban} & Mengevaluasi satu jawaban latihan dan mengembalikan \textit{feedback} \\
     \hline
     POST & \texttt{/api/latihan/} \texttt{\{topic\_slug\}/} \texttt{evaluasi-batch} & \texttt{soal[], jawaban\{\}} & Mengevaluasi seluruh jawaban sekaligus dan memperbarui data \textit{weak concepts} pengguna \\
+    \hline
+    POST & \texttt{/api/latihan/} \texttt{\{topic\_slug\}/} \texttt{evaluasi-soal-sendiri} & \texttt{pertanyaan, jawaban} & Mengevaluasi soal yang diunggah pengguna dari sumber eksternal berdasarkan konteks materi topik yang aktif \\
+    \hline
+    \end{tabular}
+\end{table}
+
+Tabel \ref{tab:api-chat} menyajikan spesifikasi \textit{endpoint} asisten percakapan yang digunakan untuk menjawab pertanyaan kontekstual pengguna seputar materi topik yang sedang dipelajari.
+
+\begin{table}[H]
+    \centering
+    \caption{Spesifikasi API \textit{Endpoint} Chat Asisten Materi}
+    \label{tab:api-chat}
+    \begin{tabular}{|L{1.4cm}|L{3.5cm}|L{3.1cm}|L{3.8cm}|}
+    \hline
+    \textbf{Metode} & \textbf{\textit{Endpoint}} & \textbf{\textit{Body}} & \textbf{Fungsi} \\
+    \hline
+    POST & \texttt{/api/chat/} \texttt{\{topic\_slug\}} & \texttt{pesan, riwayat[]} & Menghasilkan balasan kontekstual dari LLM berdasarkan pertanyaan pengguna dan materi topik yang aktif; mendukung riwayat percakapan multi-giliran \\
     \hline
     \end{tabular}
 \end{table}

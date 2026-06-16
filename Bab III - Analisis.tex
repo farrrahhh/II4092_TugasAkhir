@@ -76,6 +76,10 @@ Selain itu, mahasiswa kerap mencari bantuan melalui \textit{chatbot} LLM umum, n
     \item Mahasiswa tidak mendapatkan dukungan untuk mengecek pemahaman mereka secara langsung karena latihan dan evaluasi sering kali tidak memberikan penjelasan balik atau pembahasan detail.
 
     \item Mahasiswa belum memiliki sistem yang mendukung analisis lebih mendalam melalui visualisasi perubahan struktur data dan simulasi algoritma dalam berbagai skenario untuk memperkuat pemahaman konseptual mereka.
+
+    \item Mahasiswa tidak memiliki sarana untuk mengujikan soal dari sumber eksternal (buku, soal ujian terdahulu, atau latihan mandiri) dan mendapatkan evaluasi otomatis terhadap jawaban mereka dalam konteks materi ASD.
+
+    \item Mahasiswa tidak memiliki akses terhadap asisten tanya-jawab yang mampu menjawab pertanyaan kontekstual secara langsung sesuai topik yang sedang dipelajari tanpa harus menunggu sesi asistensi.
 \end{enumerate}
 
 Untuk mencari solusi atas masalah-masalah tersebut, perlu disusun kebutuhan fungsional dan nonfungsional sistem yang diperlukan. Berikut penjabaran mengenai kebutuhan fungsional dan nonfungsional untuk sistem yang akan dibuat.
@@ -124,36 +128,40 @@ Kebutuhan fungsional atau \textit{Functional Requirements} merupakan kebutuhan-k
 \hline
 \endlastfoot
 
-FR-01 & Sistem mampu melakukan proses \textit{login} sebagai autentikasi pengguna &
-Sistem menyediakan dialog \textit{login} yang memvalidasi kredensial pengguna (misalnya akun mahasiswa). Setelah \textit{login}, sistem memuat profil pengguna, riwayat belajar, serta konfigurasi materi yang relevan dengan pengguna tersebut. \\
-\hline
-
-FR-02 & Sistem mampu menampilkan alur pembelajaran ASD yang terstruktur &
+FR-01 & Sistem mampu menampilkan alur pembelajaran ASD yang terstruktur &
 Sistem dirancang untuk menampilkan alur belajar yang terdiri dari tahapan penjelasan konsep, contoh implementasi, latihan soal, dan ringkasan. Pengguna dapat memilih topik materi, lalu sistem menampilkan urutan langkah yang harus diikuti agar pembelajaran menjadi lebih terarah. \\
 \hline
 
-FR-03 & Sistem mampu menghasilkan penjelasan konsep ASD berbasis LLM sesuai konteks materi &
+FR-02 & Sistem mampu menghasilkan penjelasan konsep ASD berbasis LLM sesuai konteks materi &
 Sistem memanfaatkan LLM dengan struktur \textit{prompt} yang terarah untuk menghasilkan penjelasan konsep yang relevan, akurat, serta konsisten dengan materi yang sedang dipelajari pengguna. \\
 \hline
 
-FR-04 & Sistem mampu menampilkan contoh kode dan penjelasan langkah demi langkah &
+FR-03 & Sistem mampu menampilkan contoh kode dan penjelasan langkah demi langkah &
 Sistem dapat menghasilkan contoh implementasi kode untuk topik tertentu, disertai penjelasan langkah demi langkah mengenai alur eksekusi algoritma dan perubahan struktur data. Fitur ini membantu pengguna memahami hubungan antara konsep teoretis dan implementasi program. \\
 \hline
 
-FR-05 & Sistem mampu menyediakan latihan soal dan pembahasan otomatis &
+FR-04 & Sistem mampu menyediakan latihan soal dan pembahasan otomatis &
 Sistem dapat menghasilkan atau menampilkan latihan soal yang terkait dengan materi yang sedang dipelajari pengguna. Setelah pengguna menjawab, sistem memberikan pembahasan otomatis yang menjelaskan alasan jawaban benar maupun salah. \\
 \hline
 
-FR-06 & Sistem mampu memberikan umpan balik terhadap miskonsepsi pengguna &
+FR-05 & Sistem mampu memberikan umpan balik terhadap miskonsepsi pengguna &
 Sistem menganalisis jawaban atau interaksi pengguna untuk mengidentifikasi pola kesalahan umum, kemudian memberikan umpan balik yang menjelaskan letak miskonsepsi serta mengarahkan pengguna kembali ke penjelasan yang sesuai. \\
 \hline
 
-FR-07 & Sistem mampu menyajikan ringkasan materi pada akhir sesi belajar &
+FR-06 & Sistem mampu menyajikan ringkasan materi pada akhir sesi belajar &
 Sistem dapat menghasilkan ringkasan materi yang telah dipelajari pada suatu sesi, termasuk poin penting, istilah kunci, dan hubungan antar konsep. Ringkasan ini membantu pengguna melakukan \textit{review} dan memperkuat pemahaman konsep. \\
 \hline
 
-FR-08 & Sistem mampu menyimpan dan menampilkan riwayat serta progres belajar pengguna &
+FR-07 & Sistem mampu menyimpan dan menampilkan riwayat serta progres belajar pengguna &
 Sistem menyimpan data riwayat topik yang sudah dipelajari, latihan yang telah dikerjakan, serta status penyelesaian tiap modul. Pengguna dapat melihat progres belajarnya dan melanjutkan pembelajaran dari posisi terakhir dengan mudah. \\
+\hline
+
+FR-08 & Sistem mampu menerima dan mengevaluasi soal yang diunggah pengguna &
+Sistem menyediakan fasilitas bagi pengguna untuk memasukkan soal dari sumber eksternal beserta jawabannya secara mandiri. Sistem kemudian mengevaluasi jawaban menggunakan LLM berdasarkan konteks materi topik yang sedang dipelajari dan mengembalikan hasil evaluasi berupa skor, komentar, bagian yang sudah benar, bagian yang perlu diperbaiki, serta rekomendasi belajar. \\
+\hline
+
+FR-09 & Sistem mampu memberikan penjelasan materi melalui asisten percakapan kontekstual berbasis LLM &
+Sistem menyediakan asisten percakapan (\textit{chat asisten materi}) yang memungkinkan pengguna mengajukan pertanyaan seputar materi topik yang sedang dipelajari. Asisten menggunakan konteks materi resmi sebagai landasan jawaban sehingga penjelasan yang dihasilkan tetap relevan dan konsisten dengan kurikulum ASD. Riwayat percakapan dipertahankan selama sesi berlangsung untuk mendukung tanya-jawab yang berkesinambungan. \\
 \hline
 
 \end{longtable}
