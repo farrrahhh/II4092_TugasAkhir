@@ -1,7 +1,7 @@
 % ============================================================================================
 % BAB III ANALISIS MASALAH
 % Pembagian subbab tidak rigid dan dapat bervariasi. Bab ini minimal berisi analisis kebutuhan
-% fungsional dan nonfungsional, analisis berbagai alternatif solusi yang dapat ditawarkan, dan
+% fungsional, analisis berbagai alternatif solusi yang dapat ditawarkan, dan
 % metode pemilihan solusi yang diusulkan.
 % ============================================================================================
 \cleardoublepage
@@ -12,7 +12,7 @@ Bab ini membahas analisis permasalahan yang mendasari pengembangan sistem pembel
 
 \begin{enumerate}[1.]
     \item Analisis kondisi pembelajaran ASD saat ini, meliputi fungsi umum sistem yang sudah ada beserta permasalahan yang masih ditemui;
-    \item Analisis kebutuhan sistem, mencakup identifikasi masalah pengguna, konsep dasar solusi yang diusulkan, serta rumusan kebutuhan fungsional dan nonfungsional; dan
+    \item Analisis kebutuhan sistem, mencakup identifikasi masalah pengguna, konsep dasar solusi yang diusulkan, serta rumusan kebutuhan fungsional; dan
     \item Analisis pemilihan solusi, meliputi evaluasi berbagai alternatif teknologi dan penentuan solusi yang paling sesuai untuk mendukung pengembangan sistem.
 \end{enumerate}
 
@@ -54,7 +54,7 @@ Saat ini, proses pembelajaran ASD di lingkungan perkuliahan masih sangat bergant
 \section{Analisis Kebutuhan}
 % ============================================================
 
-Bagian ini menguraikan analisis kebutuhan sistem pembelajaran ASD berbasis \textit{guided learning}. Analisis dimulai dari identifikasi permasalahan yang dihadapi pengguna dalam proses pembelajaran ASD saat ini, kemudian dilanjutkan dengan penggambaran konsep dasar sistem yang diusulkan sebagai solusi, dan diakhiri dengan penjabaran kebutuhan fungsional serta kebutuhan nonfungsional yang harus dipenuhi oleh sistem.
+Bagian ini menguraikan analisis kebutuhan sistem pembelajaran ASD berbasis \textit{guided learning}. Analisis dimulai dari identifikasi permasalahan yang dihadapi pengguna dalam proses pembelajaran ASD saat ini, kemudian dilanjutkan dengan penggambaran konsep dasar sistem yang diusulkan sebagai solusi, dan diakhiri dengan penjabaran kebutuhan fungsional yang harus dipenuhi oleh sistem.
 
 \subsection{Identifikasi Masalah Pengguna}
 
@@ -82,7 +82,7 @@ Selain itu, mahasiswa kerap mencari bantuan melalui \textit{chatbot} LLM umum, n
     \item Mahasiswa tidak memiliki akses terhadap asisten tanya-jawab yang mampu menjawab pertanyaan kontekstual secara langsung sesuai topik yang sedang dipelajari tanpa harus menunggu sesi asistensi.
 \end{enumerate}
 
-Untuk mencari solusi atas masalah-masalah tersebut, perlu disusun kebutuhan fungsional dan nonfungsional sistem yang diperlukan. Berikut penjabaran mengenai kebutuhan fungsional dan nonfungsional untuk sistem yang akan dibuat.
+Untuk mencari solusi atas masalah-masalah tersebut, perlu disusun kebutuhan fungsional sistem yang diperlukan. Berikut penjabaran mengenai kebutuhan fungsional untuk sistem yang akan dibuat.
 
 
 \subsection{Konsep Dasar Sistem yang Diusulkan}
@@ -169,54 +169,6 @@ Sistem menyediakan asisten percakapan (\textit{chat asisten materi}) yang memung
 Dengan memenuhi kebutuhan fungsional ini, sistem diharapkan dapat memberikan solusi yang membantu pengguna dalam mengatasi berbagai permasalahan pembelajaran ASD yang telah diidentifikasi sebelumnya.
 
 
-\subsection{Kebutuhan Nonfungsional}
-
-Kebutuhan nonfungsional atau \textit{Non-Functional Requirements} merupakan kebutuhan yang berisi pernyataan mengenai perilaku dan kualitas yang harus dimiliki oleh sistem pembelajaran Algoritma dan Struktur Data berbasis LLM ke depannya. Berikut merupakan tabel kebutuhan nonfungsional dari sistem pembelajaran ASD berbasis LLM dengan pendekatan \textit{guided learning}.
-
-\begin{longtable}{|L{1.8cm}|L{3cm}|L{7.5cm}|}
-\caption{Kebutuhan Nonfungsional Sistem Pembelajaran ASD Berbasis LLM}
-\label{tab:kebutuhan-nonfungsional}\\
-\hline
-\textbf{ID} & \textbf{Parameter} & \textbf{Penjelasan} \\
-\hline
-\endfirsthead
-
-\caption[]{Kebutuhan Nonfungsional Sistem Pembelajaran ASD Berbasis LLM (lanjutan)}\\
-\hline
-\textbf{ID} & \textbf{Parameter} & \textbf{Penjelasan} \\
-\hline
-\endhead
-
-\hline
-\multicolumn{3}{l}{\textit{Bersambung ke halaman berikutnya}}\\
-\endfoot
-
-\hline
-\endlastfoot
-
-NF-01 & \textit{Availability} &
-Sistem harus selalu tersedia dan dapat diakses oleh pengguna tanpa mengalami \textit{crash} atau gangguan layanan, sehingga proses pembelajaran dapat dilakukan kapan saja tanpa hambatan. \\
-\hline
-
-NF-02 & \textit{Security} &
-Sistem harus melindungi data pengguna seperti progres belajar, riwayat interaksi, serta kredensial akun dengan menerapkan enkripsi dan kontrol akses yang memadai. \\
-\hline
-
-NF-03 & \textit{Compatibility} &
-Sistem harus dapat berjalan pada berbagai perangkat seperti laptop, tablet, maupun \textit{smartphone}, serta kompatibel dengan beberapa \textit{browser} modern. \\
-\hline
-
-NF-04 & \textit{Performance} &
-Sistem harus mampu merespons permintaan pengguna dan menghasilkan konten dari LLM dalam waktu yang wajar sehingga tidak mengganggu pengalaman belajar pengguna. \\
-\hline
-
-NF-05 & \textit{Usability} &
-Sistem harus menyediakan antarmuka yang intuitif dan mudah digunakan oleh mahasiswa tanpa memerlukan pelatihan khusus, sehingga pengguna dapat langsung mengikuti alur pembelajaran yang disediakan. \\
-\hline
-
-\end{longtable}
-
-Pemenuhan kebutuhan nonfungsional ini bertujuan untuk memastikan sistem memiliki ketersediaan yang baik, aman digunakan, serta memberikan pengalaman belajar yang mudah dan intuitif bagi pengguna.
 
 
 % ============================================================
