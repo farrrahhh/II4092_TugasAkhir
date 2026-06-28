@@ -299,8 +299,8 @@ Mencatat jawaban pengguna terhadap soal latihan beserta skor dan status kebenara
 \hline
 
 \texttt{progress} &
-\texttt{progress\_id, user\_id, topic\_slug, materi, contoh, latihan, ringkasan, last\_accessed} &
-Menyimpan status penyelesaian tiap tahapan \textit{guided learning} per pengguna per topik \\
+\texttt{progress\_id, user\_id, topic\_slug, materi, contoh, latihan, ringkasan, weak\_concepts, last\_accessed} &
+Menyimpan status penyelesaian tiap tahapan \textit{guided learning} per pengguna per topik; kolom \texttt{weak\_concepts} menyimpan daftar konsep lemah hasil evaluasi latihan untuk digunakan pada sesi adaptif berikutnya \\
 \hline
 
 \texttt{user\_performance} &
