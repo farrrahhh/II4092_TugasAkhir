@@ -166,10 +166,47 @@ Responden pengujian kegunaan merupakan mahasiswa yang sedang atau telah menempuh
 
 Pengujian dilakukan terhadap minimal 5 responden sesuai dengan panduan Nielsen (1993) yang menyatakan bahwa 5 pengguna sudah cukup untuk mengidentifikasi sebagian besar permasalahan kegunaan dalam sebuah antarmuka.
 
+\subsection{Evaluasi Kualitas Konten LLM}
+
+Selain pengujian fungsional dan kegunaan, dilakukan evaluasi terhadap kualitas konten yang dihasilkan oleh LLM untuk menjawab rumusan masalah kedua, yaitu sejauh mana LLM mampu menghasilkan konten yang relevan, akurat, dan konsisten dengan kurikulum ASD. Evaluasi ini difokuskan pada dua jenis konten yang dihasilkan secara dinamis oleh sistem: soal latihan dan evaluasi jawaban pengguna.
+
+\subsubsection{Metodologi}
+
+Evaluasi kualitas konten dilakukan dengan metode \textit{expert-based content validation}, yaitu membandingkan keluaran LLM terhadap jawaban referensi yang telah divalidasi terlebih dahulu berdasarkan materi kurikulum ASD. Proses evaluasi dilakukan dalam tiga tahap:
+
+\begin{enumerate}
+    \item \textbf{Penyusunan kisi-kisi soal referensi.} Disiapkan soal-soal uji beserta jawaban referensi yang benar berdasarkan sumber kurikulum (buku teks ASD dan modul kuliah). Soal mencakup tiga topik representatif yang mewakili tingkat kesulitan berbeda: \textit{Linked List} (dasar), \textit{Tree} (menengah), dan \textit{Graph} (lanjutan), masing-masing terdiri atas 5 soal sehingga total terdapat 15 soal referensi.
+
+    \item \textbf{Pengujian pada sistem.} Setiap soal referensi dimasukkan ke dalam fitur Soal Sendiri (\textit{evaluasi soal mandiri}) pada aplikasi bersama jawaban referensinya. Sistem menghasilkan hasil evaluasi berupa skor, komentar, dan umpan balik melalui LLM.
+
+    \item \textbf{Penilaian kesesuaian.} Keluaran LLM dinilai secara manual menggunakan rubrik tiga kriteria sebagaimana tercantum pada Tabel \ref{tab:rubrik-llm}. Setiap kriteria diberi bobot dan skor 1–3 (tidak sesuai / sebagian sesuai / sesuai), kemudian dikonversi ke persentase kesesuaian.
+\end{enumerate}
+
+\begin{table}[H]
+\centering
+\caption{Rubrik Evaluasi Kualitas Konten LLM}
+\label{tab:rubrik-llm}
+\begin{tabular}{|L{0.5cm}|L{3.5cm}|L{1.2cm}|L{7cm}|}
+\hline
+\textbf{No} & \textbf{Kriteria} & \textbf{Bobot} & \textbf{Deskripsi} \\
+\hline
+1 & Kebenaran Konseptual & 40\% & Penjelasan atau penilaian LLM secara konseptual benar sesuai prinsip ASD yang berlaku \\
+\hline
+2 & Kesesuaian Kurikulum & 30\% & Konten merujuk pada terminologi, notasi, dan cakupan topik yang sesuai dengan kurikulum ASD yang diajarkan \\
+\hline
+3 & Kejelasan dan Tidak Menyesatkan & 30\% & Penjelasan disampaikan dengan jelas, tidak ambigu, dan tidak mengandung informasi yang dapat menimbulkan miskonsepsi \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsubsection{Indikator Keberhasilan}
+
+Indikator keberhasilan evaluasi kualitas konten LLM adalah perolehan rata-rata persentase kesesuaian konten minimal 70\% pada seluruh kriteria. Nilai ambang ini dipilih berdasarkan pertimbangan bahwa konten dengan tingkat kesesuaian di atas 70\% dianggap layak digunakan sebagai referensi pembelajaran pendukung tanpa menimbulkan miskonsepsi yang signifikan.
+
 
 \section{Hasil Evaluasi}
 
-Bagian ini menyajikan hasil dari dua tahap evaluasi yang telah dilakukan terhadap aplikasi Teman Belajar ASD, yaitu pengujian \textit{black box} untuk memverifikasi pemenuhan kebutuhan fungsional dan pengujian kegunaan untuk menilai kemudahan penggunaan aplikasi oleh mahasiswa.
+Bagian ini menyajikan hasil dari tiga tahap evaluasi yang telah dilakukan terhadap aplikasi Teman Belajar ASD, yaitu pengujian \textit{black box} untuk memverifikasi pemenuhan kebutuhan fungsional, pengujian kegunaan untuk menilai kemudahan penggunaan aplikasi oleh mahasiswa, serta evaluasi kualitas konten LLM untuk mengukur akurasi dan relevansi keluaran model terhadap kurikulum.
 
 \subsection{Hasil Pengujian \textit{Black Box}}
 
@@ -323,7 +360,20 @@ Berdasarkan hasil pengujian pada Tabel \ref{tab:hasil-blackbox}, seluruh 18 sken
 
 % TODO: isi hasil usability testing (skor SUS per responden, rata-rata, kategori) setelah pengujian selesai
 
+\subsection{Hasil Evaluasi Kualitas Konten LLM}
+
+% TODO: isi setelah evaluasi kualitas konten selesai dilakukan.
+% Isi dengan:
+% 1. Tabel hasil penilaian per soal (15 soal × 3 kriteria × skor 1-3)
+% 2. Rata-rata persentase kesesuaian per kriteria dan keseluruhan
+% 3. Narasi temuan (topik mana yang skornya tinggi/rendah, pola kesalahan LLM jika ada)
 
 \section{Pembahasan Hasil Evaluasi}
 
-% TODO: isi pembahasan hasil evaluasi setelah data terkumpul
+% TODO: isi pembahasan hasil evaluasi setelah data terkumpul.
+% Bahas:
+% 1. Ringkasan black box: semua 18 skenario lulus → apa artinya
+% 2. Ringkasan SUS: skor X → kategori Y → apakah memenuhi indikator keberhasilan (≥68)
+% 3. Ringkasan kualitas konten LLM: rata-rata kesesuaian Z% → apakah memenuhi threshold 70%
+% 4. Keterkaitan antar hasil: apakah fungsionalitas yang lulus black box juga didukung kualitas konten yang baik
+% 5. Keterbatasan evaluasi dan implikasinya
