@@ -258,7 +258,9 @@ Fungsi \texttt{evaluasi\_soal\_sendiri} pada modul \texttt{app/ai.py} menangani 
 
 \textit{System prompt} yang dikirim ke model mengandung keseluruhan teks \texttt{materi\_evaluasi} dari konfigurasi topik yang bersangkutan (\texttt{TOPIC\_CONFIGS}). Instruksi sistem mewajibkan model mengembalikan JSON valid dengan delapan \textit{field}: \texttt{tipe\_soal} (\textit{"pengetahuan"} atau \textit{"implementasi"}), \texttt{nilai} (label teks), \texttt{skor} (integer 0--100), \texttt{komentar}, \texttt{yang\_benar}, \texttt{yang\_perlu\_diperbaiki}, \texttt{konsep\_lemah}, dan \texttt{rekomendasi\_belajar}. Parameter \texttt{response\_format} diset ke \texttt{json\_object} dan \texttt{temperature} dikecilkan ke 0.2 agar keluaran lebih deterministik. Jika kolom jawaban dikosongkan, nilai \textit{"Belum Dijawab"} dengan skor 0 ditetapkan oleh model.
 
-\textit{Endpoint} \texttt{POST /api/latihan/\{topic\_slug\}/evaluasi-soal-sendiri} menerima model Pydantic \texttt{EvaluasiSoalSendiriRequest} dengan dua \textit{field}: \texttt{pertanyaan} (wajib) dan \texttt{jawaban} (opsional, \textit{default} string kosong). \textit{Backend} memvalidasi ketersediaan konfigurasi topik dan \textit{API key} OpenAI sebelum memanggil fungsi \texttt{evaluasi\_soal\_sendiri}; kesalahan HTTP dari OpenAI ditangkap sebagai \texttt{httpx.HTTPStatusError} dan dikembalikan dengan status 502.
+\begin{sloppypar}
+Sistem mengekspos \textit{endpoint} \texttt{POST /api/latihan/\allowbreak{}\{topic\_slug\}/\allowbreak{}evaluasi-soal-sendiri} yang menerima model Pydantic \texttt{EvaluasiSoalSendiriRequest} dengan dua \textit{field}: \texttt{pertanyaan} (wajib) dan \texttt{jawaban} (opsional, \textit{default} string kosong). \textit{Backend} memvalidasi ketersediaan konfigurasi topik dan \textit{API key} OpenAI sebelum memanggil fungsi \texttt{evaluasi\_soal\_sendiri}; kesalahan HTTP dari OpenAI ditangkap sebagai \texttt{httpx.HTTPStatusError} dan dikembalikan dengan status 502.
+\end{sloppypar}
 
 \subsection{Implementasi Asisten Chat Materi}
 
@@ -268,4 +270,4 @@ Fungsi \texttt{chat\_materi\_ai} pada modul \texttt{app/ai.py} mengimplementasik
 
 Riwayat percakapan direkonstruksi menjadi daftar pesan OpenAI dengan menyertakan setiap entri \textit{riwayat} yang memiliki \textit{role} \texttt{"user"} atau \texttt{"assistant"} beserta \textit{content} yang tidak kosong, diikuti oleh pesan \textit{user} terbaru. Dengan demikian, model memiliki konteks percakapan penuh sehingga dapat menjawab pertanyaan lanjutan secara koheren. Parameter \texttt{temperature} diset ke 0.5 dan \texttt{max\_tokens} dibatasi 800 untuk menjaga keseimbangan antara kreativitas dan konsistensi respons.
 
-\textit{Endpoint} \texttt{POST /api/chat/\{topic\_slug\}} menerima model Pydantic \texttt{ChatRequest} dengan \textit{field} \texttt{pesan} (wajib) dan \texttt{riwayat} (opsional, \textit{default} daftar kosong), kemudian mengembalikan \texttt{\{"balasan": <string>\}} sebagai respons JSON.
+Sistem mengekspos \textit{endpoint} \texttt{POST /api/chat/\{topic\_slug\}} yang menerima model Pydantic \texttt{ChatRequest} dengan \textit{field} \texttt{pesan} (wajib) dan \texttt{riwayat} (opsional, \textit{default} daftar kosong), kemudian mengembalikan \texttt{\{"balasan": <string>\}} sebagai respons JSON.
