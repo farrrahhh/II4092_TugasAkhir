@@ -7,34 +7,28 @@
 
 \section{Kesimpulan}
 
-% TODO: isi setelah Bab VI (Evaluasi) selesai.
-% Kesimpulan menjawab langsung dua rumusan masalah di Bab I.
-
 Berdasarkan hasil perancangan, implementasi, dan evaluasi yang telah dilakukan, dapat ditarik kesimpulan sebagai berikut.
 
 \begin{enumerate}
-    \item % Jawaban rumusan masalah 1:
-    % Bagaimana merancang dan mengembangkan aplikasi pembelajaran ASD berbasis web
-    % dengan alur guided learning yang terstruktur?
-    [TODO]
+    \item Aplikasi pembelajaran ASD berbasis web dengan alur \textit{guided learning} yang terstruktur dan mudah diikuti mahasiswa telah berhasil dirancang dan dikembangkan melalui Teman Belajar ASD. Alur belajar bertahap (topik, materi, contoh, latihan, pembahasan, ringkasan, hingga progres) beserta mekanisme penguncian tab dan \textit{adaptive learning engine} berbasis \textit{weak concepts} terbukti berfungsi sebagaimana mestinya, dibuktikan oleh kelulusan seluruh 18 skenario pengujian \textit{black box} dari 14 fitur fungsional. Kemudahan alur ini turut dikonfirmasi oleh hasil pengujian kegunaan, di mana seluruh responden (5 dari 5) berhasil menyelesaikan seluruh tugas dengan tingkat keberhasilan 100\% dan skor SUS rata-rata 93,0 (kategori \textit{Excellent}), jauh melampaui indikator keberhasilan minimal 68. Dengan demikian, alur \textit{guided learning} yang dirancang terbukti dapat membantu mahasiswa mengikuti tahapan belajar secara terarah sebagai upaya mengurangi miskonsepsi pada konsep-konsep dasar ASD.
 
-    \item % Jawaban rumusan masalah 2:
-    % Bagaimana memanfaatkan LLM sebagai teman belajar digital yang relevan,
-    % akurat, dan konsisten dengan kurikulum?
-    [TODO]
+    \item Pemanfaatan LLM (GPT-4o-mini melalui OpenAI API) sebagai teman belajar digital yang menghasilkan penjelasan materi, contoh implementasi, soal latihan, dan evaluasi jawaban secara terkontrol melalui teknik \textit{prompt engineering} telah berhasil diimplementasikan dan terbukti relevan, akurat, serta konsisten dengan kurikulum ASD. Hal ini dibuktikan oleh hasil evaluasi kualitas konten LLM yang memperoleh rata-rata persentase kesesuaian keseluruhan sebesar 97,33\%, jauh melampaui indikator keberhasilan minimal 70\%, dengan skor sempurna (100\%) pada kriteria Kebenaran Konseptual dan Kesesuaian Kurikulum. Satu-satunya penurunan skor ditemukan pada kriteria Kejelasan dan Tidak Menyesatkan, yang disebabkan oleh kecenderungan LLM mengevaluasi jawaban pengguna secara lebih ketat/mendalam dibandingkan standar referensi, bukan karena kesalahan konsep atau miskonsepsi.
 \end{enumerate}
 
 \section{Saran}
 
-% TODO: isi berdasarkan keterbatasan yang ditemukan selama pengembangan dan evaluasi.
-% Saran ditujukan untuk pengembang atau peneliti selanjutnya.
-
-Terdapat beberapa saran untuk pengembangan sistem Teman Belajar ASD lebih lanjut.
+Terdapat beberapa saran untuk pengembangan sistem Teman Belajar ASD lebih lanjut, berdasarkan keterbatasan dan catatan yang ditemukan selama evaluasi.
 
 \begin{enumerate}
-    \item [TODO]
+    \item Menambahkan visualisasi atau animasi interaktif (misalnya animasi proses \textit{insert}/\textit{delete} pada \textit{linked list}, \textit{tree}, dan \textit{graph}) untuk mendukung pemahaman konsep struktur data yang bersifat abstrak, sesuai masukan yang berulang disampaikan oleh responden pengujian kegunaan.
 
-    \item [TODO]
+    \item Melakukan kalibrasi ulang \textit{prompt} evaluasi LLM pada fitur latihan dan soal sendiri, agar tingkat kekritisan penilaian tidak melebihi kedalaman jawaban yang diharapkan dari mahasiswa. Saran ini didasari oleh temuan yang konsisten pada evaluasi kualitas konten LLM (khususnya topik \textit{Tree}) maupun pengujian kegunaan, yang sama-sama mengindikasikan validasi jawaban oleh AI dirasa terlalu ketat pada sebagian kasus.
 
-    \item [TODO]
+    \item Memperluas cakupan pengujian kegunaan ke topik-topik ASD lainnya (\textit{Tree}, \textit{Graph}, dan sebagainya) serta menambah jumlah responden, mengingat pengujian pada penelitian ini baru dilakukan pada satu topik (\textit{Linked List}) dengan 5 responden.
+
+    \item Melibatkan lebih dari satu evaluator ahli pada evaluasi kualitas konten LLM untuk memperoleh \textit{inter-rater reliability}, serta memperluas cakupan soal referensi ke seluruh topik kurikulum ASD, mengingat evaluasi pada penelitian ini baru mencakup 15 soal pada 3 dari 10 topik dan dinilai oleh satu evaluator.
+
+    \item Melakukan perbaikan antarmuka minor berdasarkan masukan responden, seperti mempertegas kontras visual antara kotak jawaban pengguna dan \textit{feedback} AI, memperbesar ukuran teks pada navigasi, serta memperjelas label tab (misalnya "Contoh") agar tidak membingungkan pengguna baru.
+
+    \item Mengoptimalkan waktu pemrosesan \textit{generate} konten oleh LLM, misalnya melalui mekanisme \textit{caching} atau \textit{prefetching}, untuk mengurangi waktu tunggu pengguna yang dirasakan cukup lama terutama pada fitur latihan.
 \end{enumerate}
