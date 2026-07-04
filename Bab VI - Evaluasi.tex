@@ -43,12 +43,12 @@ Sistem menampilkan halaman topik dengan tab sesuai status \textit{guided flow} p
 
 FT-02 & Tampilkan Materi &
 Pengguna membuka tab materi pada topik yang dipilih &
-Konten materi statis berhasil dirender dan ditampilkan sesuai topik; progres diperbarui setelah selesai dibaca \\
+Konten materi statis berhasil dirender dan ditampilkan sesuai topik, progres diperbarui setelah selesai dibaca \\
 \hline
 
 FT-03 & Tampilkan Contoh &
 Pengguna membuka tab contoh setelah menyelesaikan tab materi &
-Konten contoh berhasil dihasilkan dan ditampilkan; tab terkunci jika materi belum selesai \\
+Konten contoh berhasil dihasilkan dan ditampilkan, tab terkunci jika materi belum selesai \\
 \hline
 
 FT-04 & Latihan Soal &
@@ -63,7 +63,7 @@ Sistem mengembalikan skor, \textit{feedback} per soal, dan pembahasan yang relev
 
 FT-06 & Ringkasan Materi &
 Pengguna membuka tab ringkasan setelah menyelesaikan latihan &
-Konten ringkasan statis berhasil dirender dan ditampilkan; topik ditandai selesai \\
+Konten ringkasan statis berhasil dirender dan ditampilkan, topik ditandai selesai \\
 \hline
 
 FT-07 & Progres Belajar &
@@ -97,13 +97,13 @@ Konten yang dihasilkan lebih menekankan konsep yang teridentifikasi sebagai kele
 \hline
 
 FT-13 & Evaluasi Soal Sendiri &
-Pengguna memasukkan soal dan jawaban dari sumber eksternal pada panel Soal Sendiri; skenario uji meliputi soal berisi teks, soal diunggah dari file \texttt{.txt}, dan kolom jawaban dikosongkan &
-Sistem mengembalikan hasil evaluasi berisi skor, nilai, komentar, bagian benar/salah, dan rekomendasi belajar; soal tanpa jawaban mendapat nilai "Belum Dijawab" \\
+Pengguna memasukkan soal dan jawaban dari sumber eksternal pada panel Soal Sendiri. Skenario uji meliputi soal berisi teks, soal diunggah dari file \texttt{.txt}, dan kolom jawaban dikosongkan &
+Sistem mengembalikan hasil evaluasi berisi skor, nilai, komentar, bagian benar/salah, dan rekomendasi belajar. Soal tanpa jawaban mendapat nilai "Belum Dijawab" \\
 \hline
 
 FT-14 & Chat Asisten Materi &
-Pengguna mengirim pertanyaan melalui widget chat pada halaman topik aktif; skenario uji meliputi pertanyaan relevan dengan topik dan pertanyaan lanjutan yang mengacu pada jawaban sebelumnya &
-Sistem mengembalikan balasan kontekstual yang relevan dengan materi topik; pertanyaan lanjutan dijawab dengan mempertimbangkan riwayat percakapan \\
+Pengguna mengirim pertanyaan melalui widget chat pada halaman topik aktif, skenario uji meliputi pertanyaan relevan dengan topik dan pertanyaan lanjutan yang mengacu pada jawaban sebelumnya &
+Sistem mengembalikan balasan kontekstual yang relevan dengan materi topik, pertanyaan lanjutan dijawab dengan mempertimbangkan riwayat percakapan \\
 \hline
 
 \end{longtable}
@@ -242,7 +242,7 @@ Lulus \\
 
 FT-02 & Men\-ampilkan materi &
 Pengguna membuka tab materi pada topik yang dipilih &
-Konten materi statis berhasil dirender dan ditampilkan; progres tab materi diperbarui setelah selesai dibaca &
+Konten materi statis berhasil dirender dan ditampilkan, progres tab materi diperbarui setelah selesai dibaca &
 Materi berhasil ditampilkan dan progres diperbarui setelah pengguna menyelesaikan tab &
 Lulus \\
 \hline
@@ -277,7 +277,7 @@ Lulus \\
 
 FT-06 & Membuka tab ringkasan &
 Pengguna membuka tab ringkasan setelah menyelesaikan latihan &
-Konten ringkasan statis berhasil dirender dan ditampilkan; topik ditandai sebagai selesai 100\% &
+Konten ringkasan statis berhasil dirender dan ditampilkan, topik ditandai sebagai selesai 100\% &
 Ringkasan berhasil ditampilkan dan status topik diperbarui menjadi selesai &
 Lulus \\
 \hline
@@ -555,4 +555,4 @@ Evaluasi kualitas konten LLM menunjukkan rata-rata persentase kesesuaian keselur
 
 Keterkaitan yang menarik ditemukan antara hasil pengujian kegunaan dan evaluasi kualitas konten LLM: keduanya secara independen mengidentifikasi isu yang sama, yaitu kecenderungan LLM untuk melakukan validasi/evaluasi jawaban secara lebih ketat dari yang diharapkan pengguna maupun standar referensi (disebutkan langsung oleh salah satu responden pengujian kegunaan, dan teridentifikasi pada 4 dari 15 soal pada evaluasi kualitas konten). Konvergensi temuan dari dua metode evaluasi yang berbeda ini memperkuat validitas temuan tersebut dan menunjukkan bahwa kalibrasi tingkat "kekritisan" \textit{prompt} evaluasi LLM merupakan area perbaikan prioritas untuk pengembangan aplikasi selanjutnya, di luar aspek fungsional dan kebenaran konseptual yang sudah terbukti baik.
 
-Secara keseluruhan, ketiga hasil evaluasi saling melengkapi dan menunjukkan bahwa aplikasi Teman Belajar ASD telah memenuhi seluruh kebutuhan fungsional (\textit{black box}), mudah dan nyaman digunakan oleh mahasiswa (\textit{usability}), serta menghasilkan konten pembelajaran dinamis yang akurat dan sesuai kurikulum (kualitas konten LLM). Evaluasi ini memiliki sejumlah keterbatasan yang perlu diperhatikan dalam menginterpretasikan hasil. Pertama, pengujian kegunaan hanya dilakukan pada satu topik (\textit{Linked List}) sehingga belum merepresentasikan pengalaman pengguna pada topik-topik lain dengan tingkat kompleksitas berbeda. Kedua, jumlah responden pengujian kegunaan (5 orang) memenuhi ambang minimal menurut Nielsen (1993) untuk mengidentifikasi sebagian besar masalah kegunaan, namun tetap tergolong kecil untuk generalisasi statistik yang kuat. Ketiga, evaluasi kualitas konten LLM dilakukan oleh satu evaluator (peneliti sendiri) terhadap 15 soal pada 3 dari 10 topik kurikulum, sehingga meskipun rubrik penilaian telah terstruktur, penilaian tetap mengandung unsur subjektivitas dan belum mencakup \textit{inter-rater reliability}; cakupan topik yang dievaluasi juga belum merepresentasikan seluruh materi ASD yang diajarkan pada aplikasi.
+Secara keseluruhan, ketiga hasil evaluasi saling melengkapi dan menunjukkan bahwa aplikasi Teman Belajar ASD telah memenuhi seluruh kebutuhan fungsional (\textit{black box}), mudah dan nyaman digunakan oleh mahasiswa (\textit{usability}), serta menghasilkan konten pembelajaran dinamis yang akurat dan sesuai kurikulum (kualitas konten LLM). Evaluasi ini memiliki sejumlah keterbatasan yang perlu diperhatikan dalam menginterpretasikan hasil. Pertama, pengujian kegunaan hanya dilakukan pada satu topik (\textit{Linked List}) sehingga belum merepresentasikan pengalaman pengguna pada topik-topik lain dengan tingkat kompleksitas berbeda. Kedua, jumlah responden pengujian kegunaan (5 orang) memenuhi ambang minimal menurut Nielsen (1993) untuk mengidentifikasi sebagian besar masalah kegunaan, namun tetap tergolong kecil untuk generalisasi statistik yang kuat. Ketiga, evaluasi kualitas konten LLM dilakukan oleh satu evaluator (peneliti sendiri) terhadap 15 soal pada 3 dari 10 topik kurikulum, sehingga meskipun rubrik penilaian telah terstruktur, penilaian tetap mengandung unsur subjektivitas dan belum mencakup \textit{inter-rater reliability}. Cakupan topik yang dievaluasi juga belum merepresentasikan seluruh materi ASD yang diajarkan pada aplikasi.

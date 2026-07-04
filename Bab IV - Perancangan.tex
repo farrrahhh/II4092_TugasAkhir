@@ -117,7 +117,7 @@ Dengan demikian, seluruh \textit{use case} yang dirancang telah mencerminkan alu
     \label{fig:sd-pilih-topik}
 \end{figure}
 
-Diagram pada Gambar \ref{fig:sd-pilih-topik} menggambarkan alur pemilihan topik ASD sekaligus penegakan urutan \textit{guided learning}. Setelah \textit{user} memilih topik, \textit{frontend} meminta data progres melalui \texttt{GET /progress}. \textit{Backend} mengambil status tab tiap topik dari \textit{database}, lalu menegakkan urutan pembelajaran: materi $\rightarrow$ contoh $\rightarrow$ latihan $\rightarrow$ ringkasan. Jika tab yang ingin diakses sudah tersedia, sistem menampilkan tab tersebut; jika belum terbuka, sistem menguncinya dan menampilkan notifikasi kepada \textit{user}.
+Diagram pada Gambar \ref{fig:sd-pilih-topik} menggambarkan alur pemilihan topik ASD sekaligus penegakan urutan \textit{guided learning}. Setelah \textit{user} memilih topik, \textit{frontend} meminta data progres melalui \texttt{GET /progress}. \textit{Backend} mengambil status tab tiap topik dari \textit{database}, lalu menegakkan urutan pembelajaran: materi $\rightarrow$ contoh $\rightarrow$ latihan $\rightarrow$ ringkasan. Jika tab yang ingin diakses sudah tersedia, sistem menampilkan tab tersebut. Jika belum terbuka, sistem menguncinya dan menampilkan notifikasi kepada \textit{user}.
 
 \begin{figure}[H]
     \centering
@@ -279,12 +279,12 @@ Menyimpan daftar topik ASD beserta deskripsi dan tingkat kesulitan \\
 
 \texttt{materials} &
 \texttt{material\_id, topic\_id, content, generated\_by\_llm} &
-Menyimpan konten materi per topik; kolom \texttt{generated\_by\_llm} menandai sumber konten \\
+Menyimpan konten materi per topik, kolom \texttt{generated\_by\_llm} menandai sumber konten \\
 \hline
 
 \texttt{examples} &
 \texttt{example\_id, topic\_id, content, generated\_by\_llm} &
-Menyimpan contoh implementasi per topik; kolom \texttt{generated\_by\_llm} menandai sumber konten \\
+Menyimpan contoh implementasi per topik, kolom \texttt{generated\_by\_llm} menandai sumber konten \\
 \hline
 
 \texttt{exercises} &
@@ -294,7 +294,7 @@ Menyimpan soal latihan per topik, dapat dihasilkan oleh LLM \\
 
 \texttt{explanations} &
 \texttt{explanation\_id, exercise\_id, content, generated\_by\_llm} &
-Menyimpan pembahasan soal latihan; berelasi \textit{one-to-one} dengan \texttt{exercises} \\
+Menyimpan pembahasan soal latihan, berelasi \textit{one-to-one} dengan \texttt{exercises} \\
 \hline
 
 \texttt{user\_answers} &
@@ -304,7 +304,7 @@ Mencatat jawaban pengguna terhadap soal latihan beserta skor dan status kebenara
 
 \texttt{progress} &
 \texttt{progress\_id, user\_id, topic\_slug, materi, contoh, latihan, ringkasan, weak\_concepts, last\_accessed} &
-Menyimpan status penyelesaian tiap tahapan \textit{guided learning} per pengguna per topik; kolom \texttt{weak\_concepts} menyimpan daftar konsep lemah hasil evaluasi latihan untuk digunakan pada sesi adaptif berikutnya \\
+Menyimpan status penyelesaian tiap tahapan \textit{guided learning} per pengguna per topik, kolom \texttt{weak\_concepts} menyimpan daftar konsep lemah hasil evaluasi latihan untuk digunakan pada sesi adaptif berikutnya \\
 \hline
 
 \texttt{user\_performance} &
@@ -421,7 +421,7 @@ Tabel \ref{tab:api-chat} menyajikan spesifikasi \textit{endpoint} asisten percak
     \hline
     \textbf{Metode} & \textbf{\textit{Endpoint}} & \textbf{\textit{Body}} & \textbf{Fungsi} \\
     \hline
-    POST & \texttt{/api/chat/} \texttt{\{topic\_slug\}} & \texttt{pesan, riwayat[]} & Menghasilkan balasan kontekstual dari LLM berdasarkan pertanyaan pengguna dan materi topik yang aktif; mendukung riwayat percakapan multi-giliran \\
+    POST & \texttt{/api/chat/} \texttt{\{topic\_slug\}} & \texttt{pesan, riwayat[]} & Menghasilkan balasan kontekstual dari LLM berdasarkan pertanyaan pengguna dan materi topik yang aktif, mendukung riwayat percakapan multi-giliran \\
     \hline
     \end{tabular}
 \end{table}
