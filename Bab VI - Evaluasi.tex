@@ -358,22 +358,201 @@ Berdasarkan hasil pengujian pada Tabel \ref{tab:hasil-blackbox}, seluruh 18 sken
 
 \subsection{Hasil Pengujian Kegunaan}
 
-% TODO: isi hasil usability testing (skor SUS per responden, rata-rata, kategori) setelah pengujian selesai
+Pengujian kegunaan dilakukan terhadap 5 responden mahasiswa yang sedang atau telah menempuh mata kuliah Algoritma dan Struktur Data, sesuai kriteria yang telah ditetapkan pada bagian sebelumnya. Profil responden disajikan pada Tabel \ref{tab:profil-responden}.
+
+\begin{table}[H]
+\centering
+\caption{Profil Responden Pengujian Kegunaan}
+\label{tab:profil-responden}
+\begin{tabular}{|L{1cm}|L{3.6cm}|L{4cm}|L{1.6cm}|L{1.2cm}|}
+\hline
+\textbf{Kode} & \textbf{Nama} & \textbf{Asal Institusi} & \textbf{Angkatan} & \textbf{Umur} \\
+\hline
+R1 & Muhammad Zufar Dafy & Institut Teknologi Nasional & 2022 & 22 \\
+\hline
+R2 & Amira Ghina Nurfansepta & Universitas Brawijaya & 2021 & 22 \\
+\hline
+R3 & Muhammad Faiz Fahri & Universitas Padjadjaran & 2022 & 21 \\
+\hline
+R4 & Thea & Institut Teknologi Bandung & 2022 & 21 \\
+\hline
+R5 & Vieri & Institut Teknologi Bandung & 2021 & 24 \\
+\hline
+\end{tabular}
+\end{table}
+
+Seluruh responden merupakan mahasiswa yang sudah pernah menempuh mata kuliah Algoritma dan Struktur Data dan baru pertama kali menggunakan aplikasi Teman Belajar ASD.
+
+\subsubsection{Hasil \textit{Task-Based Usability Test}}
+
+Kelima responden diminta menyelesaikan tujuh tugas (T1-T7) pada topik \textit{Linked List} secara mandiri tanpa bantuan peneliti, sambil diamati waktu penyelesaian dan hambatan yang dialami. Rekapitulasi hasil observasi disajikan pada Tabel \ref{tab:hasil-usability-task}.
+
+\begin{table}[H]
+\centering
+\caption{Rekapitulasi Hasil \textit{Task-Based Usability Test}}
+\label{tab:hasil-usability-task}
+\begin{tabular}{|L{3.6cm}|L{2.2cm}|L{2.6cm}|L{2.6cm}|}
+\hline
+\textbf{Tugas} & \textbf{Jumlah Selesai} & \textbf{Tingkat Keberhasilan} & \textbf{Rata-rata Waktu (detik)} \\
+\hline
+T1 - Pilih Topik & 5/5 & 100\% & 10,2 \\
+\hline
+T2 - Materi & 5/5 & 100\% & 100,6 \\
+\hline
+T3 - Contoh & 5/5 & 100\% & 53,0 \\
+\hline
+T4 - Latihan & 5/5 & 100\% & 206,2 \\
+\hline
+T5 - Pembahasan & 5/5 & 100\% & 35,6 \\
+\hline
+T6 - Ringkasan & 5/5 & 100\% & 30,2 \\
+\hline
+T7 - Progres & 5/5 & 100\% & 12,4 \\
+\hline
+\textbf{Rata-rata Keseluruhan} & \textbf{5/5} & \textbf{100\%} & \textbf{64,0} \\
+\hline
+\end{tabular}
+\end{table}
+
+Berdasarkan Tabel \ref{tab:hasil-usability-task}, seluruh responden berhasil menyelesaikan ketujuh tugas dengan tingkat keberhasilan 100\% tanpa ada yang menyerah di tengah pengujian. Tugas T4 (Latihan) memiliki rata-rata waktu penyelesaian paling lama (206,2 detik) karena mencakup waktu tunggu proses \textit{generate} soal oleh LLM serta waktu pengerjaan dan pembacaan evaluasi, sedangkan T1 (Pilih Topik) dan T7 (Progres) paling cepat diselesaikan (di bawah 15 detik) karena hanya melibatkan satu kali navigasi.
+
+Meskipun seluruh tugas formal tercatat tanpa hambatan yang menghentikan penyelesaian, sesi \textit{think-aloud} dan wawancara pasca-tugas mengungkap beberapa catatan kegunaan yang bersifat minor:
+\begin{itemize}
+    \item Waktu tunggu \textit{generate} soal oleh LLM dirasakan cukup lama oleh beberapa responden (R1, R2, R5), meskipun dipahami sebagai konsekuensi dari pemrosesan AI.
+    \item Label tab "Contoh" sempat menimbulkan sedikit kebingungan awal karena dikira berupa deskripsi materi, bukan soal contoh beserta pembahasannya (R3).
+    \item Kotak jawaban pengguna dan kotak \textit{feedback} "jawaban tidak lengkap" pada fitur latihan menggunakan warna abu-abu yang serupa sehingga kurang mudah dibedakan (R4).
+    \item Validasi/penilaian jawaban oleh AI pada satu kasus dirasa terlalu ketat oleh salah satu responden (R5), yang berpendapat evaluasi seharusnya bisa dilakukan manusia untuk kasus tertentu.
+    \item Ukuran teks pada navigasi dirasa relatif kecil (R1).
+    \item Sebagian responden mengharapkan tambahan visualisasi/ilustrasi grafis untuk materi struktur data, terutama \textit{Linked List} (R3, R4).
+\end{itemize}
+
+Seluruh catatan tersebut bersifat perbaikan pengalaman pengguna (\textit{enhancement}) dan tidak menghalangi responden menyelesaikan alur \textit{guided learning} secara keseluruhan.
+
+\subsubsection{Hasil \textit{System Usability Scale} (SUS)}
+
+Setelah menyelesaikan \textit{task-based usability test}, kelima responden mengisi kuesioner SUS. Skor tiap responden dihitung sesuai ketentuan standar SUS (butir ganjil: skor jawaban dikurangi 1; butir genap: 5 dikurangi skor jawaban; jumlah seluruh butir dikali 2,5). Hasil perhitungan skor SUS disajikan pada Tabel \ref{tab:hasil-sus}.
+
+\begin{table}[H]
+\centering
+\caption{Hasil Skor \textit{System Usability Scale} (SUS)}
+\label{tab:hasil-sus}
+\begin{tabular}{|L{1cm}|L{3.5cm}|L{2.5cm}|L{3cm}|}
+\hline
+\textbf{Kode} & \textbf{Responden} & \textbf{Skor SUS} & \textbf{Kategori} \\
+\hline
+R1 & Responden 1 & 87,5 & \textit{Excellent} \\
+\hline
+R2 & Responden 2 & 97,5 & \textit{Excellent} \\
+\hline
+R3 & Responden 3 & 85,0 & \textit{Excellent} \\
+\hline
+R4 & Responden 4 & 95,0 & \textit{Excellent} \\
+\hline
+R5 & Responden 5 & 100,0 & \textit{Excellent} \\
+\hline
+\textbf{Rata-rata} & & \textbf{93,0} & \textbf{\textit{Excellent}} \\
+\hline
+\end{tabular}
+\end{table}
+
+Rata-rata skor SUS yang diperoleh adalah 93,0, yang berdasarkan Tabel \ref{tab:sus} berada pada kategori \textit{Excellent} ($> 80{,}3$). Seluruh responden secara individu juga memperoleh skor pada kategori \textit{Excellent}, dengan skor terendah 85,0 (R3) dan skor tertinggi 100,0 (R5). Hasil ini jauh melampaui indikator keberhasilan minimal, yaitu skor SUS $\geq 68$ (kategori \textit{Good}), sehingga dapat disimpulkan bahwa aplikasi Teman Belajar ASD sangat mudah digunakan oleh mahasiswa sebagai media pembelajaran mandiri.
 
 \subsection{Hasil Evaluasi Kualitas Konten LLM}
 
-% TODO: isi setelah evaluasi kualitas konten selesai dilakukan.
-% Isi dengan:
-% 1. Tabel hasil penilaian per soal (15 soal × 3 kriteria × skor 1-3)
-% 2. Rata-rata persentase kesesuaian per kriteria dan keseluruhan
-% 3. Narasi temuan (topik mana yang skornya tinggi/rendah, pola kesalahan LLM jika ada)
+Evaluasi kualitas konten LLM dilakukan terhadap 15 soal referensi yang terbagi ke dalam tiga topik, yaitu \textit{Linked List}, \textit{Tree}, dan \textit{Graph}, masing-masing 5 soal, menggunakan fitur Soal Sendiri pada aplikasi. Setiap keluaran evaluasi LLM dinilai menggunakan rubrik pada Tabel \ref{tab:rubrik-llm} dengan skor 1-3 untuk tiap kriteria. Hasil penilaian selengkapnya disajikan pada Tabel \ref{tab:hasil-llm}.
+
+\begin{longtable}{|L{0.6cm}|L{1.6cm}|L{1.8cm}|L{1.3cm}|L{1.3cm}|L{1.3cm}|L{1.8cm}|}
+\caption{Hasil Penilaian Kualitas Konten LLM}
+\label{tab:hasil-llm}\\
+\hline
+\textbf{No} & \textbf{Kode Soal} & \textbf{Topik} & \textbf{K1} & \textbf{K2} & \textbf{K3} & \textbf{Skor (\%)} \\
+\hline
+\endfirsthead
+
+\caption[]{Hasil Penilaian Kualitas Konten LLM (lanjutan)}\\
+\hline
+\textbf{No} & \textbf{Kode Soal} & \textbf{Topik} & \textbf{K1} & \textbf{K2} & \textbf{K3} & \textbf{Skor (\%)} \\
+\hline
+\endhead
+
+\hline
+\multicolumn{7}{r}{\textit{Bersambung ke halaman berikutnya}}\\
+\endfoot
+
+\hline
+\endlastfoot
+
+1 & LL-01 & Linked List & 3 & 3 & 3 & 100 \\
+\hline
+2 & LL-02 & Linked List & 3 & 3 & 3 & 100 \\
+\hline
+3 & LL-03 & Linked List & 3 & 3 & 3 & 100 \\
+\hline
+4 & LL-04 & Linked List & 3 & 3 & 2 & 90 \\
+\hline
+5 & LL-05 & Linked List & 3 & 3 & 3 & 100 \\
+\hline
+6 & TR-01 & Tree & 3 & 3 & 2 & 90 \\
+\hline
+7 & TR-02 & Tree & 3 & 3 & 3 & 100 \\
+\hline
+8 & TR-03 & Tree & 3 & 3 & 2 & 90 \\
+\hline
+9 & TR-04 & Tree & 3 & 3 & 2 & 90 \\
+\hline
+10 & TR-05 & Tree & 3 & 3 & 3 & 100 \\
+\hline
+11 & GR-01 & Graph & 3 & 3 & 3 & 100 \\
+\hline
+12 & GR-02 & Graph & 3 & 3 & 3 & 100 \\
+\hline
+13 & GR-03 & Graph & 3 & 3 & 3 & 100 \\
+\hline
+14 & GR-04 & Graph & 3 & 3 & 3 & 100 \\
+\hline
+15 & GR-05 & Graph & 3 & 3 & 3 & 100 \\
+\hline
+\textbf{Rata-rata} & & & \textbf{3,00} & \textbf{3,00} & \textbf{2,73} & \textbf{97,33} \\
+\hline
+\end{longtable}
+
+Rata-rata persentase kesesuaian per kriteria dan keseluruhan dirangkum pada Tabel \ref{tab:ringkasan-llm}.
+
+\begin{table}[H]
+\centering
+\caption{Ringkasan Rata-rata Persentase Kesesuaian Konten LLM}
+\label{tab:ringkasan-llm}
+\begin{tabular}{|L{7cm}|L{3cm}|}
+\hline
+\textbf{Kriteria} & \textbf{Persentase (\%)} \\
+\hline
+K1 - Kebenaran Konseptual & 100,00 \\
+\hline
+K2 - Kesesuaian Kurikulum & 100,00 \\
+\hline
+K3 - Kejelasan dan Tidak Menyesatkan & 91,11 \\
+\hline
+\textbf{Rata-rata Keseluruhan} & \textbf{97,33} \\
+\hline
+\end{tabular}
+\end{table}
+
+Ditinjau per topik, rata-rata persentase kesesuaian \textit{Graph} adalah 100\%, \textit{Linked List} 98\%, dan \textit{Tree} 94\%. Seluruh 15 soal referensi memperoleh skor K1 dan K2 penuh (3/3), yang berarti LLM tidak pernah memberikan penilaian yang secara konseptual salah maupun di luar cakupan kurikulum ASD pada seluruh kasus uji.
+
+Penurunan skor hanya terjadi pada kriteria K3 (Kejelasan dan Tidak Menyesatkan) pada 4 dari 15 soal, yaitu LL-04, TR-01, TR-03, dan TR-04, dengan pola kesalahan yang serupa: LLM meminta elaborasi atau contoh tambahan yang sebenarnya berada di luar cakupan jawaban referensi (dan setara dengan tingkat kedalaman jawaban mahasiswa yang dinilai), sehingga \textit{feedback} yang diberikan terkesan lebih ketat/mendalam dibandingkan standar referensi, bukan karena mengandung kesalahan konsep atau miskonsepsi. Pola ini paling banyak ditemukan pada topik \textit{Tree} (3 dari 5 soal), sementara topik \textit{Graph} tidak menunjukkan kasus serupa sama sekali (skor sempurna pada seluruh soal).
+
+Berdasarkan hasil tersebut, rata-rata persentase kesesuaian keseluruhan sebesar 97,33\% jauh melampaui indikator keberhasilan minimal 70\%, sehingga evaluasi kualitas konten LLM dinyatakan \textbf{lulus}. Konten yang dihasilkan oleh LLM, baik dalam bentuk soal latihan maupun evaluasi jawaban pengguna, terbukti relevan, akurat, dan konsisten dengan kurikulum ASD, dengan satu catatan bahwa tingkat "kekritisan" evaluasi LLM perlu dikalibrasi ulang agar tidak melebihi standar kedalaman yang diharapkan dari mahasiswa.
 
 \section{Pembahasan Hasil Evaluasi}
 
-% TODO: isi pembahasan hasil evaluasi setelah data terkumpul.
-% Bahas:
-% 1. Ringkasan black box: semua 18 skenario lulus → apa artinya
-% 2. Ringkasan SUS: skor X → kategori Y → apakah memenuhi indikator keberhasilan (≥68)
-% 3. Ringkasan kualitas konten LLM: rata-rata kesesuaian Z% → apakah memenuhi threshold 70%
-% 4. Keterkaitan antar hasil: apakah fungsionalitas yang lulus black box juga didukung kualitas konten yang baik
-% 5. Keterbatasan evaluasi dan implikasinya
+Bagian ini membahas keterkaitan antar hasil dari ketiga tahap evaluasi yang telah dilakukan, yaitu pengujian \textit{black box}, pengujian kegunaan, dan evaluasi kualitas konten LLM, guna menjawab kedua rumusan masalah penelitian ini secara menyeluruh.
+
+Hasil pengujian \textit{black box} menunjukkan bahwa seluruh 18 skenario uji dari 14 fitur fungsional dinyatakan lulus (Tabel \ref{tab:hasil-blackbox}), yang berarti seluruh kebutuhan fungsional yang ditetapkan pada Bab III, mulai dari alur \textit{guided learning}, mekanisme penguncian tab, integrasi LLM untuk \textit{generate} konten, hingga \textit{adaptive learning engine} berdasarkan \textit{weak concepts}, telah berjalan sebagaimana mestinya dari sisi fungsional. Namun demikian, pengujian \textit{black box} hanya memverifikasi kebenaran fungsional (apakah sistem menghasilkan keluaran sesuai spesifikasi) dan tidak menilai kualitas isi maupun pengalaman penggunaan keluaran tersebut, sehingga diperlukan dua evaluasi lanjutan yang saling melengkapi.
+
+Pengujian kegunaan menunjukkan bahwa seluruh responden (5 dari 5) berhasil menyelesaikan seluruh tugas dengan tingkat keberhasilan 100\%, dan skor SUS rata-rata sebesar 93,0 berada pada kategori \textit{Excellent}, jauh di atas indikator keberhasilan minimal 68 (kategori \textit{Good}). Hal ini mengonfirmasi bahwa alur \textit{guided learning} yang telah diverifikasi lulus pada pengujian \textit{black box} juga dapat diikuti dengan mudah, efisien, dan memuaskan oleh mahasiswa dalam praktiknya. Meskipun demikian, wawancara pasca-tugas mengungkap sejumlah catatan perbaikan yang tidak tertangkap oleh pengujian \textit{black box} maupun tercermin pada skor SUS, seperti kebutuhan visualisasi tambahan pada materi struktur data, waktu tunggu \textit{generate} konten oleh LLM yang dirasa cukup lama, serta persepsi bahwa validasi jawaban oleh AI pada beberapa kasus terlalu ketat.
+
+Evaluasi kualitas konten LLM menunjukkan rata-rata persentase kesesuaian keseluruhan sebesar 97,33\%, jauh melampaui \textit{threshold} 70\% yang ditetapkan sebagai indikator keberhasilan, dengan skor sempurna pada kriteria Kebenaran Konseptual (K1) dan Kesesuaian Kurikulum (K2). Temuan ini menjawab rumusan masalah kedua penelitian, yaitu bahwa LLM mampu menghasilkan konten pembelajaran (soal latihan dan evaluasi jawaban) yang relevan, akurat, dan konsisten dengan kurikulum ASD tanpa menimbulkan miskonsepsi yang signifikan. Penurunan skor yang teramati pada kriteria Kejelasan dan Tidak Menyesatkan (K3), khususnya pada topik \textit{Tree}, konsisten dengan pola yang sama, yaitu LLM cenderung mengevaluasi lebih ketat/mendalam dibandingkan standar jawaban referensi.
+
+Keterkaitan yang menarik ditemukan antara hasil pengujian kegunaan dan evaluasi kualitas konten LLM: keduanya secara independen mengidentifikasi isu yang sama, yaitu kecenderungan LLM untuk melakukan validasi/evaluasi jawaban secara lebih ketat dari yang diharapkan pengguna maupun standar referensi (disebutkan langsung oleh salah satu responden pengujian kegunaan, dan teridentifikasi pada 4 dari 15 soal pada evaluasi kualitas konten). Konvergensi temuan dari dua metode evaluasi yang berbeda ini memperkuat validitas temuan tersebut dan menunjukkan bahwa kalibrasi tingkat "kekritisan" \textit{prompt} evaluasi LLM merupakan area perbaikan prioritas untuk pengembangan aplikasi selanjutnya, di luar aspek fungsional dan kebenaran konseptual yang sudah terbukti baik.
+
+Secara keseluruhan, ketiga hasil evaluasi saling melengkapi dan menunjukkan bahwa aplikasi Teman Belajar ASD telah memenuhi seluruh kebutuhan fungsional (\textit{black box}), mudah dan nyaman digunakan oleh mahasiswa (\textit{usability}), serta menghasilkan konten pembelajaran dinamis yang akurat dan sesuai kurikulum (kualitas konten LLM). Evaluasi ini memiliki sejumlah keterbatasan yang perlu diperhatikan dalam menginterpretasikan hasil. Pertama, pengujian kegunaan hanya dilakukan pada satu topik (\textit{Linked List}) sehingga belum merepresentasikan pengalaman pengguna pada topik-topik lain dengan tingkat kompleksitas berbeda. Kedua, jumlah responden pengujian kegunaan (5 orang) memenuhi ambang minimal menurut Nielsen (1993) untuk mengidentifikasi sebagian besar masalah kegunaan, namun tetap tergolong kecil untuk generalisasi statistik yang kuat. Ketiga, evaluasi kualitas konten LLM dilakukan oleh satu evaluator (peneliti sendiri) terhadap 15 soal pada 3 dari 10 topik kurikulum, sehingga meskipun rubrik penilaian telah terstruktur, penilaian tetap mengandung unsur subjektivitas dan belum mencakup \textit{inter-rater reliability}; cakupan topik yang dievaluasi juga belum merepresentasikan seluruh materi ASD yang diajarkan pada aplikasi.

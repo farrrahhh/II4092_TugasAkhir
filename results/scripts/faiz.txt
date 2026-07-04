@@ -1,0 +1,106 @@
+
+## Transkrip Pengujian Usability Aplikasi
+
+### Sesi Pembukaan (Pengantar & Instruksi)
+
+**Farah:** Halo, perkenalkan nama saya Farah. Terima kasih sudah bersedia meluangkan waktu. Kita sedang menguji sebuah aplikasi bernama teman belajar algoritma dan struktur data. Nah, ini adalah bagian dari tugas akhir saya. Yang penting untuk digarisbawahi, yang sedang diuji itu adalah aplikasinya, bukan Anda. Jadi jika Anda mengalami kesulitan, tidak masalah, justru itu menjadi masukan untuk saya. Penelitian ini akan berjalan selama 15 sampai 30 menit. Selama mengerjakan, silakan kerjakan sesuai dengan instruksi saya. Saya akan mengamati dan mencatat, tapi saya tidak akan membantu. Jadi ketika Anda mengalami kesulitan, Anda bisa bilang saja. Apakah ada pertanyaan?
+
+**Faiz:** Sudah jelas.
+
+### Sesi Pengujian Aplikasi (Task)
+
+**Farah:** Oke, baik, terima kasih. Selanjutnya kita bisa *share screen* dan Anda bisa menggunakan aplikasi ini. Untuk tes pertama, silakan daftar akun terlebih dahulu.
+
+**Faiz:** Baik. Daftar akun... *[Faiz melakukan proses pendaftaran]*
+
+**Farah:** Oke, baik. Jadi tadi untuk halaman *login* dan daftar itu tidak termasuk ke dalam kriteria dalam penelitian ini. Jadi *email* yang diverifikasi itu tidak benar sepenuhnya tidak masalah. Oke, tes berikutnya adalah, silakan masuk ke halaman topik dan pilih topik *List Linear*.
+
+**Faiz:** Oke. *List Linear*. Iya.
+
+**Farah:** *List Linear*, oke. Silakan mulai belajar. Setelah Anda masuk ke halaman tersebut, silakan baca materinya dan tandai selesai. Tidak perlu dibaca semua, tidak masalah.
+
+**Faiz:** *[Membuka materi]* Oke, tandai selesai.
+
+**Farah:** Iya. Apakah Anda mengalami kesulitan ketika melakukan ini?
+
+**Faiz:** Tidak, ini di sebelah kiri sudah ada panduannya juga kan, mau... ini sedang di *section* mana dan enggak ada banyak lagi.
+
+**Farah:** Oke, baik, terima kasih. Selanjutnya silakan buka bagian contoh dan baca contoh, kemudian tandai selesai apabila sudah.
+
+**Faiz:** Oke. *[Membuka bagian contoh]* Oh, ini pembahasannya. Iya. Oke.
+
+**Farah:** Oke, apakah Anda mengalami kesulitan atau ada masukan terkait fitur ini?
+
+**Faiz:** Ini contoh, ya? Iya, contoh. Tadi bingung aja sih pas masuk contoh, ini enggak ngeh ini langsung soalnya. Ternyata ini langsung soal dan ini juga langsung ada pembahasannya juga.
+
+**Farah:** Iya. Apakah ada masukan atau kendala, atau menurut Anda sudah oke?
+
+**Faiz:** Kalau bisa ada penanda yang lebih jelas kalau misalkan ini udah langsung contoh. Ini kan kecil gini ya soalnya. Oh, *I see*.
+
+**Farah:** Oke, baik, terima kasih atas masukannya. Selanjutnya masuk ke bagian latihan dan coba kerjakan latihan yang ada. Soal ini berasal dari AI, jadi AI akan men-*generate* soal ini. Anda bisa melakukan ganti soal.
+
+**Faiz:** Ganti soal?
+
+**Farah:** Iya. Dan AI akan men-*generate* soal baru untuk Anda. Kemudian silakan kerjakan soal sesuai dengan apa yang Anda pahami, tidak perlu benar. Nanti baca evaluasi yang diberikan oleh AI.
+
+**Faiz:** Oke. Kepanjangan ya, ganti soal aja. *[Melakukan ganti soal dan mengerjakan]* Jelasin... Ini dinilai, kan?
+
+**Farah:** Oke. Ini langsung dinilai dengan AI, ya.
+
+**Faiz:** Oke. *[Membaca hasil evaluasi]* Langsung sudah benar, oke. Tidak masalah. Jawaban sangat minim, oke.
+
+**Farah:** Silakan dibaca dan tandai selesai apabila sudah, dan tolong berikan *feedback* terkait evaluasi dan soal yang diberikan oleh AI, apakah ini membantu atau tidak.
+
+**Faiz:** *[Membaca evaluasi]* Tandai selesai.
+
+**Farah:** Iya. Oke, jadi bagaimana pendapat Anda terkait fitur ini?
+
+**Faiz:** Menurut saya ini sangat bagus untuk latihan soal dan mendalami *knowledge* tentang apa yang sedang dipelajari, ya. Karena ini langsung dicelupin langsung dan kita disuruh kasih pemahaman kita sendiri tentang apa yang udah kita pelajari. Dan kalau misalkan salah, langsung dikoreksi, ya. Dan ini juga udah oke banget sih karena langsung di-*point out* juga apa yang harus... bagian mana yang harus kita *improve* dari jawaban kita gitu.
+
+**Farah:** Oke, baik. Terima kasih atas *feedback*-nya. Selanjutnya bagian ringkasan. Silakan baca bagian ringkasan dan tandai selesai apabila sudah.
+
+**Faiz:** *[Membuka bagian ringkasan]* Oke, baik.
+
+**Farah:** Apa pendapat Anda terkait fitur ini?
+
+**Faiz:** Menurut saya ringkasannya ini udah oke. Cuma mungkin ini kan langsung mendalam banget, ya. Mungkin bisa lebih apa... dari mendasar dulu. Dan di sini saya juga tidak melihat ada visualisasi. Menurut saya untuk materi ini akan lebih mudah dipahami jika ada visualisasi. Tapi di sini yang saya lihat hanya teks dan banyak istilah-istilah asing yang mungkin orang awam tidak ketahui gitu.
+
+**Farah:** Oh, mengerti. Iya. Terima kasih atas masukannya. Selanjutnya beralih ke halaman progres dan lihat progres belajar Anda terkait *List Linear*.
+
+**Faiz:** 10%. Progres. Oke.
+
+**Farah:** Oke, bisa Anda lihat bahwa progres Anda telah 100%, berarti Anda telah menyelesaikan materi *List Linear*. Untuk pengujian seluruh *task*-nya sudah bisa berhasil Anda selesaikan. Selanjutnya adalah pengisian formulir. Jadi saya akan kirimkan formulir kepada Anda dan Anda bisa isi terlebih dahulu.
+
+**Faiz:** *[Mengisi formulir evaluasi]* Oke, baik.
+
+**Farah:** Terima kasih untuk pengisian form-nya.
+
+### Sesi Wawancara (Post-Test) & Penutup
+
+**Farah:** Selanjutnya, ini adalah pertanyaan tambahan. Jadi saya ingin bertanya lebih lanjut. Secara umum, bagaimana kesan Anda menggunakan aplikasi ini?
+
+**Faiz:** Kesan saya, ini aplikasi menarik, ya. Ini aplikasi teman belajar untuk belajar algoritma dan struktur data, khususnya untuk mahasiswa-mahasiswa informatika yang dapet mata kuliah ini. Menurut saya ini aplikasi yang bakalan bisa membantu mahasiswa-mahasiswa tersebut. Khususnya dari bagian *engagement*, ya. Itu karena langsung ada bagian pertanyaannya yang bisa langsung menguji mahasiswa tersebut dan bisa langsung membantu mahasiswa tersebut kurangnya di bagian mana gitu.
+
+**Farah:** Oke, baik, terima kasih. Selanjutnya, untuk hal-hal yang perlu diperbaiki dari aplikasi ini, apa saja, ya?
+
+**Faiz:** Pertama menurut saya di bagian visualisasi, ya. Saya rasa untuk materi struktur data khususnya itu akan lebih mudah dipahami jika ada banyak visualisasi, khususnya tadi di *linked list*, ya. Tadi saya kurang melihat visualisasinya.
+
+**Farah:** Oke. Apa bagian yang menurut Anda paling menarik atau yang paling Anda suka?
+
+**Faiz:** Menurut saya yang paling menarik di fitur AI-nya, ya. Tadi misalkan kita kurang puas dengan pertanyaannya, atau jika merasa pertanyaannya kegampangan nih, kita bisa langsung ganti soal ke soal yang menurut kita *challenging* gitu. Di bagian yang tidak sukanya, menurut saya di bagian penjelasan, sih, ya. Di bagian penjelasan itu menurut saya udah langsung terlalu mendalam secara bahasa, dan sebenarnya secara visual itu tidak ada masalah. Cuman masalah di kontennya aja, itu belum dari dasar, ya. Berarti harusnya benar.
+
+**Farah:** Oke, baik. Pertanyaan terakhir, kalau ada yang bisa diubah dari aplikasi ini, apa yang bisa diubah?
+
+**Faiz:** Menurut saya pertama, adakan fitur *night mode*.
+
+**Farah:** Oke.
+
+**Faiz:** Dan yang kedua, saya akan tambahkan visualisasi aja sih.
+
+**Farah:** Oke, baik. Terima kasih banyak sudah membantu saya dalam mengerjakan tugas akhir ini. Semoga saya bisa lulus tepat waktu.
+
+**Faiz:** Amin. Amin.
+
+**Farah:** Terima kasih banyak, Faiz. Selamat malam.
+
+**Faiz:** Oke, selamat malam.

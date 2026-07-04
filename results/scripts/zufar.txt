@@ -1,0 +1,107 @@
+### 1. Pendahuluan & Persiapan
+
+**Farah:** Halo, terima kasih sudah bersedia meluangkan waktu Anda. Nama saya Farah Aulia, Anda bisa memanggil saya Farah. Saat ini saya sedang menguji sebuah aplikasi, yaitu teman belajar algoritma dan struktur data sebagai bagian dari tugas akhir saya. Nah, yang perlu digarisbawahi di sini yang kita akan uji adalah aplikasinya, bukan kamu. Jadi kalau nanti ada bagian yang membingungkan atau sulit ditemukan, itu adalah masukan bagi saya, jadi bukan kesalahan kamu. Kemudian sesi ini akan berlangsung kurang lebih sekitar 30 menit, terdiri dari kamu mengerjakan beberapa tugas di aplikasi, lalu mengisi kuesioner singkat. Selama mengerjakan tugas, saya meminta kamu untuk berpikir keras atau *think aloud*. Jadi coba ucapkan apa yang kamu pikirkan atau cari saat menggunakan aplikasi. Misalnya, "Saya cari tombol ini di sini karena biasanya ada di pojok kanan atas," atau "Saya bingung nih, harus klik yang mana." Enggak perlu dijawab dengan benar, saya cuma perlu tahu apa yang kamu pikirkan. Saya akan mengamati dan mencatat, tapi saya tidak akan membantu selama pengerjaan tugas. Itu memang dari bagian dari pengujian. Kalau kamu benar-benar *stuck*, kamu boleh bilang "Saya menyerah" dan kita lanjut ke tugas berikutnya. Sebelum itu, apakah ada pertanyaan untuk memulai?
+
+**Zufar:** Oke, cukup ya, Mbak.
+
+**Farah:** Oke, terima kasih. Baik karena saya rasa tidak ada pertanyaan, kita bisa masuk ke sesi pengujian. Saya izin untuk mengambil HP saya terlebih dahulu. Oke. Selanjutnya coba kamu *share screen* ke *link* yang sudah saya berikan sebelumnya terkait *website* saya.
+
+---
+
+### 2. Sesi Pengujian Aplikasi (Usability Testing)
+
+**Zufar:** Kayak gini, Mbak?
+
+**Farah:** Bentar ya, Mas. Sepertinya nge-*lag*. Oke, ya benar seperti itu, Mas. Nah, untuk tugas pertama, silakan daftar terlebih dahulu.
+
+**Zufar:** Ini biasanya buat tombol daftar tuh pasti di bawah tombol *login* ya masuk umumnya. Di sini jelas, terus... nama lengkap...
+
+**Farah:** Oke, baik. Terima kasih. Jadi saya izin menjelaskan, ini adalah halaman utama ketika Anda selesai melakukan pendaftaran. Berikutnya, coba lakukan untuk mencari topik *linked list* di *website* ini. Saya mulai dari sekarang.
+
+**Zufar:** Cari topik ya... Oke, ini buat navigasinya biasanya di atas ya emang paling gampang dilihat juga. Oke. Udah, udah dapet topiknya.
+
+**Farah:** Oh iya, silakan masuk ke *linked list* ya.
+
+**Zufar:** Gimana, Mbak?
+
+**Farah:** *Linked list*, *linked list*.
+
+**Zufar:** Oh, *list* linear itu.
+
+**Farah:** Oke, baik. Setelah itu, coba baca halaman materi yang ditampilkan lalu tandai sebagai selesai.
+
+**Zufar:** Ini saya langsung ceritain baca aja dulu deh. Oke buat tombol selesainya di sini ya, kelihatan kok Mbak.
+
+**Farah:** Oke, terima kasih. Berikutnya masuk ke contoh dan baca bagian contohnya. Setelah itu tekan tombol selesai apabila sudah. Selanjutnya kita masuk ke latihan. Di sini latihan ada soal dari AI dan soal sendiri. Jadi soal dari AI ini, AI akan men-*generate* soal dan akan menampilkan kepada Anda, dan dia akan mengevaluasi secara otomatis jawaban Anda. Nah, itu mungkin bisa dikerjakan dan berikan... dan kemudian baca evaluasi yang diberikan. Bisa kerjakan soal satu aja terlebih dahulu.
+
+**Zufar:** Ini kalau lihat ke belakang lagi bisa nggak ya, Mas? *(Melihat layar)*
+
+**Farah:** Jawab ngawur aja nggak apa-apa, aku tidak menilai kamu bisa atau tidak. Sebisa kamu aja.
+
+**Zufar:** Oke, ini misal saya jawab... pasti kurang paham gitu nah.
+
+**Farah:** Hahaha, gila kamu ngasih kurang paham. Bisa-bisa ya ngasih kurang paham. Mending kamu ngawur dulu kayak misal nih, "Jelaskan perbedaan antara *list* linear biasa..." kalau *list* linear biasa mungkin kayak pointernya cuman satu, kalau *double linked list* dia bisa ke belakang ke depan gitu.
+
+**Zufar:** Biasa pointernya satu, sedangkan *double list* pointernya dua. Untuk...
+
+**Farah:** Aduh aku harus ngedit video ini anjir gara-gara omongan kita hahaha.
+
+**Zufar:** *Double linked list* lebih diuntungkan ketika... diperlukan perbandingan antar *value* dalam *list* dan perlu komputasi cepat. Terus gimana nih? Nilai soal ini ya Mbak?
+
+**Farah:** Iya. Iya benar.
+
+**Zufar:** Jawaban saya betul atau tidak. Wah nilainya 55. "Penjelasan lebih mendalam tentang perbedaan kedua struktur..." Oh...
+
+**Farah:** Oke, setelah itu coba tekan tandai selesai dan masuk ke... Setelah itu tekan tandai selesai dan coba Anda buka *tab* ringkasan dan selesaikan alur belajar untuk topik *list* linear ini.
+
+**Zufar:** Oke, berarti ini beresin dulu atau langsung ringkasan aja?
+
+**Farah:** Ringkasan aja. Dan tandai selesai. Oke, baik, terima kasih. Oke terakhir, coba akses halaman progres belajar dan cek status penyelesaian topik *linked list*.
+
+**Zufar:** Oke ini buatnya tadi kan kita pindah... pindah menu lagi ya berarti kita ke navigasi atas, progres. Ini ya, jelas. Terus tadi apa ya Mbak?
+
+**Farah:** *Link list*. *List* linear.
+
+**Zufar:** Linear ya. Tadi udah ya ditandain.
+
+**Farah:** Ya, kita sudah melihat bahwa *list* linear telah selesai dipelajari. Oke saya rasa itu adalah semua tugas sudah selesai.
+
+---
+
+### 3. Sesi Kuesioner (SUS) & Debriefing
+
+**Farah:** Sekarang saya akan kirimkan *link* Google Form berisi 10 pernyataan singkat tentang pengalamanmu menggunakan aplikasi ini. Isi berdasarkan kesan pertamamu, nggak perlu dipikir terlalu lama, dan mohon diisi dulu sebelum kita ngobrol supaya jawabannya murni dari pengalamanmu sendiri, bukan hasil diskusi kita. Itu tadi *link*-nya sudah saya kirim di WhatsApp yang Google Form tadi, silakan diisi.
+
+**Zufar:** Ini udah saya buka ya *link*-nya. Ini saya perlu ngeluarin pikiran saya juga ya saat ngisi ya?
+
+**Farah:** Ah tidak perlu, tidak perlu. Silakan isi sesuai pengalaman Anda.
+
+*(Jeda saat Zufar mengisi kuesioner)*
+
+**Farah:** Oke, baik, terima kasih setelah mengisi kuesioner SUS-nya. Oke, selanjutnya kita masuk ke *debriefing*. Secara umum bagaimana kesan kamu memakai aplikasi ini?
+
+**Zufar:** Buat aplikasi ini cukup jelas ya buat tujuan aplikasinya apa gitu. Jadi secara UI itu berarti udah menggambarkan banget lah ya si aplikasi ini tentang apa. Terus *user friendly* juga, ini udah mengikuti standar juga menurut saya, maksudnya udah seperti aplikasi pada umumnya ya jadi pembiasaannya nggak terlalu banyak gitu. Kita udah langsung familiar gitu ya. Seperti itu. Terus mungkin cukup kaget ya sama fiturnya, soalnya bagus gitu Mbak.
+
+**Farah:** Oh makasih, makasih Mas. Oke lanjut, apa menurutmu bagian yang paling membingungkan atau susah digunakan? Dan apa sarannya?
+
+**Zufar:** Susah digunakan ya? Menurut saya sih udah cukup *user friendly* semua sih ya Mbak, udah jelas semua gitu. Enggak ada yang apa ya, yang menyulitkan gitu ya Mbak. Gitu sih.
+
+**Farah:** Kalau ada hal yang ingin diubah atau diperbaiki apa ya?
+
+**Zufar:** Mungkin saya boleh liat lagi ya?
+
+**Farah:** Boleh Mas, boleh, dieksplor lagi boleh Mas, saya tunggu juga boleh Mas.
+
+**Zufar:** Paling menurut saya sebenarnya udah untuk peletakan lokasi udah bagus banget ya Mbak. Paling ini aja sih Mbak, *font*-nya ya paling. Biasanya kalau seingat saya tuh biasanya lebih gede gitu loh, gitu biar lebih gampang dipencet gitu.
+
+**Farah:** Oh oke Mas, makasih, sangat membantu untuk *feedback*-nya. Oke, mungkin *last question*. Tadi soal *font*, mungkin ada lagi yang lain?
+
+**Zufar:** Enggak ya, *font* ini aja bagian navigasinya aja sih Mbak yang kurang gede gitu menurut saya.
+
+**Farah:** Oke. Untuk yang fitur yang paling disuka apa Mas?
+
+**Zufar:** Yang tadi AI sih Mbak. Soal AI sih menurut saya. Ini saya boleh lihat lagi ya sini. Soalnya tadi si bahasanya kan berdasarkan jawaban saya ya Mbak. Jadi soalnya kalau kita ngerjain, maksudnya kan sebenarnya latihan-latihan soal gini udah biasa ya Mbak, udah banyak gitu. Cuman kan pasti pembahasannya tuh ngikutin dari berdasarkan soalnya gitu. Sedangkan ini karena ada AI-nya jadi berdasarkan jawaban kita gitu sih pembahasannya.
+
+**Farah:** Oke, mantap. Oke terima kasih Mas. Saya rasa untuk pengujiannya cukup sampai sini. Ini sangat berarti untuk menyelesaikan tugas akhir saya. Selamat malam Mas.
+
+**Zufar:** Ya, selamat malam juga Mbak.

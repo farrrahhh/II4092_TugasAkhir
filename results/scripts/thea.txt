@@ -1,0 +1,137 @@
+
+
+### 1. Pendahuluan & Persiapan
+
+**Farah:** Halo, selamat malam! Perkenalkan nama saya Farah. Terima kasih sudah bersedia meluangkan waktu Anda. Saya sedang menguji sebuah aplikasi bernama teman belajar algoritma dan struktur data. Ini adalah bagian dari tugas akhir saya. Yang penting untuk digarisbawahi, yang sedang diuji adalah aplikasinya, bukan kamu. Jadi kalau nanti ada bagian yang membingungkan atau sulit ditemukan, itu justru menjadi masukan bagi saya, dan bukan kesalahan Anda. Nah, saat mengerjakan, saya akan mengamati dan mencatat, tapi saya tidak akan membantu selama pengerjaan. Itu menjadi bagian dari pengujian. Kalau kamu benar-benar *stuck*, kamu boleh bilang untuk menyerah dan kita akan lanjut ke tugas berikutnya. Apakah ada pertanyaan sebelum kita mulai?
+
+**Thea:** Aman-aman. Nggak ada.
+
+**Farah:** Oke. Baik, terima kasih. E silakan buka *website* yang saya kirim di WhatsApp sebelumnya dan silakan lakukan *share screen* untuk *website* tersebut.
+
+**Thea:** Udah buka.
+
+**Farah:** E silakan *share screen*.
+
+**Thea:** Oh iya ya. Udah. Udah keliatan nggak?
+
+**Farah:** Oke, sudah terlihat. E silakan lakukan pendaftaran terlebih dahulu.
+
+---
+
+### 2. Sesi Pengujian Aplikasi (Usability Testing)
+
+*(Thea mencoba mendaftar/login)*
+
+**Thea:** Loh, ini kenapa Far?
+
+**Farah:** Emm... Coba kata sandinya.
+
+**Thea:** Oke, oke, oke.
+
+**Farah:** Oke, baik tidak masalah. Jadi sebenarnya daftar dan *login* itu tidak tidak termasuk dalam pengujian saya, jadi e itu tidak termasuk ke dalam e pengujian untuk itu. Nah, mari kita mulai untuk pengujiannya. Tugas pertama yang perlu Anda lakukan adalah buka halaman topik dan pilih *list* linear, kemudian pelajari topik tersebut.
+
+*(Thea membuka topik dan membaca)*
+
+**Farah:** Oke, tandai selesai. He eh. Apakah ada masukan terkait materi e *list* ini?
+
+**Thea:** E... bentar aku liat sambil liat-liat lagi.
+
+**Farah:** Boleh.
+
+**Thea:** Dari aku aman aja sih. Bentar bentar, aku mau tanya, aku mau tanya. Ringkasan empat alternatif tuh dia maksudnya emang ringkasan gitu atau gimana?
+
+**Farah:** Oke, baik. Untuk ringkasan empat alternatif itu adalah e alternatif dari implementasi *list*, jadi bisa secara implisit, eksplisit, atau e dan lainnya. Itu bentuk *list* aja sih. Jadi bukan ringkasan dari e ringkasan semuanya.
+
+**Thea:** Oh, oalah. Oke oke oke. Aman aja sih kalau aku.
+
+**Farah:** Oke baik. Selanjutnya e silakan buka halaman contoh dan pelajari contoh, kemudian tandai selesai apabila sudah.
+
+*(Thea membuka halaman contoh)*
+
+**Thea:** Udah.
+
+**Farah:** Apakah ada masukan atau *feedback* terkait dengan bagian contoh?
+
+**Thea:** Mmm... Sebenarnya nggak ada sih, aman-aman aja sih kalau aku.
+
+**Farah:** Oke baik, terima kasih. Berikutnya lanjut ke halaman latihan, kerjakan satu soal latihan. Jadi ini menunggu karena soalnya ada e di-*generate* oleh AI. Kerjakan satu soal dan baca evaluasinya, kemudian tandai selesai apabila sudah. Anda tidak perlu e jawaban yang benar, masukkan jawaban yang e Anda tahu saja tidak masalah.
+
+**Thea:** "Jelaskan definisi ADT." Tidak perlu benar, tidak masalah. Oh, oke oke oke. Ya ya, saya mau benar juga nggak apa-apa.
+
+**Farah:** *(Tertawa)*
+
+**Thea:** Nyontek sini aja, oh nggak bisa ya. Bisa.
+
+*(Thea mengerjakan soal latihan)*
+
+**Thea:** Udah. Ini *next* aja.
+
+**Farah:** Ingat tolong berikan *feedback* dari soal yang telah Anda kerjakan, apakah Anda setuju dengan evaluasi yang diberikan.
+
+**Thea:** Ini kenapa belum dijawab?
+
+**Farah:** Oh, itu karena AI mengevaluasi bahwa jawabannya kurang tepat.
+
+**Thea:** Oh. Kayaknya kalau aku tampilannya aja sih, kan ini jawaban aku ya, kotakannya kan abu, tapi yang bawahnya tuh jawabannya dia, "jawaban tidak lengkap", itu kotakannya juga abu. Kayak... mungkin dibedain gitu.
+
+**Farah:** Oh, benar. Terima kasih atas masukannya, Thea. Oke, baik. Apakah ada masukan yang lainnya?
+
+**Thea:** E... Oh ini tuh di-*generate* AI-nya atau gimana ya?
+
+**Farah:** Iya.
+
+**Thea:** Oh kalau bisa dia suruh ngambilnya yang dari ini sih, nama-nama *tab*-nya ini.
+
+**Farah:** Oke, terima kasih, menarik. Oke, silakan tandai selesai apabila tidak ada *feedback* lagi. Selanjutnya silakan baca e bagian ringkasan dan selesaikan bagian ringkasan apabila dirasa sudah cukup.
+
+*(Thea membuka bagian ringkasan)*
+
+**Thea:** Udah.
+
+**Farah:** Oke. E apakah ada masukan terkait bagian ringkasan?
+
+**Thea:** E... nggak ada sih. Cuman aku bingungnya tuh kayak... kenapa ringkasan tuh baru bisa diakses setelah latihan gitu. Eh, iya nggak sih?
+
+**Farah:** Iya, iya.
+
+**Thea:** Aku mikirnya kenapa nggak setelah baca materi gitu juga ada ringkasannya gitu.
+
+**Farah:** Oke. Terima kasih atas masukannya. Jadi sebenarnya e ini sengaja dibuat untuk e alurnya seperti itu, jadi dari materi, contoh, latihan, kemudian ringkasan. Jadi e peserta bisa me-*review* semua yang telah dia pelajari dan dia kerjakan di ringkasan. Tapi mungkin menjadi masukan untuk ringkasannya dipindah setelah e bagian materi atau contoh.
+
+**Thea:** Oke oke.
+
+**Farah:** Oke. Selanjutnya *task* berikutnya silakan buka halaman progres dan lihat progres belajar Anda untuk bagian *list*.
+
+*(Thea melihat halaman progres)*
+
+**Thea:** Oke.
+
+**Farah:** Oke. E sudah. Saya rasa untuk tugasnya sudah selesai sampai sini. Selanjutnya kita masuk ke halaman e pengisian *form*. Jadi Anda bisa *stop share screen* dan isi *form* yang telah saya kirimkan di WhatsApp.
+
+---
+
+### 3. Sesi Kuesioner (SUS) & Debriefing
+
+**Thea:** Oke. Yang SUS ini kan ya?
+
+**Farah:** Iya. Itu hanya ada 10 soal.
+
+*(Jeda saat Thea mengisi kuesioner SUS)*
+
+**Thea:** Udah.
+
+**Farah:** Oke baik e terima kasih. Ini ada tiga pertanyaan tambahan saja e untuk menutup sesi ini. Nah, e pertanyaan pertama, bagaimana kesan keseluruhan Anda terkait aplikasi ini?
+
+**Thea:** E kesan keseluruhan ngebantu sih. Soalnya ini kan dari sini kita bisa ngelihat berbagai jenis topik yang ada, terus ada materinya itu udah terstruktur gitu secara langsung. Terus sama kayak mungkin yang paling bantu tuh apa, latihan itu ya. Soalnya kan dia pakai AI. Nah itu latihannya tuh bisa macam-macam gitu, nggak bakal bisa beda gitu. Jadi bakal bantu untuk belajar.
+
+**Farah:** Baik, terima kasih. Kemudian untuk e apa fitur atau e *task* yang paling menarik untuk Anda?
+
+**Thea:** E latihan.
+
+**Farah:** Oke. Apabila ada yang bisa diubah dari aplikasi ini, apa yang bisa diubah?
+
+**Thea:** E kayaknya tambahin gambar aja sih biar kayak lebih menarik gitu, atau mungkin bisa ada kayak animasi kayak untuk menunjukkan proses insersinya dalam *list* misalnya gitu, atau kayak proses *delete*. Tapi kalau pakai ini juga udah jelas sih sebenarnya.
+
+**Farah:** Oke baik. E saya rasa cukup sekian e pengujian dari saya. Terima kasih sudah membantu dalam pengujian tugas akhir saya. Semoga saya bisa lulus tepat waktu. Selamat malam, Thea.
+
+**Thea:** Amin.

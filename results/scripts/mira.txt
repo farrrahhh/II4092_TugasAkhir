@@ -1,0 +1,121 @@
+
+
+### 1. Pendahuluan & Persiapan
+
+**Farah**: Halo, terima kasih sudah bersedia meluangkan waktu Anda. Perkenalkan nama saya Farah Aulia. Biasa dipanggil Farah. Saya dari Institut Teknologi Bandung semester 8. Saat ini saya sedang melakukan pengujian untuk tugas akhir saya terkait aplikasi yang bernama Teman Belajar Algoritma Struktur Data. Nah, yang penting untuk digarisbawahi, yang sedang diuji adalah aplikasinya bukan kamu. Jadi, kalau nanti ada bagian yang membingungkan atau sulit ditemukan, itu justru masukan yang saya butuhkan, bukan kesalahan. Sesi ini akan berlangsung sekitar 15 sampai 30 menit, terdiri dari kamu mengerjakan beberapa tugas di aplikasi lalu mengisi kuesioner singkat. Kemudian selanjutnya saya akan mengamati dan mencatat tapi saya tidak akan membantu selama pengerjaan tugas. Kalau kamu benar-benar *stuck*, boleh bilang "saya menyerah" dan kita lanjut ke tugas berikutnya. Sebelum kita mulai, apakah ada pertanyaan?
+
+**Mira**: Tidak ada.
+
+**Farah**: Oke bagus. Nah, selanjutnya ee silakan buka *website* yang saya kirim di *chat* dan silakan *share screen*.
+
+**Mira**: Oke. Eh... *share screen*. Hem...
+
+**Farah**: Bentar ya.
+
+**Mira**: Aman. Silakan boleh e... mengambil waktu tidak masalah. Ya, ini karena ada setingan... Nah.
+
+*(Mira berhasil membagikan layarnya)*
+
+**Mira**: Baik, apakah sudah terlihat layar saya?
+
+**Farah**: Iya, sudah terlihat. Nah, sebelum masuk ke aplikasi, Anda bisa melakukan pendaftaran akun terlebih dahulu. Silakan lakukan pendaftaran.
+
+**Mira**: Baik.
+
+*(Mira mulai mengisi form pendaftaran)*
+
+**Mira**: Untuk email-nya, sesuai dengan email saya atau?
+
+**Farah**: E terserah, boleh email bebas karena daftar dan masuk tidak termasuk dalam kriteria pengujian.
+
+**Mira**: Baik.
+
+---
+
+### 2. Sesi Pengujian Aplikasi (Usability Testing)
+
+**Farah**: Oke, baik. Ini adalah halaman eee pertama yang Anda bisa akses dari Teman Belajar Algoritma dan Struktur Data. Nah, kali ini kita coba mulai Anda membuka eeee bagian topik dan pilih eeee *list* linear untuk dipelajari.
+
+**Mira**: Yang ini?
+
+**Farah**: Eee *list* linear.
+
+**Mira**: *List* linear. Oh *sorry, sorry*, yang ini.
+
+**Farah**: Iya. Nah, ee bagaimana pendapat Anda terkait navigasi ke halaman topik?
+
+**Mira**: Sudah cukup baik, karena terdapat di sebelah atas ini, jadi kita bisa melihatnya dengan mudah, menu-menu apa saja yang ada. Dan se... ketika memilih topik, kita tinggal mem... melihat topik apa aja yang ada, kita *scrolling*. Lalu kita pencet *mulai* dan kita langsung masuk ke dalam materi dari topik-topik yang ada.
+
+**Farah**: Oke, baik. Terima kasih atas ee tanggapannya. Nah, sekarang lakukan tugas untuk menyelesaikan materi. Jadi, baca seluruh materi dan tekan tombol eee selesaikan materi yang ada.
+
+*(Mira membaca materi dan menekan tombol)*
+
+**Farah**: Oke, baik, terima kasih. Nah, berikutnya masuk ke halaman contoh dan baca contoh, serta selesaikan eee contoh tersebut.
+
+*(Mira membaca contoh dan menekan tombol)*
+
+**Farah**: Oke. Sebelum kita lanjut ke latihan, apakah ada tanggapan terkait materi dan contoh yang ada?
+
+**Mira**: Menurut saya sudah sangat baik, ya, karena ini, saya cukup suka karena berwarna, tidak hitam-putih saja di sini. Ada warna-warna yang bisa memanjakan mata saya.
+
+**Farah**: Oke, baik. Terima kasih. Selanjutnya masuk ke halaman latihan. Nah, latihan ini adalah soal yang di-*generate* oleh AI berdasarkan materi yang telah Anda pelajari. Jadi, membutuhkan waktu untuk men-*generate*-nya. Silakan coba kerjakan satu soal saja dan eee baca hasil evaluasi yang diberikan oleh AI. Eee Anda boleh e... menjawab setahu Anda, tidak perlu benar.
+
+**Mira**: Baik.
+
+*(Mira mengerjakan soal latihan)*
+
+**Mira**: Langsung dinilai, soal?
+
+**Farah**: Iya, boleh.
+
+*(Mira membaca hasil evaluasi)*
+
+**Farah**: Oke, baik. Di sini Anda bisa melihat nilainya dan rincian penilaian yang telah dievaluasi oleh AI. Silakan baca evaluasinya dan berikan pendapat Anda terkait latihan dan evaluasi yang diberikan oleh AI ini.
+
+**Mira**: Ya, di sini saya memang tidak menjawab dengan... lengkap, karena saya hanya menjelaskan perbedaan antara *list* biasa dan *double linked list*. Sementara soalnya itu, soal yang diberikan terdapat... saya disuruh untuk eee menyertakan kelebihan dan kekurangan dari masing-masing eee tipe data ini... struktur data tersebut. Jadi, ya memang jawaban saya belum lengkap, dan eee di sini terdapat eeee apa yang perlu saya tambahkan, apa yang kurang dari jawaban saya, dan ya, ini sudah benar, sih.
+
+**Farah**: Oke, baik. Eee coba tandai selesai untuk bagian latihan dan silakan beralih ke ringkasan dan selesaikan bagian ringkasan.
+
+*(Mira menekan tombol dan beralih ke halaman ringkasan)*
+
+**Farah**: Oke, baik. Jadi, eee bagaimana tanggapan Anda terkait bagian ringkasan?
+
+**Mira**: Ya, sekali lagi saya suka apabila terdapat banyak warna, karena saya orangnya visual. Jadi, saya suka apabila warna-warna dan juga ini eee dikelompokkan berdasarkan topik-topik atau materi-materi yang eee sudah jelas seperti ini. Struktur berkait, representasi, variasi *list* linear, *stack, queue*, dan lain-lainnya.
+
+**Farah**: Oke, terima kasih. Selanjutnya lakukan *task* untuk melihat progres belajar Anda. Jadi, silakan Anda navigasi ke halaman progres dan lihat penyelesaian Anda terkait *list* linear.
+
+*(Mira membuka halaman progres belajar)*
+
+**Farah**: Oke. Nah, bisa Anda lihat bahwa progres telah selesai 100% karena Anda telah menyelesaikan materi, latihan, contoh, dan ringkasan. Oke. Karena semua *task* sudah berhasil Anda selesaikan dengan baik, selanjutnya kita masuk ke kuesioner. Jadi, sudah saya kirimkan kuesioner Google Form-nya ada di WhatsApp. Silakan isi tanpa saya mengetahui eee isi Anda. Jadi, silakan Anda *stop share screen* sekarang.
+
+**Mira**: Baik, saya isi sekarang ya.
+
+**Farah**: Iya, terima kasih.
+
+---
+
+### 3. Sesi Kuesioner (SUS) & Debriefing
+
+*(Jeda saat Mira mengisi kuesioner)*
+
+**Mira**: Baik, sudah saya *submit* ya, untuk kuesionernya.
+
+**Farah**: E baik, terima kasih banyak. Nah, berikutnya kita masuk ke sesi eee tambahan. Jadi eee saya ingin bertanya terkait pertanyaan-pertanyaan umum. Bagaimana kesan Anda terkait aplikasi ini?
+
+**Mira**: Menurut saya, kesan saya, uh, menggunakan aplikasi ini... karena menurut saya Algoritma dan Struktur Data itu merupakan mata kuliah yang cukup sulit, ya, karena pada saat saya berkuliah dulu, eee cukup banyak teman-teman saya, dan juga saya sendiri merasa kesulitan dalam eee mengerjakan dan mempelajari, dan juga memahami materi-materi yang eee diberikan. Dengan adanya eee aplikasi ini atau *website* ini, saya rasa se... eeee semakin mudah bagi saya untuk memahaminya.
+
+**Farah**: Oke, baik. Eee terima kasih atas kesannya. Selanjutnya ee saya ingin bertanya, *part* mana yang menurut Anda paling membingungkan?
+
+**Mira**: Membingungkan... saya rasa nggak ada ya, karena semuanya sudah sangat jelas di situ. Jadi eee menurut saya se... sudah sangat mudah untuk dinavigasi, karena di situ sudah ada keterangan yang lengkap, jadi ya bagi saya tadi saya tidak mengalami kebingungan sama sekali, sih, dalam mengoperasikan eee aplikasinya.
+
+**Farah**: Mmm, *I see*. Oke, berikutnya eee apa bagian yang menurutmu paling membantu atau paling kamu suka?
+
+**Mira**: Bagian yang paling membantu bagi saya yaitu ketika AI memberikan saya pertanyaan atas materi yang ada. Sehingga saya bisa me... lakukan, atau menguji diri saya, apakah saya sudah benar-benar memahami materinya, dan ketika saya memberikan jawaban eee di situ juga saya mendapatkan eeee evaluasi atau apakah jawaban saya ini sudah cukup benar atau belum. Jadi dari situ saya bisa me... apa ya... membuat saya semakin yakin lah, dalam belajar Algoritma dan Struktur Data ini.
+
+**Farah**: Oke, baik. Terima kasih atas eee hal yang paling membantu. Selanjutnya ini pertanyaan terakhir, kalau ada satu hal yang di... kalau ada hal yang bisa diubah dari aplikasi ini, itu apa?
+
+**Mira**: Mmm... apa ya... Menurut saya eee... tapi ini tidak eee... besar, ya, tapi mungkin dalam waktu apa... dalam menunggu soal untuk di-*generate* AI, tapi memang saya sadari untuk *generate* AI... apa, AI butuh waktu untuk men-*generate* soal, tapi ya memang... ya itu. Jadi saya sebagai *user*, menunggu, gitu.
+
+**Farah**: Oh, saya mengerti. Oke, baik. Eee saya kira cukup untuk pengujian kali ini. Eee sudah... saya berterima kasih telah membantu saya dalam mengerjakan tugas akhir saya, semoga saya cepat lulus. Terima kasih.
+
+**Mira**: Sama-sama.

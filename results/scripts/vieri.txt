@@ -1,0 +1,151 @@
+
+
+### 1. Pendahuluan & Persiapan
+
+**Farah:** Selamat malam, terima kasih sudah bersedia meluangkan waktu. Perkenalkan, nama saya Farah Aulia. Saya sedang menguji sebuah aplikasi bernama Teman Belajar Algoritma dan Struktur Data, sebagai bagian dari tugas akhir saya. Nah, yang penting untuk digarisbawahi, yang sedang diuji adalah aplikasinya bukan kamu. Jadi kalau nanti ada bagian yang membingungkan atau sulit ditemukan, itu menjadi masukan yang saya butuhkan, bukan kesalahan kamu. Sesi ini akan berlangsung selama 10 sampai 20 menit tergantung situasinya. Kamu nanti akan diperintahkan untuk mengerjakan beberapa tugas di aplikasi ini lalu mengisi kuesioner singkat. Nah, selama mengerjakan tugas, saya akan mengamati dan mencatat, tapi saya tidak akan membantu selama pengerjaan tugas. Itu memang bagian dari pengujian. Kalau kamu benar-benar *stuck*, boleh bilang "saya menyerah" dan kita lanjut ke tugas berikutnya. Ada pertanyaan sebelum kita mulai?
+
+**Vieri:** Cukup.
+
+**Farah:** Oke, mantap. Nah, selanjutnya silakan *share screen* ke halaman *website* yang sudah saya kirimkan di *chat*.
+
+**Vieri:** Oke terus.
+
+**Farah:** Terima kasih, sudah terlihat. Sekarang silakan lakukan pendaftaran di halaman *website* tersebut.
+
+*(Vieri melakukan pendaftaran)*
+
+**Farah:** Oke baik. Halaman *login* dan daftar tidak termasuk ke dalam pengujian dari *task* ini. Selanjutnya kita akan fokus ke *task* yang pertama, yaitu navigasi ke halaman topik dan pilih topik *list* linear untuk dipelajari.
+
+---
+
+### 2. Sesi Pengujian Aplikasi (Usability Testing)
+
+**Vieri:** Kenapa ya harus *list* linear?
+
+**Farah:** *List* linear adalah salah satu contoh topik yang sengaja saya pilih untuk demonstrasi pada pengujian ini.
+
+**Vieri:** Mmm. Enggak boleh milih ya?
+
+**Farah:** Ya, silakan pilih *list* linear dan mulai untuk belajar. Oke, baik. Selanjutnya masuk ke materi dan baca materinya, kemudian tandai selesai setelah materi selesai dibaca.
+
+**Vieri:** Ini aku boleh nanya enggak?
+
+**Farah:** Apa? Silakan, silakan boleh bertanya.
+
+**Vieri:** Saya lagi males baca soalnya.
+
+**Farah:** Materi tidak termasuk ke dalam penilaian, jadi silakan baca sekilas tidak masalah.
+
+**Vieri:** Aduh. Susahnya ternyata belajar ASD tuh. *Double linked list*. Mmm, terus nama *next*. Hm. Ini apaan ya *stack* ya. Bisa tolong jelasin enggak kenapa ada ini, *stack* dengan bentuk struktur berkait?
+
+**Farah:** Baik, terima kasih atas pertanyaannya. Jadi ada bertanya tentang *stack* dengan *list* linear ya? Nah, itu nanti jadi *stack* yang diimplementasikan dengan *list* linear. Jadi kita bisa tahu elemen teratasnya dengan bentuk *list* linear. Apa yang Anda kurang paham?
+
+**Vieri:** Oh, jadi ini sebenarnya *stack*. Cuman *value* dari *stack*-nya tuh *list* linear gitu ya?
+
+**Farah:** Sepertinya seperti itu.
+
+**Vieri:** Ada *queue* juga. Oh. Aneh nih ada *priority queue* pakai *list* linear, susah dong. Oke ya udahlah tandai selesai. Terus.
+
+**Farah:** Oke baik. Bagaimana pendapat Anda terhadap materi ini?
+
+**Vieri:** Ya kalau pendapat saya sih... sebenarnya kalau tentang apa sih *list* linear itu enggak perlu sampai jelasin yang *queue* terus *stack* sama *priority queue* itu ya. Itu mungkin bisa dijelasin di materi lain yang lebih spesifik. Kayak contohnya yang materi-materi *stack*, *queue*, sama *priority queue* itu bisa kamu jelasin ke materi yang LIFO sama FIFO.
+
+**Farah:** Baik, terima kasih atas tanggapannya. Lanjut ke fitur berikutnya, silakan akses halaman contoh dan baca contohnya. Kemudian tandai selesai ketika sudah.
+
+**Vieri:** Mmm. Oke. Udah. Halo bro.
+
+**Farah:** Oke nah. Tandai selesai ketika sudah. Nah, bagaimana pendapat Anda terkait fitur contoh ini?
+
+**Vieri:** Oke contohnya cukup jelas. He eh. Oke cukup jelas. Enggak ada masalah contohnya.
+
+**Farah:** Baik selanjutnya, akses halaman latihan dan kerjakan salah satu soal yang ada di situ. Dan baca evaluasinya, tandai selesai ketika sudah.
+
+**Vieri:** Kok lama ya? Ada *bug* kah? Kayaknya boleh pakai AI enggak?
+
+**Farah:** Silakan dikerjakan sesuai pemahaman Anda. Tidak perlu benar.
+
+**Vieri:** Bentar ya saya mikir dulu. Ini kalau saya enggak tahu gimana?
+
+**Farah:** Enggak apa-apa, tidak perlu benar.
+
+**Vieri:** Enggak apa-apa ya. Udah. Terus. Halo.
+
+**Farah:** Oke, silakan nilai soal ini dan baca hasil evaluasinya.
+
+**Vieri:** Boleh saya lihat untuk nilainya? 60.
+
+**Farah:** Oke silakan baca hasil evaluasi yang diberikan, apakah sesuai dan apakah mudah dipahami dan silakan berikan masukan apabila kurang.
+
+**Vieri:** Mmm mungkin ini sih. Apa? Enggak enggak menyinggung kompleksitas tapi kenapa ada kompleksitasnya.
+
+**Farah:** Baik, terima kasih jadi Anda... menjawab bahwa hasil evaluasi yang diberikan kurang tepat atau bagaimana?
+
+**Vieri:** Ya kurang tepat untuk penilaiannya.
+
+**Farah:** Oke, baik. Apakah ada hal yang lain?
+
+**Vieri:** Udah cukup.
+
+**Farah:** Oke selanjutnya silakan tandai selesai dan masuk ke halaman ringkasan dan baca ringkasannya. Kemudian tandai selesai apabila sudah.
+
+**Vieri:** He eh. Udah. Udah sayang.
+
+**Farah:** Oke, apakah ada masukan atau *feedback* terkait fitur ini?
+
+**Vieri:** Cukup.
+
+**Farah:** Oke, setelah itu tugas yang terakhir, silakan masuk ke halaman progres dan lihat progres belajar Anda terkait *list* linear.
+
+**Vieri:** Hm. Mana? Lihat progres belajar Anda terkait *list* linear. Oke.
+
+**Farah:** Baik Anda telah menyelesaikan *list* linear 100% materi. Untuk pengujian dari *task* yang perlu Anda kerjakan telah selesai.
+
+---
+
+### 3. Sesi Kuesioner (SUS) & Debriefing
+
+**Farah:** Selanjutnya kita masuk ke pengisian kuesioner. Silakan akses *link* kuesioner yang saya kirim di *chat*, Anda tidak perlu *share screen* untuk mengisinya. Setelah selesai, tolong beritahu saya.
+
+**Vieri:** Sensitif banget nanya-nanya. Bentar ya saya mikir dulu. Ini kalau saya enggak tahu gimana?
+
+**Farah:** Enggak apa-apa, tidak perlu benar.
+
+**Vieri:** Enggak apa-apa ya. Udah. Eh, jangan di-*record*.
+
+**Farah:** Halo, apa?
+
+**Vieri:** Halo jangan di-*record* kan udah selesai.
+
+**Farah:** Belum, masih belum, silakan *submit*.
+
+**Vieri:** Enggak nih, kamu mau nilai bagus enggak? Hah. Ya makanya matiin dulu.
+
+**Farah:** Silakan isi sesuai dengan apa yang Anda yakini.
+
+**Vieri:** Oh kamu kenapa sih kayak bolak-balik gitu ya. Saya pikir terlalu banyak inkonsisten, enggak ya. Dah. Udah sayang.
+
+**Farah:** Oke, baik. Selanjutnya silakan tutup *share screen*-nya dan kita akan mulai di sesi terakhir yaitu sesi tambahan. Bagaimana kesan Anda keseluruhan terhadap aplikasi ini?
+
+**Vieri:** Oke sih.
+
+**Farah:** Halo. Bagaimana kesan Anda terhadap aplikasi ini secara keseluruhan?
+
+**Vieri:** Oke cuman soalnya ini aja, validasinya agak jelek aja sih menurutku. Sama kadang materinya yang tadi tuh enggak ini, enggak terlalu relevan tapi dimasukin. Sama ini sih mungkin bisa tambahin perbanyak contohnya aja tiap-tiap sub-materi dikasih contoh masing-masing, kayak *single linked list* itu dikasih contohnya, *double linked list* dikasih contohnya. Tadi contohnya satu doang.
+
+**Farah:** Baik, terima kasih. Jadi menurut Anda apa hal yang paling Anda sukai dari aplikasi ini?
+
+**Vieri:** *Generate* soalnya.
+
+**Farah:** Apa yang menurut Anda paling membingungkan?
+
+**Vieri:** Validasi soalnya.
+
+**Farah:** Kalau ada yang bisa diubah dari aplikasi ini, apa yang bisa diubah?
+
+**Vieri:** Mungkin contohnya sama validasinya lebih oke lah. Enggak terlalu *strict*. Validasinya bisa diganti manusia aja.
+
+**Farah:** Oh baik, terima kasih. Saya rasa cukup sekian pengujian kali ini. Anda telah membantu saya mengerjakan tugas akhir saya, semoga tugas akhir saya selesai dengan baik dan bisa lulus tepat waktu.
+
+**Vieri:** Amin.
+
+**Farah:** Oke baik saya akhiri selamat malam. Hm.
