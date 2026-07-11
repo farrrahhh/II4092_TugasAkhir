@@ -139,7 +139,7 @@ Gambar \ref{fig:impl-contoh} menunjukkan tampilan halaman contoh yang telah diim
     \label{fig:impl-contoh}
 \end{figure}
 
-Setiap soal contoh ditampilkan dalam format terstruktur: bagian atas menampilkan \textit{badge} tingkat kesulitan dan kategori topik, diikuti judul soal, blok deskripsi masalah, serta tiga kartu ringkas yang menampilkan spesifikasi input, output, dan \textit{constraint}. Di bawahnya terdapat contoh pasangan input-output dalam dua panel berdampingan.
+Setiap soal contoh ditampilkan dalam format terstruktur: bagian atas menampilkan \textit{badge} tingkat kesulitan dan kategori topik, diikuti judul soal, blok deskripsi masalah, serta tiga kartu ringkas yang menampilkan spesifikasi \textit{input}, \textit{output}, dan \textit{constraint}. Di bawahnya terdapat contoh pasangan \textit{input-output} dalam dua panel berdampingan.
 
 Halaman ini menerapkan dua komponen interaktif yang dapat diungkap secara terpisah: blok \textit{Hint} yang memberikan petunjuk pendekatan solusi, dan blok \textit{Lihat Pembahasan} yang menampilkan solusi lengkap mencakup algoritma langkah demi langkah dalam bentuk daftar bernomor, notasi algoritmik dalam bentuk pseudocode, dan implementasi dalam bahasa C beserta penelusuran nilai (\textit{trace}). Kedua blok ini tersembunyi secara \textit{default} agar pengguna terdorong untuk memikirkan solusi terlebih dahulu sebelum melihat jawaban. Potongan kode implementasi mekanisme \textit{toggle} tersebut dapat dilihat pada Lampiran \ref{chap:lampiran-a}, Kode \ref{lst:contoh-toggle}.
 
@@ -213,15 +213,15 @@ Gambar \ref{fig:impl-soal-sendiri} menunjukkan tampilan panel Soal Sendiri yang 
     \label{fig:impl-soal-sendiri}
 \end{figure}
 
-Komponen \texttt{SoalSendiriPanel} diimplementasikan di \texttt{app/components/SoalSendiriPanel.js} dan menerima \textit{prop} \texttt{topicSlug} serta \texttt{onGoToMateri}. Panel menyediakan dua \textit{textarea}: satu untuk soal dan satu untuk jawaban pengguna. Selain input teks langsung, panel mendukung unggah file dalam format \texttt{.txt} dan \texttt{.md} melalui mekanisme klik tombol maupun \textit{drag-and-drop}. Validasi format dilakukan melalui fungsi \texttt{isAccepted} yang memeriksa MIME \textit{type} dan ekstensi file sebelum konten dibaca menggunakan \texttt{FileReader}.
+Komponen \texttt{SoalSendiriPanel} diimplementasikan di \texttt{app/components/SoalSendiriPanel.js} dan menerima \textit{prop} \texttt{topicSlug} serta \texttt{onGoToMateri}. Panel menyediakan dua \textit{textarea}: satu untuk soal dan satu untuk jawaban pengguna. Selain \textit{input} teks langsung, panel mendukung unggah file dalam format \texttt{.txt} dan \texttt{.md} melalui mekanisme klik tombol maupun \textit{drag-and-drop}. Validasi format dilakukan melalui fungsi \texttt{isAccepted} yang memeriksa MIME \textit{type} dan ekstensi file sebelum konten dibaca menggunakan \texttt{FileReader}.
 
 Setelah pengguna menekan tombol evaluasi, komponen mengirim permintaan \texttt{POST /api/soal-sendiri/\{topicSlug\}} ke \textit{proxy} Next.js. Sistem menampilkan indikator \textit{loading} selama menunggu respons dari \textit{backend}. Hasil evaluasi ditampilkan dalam panel terstruktur yang memuat: \textit{badge} label nilai (Sangat Baik, Baik, Cukup, Perlu Perbaikan, atau Belum Dijawab) dengan warna berbeda untuk setiap kategori, \textit{progress bar} skor numerik 0--100, komentar ringkasan, bagian yang sudah benar, bagian yang perlu diperbaiki, daftar konsep lemah, dan rekomendasi belajar berupa daftar subtopik spesifik dari materi.
 
-\subsection{Implementasi Widget Chat Asisten Materi}
+\subsection{Implementasi \textit{Widget} Chat Asisten Materi}
 
-Widget Chat Asisten Materi menyediakan antarmuka percakapan kontekstual yang memungkinkan pengguna mengajukan pertanyaan seputar materi topik yang sedang dipelajari secara langsung tanpa keluar dari halaman. Widget ini tersedia di seluruh sepuluh halaman topik sebagai elemen mengambang yang dapat dibuka dan ditutup.
+\textit{Widget} Chat Asisten Materi menyediakan antarmuka percakapan kontekstual yang memungkinkan pengguna mengajukan pertanyaan seputar materi topik yang sedang dipelajari secara langsung tanpa keluar dari halaman. \textit{Widget} ini tersedia di seluruh sepuluh halaman topik sebagai elemen mengambang yang dapat dibuka dan ditutup.
 
-Gambar \ref{fig:impl-chat-materi} menunjukkan tampilan widget chat asisten materi yang telah diimplementasikan.
+Gambar \ref{fig:impl-chat-materi} menunjukkan tampilan \textit{widget} chat asisten materi yang telah diimplementasikan.
 
 \begin{figure}[H]
     \centering
@@ -230,7 +230,7 @@ Gambar \ref{fig:impl-chat-materi} menunjukkan tampilan widget chat asisten mater
     \label{fig:impl-chat-materi}
 \end{figure}
 
-Komponen \texttt{MateriChatWidget} diimplementasikan di \texttt{app/components/MateriChatWidget.js} dan menerima \textit{prop} \texttt{topicSlug}. Widget awalnya tampil sebagai tombol ikon yang dapat diklik untuk membuka panel chat. Saat panel terbuka, terdapat empat \textit{suggestion chip} yang dapat diklik untuk mengisi pertanyaan secara cepat, seperti \textit{"Jelaskan konsep ini dengan contoh sederhana"} atau \textit{"Kenapa kita butuh ini?"}. Area pesan menggunakan \texttt{useRef} untuk mendukung \textit{auto-scroll} ke pesan terbaru setiap kali terdapat pesan baru atau indikator \textit{loading}. Fokus input secara otomatis diarahkan ke \textit{text field} saat panel pertama kali dibuka menggunakan \texttt{useEffect}.
+Komponen \texttt{MateriChatWidget} diimplementasikan di \texttt{app/components/MateriChatWidget.js} dan menerima \textit{prop} \texttt{topicSlug}. \textit{Widget} awalnya tampil sebagai tombol ikon yang dapat diklik untuk membuka panel chat. Saat panel terbuka, terdapat empat \textit{suggestion chip} yang dapat diklik untuk mengisi pertanyaan secara cepat, seperti \textit{"Jelaskan konsep ini dengan contoh sederhana"} atau \textit{"Kenapa kita butuh ini?"}. Area pesan menggunakan \texttt{useRef} untuk mendukung \textit{auto-scroll} ke pesan terbaru setiap kali terdapat pesan baru atau indikator \textit{loading}. Fokus \textit{input} secara otomatis diarahkan ke \textit{text field} saat panel pertama kali dibuka menggunakan \texttt{useEffect}.
 
 Saat pengguna mengirim pesan, fungsi \texttt{handleSend} menyusun riwayat percakapan dari \textit{state} \texttt{messages} yang sudah ada, menambahkan pesan \textit{user} baru ke antarmuka, lalu mengirim permintaan \texttt{POST /api/chat/\{topicSlug\}} dengan \textit{payload} berisi \texttt{pesan} dan \texttt{riwayat}. Balasan dari \textit{backend} dimasukkan ke \textit{state} \texttt{messages} sebagai pesan dengan role \texttt{"assistant"}, sehingga percakapan bersifat \textit{multi-turn} dan konteks dipertahankan selama sesi berlangsung.
 

@@ -36,7 +36,7 @@ Bagian ini menguraikan landasan teoritis mengenai \textit{Large Language Model} 
 
 \textit{Large Language Model} (LLM) merupakan model kecerdasan buatan berskala besar yang dirancang untuk mempelajari struktur bahasa dan memprediksi token berikutnya berdasarkan konteks masukan. Model ini dilatih menggunakan kumpulan data berukuran sangat besar (miliaran token) dan parameter berskala tinggi sehingga mampu melakukan berbagai tugas pemrosesan bahasa secara generatif, seperti menjawab pertanyaan, merangkum teks, menjelaskan konsep, hingga menghasilkan kode program.
 
-Arsitektur utama yang menjadi fondasi LLM modern adalah Transformer \cite{Vaswani2017AttentionIsAllYouNeed}, yang mengandalkan mekanisme \textit{self-attention} untuk memahami hubungan antar-token secara paralel dan efisien. Transformer terdiri dari dua komponen utama, yaitu \textit{encoder} dan \textit{decoder}, tetapi mayoritas LLM generatif saat ini (seperti GPT dan model berbasis \textit{decoder-only} lainnya) hanya menggunakan blok \textit{decoder}. Setiap \textit{decoder layer} terdiri dari beberapa komponen inti yang memproses input secara bertahap.
+Arsitektur utama yang menjadi fondasi LLM modern adalah Transformer \cite{Vaswani2017AttentionIsAllYouNeed}, yang mengandalkan mekanisme \textit{self-attention} untuk memahami hubungan antar-token secara paralel dan efisien. Transformer terdiri dari dua komponen utama, yaitu \textit{encoder} dan \textit{decoder}, tetapi mayoritas LLM generatif saat ini (seperti GPT dan model berbasis \textit{decoder-only} lainnya) hanya menggunakan blok \textit{decoder}. Setiap \textit{decoder layer} terdiri dari beberapa komponen inti yang memproses \textit{input} secara bertahap.
 
 \begin{figure}[H]
     \centering

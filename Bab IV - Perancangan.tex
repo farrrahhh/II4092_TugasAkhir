@@ -100,7 +100,7 @@ Selanjutnya, \textit{user} akan memasuki alur pembelajaran terstruktur dengan me
 
 Setelah menyelesaikan latihan, \textit{user} dapat melihat pembahasan (UC-05) sebagai bentuk umpan balik dari sistem. Relasi \textit{extend} antara UC-04 dan UC-05 menunjukkan bahwa pembahasan hanya muncul setelah \textit{user} mengerjakan latihan. Selain itu, \textit{user} juga dapat melihat ringkasan materi (UC-06) untuk memperkuat pemahaman, serta memantau progres belajar melalui fitur \textit{progress} (UC-07).
 
-Sebagai pelengkap alur utama, \textit{user} dapat memanfaatkan dua fitur tambahan yang tersedia pada setiap halaman topik: mengevaluasi soal mandiri (UC-08) dengan memasukkan soal dan jawaban dari sumber eksternal untuk dinilai oleh sistem, serta bertanya kepada asisten materi (UC-09) melalui widget percakapan kontekstual yang memberikan penjelasan sesuai topik yang sedang dipelajari.
+Sebagai pelengkap alur utama, \textit{user} dapat memanfaatkan dua fitur tambahan yang tersedia pada setiap halaman topik: mengevaluasi soal mandiri (UC-08) dengan memasukkan soal dan jawaban dari sumber eksternal untuk dinilai oleh sistem, serta bertanya kepada asisten materi (UC-09) melalui \textit{widget} percakapan kontekstual yang memberikan penjelasan sesuai topik yang sedang dipelajari.
 
 Dengan demikian, seluruh \textit{use case} yang dirancang telah mencerminkan alur \textit{guided learning} yang mendukung pembelajaran ASD secara terstruktur dan interaktif, serta memenuhi kebutuhan fungsional sistem.
 
@@ -200,7 +200,7 @@ Diagram pada Gambar \ref{fig:sd-soal-sendiri} menggambarkan alur evaluasi soal y
 \end{figure}
 
 \begin{sloppypar}
-Diagram pada Gambar \ref{fig:sd-chat-materi} menggambarkan alur percakapan antara \textit{user} dan asisten materi. \textit{User} mengetikkan pertanyaan pada widget chat yang tersedia di setiap halaman topik. \textit{Frontend} menyertakan riwayat percakapan sebelumnya (\texttt{riwayat}) bersama pesan baru (\texttt{pesan}) dalam \textit{body} permintaan \texttt{POST /api/\allowbreak{}chat/\allowbreak{}\{slug\}}, yang diteruskan oleh \textit{proxy} Next.js ke \textit{backend} melalui \texttt{POST /api/chat/\allowbreak{}\{topic\_slug\}}. \textit{Backend} menyusun \textit{system prompt} yang memuat konteks materi topik aktif beserta seluruh riwayat percakapan, kemudian mengirimkannya ke OpenAI API. OpenAI API menghasilkan balasan kontekstual yang dikembalikan ke \textit{frontend} dalam field \texttt{balasan}. \textit{Frontend} menampilkan balasan tersebut sebagai pesan baru dalam antarmuka chat, memperbarui riwayat untuk digunakan pada pesan berikutnya.
+Diagram pada Gambar \ref{fig:sd-chat-materi} menggambarkan alur percakapan antara \textit{user} dan asisten materi. \textit{User} mengetikkan pertanyaan pada \textit{widget chat} yang tersedia di setiap halaman topik. \textit{Frontend} menyertakan riwayat percakapan sebelumnya (\texttt{riwayat}) bersama pesan baru (\texttt{pesan}) dalam \textit{body} permintaan \texttt{POST /api/\allowbreak{}chat/\allowbreak{}\{slug\}}, yang diteruskan oleh \textit{proxy} Next.js ke \textit{backend} melalui \texttt{POST /api/chat/\allowbreak{}\{topic\_slug\}}. \textit{Backend} menyusun \textit{system prompt} yang memuat konteks materi topik aktif beserta seluruh riwayat percakapan, kemudian mengirimkannya ke OpenAI API. OpenAI API menghasilkan balasan kontekstual yang dikembalikan ke \textit{frontend} dalam field \texttt{balasan}. \textit{Frontend} menampilkan balasan tersebut sebagai pesan baru dalam antarmuka chat, memperbarui riwayat untuk digunakan pada pesan berikutnya.
 \end{sloppypar}
 
 \subsection{Arsitektur Sistem}
@@ -222,7 +222,7 @@ Bagian ini menjelaskan perancangan \textit{database} yang digunakan oleh sistem,
 
 \subsection{Spesifikasi \textit{Platform Database}}
 
-PostgreSQL dipilih sebagai sistem manajemen \textit{database} karena bersifat \textit{open source}, mendukung tipe data relasional yang kaya, serta memiliki ekosistem yang matang untuk pengembangan aplikasi web. Akses ke \textit{database} dilakukan melalui SQLAlchemy sebagai ORM (\textit{Object-Relational Mapper}) dengan \textit{driver} psycopg3, sehingga interaksi antara \textit{backend} Python dan \textit{database} dapat dilakukan secara efisien dan aman. Tabel \ref{tab:spek-db} menyajikan spesifikasi \textit{platform database} yang digunakan.
+PostgreSQL dipilih sebagai sistem manajemen \textit{database} karena bersifat \textit{open source}, mendukung tipe data relasional yang kaya, serta memiliki ekosistem yang matang untuk pengembangan aplikasi \textit{web}. Akses ke \textit{database} dilakukan melalui SQLAlchemy sebagai ORM (\textit{Object-Relational Mapper}) dengan \textit{driver} psycopg3, sehingga interaksi antara \textit{backend} Python dan \textit{database} dapat dilakukan secara efisien dan aman. Tabel \ref{tab:spek-db} menyajikan spesifikasi \textit{platform database} yang digunakan.
 
 \begin{table}[H]
     \centering
@@ -330,11 +330,11 @@ Gambar \ref{fig:erd} menunjukkan \textit{Entity Relationship Diagram} (ERD) yang
 
 \section{Perancangan \textit{Website}}
 
-Bagian ini membahas perancangan teknis aplikasi web Teman Belajar ASD, meliputi arsitektur sistem dan tumpukan teknologi yang digunakan, spesifikasi \textit{endpoint} API, rancangan antarmuka pengguna, serta konfigurasi \textit{hosting} dan \textit{deployment}.
+Bagian ini membahas perancangan teknis aplikasi \textit{web} Teman Belajar ASD, meliputi arsitektur sistem dan tumpukan teknologi yang digunakan, spesifikasi \textit{endpoint} API, rancangan antarmuka pengguna, serta konfigurasi \textit{hosting} dan \textit{deployment}.
 
 \subsection{Perancangan Arsitektur Sistem}
 
-Aplikasi Teman Belajar ASD dibangun menggunakan arsitektur \textit{client-server} yang terdiri dari tiga lapisan utama: \textit{frontend}, \textit{backend}, dan \textit{database}. Komponen \textit{frontend} dibangun dengan Next.js dan berkomunikasi dengan \textit{backend} melalui RESTful API berbasis FastAPI. \textit{Backend} menangani logika bisnis, autentikasi JWT, serta integrasi dengan OpenAI API untuk membangkitkan soal latihan, mengevaluasi jawaban pengguna, dan melayani chatbot asisten materi. Data pengguna dan progres belajar disimpan pada PostgreSQL. Tabel \ref{tab:tech-stack} menyajikan komponen teknologi yang digunakan pada setiap lapisan sistem.
+Aplikasi Teman Belajar ASD dibangun menggunakan arsitektur \textit{client-server} yang terdiri dari tiga lapisan utama: \textit{frontend}, \textit{backend}, dan \textit{database}. Komponen \textit{frontend} dibangun dengan Next.js dan berkomunikasi dengan \textit{backend} melalui RESTful API berbasis FastAPI. \textit{Backend} menangani logika bisnis, autentikasi JWT, serta integrasi dengan OpenAI API untuk membangkitkan soal latihan, mengevaluasi jawaban pengguna, dan melayani \textit{chatbot} asisten materi. Data pengguna dan progres belajar disimpan pada PostgreSQL. Tabel \ref{tab:tech-stack} menyajikan komponen teknologi yang digunakan pada setiap lapisan sistem.
 
 \begin{table}[H]
     \centering
@@ -362,7 +362,7 @@ Aplikasi Teman Belajar ASD dibangun menggunakan arsitektur \textit{client-server
     \hline
     Autentikasi & PyJWT & Pembuatan dan validasi JWT \textit{token} \\
     \hline
-    \textit{AI Integration} & OpenAI API (GPT-4o-mini) & Generasi soal latihan adaptif, evaluasi jawaban pengguna, dan chatbot asisten materi \\
+    \textit{AI Integration} & OpenAI API (GPT-4o-mini) & Generasi soal latihan adaptif, evaluasi jawaban pengguna, dan \textit{chatbot} asisten materi \\
     \hline
     \textit{HTTP Client} & httpx & Komunikasi asinkron ke OpenAI API \\
     \hline
@@ -444,7 +444,7 @@ Tabel \ref{tab:hosting-frontend} menyajikan spesifikasi \textit{hosting} untuk l
     \hline
     \textit{Runtime} & Node.js 20 Alpine \\
     \hline
-    \textit{Framework} & Next.js (output: \texttt{standalone}) \\
+    \textit{Framework} & Next.js (\textit{output}: \texttt{standalone}) \\
     \hline
     \textit{Build Command} & \texttt{npm run build} \\
     \hline
