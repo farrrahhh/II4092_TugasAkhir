@@ -26,7 +26,7 @@ Berikut merupakan \textit{use case diagram} yang menggambarkan interaksi antara 
 
 Penjelasan mengenai diagram di atas dan keterkaitannya dengan kebutuhan fungsional dapat dilihat pada Tabel \ref{tab:use-case}.
 
-\begin{longtable}{|L{1.0cm}|L{1.3cm}|L{2.7cm}|L{4.0cm}|L{2.5cm}|}
+\begin{longtable}{|c|L{1.3cm}|L{2.6cm}|L{3.9cm}|L{2.5cm}|}
 \caption{Deskripsi \textit{Use Case} Sistem Pembelajaran ASD}
 \label{tab:use-case}\\
 \hline
@@ -319,12 +319,12 @@ Mendefinisikan urutan tahapan pembelajaran per topik \\
 
 \end{longtable}
 
-Gambar \ref{fig:erd} menunjukkan \textit{Entity Relationship Diagram} (ERD) yang menggambarkan seluruh tabel dan relasi antar-tabel pada sistem.
+Gambar \ref{fig:erd} menunjukkan Skema \textit{Database} yang menggambarkan seluruh tabel dan relasi antar-tabel pada sistem.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{images/erd-schema.png}
-    \caption{\textit{Entity Relationship Diagram} Skema \textit{Database}}
+    \caption{Skema \textit{Database}}
     \label{fig:erd}
 \end{figure}
 
@@ -406,7 +406,7 @@ Tabel \ref{tab:api-latihan} menyajikan spesifikasi \textit{endpoint} latihan yan
     \hline
     POST & \texttt{/api/latihan/} \texttt{\{topic\_slug\}/} \texttt{evaluasi-batch} & \texttt{soal[], jawaban\{\}} & Mengevaluasi seluruh jawaban sekaligus dan memperbarui data \textit{weak concepts} pengguna \\
     \hline
-    POST & \texttt{/api/latihan/} \texttt{\{topic\_slug\}/} \texttt{evaluasi-soal-sendiri} & \texttt{pertanyaan, jawaban} & Mengevaluasi soal yang diunggah pengguna dari sumber eksternal berdasarkan konteks materi topik yang aktif \\
+    POST & \texttt{/api/latihan/} \texttt{\{topic\_slug\}/} \texttt{evaluasi-soal-} \texttt{sendiri} & \texttt{pertanyaan, jawaban} & Mengevaluasi soal yang diunggah pengguna dari sumber eksternal berdasarkan konteks materi topik yang aktif \\
     \hline
     \end{tabular}
 \end{table}

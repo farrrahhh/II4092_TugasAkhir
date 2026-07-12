@@ -4991,25 +4991,30 @@
     <bcf:citekey order="10" intorder="1">Vaswani2017AttentionIsAllYouNeed</bcf:citekey>
     <bcf:citekey order="11" intorder="1">Minaee2025PromptEngineering</bcf:citekey>
     <bcf:citekey order="11" intorder="2">White2023PromptPatternCatalog</bcf:citekey>
-    <bcf:citekey order="12" intorder="1">Pressman2015SWE</bcf:citekey>
-    <bcf:citekey order="13" intorder="1">Pressman2015SWE</bcf:citekey>
-    <bcf:citekey order="14" intorder="1">Myers2011ArtOfSoftwareTesting</bcf:citekey>
-    <bcf:citekey order="15" intorder="1">Jamie2024ChatGPTDSA</bcf:citekey>
-    <bcf:citekey order="16" intorder="1">Deng2025LLMProgrammingTasks</bcf:citekey>
-    <bcf:citekey order="17" intorder="1">Zaus2025AlgorithmInstructionChatbots</bcf:citekey>
-    <bcf:citekey order="18" intorder="1">Mtaho2024</bcf:citekey>
-    <bcf:citekey order="19" intorder="1">Mtaho2024</bcf:citekey>
-    <bcf:citekey order="20" intorder="1">White2023PromptPatternCatalog</bcf:citekey>
-    <bcf:citekey order="21" intorder="1">Minaee2025PromptEngineering</bcf:citekey>
-    <bcf:citekey order="22" intorder="1">OpenAI2023GPT4TechnicalReport</bcf:citekey>
-    <bcf:citekey order="23" intorder="1">Jacobs2024LLMFeedbackProgramming</bcf:citekey>
-    <bcf:citekey order="24" intorder="1">Vanzo2024GPT4HomeworkTutor</bcf:citekey>
-    <bcf:citekey order="25" intorder="1">OpenAI2023GPT4TechnicalReport</bcf:citekey>
-    <bcf:citekey order="26" intorder="1">Jacobs2024LLMFeedbackProgramming</bcf:citekey>
-    <bcf:citekey order="27" intorder="1">Vanzo2024GPT4HomeworkTutor</bcf:citekey>
-    <bcf:citekey order="28" intorder="1">White2023PromptPatternCatalog</bcf:citekey>
-    <bcf:citekey order="29" intorder="1">Pressman2015SWE</bcf:citekey>
-    <bcf:citekey order="30" intorder="1">Myers2011ArtOfSoftwareTesting</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">Kasneci2023</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">Leinonen2023</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">Jacobs2024LLMFeedbackProgramming</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">Vanzo2024GPT4HomeworkTutor</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">Raihan2024</bcf:citekey>
+    <bcf:citekey order="17" intorder="1">Pressman2015SWE</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">Pressman2015SWE</bcf:citekey>
+    <bcf:citekey order="19" intorder="1">Myers2011ArtOfSoftwareTesting</bcf:citekey>
+    <bcf:citekey order="20" intorder="1">Jamie2024ChatGPTDSA</bcf:citekey>
+    <bcf:citekey order="21" intorder="1">Deng2025LLMProgrammingTasks</bcf:citekey>
+    <bcf:citekey order="22" intorder="1">Zaus2025AlgorithmInstructionChatbots</bcf:citekey>
+    <bcf:citekey order="23" intorder="1">Mtaho2024</bcf:citekey>
+    <bcf:citekey order="24" intorder="1">Mtaho2024</bcf:citekey>
+    <bcf:citekey order="25" intorder="1">White2023PromptPatternCatalog</bcf:citekey>
+    <bcf:citekey order="26" intorder="1">Minaee2025PromptEngineering</bcf:citekey>
+    <bcf:citekey order="27" intorder="1">OpenAI2023GPT4TechnicalReport</bcf:citekey>
+    <bcf:citekey order="28" intorder="1">Jacobs2024LLMFeedbackProgramming</bcf:citekey>
+    <bcf:citekey order="29" intorder="1">Vanzo2024GPT4HomeworkTutor</bcf:citekey>
+    <bcf:citekey order="30" intorder="1">OpenAI2023GPT4TechnicalReport</bcf:citekey>
+    <bcf:citekey order="31" intorder="1">Jacobs2024LLMFeedbackProgramming</bcf:citekey>
+    <bcf:citekey order="32" intorder="1">Vanzo2024GPT4HomeworkTutor</bcf:citekey>
+    <bcf:citekey order="33" intorder="1">White2023PromptPatternCatalog</bcf:citekey>
+    <bcf:citekey order="34" intorder="1">Pressman2015SWE</bcf:citekey>
+    <bcf:citekey order="35" intorder="1">Myers2011ArtOfSoftwareTesting</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="cms">
